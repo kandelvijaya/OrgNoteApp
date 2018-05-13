@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
 		2855D3F320A843180082EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F220A843180082EC00 /* ViewController.swift */; };
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28417E2520A844C000996941 /* supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2855D3F020A843180082EC00 /* AppDelegate.swift */,
+				2855D3F220A843180082EC00 /* ViewController.swift */,
+				2855D3F720A8431A0082EC00 /* Assets.xcassets */,
+				2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */,
+			);
+			path = supporting;
+			sourceTree = "<group>";
+		};
+		28417E2720A844D700996941 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				28417E2820A8469800996941 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
@@ -75,11 +96,9 @@
 		2855D3EF20A843180082EC00 /* OrgNoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				2855D3F020A843180082EC00 /* AppDelegate.swift */,
-				2855D3F220A843180082EC00 /* ViewController.swift */,
-				2855D3F720A8431A0082EC00 /* Assets.xcassets */,
-				2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
+				28417E2720A844D700996941 /* Coordinators */,
+				28417E2520A844C000996941 /* supporting */,
 			);
 			path = OrgNoteApp;
 			sourceTree = "<group>";
@@ -194,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
+				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
