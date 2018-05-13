@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
+		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
+		28417E3020A84A8300996941 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */; };
+		28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */; };
+		28417E3420A84D8000996941 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3320A84D8000996941 /* Operators.swift */; };
+		28417E3620A84DD000996941 /* GenericListDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3520A84DD000996941 /* GenericListDriver.swift */; };
+		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
 		2855D3F320A843180082EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F220A843180082EC00 /* ViewController.swift */; };
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
+		28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithmTests.swift; sourceTree = "<group>"; };
+		28417E3320A84D8000996941 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		28417E3520A84DD000996941 /* GenericListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericListDriver.swift; sourceTree = "<group>"; };
+		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +87,18 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		28417E2C20A8494D00996941 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */,
+				28417E2D20A84A4C00996941 /* GenericList<T>.swift */,
+				28417E3320A84D8000996941 /* Operators.swift */,
+				28417E3520A84DD000996941 /* GenericListDriver.swift */,
+				28417E3720A84E0800996941 /* ListSection.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +120,7 @@
 		2855D3EF20A843180082EC00 /* OrgNoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				28417E2C20A8494D00996941 /* Core */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
 				28417E2720A844D700996941 /* Coordinators */,
 				28417E2520A844C000996941 /* supporting */,
@@ -108,6 +133,7 @@
 			children = (
 				2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */,
 				2855D40720A8431A0082EC00 /* Info.plist */,
+				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
 			);
 			path = OrgNoteAppTests;
 			sourceTree = "<group>";
@@ -213,8 +239,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
+				28417E3020A84A8300996941 /* DiffingAlgorithm.swift in Sources */,
+				28417E3620A84DD000996941 /* GenericListDriver.swift in Sources */,
+				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
+				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
+				28417E3420A84D8000996941 /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
+				28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
