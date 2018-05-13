@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
+		2855D3F320A843180082EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F220A843180082EC00 /* ViewController.swift */; };
+		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
+		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
+		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2855D40220A8431A0082EC00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2855D3E520A843180082EC00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2855D3EC20A843180082EC00;
+			remoteInfo = OrgNoteApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2855D3F720A8431A0082EC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2855D3FA20A8431A0082EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2855D3FC20A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
+		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2855D3EA20A843180082EC00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2855D3FE20A8431A0082EC00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2855D3E420A843180082EC00 = {
+			isa = PBXGroup;
+			children = (
+				2855D3EF20A843180082EC00 /* OrgNoteApp */,
+				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
+				2855D3EE20A843180082EC00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2855D3EE20A843180082EC00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2855D3ED20A843180082EC00 /* OrgNoteApp.app */,
+				2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2855D3EF20A843180082EC00 /* OrgNoteApp */ = {
+			isa = PBXGroup;
+			children = (
+				2855D3F020A843180082EC00 /* AppDelegate.swift */,
+				2855D3F220A843180082EC00 /* ViewController.swift */,
+				2855D3F720A8431A0082EC00 /* Assets.xcassets */,
+				2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */,
+				2855D3FC20A8431A0082EC00 /* Info.plist */,
+			);
+			path = OrgNoteApp;
+			sourceTree = "<group>";
+		};
+		2855D40420A8431A0082EC00 /* OrgNoteAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */,
+				2855D40720A8431A0082EC00 /* Info.plist */,
+			);
+			path = OrgNoteAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2855D3EC20A843180082EC00 /* OrgNoteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2855D40A20A8431A0082EC00 /* Build configuration list for PBXNativeTarget "OrgNoteApp" */;
+			buildPhases = (
+				2855D3E920A843180082EC00 /* Sources */,
+				2855D3EA20A843180082EC00 /* Frameworks */,
+				2855D3EB20A843180082EC00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrgNoteApp;
+			productName = OrgNoteApp;
+			productReference = 2855D3ED20A843180082EC00 /* OrgNoteApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2855D40020A8431A0082EC00 /* OrgNoteAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2855D40D20A8431A0082EC00 /* Build configuration list for PBXNativeTarget "OrgNoteAppTests" */;
+			buildPhases = (
+				2855D3FD20A8431A0082EC00 /* Sources */,
+				2855D3FE20A8431A0082EC00 /* Frameworks */,
+				2855D3FF20A8431A0082EC00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2855D40320A8431A0082EC00 /* PBXTargetDependency */,
+			);
+			name = OrgNoteAppTests;
+			productName = OrgNoteAppTests;
+			productReference = 2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2855D3E520A843180082EC00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = com.kandelvijaya;
+				TargetAttributes = {
+					2855D3EC20A843180082EC00 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					2855D40020A8431A0082EC00 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2855D3EC20A843180082EC00;
+					};
+				};
+			};
+			buildConfigurationList = 2855D3E820A843180082EC00 /* Build configuration list for PBXProject "OrgNoteApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2855D3E420A843180082EC00;
+			productRefGroup = 2855D3EE20A843180082EC00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2855D3EC20A843180082EC00 /* OrgNoteApp */,
+				2855D40020A8431A0082EC00 /* OrgNoteAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2855D3EB20A843180082EC00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
+				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2855D3FF20A8431A0082EC00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2855D3E920A843180082EC00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
+				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2855D3FD20A8431A0082EC00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2855D40320A8431A0082EC00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2855D3EC20A843180082EC00 /* OrgNoteApp */;
+			targetProxy = 2855D40220A8431A0082EC00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2855D3FA20A8431A0082EC00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2855D40820A8431A0082EC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2855D40920A8431A0082EC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2855D40B20A8431A0082EC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2855D40C20A8431A0082EC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2855D40E20A8431A0082EC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OrgNoteAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
+			};
+			name = Debug;
+		};
+		2855D40F20A8431A0082EC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OrgNoteAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2855D3E820A843180082EC00 /* Build configuration list for PBXProject "OrgNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2855D40820A8431A0082EC00 /* Debug */,
+				2855D40920A8431A0082EC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2855D40A20A8431A0082EC00 /* Build configuration list for PBXNativeTarget "OrgNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2855D40B20A8431A0082EC00 /* Debug */,
+				2855D40C20A8431A0082EC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2855D40D20A8431A0082EC00 /* Build configuration list for PBXNativeTarget "OrgNoteAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2855D40E20A8431A0082EC00 /* Debug */,
+				2855D40F20A8431A0082EC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2855D3E520A843180082EC00 /* Project object */;
+}
