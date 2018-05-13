@@ -1,0 +1,6 @@
+[submodule "deps/Kekka"]
+	path = deps/Kekka
+	url = git@github.com:kandelvijaya/Kekka.git
+[submodule "deps/OrgSwiftParser"]
+	path = deps/OrgSwiftParser
+	url = git@github.com:kandelvijaya/OrgSwiftParser.git
