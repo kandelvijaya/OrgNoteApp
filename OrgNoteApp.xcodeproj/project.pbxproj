@@ -21,6 +21,8 @@
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
 		28703D3C20A859C800DC8DBF /* Kekka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D2F20A859AF00DC8DBF /* Kekka.framework */; };
 		28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D3820A859BD00DC8DBF /* ParserCombinator.framework */; };
+		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
+		28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4520A85C7600DC8DBF /* OrgParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kekka.xcodeproj; path = deps/Kekka/Kekka.xcodeproj; sourceTree = "<group>"; };
 		28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ParserCombinator.xcodeproj; path = deps/OrgSwiftParser/ParserCombinator/ParserCombinator.xcodeproj; sourceTree = "<group>"; };
+		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
+		28703D4520A85C7600DC8DBF /* OrgParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				28703D3E20A85A0200DC8DBF /* OrgParser */,
 				28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */,
 				28417E2D20A84A4C00996941 /* GenericList<T>.swift */,
 				28417E3320A84D8000996941 /* Operators.swift */,
@@ -171,6 +176,7 @@
 				2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */,
 				2855D40720A8431A0082EC00 /* Info.plist */,
 				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
+				28703D4520A85C7600DC8DBF /* OrgParserTests.swift */,
 			);
 			path = OrgNoteAppTests;
 			sourceTree = "<group>";
@@ -198,6 +204,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28703D3E20A85A0200DC8DBF /* OrgParser */ = {
+			isa = PBXGroup;
+			children = (
+				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
+			);
+			path = OrgParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,7 @@
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
+				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28417E3420A84D8000996941 /* Operators.swift in Sources */,
 			);
@@ -358,6 +373,7 @@
 			files = (
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
 				28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */,
+				28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
