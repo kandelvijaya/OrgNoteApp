@@ -11,7 +11,18 @@ import XCTest
 @testable import OrgNoteApp
 
 final class OrgParserTests: XCTestCase {
-    //TODO:
+
+    func test_thatASimpleOutlineHeadingCanBeParsed() {
+        let heading = "* This is a heading level 1"
+        let output = OrgParser.parse(heading)
+        XCTAssertNotNil(output)
+        XCTAssertEqual(output!.count, 1)
+        let thisOutline = output!.first!
+        let expectedHeading = OutlineHeading(title: "This is a heading level 1", depth: 1)
+        let expectedOutline = Outline(heading: expectedHeading, content: [])
+        XCTAssertEqual(thisOutline, expectedOutline)
+    }
+
 }
 
 

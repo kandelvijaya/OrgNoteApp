@@ -13,7 +13,7 @@ import ParserCombinator
 typealias OrgFile = [Outline]
 
 
-struct OutlineHeading {
+struct OutlineHeading: Hashable {
 
     let title: String
     let depth: Int
@@ -21,7 +21,7 @@ struct OutlineHeading {
 }
 
 
-struct Outline {
+struct Outline: Hashable {
 
     let heading: OutlineHeading
     let content: [String]
@@ -35,6 +35,19 @@ struct Outline {
 
 }
 
+// [Outline] or [String] were not Hashable by default.
+extension Array: Hashable where Element: Hashable {
+
+    public var hashValue: Int {
+        guard let first = self.first else {
+            return "\(Element.self)".hashValue
+        }
+        return dropFirst().reduce(first.hashValue) {
+            return $0 ^ $1.hashValue
+        }
+    }
+
+}
 
 struct OrgParser {
 
