@@ -19,6 +19,8 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+		28703D3C20A859C800DC8DBF /* Kekka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D2F20A859AF00DC8DBF /* Kekka.framework */; };
+		28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D3820A859BD00DC8DBF /* ParserCombinator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2855D3EC20A843180082EC00;
 			remoteInfo = OrgNoteApp;
+		};
+		28703D2E20A859AF00DC8DBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2897E3362004086400BEA454;
+			remoteInfo = Kekka;
+		};
+		28703D3020A859AF00DC8DBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2897E33F2004086500BEA454;
+			remoteInfo = KekkaTests;
+		};
+		28703D3720A859BD00DC8DBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85253C8820710D240039ABA1;
+			remoteInfo = ParserCombinator;
+		};
+		28703D3920A859BD00DC8DBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85253C9120710D240039ABA1;
+			remoteInfo = ParserCombinatorTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +78,8 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kekka.xcodeproj; path = deps/Kekka/Kekka.xcodeproj; sourceTree = "<group>"; };
+		28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ParserCombinator.xcodeproj; path = deps/OrgSwiftParser/ParserCombinator/ParserCombinator.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28703D3C20A859C800DC8DBF /* Kekka.framework in Frameworks */,
+				28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,9 +136,12 @@
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
+				28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */,
+				28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */,
 				2855D3EF20A843180082EC00 /* OrgNoteApp */,
 				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
 				2855D3EE20A843180082EC00 /* Products */,
+				28703D3B20A859C800DC8DBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +173,31 @@
 				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
 			);
 			path = OrgNoteAppTests;
+			sourceTree = "<group>";
+		};
+		28703D2A20A859AF00DC8DBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28703D2F20A859AF00DC8DBF /* Kekka.framework */,
+				28703D3120A859AF00DC8DBF /* KekkaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28703D3320A859BD00DC8DBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28703D3820A859BD00DC8DBF /* ParserCombinator.framework */,
+				28703D3A20A859BD00DC8DBF /* ParserCombinatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28703D3B20A859C800DC8DBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +268,16 @@
 			mainGroup = 2855D3E420A843180082EC00;
 			productRefGroup = 2855D3EE20A843180082EC00 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 28703D2A20A859AF00DC8DBF /* Products */;
+					ProjectRef = 28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */;
+				},
+				{
+					ProductGroup = 28703D3320A859BD00DC8DBF /* Products */;
+					ProjectRef = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2855D3EC20A843180082EC00 /* OrgNoteApp */,
@@ -213,6 +285,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		28703D2F20A859AF00DC8DBF /* Kekka.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kekka.framework;
+			remoteRef = 28703D2E20A859AF00DC8DBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		28703D3120A859AF00DC8DBF /* KekkaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KekkaTests.xctest;
+			remoteRef = 28703D3020A859AF00DC8DBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		28703D3820A859BD00DC8DBF /* ParserCombinator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ParserCombinator.framework;
+			remoteRef = 28703D3720A859BD00DC8DBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		28703D3A20A859BD00DC8DBF /* ParserCombinatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ParserCombinatorTests.xctest;
+			remoteRef = 28703D3920A859BD00DC8DBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2855D3EB20A843180082EC00 /* Resources */ = {
