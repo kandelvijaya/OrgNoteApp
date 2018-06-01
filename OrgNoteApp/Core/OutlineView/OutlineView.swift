@@ -17,6 +17,8 @@ final class OutlineView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        heading.numberOfLines = 0
+        content.numberOfLines = 0 
         addSubview(heading)
         addSubview(content)
         subItemView.forEach(addSubview)
@@ -29,19 +31,26 @@ final class OutlineView: UIView {
 
     func update(with outline: Outline) {
         heading.text = "*".replicate(outline.heading.depth) + "  " + outline.heading.title
-        content.text = outline.content.joined()
+        content.text = outline.content.joined(separator: "\n")
+        updateConstraintsIfNeeded()
     }
 
     private func setupConstraints() {
         self.translatesAutoresizingMaskIntoConstraints = false
+        heading.translatesAutoresizingMaskIntoConstraints = false
+        content.translatesAutoresizingMaskIntoConstraints = false
+
         let headingCons = [heading.topAnchor.constraint(equalTo: self.topAnchor),
-        heading.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-        heading.trailingAnchor.constraint(equalTo: self.trailingAnchor)]
+                           heading.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                           heading.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+                        ]
         self.addConstraints(headingCons)
 
-        let contentCons = [content.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-                           content.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-                           content.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)]
+        let contentCons = [content.leadingAnchor.constraint(equalTo: heading.leadingAnchor, constant: 10),
+                           content.topAnchor.constraint(equalTo: heading.bottomAnchor, constant: 10),
+                           content.trailingAnchor.constraint(equalTo: heading.trailingAnchor, constant: 0),
+                           content.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ]
         self.addConstraints(contentCons)
     }
 

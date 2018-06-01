@@ -23,12 +23,13 @@
 		28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D3820A859BD00DC8DBF /* ParserCombinator.framework */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
 		28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4520A85C7600DC8DBF /* OrgParserTests.swift */; };
-		2880A09820C18DEE00CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WL.org */; };
-		2880A09920C18E2B00CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WL.org */; };
+		2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WLbig.org */; };
+		2880A09920C18E2B00CD4ACC /* WLbig.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WLbig.org */; };
 		2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A09B20C18FFC00CD4ACC /* OutlineView.swift */; };
 		2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A09D20C194BE00CD4ACC /* OutlineCell.swift */; };
 		2880A0A120C196E700CD4ACC /* OrgListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A020C196E700CD4ACC /* OrgListViewController.swift */; };
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
+		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,11 +91,12 @@
 		28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ParserCombinator.xcodeproj; path = deps/OrgSwiftParser/ParserCombinator/ParserCombinator.xcodeproj; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
 		28703D4520A85C7600DC8DBF /* OrgParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserTests.swift; sourceTree = "<group>"; };
-		2880A09320C18DEE00CD4ACC /* WL.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
+		2880A09320C18DEE00CD4ACC /* WLbig.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WLbig.org; sourceTree = "<group>"; };
 		2880A09B20C18FFC00CD4ACC /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
 		2880A09D20C194BE00CD4ACC /* OutlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineCell.swift; sourceTree = "<group>"; };
 		2880A0A020C196E700CD4ACC /* OrgListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListViewController.swift; sourceTree = "<group>"; };
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
+		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 		28417E2520A844C000996941 /* supporting */ = {
 			isa = PBXGroup;
 			children = (
-				2880A09320C18DEE00CD4ACC /* WL.org */,
+				2880A09320C18DEE00CD4ACC /* WLbig.org */,
+				2880A0A520C1ACF200CD4ACC /* WL.org */,
 				2855D3F020A843180082EC00 /* AppDelegate.swift */,
 				2855D3F220A843180082EC00 /* ViewController.swift */,
 				2855D3F720A8431A0082EC00 /* Assets.xcassets */,
@@ -378,7 +381,8 @@
 			files = (
 				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
-				2880A09820C18DEE00CD4ACC /* WL.org in Resources */,
+				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
+				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2880A09920C18E2B00CD4ACC /* WL.org in Resources */,
+				2880A09920C18E2B00CD4ACC /* WLbig.org in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

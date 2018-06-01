@@ -1,0 +1,246 @@
+* Mon 05-07-2018
+
+** Q1 Task(Urgent & Important)             
+*** TODO GDPR liscence investigation IOS-4745
+*** TODO Preview effect on home TNA 
+
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Tue 05-08-2018
+
+** Q1 Task(Urgent & Important)             
+*** PROGRESS GDPR liscence IOS-4745
+    1. Do i need to acknowledge third party by having third party and liscence section in the app?
+    2. Do i need to proof read source code and check for malicious attempts?
+    3. Do i need to get verification that a certain library doesnot have popular attack vuneralibility like:
+       - heartbleed
+       - man-in-middle
+       - tampered library via download
+    4. What if there are deprecated libraries?
+       - FXKeychain
+       - ZalandoPayments
+       - 
+    5. What if the lirary doesnot have a proper liscence?
+    6. Identify libraries that are doing HTTP calls?  [ONIT]
+       - zalando has 2 exception both for Debug purpose
+       - FLKDemo has complete exception but this is only for the test target
+       - 
+       - 
+
+
+*** DONE Email Auslanderbehorde with German translation
+    CLOSED: [2018-05-08 Tue 10:03]
+
+    - State "DONE"       from "PROGRESS"   [2018-05-08 Tue 10:03]
+** Q2 Task(Urgent & Not Important)         
+*** DONE pay zalando
+    CLOSED: [2018-05-09 Wed 09:48]
+    - State "DONE"       from "PROGRESS"   [2018-05-09 Wed 09:48]
+*** DONE Send Team Session Email and talk to Ramy 
+    CLOSED: [2018-05-09 Wed 09:48]
+    - State "DONE"       from "PROGRESS"   [2018-05-09 Wed 09:48]
+*** TODO Schedule certificate meeting with all teams 
+
+** Q3 Task(Not-urgent & Important)         
+*** TODO Buy airplane ticket 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+*** Can internal dependecies use HTTP when the main target doesnot say so?
+
+* Wed 05-09-2018
+
+** Q1 Task(Urgent & Important)             
+*** TODO Schedule for Tanquilo python workgroup
+*** TODO Feedback to Linda 
+*** TODO Call uncle for the date
+*** TODO Fill out score card 
+
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** TODO Check Swift Algorithm Club
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+
+* Fri 05-11-2018
+
+** Q1 Task(Urgent & Important)             
+*** DONE Talk to aunt for the date 
+    CLOSED: [2018-05-11 Fri 12:53]
+    - State "DONE"       from "PROGRESS"   [2018-05-11 Fri 12:53]
+*** PROGRESS GDPR check if we need to list all the libs in a place 
+
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Mon 05-14-2018
+
+** Q1 Task(Urgent & Important)             
+*** DONE Finilized script to aggregate license and use it in settings bundle 
+    CLOSED: [2018-05-14 Mon 16:58]
+    - State "DONE"       from "PROGRESS"   [2018-05-14 Mon 16:58]
+*** DONE Collect Employment certificate and print the rest for tomorrow
+    CLOSED: [2018-05-14 Mon 16:58]
+    - State "DONE"       from "PROGRESS"   [2018-05-14 Mon 16:58]
+*** TODO find appointment for this thursday at auslanderbehorde
+*** DONE Sprint planning prepare
+    CLOSED: [2018-05-14 Mon 16:58]
+
+    - State "DONE"       from "PROGRESS"   [2018-05-14 Mon 16:58]
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Tue 05-15-2018
+
+** Q1 Task(Urgent & Important)             
+*** DONE Review all KP's PR
+    CLOSED: [2018-05-15 Tue 14:50]
+    - State "DONE"       from "PROGRESS"   [2018-05-15 Tue 14:50]
+*** DONE Print all the papers for aus
+    CLOSED: [2018-05-16 Wed 09:57]
+    - State "DONE"       from "PROGRESS"   [2018-05-16 Wed 09:57]
+*** DONE Send team session email
+    CLOSED: [2018-05-15 Tue 14:50]
+    - State "DONE"       from "PROGRESS"   [2018-05-15 Tue 14:50]
+*** PROGRESS Start on new task
+
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Wed 05-16-2018
+
+** Q1 Task(Urgent & Important)             
+*** TODO Code review Style Selector and Influencer without Jon
+*** TODO Provide interview feedback 
+*** TODO Team session presentation
+
+** Q2 Task(Urgent & Not Important)         
+*** TODO Ask Uncle to make a call 
+
+** Q3 Task(Not-urgent & Important)
+*** DONE Inform Mokhles for the 20%
+    CLOSED: [2018-05-16 Wed 10:00]
+
+    - State "DONE"       from "PROGRESS"   [2018-05-16 Wed 10:00]
+*** TODO Plan tasks for Tomorrows 20% day
+*** TODO Start on draft for this weeks blog post 
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Thu 05-17-2018
+
+** Q1 Task(Urgent & Important)             
+*** PROGRESS Fix Style Selector Animation removal
+*** DONE Review matteo's PR
+    CLOSED: [2018-05-18 Fri 12:01]
+    - State "DONE"       from "PROGRESS"   [2018-05-18 Fri 12:01]
+*** TODO Write interview feedback 
+*** 
+
+** Q2 Task(Urgent & Not Important)         
+* 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+* Fri 05-18-2018
+
+** Q1 Task(Urgent & Important)             
+*** DONE Prepare for One-One talk
+    CLOSED: [2018-05-18 Fri 14:59]
+    - State "DONE"       from "PROGRESS"   [2018-05-18 Fri 14:59]
+*** TODO Insertion of style selector at model build time
+*** TODO Interview prepare and Write feedback 
+*** DONE Send email to Andrea
+    CLOSED: [2018-05-18 Fri 14:59]
+
+    - State "DONE"       from "PROGRESS"   [2018-05-18 Fri 14:59]
+** Q2 Task(Urgent & Not Important)         
+*** 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
+
+
+* Tue 05-22-2018
+
+** Q1 Task(Urgent & Important)             
+*** DONE Finilize interview review 
+    CLOSED: [2018-05-22 Tue 11:28]
+    - State "DONE"       from "PROGRESS"   [2018-05-22 Tue 11:28]
+*** TODO Implement Model Builder insertion of style selector 
+*** TODO Ask for Health insurance certificate for kriti
+*** TODO Regression 
+
+** Q2 Task(Urgent & Not Important)         
+*** TODO Talk to dad about the exact address 
+
+** Q3 Task(Not-urgent & Important)         
+*** 
+
+** Q4 Task(Neither Urgent nor Important)  
+*** 
+
+** Todays Journal
+  
