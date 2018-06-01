@@ -23,6 +23,22 @@ final class OrgParserTests: XCTestCase {
         XCTAssertEqual(thisOutline, expectedOutline)
     }
 
+    func test_whenOrgFileIsProvided_thenItCanBeParsed() {
+        guard let fileURL = Bundle(for: self.classForCoder).url(forResource: "WL", withExtension: "org") else {
+            XCTFail("Org file not found")
+            return
+        }
+
+        guard let fileContentBuffer = try? String(contentsOf: fileURL) else {
+            XCTFail("File contents cannot be converted to String")
+            return
+        }
+
+        let output = OrgParser.parse(fileContentBuffer)
+        XCTAssertNotNil(output)
+        XCTAssertGreaterThan(output!.count, 0)
+    }
+
 }
 
 

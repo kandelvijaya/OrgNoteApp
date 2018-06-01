@@ -28,6 +28,7 @@ struct MainNavigator: Navigator {
 
     func start() {
         let viewController = ViewController()
+        viewController.view.backgroundColor = .white
         navigationController.pushViewController(viewController, animated: true)
     }
 
