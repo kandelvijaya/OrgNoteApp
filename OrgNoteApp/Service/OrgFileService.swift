@@ -11,7 +11,7 @@ import Kekka
 
 protocol OrgFileServiceProtocol {
 
-    func fetchWorkLog() -> Future<Result<Outline>>
+    func fetchWorkLog() -> Future<Result<OrgFile>>
 
 }
 
@@ -19,7 +19,7 @@ protocol OrgFileServiceProtocol {
 
 struct Mock {
 
-    enum OrgFileServiceError {
+    enum OrgFileServiceError: Error {
         case fileNotFound
         case fileDoesnotContainProperStringContent
         case unknown
@@ -27,12 +27,13 @@ struct Mock {
 
     struct OrgFileService: OrgFileServiceProtocol {
 
-        func fetchWorkLog() -> Future<Result<Outline>> {
-            return KPromise<Result<Outline>>({ (aComplation) in
+        func fetchWorkLog() -> Future<Result<OrgFile>> {
+            return KPromise<Result<OrgFile>>({ (aComplation) in
                 guard let url = Bundle.main.url(forResource: "WL", withExtension: "org"),
                     let buffer = try? String(contentsOf: url),
                     let orgFile = OrgParser.parse(buffer) else {
                         aComplation?(Result.failure(error: OrgFileServiceError.unknown))
+                        return 
                 }
                 aComplation?(.success(value: orgFile))
             })

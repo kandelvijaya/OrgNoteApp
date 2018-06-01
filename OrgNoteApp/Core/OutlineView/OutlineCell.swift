@@ -10,13 +10,10 @@ import UIKit
 
 final class OutlineCell: UITableViewCell {
 
-    init(with outlineView: OutlineView) {
-        super.init(style: .default, reuseIdentifier: "OutlineCell")
+    public func update(with model: Outline) {
+        let outlineView = OutlineView()
+        outlineView.update(with: model)
         embed(outlineView)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
 }
@@ -24,7 +21,7 @@ final class OutlineCell: UITableViewCell {
 
 extension UIView {
 
-    func embed(_ view: UIView) {
+    public func embed(_ view: UIView) {
         let holder = self
         let child = view
 
