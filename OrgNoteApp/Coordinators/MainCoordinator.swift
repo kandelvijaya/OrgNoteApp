@@ -27,9 +27,8 @@ struct MainNavigator: Navigator {
     }
 
     func start() {
-        let viewController = ViewController()
-        viewController.view.backgroundColor = .white
-        navigationController.pushViewController(viewController, animated: true)
+        let controller = ListViewController(with: OrgListFactoryTemp().sections)
+        navigationController.pushViewController(controller, animated: true)
     }
 
 }

@@ -17,6 +17,9 @@ final class OutlineView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubview(heading)
+        addSubview(content)
+        subItemView.forEach(addSubview)
         setupConstraints()
     }
 

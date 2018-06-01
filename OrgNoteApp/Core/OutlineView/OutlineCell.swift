@@ -13,7 +13,7 @@ final class OutlineCell: UITableViewCell {
     public func update(with model: Outline) {
         let outlineView = OutlineView()
         outlineView.update(with: model)
-        embed(outlineView)
+        contentView.embed(outlineView)
     }
 
 }
@@ -31,7 +31,7 @@ extension UIView {
                     child.trailingAnchor.constraint(equalTo: holder.trailingAnchor),
                     child.topAnchor.constraint(equalTo: holder.topAnchor),
                     child.bottomAnchor.constraint(equalTo: holder.bottomAnchor)]
-        holder.addConstraints(cons)
+        cons.forEach { $0.isActive = true }
     }
 
 }
