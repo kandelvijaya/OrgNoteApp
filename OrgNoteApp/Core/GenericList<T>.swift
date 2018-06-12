@@ -16,7 +16,7 @@ import UIKit
 /// - note: see `CellDescriptor.any()` for more info
 final class ListViewController<T: Hashable>: UITableViewController {
 
-    private var sectionDescriptors: [ListSectionDescriptor<T>]
+    private(set) var sectionDescriptors: [ListSectionDescriptor<T>]
 
     init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped) {
         self.sectionDescriptors = models

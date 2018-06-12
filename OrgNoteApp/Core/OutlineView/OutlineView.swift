@@ -39,7 +39,7 @@ final class OutlineView: UIView {
             return subItemView
         }
 
-        subItemViews.forEach(subItemsStackView.addArrangedSubview)
+        // subItemViews.forEach(subItemsStackView.addArrangedSubview)
         updateConstraintsIfNeeded()
     }
 

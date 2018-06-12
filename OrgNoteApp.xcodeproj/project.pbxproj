@@ -14,6 +14,7 @@
 		28417E3420A84D8000996941 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3320A84D8000996941 /* Operators.swift */; };
 		28417E3620A84DD000996941 /* GenericListDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3520A84DD000996941 /* GenericListDriver.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
+		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
 		2855D3F320A843180082EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F220A843180082EC00 /* ViewController.swift */; };
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		28417E3520A84DD000996941 /* GenericListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericListDriver.swift; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC4B20C870CB00946CC6 /* OrgNotePlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OrgNotePlay.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				2855D40720A8431A0082EC00 /* Info.plist */,
 				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
 				28703D4520A85C7600DC8DBF /* OrgParserTests.swift */,
+				2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */,
 			);
 			path = OrgNoteAppTests;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */,
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
 				28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */,
 				28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */,

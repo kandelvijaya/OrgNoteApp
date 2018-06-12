@@ -27,7 +27,7 @@ struct MainNavigator: Navigator {
     }
 
     func start() {
-        let controller = ListViewController(with: OrgListFactoryTemp().sections)
+        let controller = OrgListDriver().controller
         navigationController.pushViewController(controller, animated: true)
     }
 
