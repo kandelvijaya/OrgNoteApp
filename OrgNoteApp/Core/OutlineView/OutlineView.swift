@@ -12,7 +12,7 @@ final class OutlineView: UIView {
 
     private var heading: UILabel = UILabel()
     private var content: UILabel = UILabel()
-    private var subItemView: [OutlineView] = []
+    private let subItemsStackView = UIStackView()
 
 
     override init(frame: CGRect) {
@@ -21,7 +21,7 @@ final class OutlineView: UIView {
         content.numberOfLines = 0 
         addSubview(heading)
         addSubview(content)
-        subItemView.forEach(addSubview)
+        addSubview(subItemsStackView)
         setupConstraints()
     }
 
@@ -32,6 +32,14 @@ final class OutlineView: UIView {
     func update(with outline: Outline) {
         heading.text = "*".replicate(outline.heading.depth) + "  " + outline.heading.title
         content.text = outline.content.joined(separator: "\n")
+
+        let subItemViews: [OutlineView] = outline.subItems.map { subitemModel in
+            let subItemView = OutlineView()
+            subItemView.update(with: subitemModel)
+            return subItemView
+        }
+
+        subItemViews.forEach(subItemsStackView.addArrangedSubview)
         updateConstraintsIfNeeded()
     }
 
@@ -39,6 +47,7 @@ final class OutlineView: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         heading.translatesAutoresizingMaskIntoConstraints = false
         content.translatesAutoresizingMaskIntoConstraints = false
+        subItemsStackView.translatesAutoresizingMaskIntoConstraints = false
 
         let headingCons = [heading.topAnchor.constraint(equalTo: self.topAnchor),
                            heading.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -49,9 +58,15 @@ final class OutlineView: UIView {
         let contentCons = [content.leadingAnchor.constraint(equalTo: heading.leadingAnchor, constant: 10),
                            content.topAnchor.constraint(equalTo: heading.bottomAnchor, constant: 10),
                            content.trailingAnchor.constraint(equalTo: heading.trailingAnchor, constant: 0),
-                           content.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ]
         self.addConstraints(contentCons)
+
+        let stackViewCons = [subItemsStackView.topAnchor.constraint(equalTo: content.bottomAnchor),
+                             subItemsStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                             subItemsStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                             subItemsStackView.trailingAnchor.constraint(equalTo: trailingAnchor)]
+        self.addConstraints(stackViewCons)
+        subItemsStackView.axis = .vertical
     }
 
 }

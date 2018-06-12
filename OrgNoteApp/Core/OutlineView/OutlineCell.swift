@@ -19,6 +19,15 @@ final class OutlineCell: UITableViewCell {
     public func embedInContentView(_ view: UIView) {
         let holder = UIView()
         contentView.addSubview(holder)
+
+        let consToContentView = [ holder.topAnchor.constraint(equalTo: contentView.topAnchor),
+                                  holder.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                                  holder.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                                  holder.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)]
+        consToContentView.forEach {
+            $0.isActive = true 
+        }
+
         let child = view
 
         holder.translatesAutoresizingMaskIntoConstraints = false

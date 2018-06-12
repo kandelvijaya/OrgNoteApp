@@ -21,7 +21,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
     init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped) {
         self.sectionDescriptors = models
         super.init(style: style)
-        self.tableView.autoresizesSubviews = true
+//        self.tableView.autoresizesSubviews = true
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 50
     }
 
     func update(with newModels: [ListSectionDescriptor<T>]) {

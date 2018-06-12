@@ -78,6 +78,7 @@
 		28417E3320A84D8000996941 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		28417E3520A84DD000996941 /* GenericListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericListDriver.swift; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		2846CC4B20C870CB00946CC6 /* OrgNotePlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OrgNotePlay.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				2880A09B20C18FFC00CD4ACC /* OutlineView.swift */,
+				2846CC4B20C870CB00946CC6 /* OrgNotePlay.playground */,
 				2880A09D20C194BE00CD4ACC /* OutlineCell.swift */,
 			);
 			path = OutlineView;
