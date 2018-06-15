@@ -42,4 +42,12 @@ final class ArrayReplaceTest: XCTestCase {
         // 2. Measure time and analyse
     }
 
+    // TODO: Array insert after
+
+    func test_whenItemIsInsertedAfterAnEmptyList_ItContainsInsertedItemsOnly() {
+        let arr = [Int]()
+        arr.insert(contentsOf: [1,2,3], at: 0)
+        XCTAssertTrue(arr.count == 3)
+    }
+
 }

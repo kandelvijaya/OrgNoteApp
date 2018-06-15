@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
+		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
+		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2814519320D3D4400006BBD7 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */; };
+		2814519420D3DE800006BBD7 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3020A84A8300996941 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */; };
@@ -34,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2814518B20D3D4260006BBD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2855D3E520A843180082EC00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2814518520D3D4260006BBD7;
+			remoteInfo = EnablePlaygroundShare;
+		};
 		2855D40220A8431A0082EC00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2855D3E520A843180082EC00 /* Project object */;
@@ -71,7 +84,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2814519220D3D4260006BBD7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2814517420D349380006BBD7 /* OrgListDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverTests.swift; sourceTree = "<group>"; };
+		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
+		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E2F20A84A8300996941 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithm.swift; sourceTree = "<group>"; };
@@ -79,7 +110,6 @@
 		28417E3320A84D8000996941 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		28417E3520A84DD000996941 /* GenericListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericListDriver.swift; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
-		2846CC4B20C870CB00946CC6 /* OrgNotePlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OrgNotePlay.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,12 +133,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2814518320D3D4260006BBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2855D3EA20A843180082EC00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28703D3C20A859C800DC8DBF /* Kekka.framework in Frameworks */,
 				28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */,
+				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2814518720D3D4260006BBD7 /* EnablePlaygroundShare */ = {
+			isa = PBXGroup;
+			children = (
+				2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */,
+				2814518920D3D4260006BBD7 /* Info.plist */,
+			);
+			path = EnablePlaygroundShare;
+			sourceTree = "<group>";
+		};
 		28417E2520A844C000996941 /* supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +211,7 @@
 				28703D2920A859AF00DC8DBF /* Kekka.xcodeproj */,
 				2855D3EF20A843180082EC00 /* OrgNoteApp */,
 				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
+				2814518720D3D4260006BBD7 /* EnablePlaygroundShare */,
 				2855D3EE20A843180082EC00 /* Products */,
 				28703D3B20A859C800DC8DBF /* Frameworks */,
 			);
@@ -174,6 +222,7 @@
 			children = (
 				2855D3ED20A843180082EC00 /* OrgNoteApp.app */,
 				2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */,
+				2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +248,7 @@
 				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
 				28703D4520A85C7600DC8DBF /* OrgParserTests.swift */,
 				2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */,
+				2814517420D349380006BBD7 /* OrgListDriverTests.swift */,
 			);
 			path = OrgNoteAppTests;
 			sourceTree = "<group>";
@@ -240,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				2880A09B20C18FFC00CD4ACC /* OutlineView.swift */,
-				2846CC4B20C870CB00946CC6 /* OrgNotePlay.playground */,
 				2880A09D20C194BE00CD4ACC /* OutlineCell.swift */,
 			);
 			path = OutlineView;
@@ -264,7 +313,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2814518120D3D4260006BBD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		2814518520D3D4260006BBD7 /* EnablePlaygroundShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2814518F20D3D4260006BBD7 /* Build configuration list for PBXNativeTarget "EnablePlaygroundShare" */;
+			buildPhases = (
+				2814518120D3D4260006BBD7 /* Headers */,
+				2814518220D3D4260006BBD7 /* Sources */,
+				2814518320D3D4260006BBD7 /* Frameworks */,
+				2814518420D3D4260006BBD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnablePlaygroundShare;
+			productName = EnablePlaygroundShare;
+			productReference = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2855D3EC20A843180082EC00 /* OrgNoteApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2855D40A20A8431A0082EC00 /* Build configuration list for PBXNativeTarget "OrgNoteApp" */;
@@ -272,10 +350,12 @@
 				2855D3E920A843180082EC00 /* Sources */,
 				2855D3EA20A843180082EC00 /* Frameworks */,
 				2855D3EB20A843180082EC00 /* Resources */,
+				2814519220D3D4260006BBD7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2814518C20D3D4260006BBD7 /* PBXTargetDependency */,
 			);
 			name = OrgNoteApp;
 			productName = OrgNoteApp;
@@ -310,6 +390,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = com.kandelvijaya;
 				TargetAttributes = {
+					2814518520D3D4260006BBD7 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					2855D3EC20A843180082EC00 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -344,6 +427,7 @@
 			targets = (
 				2855D3EC20A843180082EC00 /* OrgNoteApp */,
 				2855D40020A8431A0082EC00 /* OrgNoteAppTests */,
+				2814518520D3D4260006BBD7 /* EnablePlaygroundShare */,
 			);
 		};
 /* End PBXProject section */
@@ -380,6 +464,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2814518420D3D4260006BBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2855D3EB20A843180082EC00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +493,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2814518220D3D4260006BBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2814519320D3D4400006BBD7 /* DiffingAlgorithm.swift in Sources */,
+				2814519420D3DE800006BBD7 /* ListSection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2855D3E920A843180082EC00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */,
 				2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */,
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
 				28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */,
@@ -436,6 +537,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2814518C20D3D4260006BBD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2814518520D3D4260006BBD7 /* EnablePlaygroundShare */;
+			targetProxy = 2814518B20D3D4260006BBD7 /* PBXContainerItemProxy */;
+		};
 		2855D40320A8431A0082EC00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2855D3EC20A843180082EC00 /* OrgNoteApp */;
@@ -455,6 +561,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2814519020D3D4260006BBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EnablePlaygroundShare/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.EnablePlaygroundShare;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2814519120D3D4260006BBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EnablePlaygroundShare/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.EnablePlaygroundShare;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2855D40820A8431A0082EC00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -572,8 +737,10 @@
 		2855D40B20A8431A0082EC00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,6 +748,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -589,8 +757,10 @@
 		2855D40C20A8431A0082EC00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,6 +768,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,6 +817,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2814518F20D3D4260006BBD7 /* Build configuration list for PBXNativeTarget "EnablePlaygroundShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2814519020D3D4260006BBD7 /* Debug */,
+				2814519120D3D4260006BBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2855D3E820A843180082EC00 /* Build configuration list for PBXProject "OrgNoteApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -9,14 +9,6 @@
 import Foundation
 import Kekka
 
-
-class OrgListFactoryTemp {
-
-
-
-}
-
-
 final class OrgListDriver {
 
     var cells: [AnyListCellDescriptor] {
@@ -58,7 +50,7 @@ final class OrgListDriver {
 
         let newItemChildCellDescriptors = item.subItems.map(cellDescriptor)
 
-        let updatedSection = selectedItemsSectionDescriptor.items.replace(matching: selectedItemCellDescriptor, with: newItemChildCellDescriptors) |> sectionDescriptor
+        let updatedSection = selectedItemsSectionDescriptor.items.insert(items: newItemChildCellDescriptors, after: selectedItemCellDescriptor) |> sectionDescriptor
 
         let newSections = currentListState.replace(matching: selectedItemsSectionDescriptor, with: updatedSection)
 
@@ -67,9 +59,6 @@ final class OrgListDriver {
 
 }
 
-
-
-typealias AnyListSectionDescriptor = ListSectionDescriptor<AnyHashable>
 
 extension Array where Element: Equatable{
 
@@ -84,6 +73,13 @@ extension Array where Element: Equatable{
     func replace(matching old: Element, with new: Element) -> [Element] {
         if new == old { return self }
         return replace(matching: old, with: [new])
+    }
+
+    func insert(items: [Element], after item: Element) -> [Element] {
+        guard let indexOfItem = self.firstIndex(where: { $0 == item }) else { return self }
+        var selfCopy = self
+        selfCopy.insert(contentsOf: items, at: indexOfItem.advanced(by: 1))
+        return selfCopy
     }
 
 }

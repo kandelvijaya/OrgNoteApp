@@ -91,3 +91,4 @@ extension ListCellDescriptor {
 }
 
 typealias AnyListCellDescriptor = ListCellDescriptor<AnyHashable, UITableViewCell>
+typealias AnyListSectionDescriptor = ListSectionDescriptor<AnyHashable>

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:OrgNotePlay.playground">
+   </FileRef>
+   <FileRef
       location = "group:OrgNoteApp.xcodeproj">
    </FileRef>
 </Workspace>
