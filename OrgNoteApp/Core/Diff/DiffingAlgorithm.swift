@@ -17,7 +17,14 @@ public enum DiffResult<T: Diffable>: Hashable {
     case internalEdit(_ edits: [DiffResult<T.InternalItemType>], atIndex: Int, forItem: T)
 }
 
-
+/// top level diff algorithm interface
+///
+/// Complexity: O(n^2) [Bear in mind the complexity can get worse if
+/// are more than 2 levels of nested structure]
+///
+/// `_detectMove()` contributes to the slowness of this algorithm.
+/// If you care speed but not the move instructions then use `_diffWithoutMove()` for
+/// near to O(n) performance. Again, when its single levelled diffing.
 public func diff<C: Collection>(_ old: C, _ new: C) -> [DiffResult<C.Element>] {
     let oldItems = old.enumerated().map { ($0.offset, $0.element) }
     let newItems = new.enumerated().map { ($0.offset, $0.element) }

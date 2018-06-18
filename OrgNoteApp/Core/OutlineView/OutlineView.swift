@@ -32,14 +32,6 @@ final class OutlineView: UIView {
     func update(with outline: Outline) {
         heading.text = "*".replicate(outline.heading.depth) + "  " + outline.heading.title
         content.text = outline.content.joined(separator: "\n")
-
-        let subItemViews: [OutlineView] = outline.subItems.map { subitemModel in
-            let subItemView = OutlineView()
-            subItemView.update(with: subitemModel)
-            return subItemView
-        }
-
-        // subItemViews.forEach(subItemsStackView.addArrangedSubview)
         updateConstraintsIfNeeded()
     }
 

@@ -74,6 +74,66 @@ final class DiffTests: XCTestCase {
         XCTAssertEqual([], refinedDiff)
     }
 
+    func test_whenDiffingOn3LevelsDeep_EditsArePropagated() {
+        let level3 = ModelLevel3(meta2: 1, age: 1)
+        let level2 = ModelLevel2(meta: "meta 2", subItems: [level3])
+        let level1 = ModelLevel1(name: "Level 1", subItems: [level2])
+        let level3Edited = ModelLevel3(meta2: 1, age: 2)
+        let level2Modified = ModelLevel2(meta: "meta 2", subItems: [level3Edited])
+        let level1Modified = ModelLevel1(name: "Level 1", subItems: [level2Modified])
+
+        let output = diff([level1], [level1Modified])
+        let firstChange = output.first!
+        let lowestEdits = firstChange.edits?.first?.edits
+        XCTAssertTrue(lowestEdits!.count == 2)
+    }
+
+}
+
+
+extension DiffResult {
+
+    var edits: [DiffResult<T.InternalItemType>]? {
+        if case let .internalEdit(edts, atIndex: _, forItem: _) = self {
+            return edts
+        }
+        return nil
+    }
+}
+
+extension DiffTests {
+
+    struct ModelLevel3: Diffable {
+        let meta2: Int
+        let age: Int
+    }
+
+    struct ModelLevel2: Diffable {
+        let meta: String
+        let subItems: [ModelLevel3]
+
+        func isContainerEqual(to anotherParent: DiffTests.ModelLevel2) -> Bool {
+            return self.meta == anotherParent.meta
+        }
+
+        func internalDiff(with anotherParent: DiffTests.ModelLevel2) -> [DiffResult<DiffTests.ModelLevel3>] {
+            return diff(self.subItems, anotherParent.subItems)
+        }
+    }
+
+    struct ModelLevel1: Diffable {
+        let name: String
+        let subItems: [ModelLevel2]
+
+        func isContainerEqual(to anotherParent: DiffTests.ModelLevel1) -> Bool {
+            return self.name == anotherParent.name
+        }
+
+        func internalDiff(with anotherParent: DiffTests.ModelLevel1) -> [DiffResult<DiffTests.ModelLevel2>] {
+            return diff(self.subItems, anotherParent.subItems)
+        }
+    }
+
 }
 
 

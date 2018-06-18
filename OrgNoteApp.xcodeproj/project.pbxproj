@@ -11,8 +11,6 @@
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2814519420D3DE800006BBD7 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
-		2814519620D413E20006BBD7 /* ListSectionDiffAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814519520D413E20006BBD7 /* ListSectionDiffAlgorithm.swift */; };
 		2836E3D720D7C14000CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
 		2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */; };
 		2836E3DC20D7C35900CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
@@ -21,7 +19,6 @@
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */; };
 		28417E3420A84D8000996941 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3320A84D8000996941 /* Operators.swift */; };
-		28417E3620A84DD000996941 /* GenericListDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3520A84DD000996941 /* GenericListDriver.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
@@ -37,7 +34,7 @@
 		2880A09920C18E2B00CD4ACC /* WLbig.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WLbig.org */; };
 		2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A09B20C18FFC00CD4ACC /* OutlineView.swift */; };
 		2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A09D20C194BE00CD4ACC /* OutlineCell.swift */; };
-		2880A0A120C196E700CD4ACC /* OrgListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A020C196E700CD4ACC /* OrgListViewController.swift */; };
+		2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A020C196E700CD4ACC /* OrgListDriver.swift */; };
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
@@ -107,14 +104,12 @@
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2814519520D413E20006BBD7 /* ListSectionDiffAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionDiffAlgorithm.swift; sourceTree = "<group>"; };
 		2836E3D620D7C14000CCA147 /* Diffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
 		2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithm.swift; sourceTree = "<group>"; };
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithmTests.swift; sourceTree = "<group>"; };
 		28417E3320A84D8000996941 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		28417E3520A84DD000996941 /* GenericListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericListDriver.swift; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +128,7 @@
 		2880A09320C18DEE00CD4ACC /* WLbig.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WLbig.org; sourceTree = "<group>"; };
 		2880A09B20C18FFC00CD4ACC /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
 		2880A09D20C194BE00CD4ACC /* OutlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineCell.swift; sourceTree = "<group>"; };
-		2880A0A020C196E700CD4ACC /* OrgListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListViewController.swift; sourceTree = "<group>"; };
+		2880A0A020C196E700CD4ACC /* OrgListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriver.swift; sourceTree = "<group>"; };
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,14 +203,10 @@
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				28BEF90520D7CEFD00BB7C19 /* GenericList */,
 				2836E3D120D7C12A00CCA147 /* Diff */,
 				2880A09A20C18FE400CD4ACC /* OutlineView */,
 				28703D3E20A85A0200DC8DBF /* OrgParser */,
-				2814519520D413E20006BBD7 /* ListSectionDiffAlgorithm.swift */,
-				28417E2D20A84A4C00996941 /* GenericList<T>.swift */,
-				28417E3320A84D8000996941 /* Operators.swift */,
-				28417E3520A84DD000996941 /* GenericListDriver.swift */,
-				28417E3720A84E0800996941 /* ListSection.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -297,6 +288,7 @@
 		28703D3E20A85A0200DC8DBF /* OrgParser */ = {
 			isa = PBXGroup;
 			children = (
+				28417E3320A84D8000996941 /* Operators.swift */,
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
 			);
 			path = OrgParser;
@@ -314,7 +306,7 @@
 		2880A09F20C196CD00CD4ACC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				2880A0A020C196E700CD4ACC /* OrgListViewController.swift */,
+				2880A0A020C196E700CD4ACC /* OrgListDriver.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -325,6 +317,15 @@
 				2880A0A320C197E600CD4ACC /* OrgFileService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		28BEF90520D7CEFD00BB7C19 /* GenericList */ = {
+			isa = PBXGroup;
+			children = (
+				28417E3720A84E0800996941 /* ListSection.swift */,
+				28417E2D20A84A4C00996941 /* GenericList<T>.swift */,
+			);
+			path = GenericList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,7 +517,6 @@
 			files = (
 				2836E3DC20D7C35900CCA147 /* Diffable.swift in Sources */,
 				2836E3DD20D7C35C00CCA147 /* DiffingAlgorithm.swift in Sources */,
-				2814519420D3DE800006BBD7 /* ListSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,17 +526,15 @@
 			files = (
 				2836E3D720D7C14000CCA147 /* Diffable.swift in Sources */,
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
-				28417E3620A84DD000996941 /* GenericListDriver.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
-				2880A0A120C196E700CD4ACC /* OrgListViewController.swift in Sources */,
+				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
-				2814519620D413E20006BBD7 /* ListSectionDiffAlgorithm.swift in Sources */,
 				2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */,
 				28417E3420A84D8000996941 /* Operators.swift in Sources */,
 			);

@@ -14,6 +14,6 @@ precedencegroup Application {
 }
 
 infix operator |> : Application
-func |> <T,U>(_ lhs: @autoclosure () -> T, rhs: @escaping (T) -> U) -> U {
+public func |> <T,U>(_ lhs: @autoclosure () -> T, rhs: @escaping (T) -> U) -> U {
     return rhs(lhs())
 }
