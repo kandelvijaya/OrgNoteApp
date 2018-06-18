@@ -9,6 +9,8 @@
 import XCTest
 @testable import OrgNoteApp
 
+extension Int: Diffable {}
+
 final class DiffTests: XCTestCase {
 
     func test_whenDiffingWithExactSameItems_diffResultIsEmpty() {
@@ -69,7 +71,14 @@ final class DiffTests: XCTestCase {
                                 .unchanged(item:2, atIndex: 1),
                                 .unchanged(item:3, atIndex:2)])
         let refinedDiff = diff(initial, new)
-        XCTAssertEqual(output, refinedDiff)
+        XCTAssertEqual([], refinedDiff)
     }
 
+}
+
+
+func simpleDiff<T: Diffable>(_ old: [T], _ new: [T]) -> [DiffResult<T>] {
+    let olds = old.enumerated().map { ($0.0, $0.1) }
+    let news = new.enumerated().map { ($0.0, $0.1) }
+    return _diffWithoutMove(olds, news)
 }

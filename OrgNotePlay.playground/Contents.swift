@@ -2,36 +2,34 @@ import UIKit
 import EnablePlaygroundShare
 import Kekka
 
-protocol Diffable: Hashable {
-    associatedtype Element: Hashable
-    var itemsToDiff: [Element] { get }
-}
-
-
-extension Array: Diffable where Element: Hashable {
-
-    var itemsToDiff: [Element] {
-        return self
-    }
-
-}
-
 
 struct SubModel: Hashable {
     let name: String
     let age: Int
 }
 
-struct Model: Diffable {
+struct Model {
+
     let name: String
     let meta: String?
     let subitems: [SubModel]
 
-    var itemsToDiff: [SubModel] {
-        return subitems
+}
+
+extension Model: Diffable {
+
+    func isContainerEqual(to anotherParent: Model) -> Bool {
+        return self.name == anotherParent.name &&
+            self.meta == anotherParent.meta
+    }
+
+    func internalDiff(with anotherParent: Model) -> [DiffResult<SubModel>] {
+        let idiff = exceptUnchanged(diff(self.subitems, anotherParent.subitems))
+        return idiff
     }
 }
 
+extension SubModel: Diffable { }
 
 let puppy = SubModel(name: "puppy", age: 1)
 let puss = SubModel(name: "puss", age: 0)
@@ -42,16 +40,6 @@ let ownerBj = Model(name: "Bj", meta: "about to have", subitems: [puppy, puss])
 
 let ownerBjCopyWithAll = Model(name: ownerBj.name, meta: ownerBj.meta, subitems: ownerBj.subitems + [kale])
 
-let diffRaw = diff([ownerBj], [ownerBjCopyWithAll])
-let diffResult = exceptUnchanged(diffRaw)
-print(diffResult)
-
-let diffC = exceptUnchanged(diffContainer(ownerBj, ownerBjCopyWithAll))
-print(diffC)
-
-
-let diffC2 = exceptUnchanged(diffContainer([ownerBj, ownerBj], [ownerBjCopyWithAll, ownerBj]))
-print(diffC2)
 
 extension DiffResult: CustomPlaygroundDisplayConvertible {
 
@@ -63,6 +51,10 @@ extension DiffResult: CustomPlaygroundDisplayConvertible {
             return " ⤵️ Inserted \(item) at index \(index) "
         case let .moved(item: item, fromIndex: fromIndex, toIndex: toIndex):
             return " 🏃 Moved \(item) from index \(fromIndex) to index \(toIndex) "
+        case let .internalEdit(edits, atIndex: atIndex, forItem: parentItem):
+            let alllist = edits.map({ $0.playgroundDescription as! String }).joined(separator: "\n")
+            let title = "Internal Edits atIndex \(atIndex) for parent item \(parentItem) \n"
+            return title + alllist
         default:
             return "unchanged"
         }
@@ -72,15 +64,5 @@ extension DiffResult: CustomPlaygroundDisplayConvertible {
 }
 
 
-func diffContainer<T: Diffable>(_ old: T, _ new: T) -> [DiffResult<T.Element>] {
-    return diff(old.itemsToDiff, new.itemsToDiff)
-}
 
-
-
-
-// diff [section] to [section]
-// for each do a section diff
-// reduce / collect diff result
-// apply the diff for each row
-
+diff([ownerBj], [ownerBjCopyWithAll])
