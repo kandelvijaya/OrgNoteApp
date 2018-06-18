@@ -21,25 +21,17 @@ final class ListViewController<T: Hashable>: UITableViewController {
     init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped) {
         self.sectionDescriptors = models
         super.init(style: style)
-//        self.tableView.autoresizesSubviews = true
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50
     }
 
     func update(with newModels: [ListSectionDescriptor<T>]) {
-        if newModels.count == self.sectionDescriptors.count && newModels.count == 1 {
-            singleSectionDiffUpdate(with: newModels.first!)
-        } else {
-            multiSectionDiffUpdate(with: newModels)
-        }
-    }
-
-    private func multiSectionDiffUpdate(with newModels: [ListSectionDescriptor<T>]) {
         let currentModels = self.sectionDescriptors
         self.sectionDescriptors = newModels
-        let diffed = exceptUnchanged(diff(currentModels, newModels))
+        let diffResult = diff(currentModels, newModels)
+
         tableView.beginUpdates()
-        diffed.forEach { diffRes in
+        diffResult.forEach { diffRes in
             switch diffRes {
             case let .deleted(item: _, fromIndex: idx):
                 self.tableView.deleteSections(IndexSet(integer: idx), with: .automatic)
@@ -47,34 +39,29 @@ final class ListViewController<T: Hashable>: UITableViewController {
                 self.tableView.insertSections(IndexSet(integer: idx), with: .automatic)
             case let .moved(item: _, fromIndex: idx1, toIndex: idx2):
                 self.tableView.moveSection(idx1, toSection: idx2)
-            default:
+            case .unchanged:
                 break
+            case let .internalEdit(diffResInternal, atIndex: sectionIndex, forItem: _):
+                diffResInternal.forEach { cellDiffRes in
+                    switch cellDiffRes {
+                    case let .deleted(item: _, fromIndex: idx):
+                        self.tableView.deleteRows(at: [IndexPath(row: idx, section: sectionIndex)], with: .automatic)
+                    case let .inserted(item: _, atIndex: idx):
+                        self.tableView.insertRows(at: [IndexPath(item: idx, section: sectionIndex)], with: .automatic)
+                    case let .moved(item: _, fromIndex: idx1, toIndex: idx2):
+                        self.tableView.moveRow(at: IndexPath(row: idx1, section: sectionIndex), to: IndexPath(row: idx2, section: sectionIndex))
+                    default:
+                        // UITableView only supports section and cell level diffing.
+                        // Any lowerlevel diff will be applied on cell level.
+                        break
+                    }
+                }
+                
             }
         }
         tableView.endUpdates()
     }
 
-    private func singleSectionDiffUpdate(with newModel: ListSectionDescriptor<T>) {
-        let currentModels = self.sectionDescriptors
-        self.sectionDescriptors = [newModel]
-
-        assert(self.sectionDescriptors.count == 1, "Single section diff is only applicable for 1 section")
-        tableView.beginUpdates()
-        let diffResult = diffSection(currentModels.first!, newModel)
-        diffResult.forEach { res in
-            switch res {
-            case let .deleted(item: _, fromIndex: idx):
-                self.tableView.deleteRows(at: [IndexPath(row: idx, section: 0)], with: .automatic)
-            case let .inserted(item: _, atIndex: idx):
-                self.tableView.insertRows(at: [IndexPath(item: idx, section: 0)], with: .automatic)
-            case let .moved(item: _, fromIndex: idx1, toIndex: idx2):
-                self.tableView.moveRow(at: IndexPath(row: idx1, section: 0), to: IndexPath(row: idx2, section: 0))
-            default:
-                break
-            }
-        }
-        tableView.endUpdates()
-    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("initCoder: not implemented")
