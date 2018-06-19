@@ -10,8 +10,9 @@ import UIKit
 
 final class OutlineCell: UITableViewCell {
 
-    public func update(with model: Outline) {
-        let outlineView = OutlineView()
+    lazy var outlineView = OutlineView()
+
+    public func update(with model: OutlineViewModel) {
         outlineView.update(with: model)
         embedInContentView(outlineView)
     }
@@ -39,6 +40,11 @@ final class OutlineCell: UITableViewCell {
                     child.topAnchor.constraint(equalTo: holder.topAnchor),
                     child.bottomAnchor.constraint(equalTo: holder.bottomAnchor)]
         cons.forEach { $0.isActive = true }
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        outlineView.clearContents()
     }
 
 }

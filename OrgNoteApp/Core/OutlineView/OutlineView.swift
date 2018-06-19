@@ -25,13 +25,19 @@ final class OutlineView: UIView {
         setupConstraints()
     }
 
+    func clearContents() {
+        self.heading.text = ""
+        self.content.text = ""
+        subItemsStackView.arrangedSubviews.forEach(subItemsStackView.removeArrangedSubview)
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func update(with outline: Outline) {
-        heading.text = "*".replicate(outline.heading.depth) + "  " + outline.heading.title
-        content.text = outline.content.joined(separator: "\n")
+    func update(with outline: OutlineViewModel) {
+        heading.text = outline.title
+        content.text = outline.content
         updateConstraintsIfNeeded()
     }
 

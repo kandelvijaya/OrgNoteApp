@@ -38,6 +38,7 @@
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
+		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		2880A0A020C196E700CD4ACC /* OrgListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriver.swift; sourceTree = "<group>"; };
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
+		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 			children = (
 				28417E3320A84D8000996941 /* Operators.swift */,
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
+				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
 			);
 			path = OrgParser;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */,
 				28417E3420A84D8000996941 /* Operators.swift in Sources */,
+				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
