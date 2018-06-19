@@ -17,6 +17,17 @@ public enum DiffResult<T: Diffable>: Hashable {
     case internalEdit(_ edits: [DiffResult<T.InternalItemType>], atIndex: Int, forItem: T)
 }
 
+extension DiffResult {
+
+    var edits: [DiffResult<T.InternalItemType>]? {
+        if case let .internalEdit(edts, atIndex: _, forItem: _) = self {
+            return edts
+        }
+        return nil
+    }
+}
+
+
 /// top level diff algorithm interface
 ///
 /// Complexity: O(n^2) [Bear in mind the complexity can get worse if
@@ -31,6 +42,14 @@ public func diff<C: Collection>(_ old: C, _ new: C) -> [DiffResult<C.Element>] {
     let simpleDiff = _diffWithoutMove(oldItems, newItems)
     let diffWithMove = _detectMove(in: simpleDiff)
     let diffWithoutUnchanged = exceptUnchanged(diffWithMove)
+    return diffWithoutUnchanged
+}
+
+public func diffWithoutMove<C: Collection>(_ old: C, _ new: C) -> [DiffResult<C.Element>] {
+    let oldItems = old.enumerated().map { ($0.offset, $0.element) }
+    let newItems = new.enumerated().map { ($0.offset, $0.element) }
+    let simpleDiff = _diffWithoutMove(oldItems, newItems)
+    let diffWithoutUnchanged = exceptUnchanged(simpleDiff)
     return diffWithoutUnchanged
 }
 

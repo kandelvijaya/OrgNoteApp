@@ -10,28 +10,28 @@ import Foundation
 import Kekka
 
 typealias OutlineCellDesc = ListCellDescriptor<OutlineViewModel, OutlineCell>
-typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel, OutlineCell>
+typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
 
 final class OrgListDriver {
 
-    var cells: [OutlineCellDesc] {
+    var cells: [AnyListCellDescriptor] {
         let model = Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value!
         return model.map(OutlineViewModel.init).map(cellDescriptor)
     }
 
-    private func cellDescriptor(for viewModel: OutlineViewModel) -> OutlineCellDesc {
+    private func cellDescriptor(for viewModel: OutlineViewModel) -> AnyListCellDescriptor {
         var cellDesc = OutlineCellDesc(viewModel, identifier: "OutlineCell", cellClass: OutlineCell.self, configure: { cell in
             cell.update(with: viewModel)
         })
         cellDesc.onSelect = {
             self.didSelect(item: viewModel)
         }
-        return cellDesc
+        return cellDesc.any()
     }
 
 
 
-    private func sectionDescriptor(for cellDescs: [OutlineCellDesc]) -> OutlineSectionDesc {
+    private func sectionDescriptor(for cellDescs: [AnyListCellDescriptor]) -> AnyListSectionDescriptor {
         return ListSectionDescriptor(with: cellDescs)
     }
 
@@ -43,29 +43,24 @@ final class OrgListDriver {
 
         let selected = currentListState.find { section in
             let givenItemFoundInThisSection = section.items.find { outline in
-                outline.model == item
+                outline.model as! OutlineViewModel == item
             }
             return givenItemFoundInThisSection != nil
         }
 
         guard let selectedItemsSectionDescriptor = selected,
-            let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find({ $0.model == item }) else {
+            let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find({ $0.model as! OutlineViewModel == item }) else {
             fatalError("A tapped item must correspond to current list of section")
         }
 
         if item.isExpanded {
-            // collapse
-            // remove all
-            // find all subItems for this cells
-            let subItemsCellDescriptors = findCellDescriptors(for: item.subModels, in: selectedItemsSectionDescriptor)
-            let newCellDescriptors = deletingCellDescriptors(subItemsCellDescriptors, from: selectedItemsSectionDescriptor)
-            let newSectionDescriptor = newCellDescriptors |> sectionDescriptor
-            controller.update(with: newSectionDescriptor)
+            let newSectionAfterCollapsing = removingAllNestedSubItems(for: item, from: selectedItemsSectionDescriptor)
+            let toggledItems = newSectionAfterCollapsing.items.replace(matching: selectedItemCellDescriptor, with: toggledCellDescriptor(for: item))
+            let toggledSections = toggledItems |> sectionDescriptor
+            let newSections = currentListState.replace(matching: selectedItemsSectionDescriptor, with: toggledSections)
+            controller.update(with: newSections)
         } else {
-            var newModel = item
-            newModel.isExpanded = true
-
-            let modifiedSelectedItemCell = newModel |> cellDescriptor
+            let modifiedSelectedItemCell = toggledCellDescriptor(for: item)
 
             let newItemChildCellDescriptors = item.subModels.map(cellDescriptor)
 
@@ -84,14 +79,29 @@ final class OrgListDriver {
 
 extension OrgListDriver {
 
-    func findCellDescriptors(for items: [OutlineViewModel], in section: ListSectionDescriptor<OutlineViewModel>) -> [ListCellDescriptor<OutlineViewModel, UITableViewCell>] {
-        let cellDescs = items.map(cellDescriptor)
-        var newSection = section
+    func findCellDescriptors(for items: [OutlineViewModel], in section: AnyListSectionDescriptor) -> [(Int, AnyListCellDescriptor)] {
+     return []
 
     }
 
     func deletingCellDescriptor(_ items: [ListCellDescriptor<OutlineViewModel, UITableViewCell>], from section: ListSectionDescriptor<OutlineViewModel>) {
 
+    }
+
+    func removingAllNestedSubItems(for model: OutlineViewModel, from section: AnyListSectionDescriptor) -> AnyListSectionDescriptor {
+        let toRemoveCells = model.subModels.map(cellDescriptor)
+        var fromList = section.items
+        toRemoveCells.forEach { itemCellToRemove in
+            let newList = fromList.replace(matching: itemCellToRemove, with: [])
+            fromList = newList
+        }
+        return fromList |> sectionDescriptor
+    }
+
+    func toggledCellDescriptor(for item: OutlineViewModel) -> AnyListCellDescriptor {
+        var itemCopy = item
+        itemCopy.isExpanded.toggle()
+        return itemCopy |> cellDescriptor
     }
 
 }
@@ -119,4 +129,3 @@ extension Array where Element: Equatable{
     }
 
 }
-

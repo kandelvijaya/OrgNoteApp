@@ -91,16 +91,6 @@ final class DiffTests: XCTestCase {
 }
 
 
-extension DiffResult {
-
-    var edits: [DiffResult<T.InternalItemType>]? {
-        if case let .internalEdit(edts, atIndex: _, forItem: _) = self {
-            return edts
-        }
-        return nil
-    }
-}
-
 extension DiffTests {
 
     struct ModelLevel3: Diffable {

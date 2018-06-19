@@ -29,7 +29,7 @@ struct Mock {
 
         func fetchWorkLog() -> Future<Result<OrgFile>> {
             return KPromise<Result<OrgFile>>({ (aComplation) in
-                guard let url = Bundle.main.url(forResource: "WL", withExtension: "org"),
+                guard let url = Bundle.main.url(forResource: "WLbig", withExtension: "org"),
                     let buffer = try? String(contentsOf: url),
                     let orgFile = OrgParser.parse(buffer) else {
                         aComplation?(Result.failure(error: OrgFileServiceError.unknown))
