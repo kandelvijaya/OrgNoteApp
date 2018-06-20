@@ -89,13 +89,21 @@ extension OrgListDriver {
     }
 
     func removingAllNestedSubItems(for model: OutlineViewModel, from section: AnyListSectionDescriptor) -> AnyListSectionDescriptor {
+        if model.subModels.isEmpty { return section }
         let toRemoveCells = model.subModels.map(cellDescriptor)
         var fromList = section.items
         toRemoveCells.forEach { itemCellToRemove in
             let newList = fromList.replace(matching: itemCellToRemove, with: [])
             fromList = newList
         }
-        return fromList |> sectionDescriptor
+        
+        /// This takes O(n^2)
+        var sectionDesc = fromList |> sectionDescriptor
+        model.subModels.forEach { subItem in
+            let tempDesc = sectionDesc
+            sectionDesc = removingAllNestedSubItems(for: subItem, from: tempDesc)
+        }
+        return sectionDesc
     }
 
     func toggledCellDescriptor(for item: OutlineViewModel) -> AnyListCellDescriptor {

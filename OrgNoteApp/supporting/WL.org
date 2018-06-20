@@ -5,3 +5,18 @@
 - This is subheading content
 ** This is second subheading
 This is second subhead content
+
+* Mon 05-07-2018
+
+** Q1 Task(Urgent & Important)
+*** TODO GDPR liscence investigation IOS-4745
+*** TODO Preview effect on home TNA
+
+** Q2 Task(Urgent & Not Important)
+***
+
+** Q3 Task(Not-urgent & Important)
+***
+
+** Q4 Task(Neither Urgent nor Important)
+*** 
