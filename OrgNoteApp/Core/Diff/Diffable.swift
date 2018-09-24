@@ -8,54 +8,52 @@
 
 import Foundation
 
-public protocol Diffable: Hashable {
-
-    /// euqality of parent's properties without regard to the underlying items.
-    /// By default, this calls into the Equatable's `==` method.
-    ///
-    /// Customize this when you want to diff internal items independently
-    /// to the outer parent. A analogy to look for is file diff.
-    /// Rather than saying the file is deleted and inserted when a new line is added
-    /// or a line is edited; we want to say the file is edited and the edits happened
-    /// on the deeper level ([lines])
-    func isContainerEqual(to anotherParent: Self) -> Bool
+protocol Diffable: Hashable {
 
     /// Used to represent the internalItemType that represents another level.
     /// By default, this will be the same type as the conforming i.e. without customization.
     associatedtype InternalItemType: Diffable = Self
 
-    /// if the parent's are same besides the internal/ underlying items
-    /// then this method is invoked to find the edits for given model
-    ///
-    /// ```swift
-    ///     struct Model {
-    ///         let meta: [String]
-    ///         let subItems: [String]
-    ///     }
-    ///     let models1 = [Model(meta: ["meta"], subItems: ["Dog", "Cat"])]
-    ///     let models2 = [Model(meta: ["meta"], subItems: ["Dog", "Elephant"])]
-    ///     diff(modesl, models2)
-    /// ```
-    /// In this case, models1 and models2 are same on container level.
-    /// However they are different on subItems (underlying) level.
-    /// We could naively say its `deletion of models1` and `insertion of models2`
-    /// However it is much effecient to say
-    /// `models1 is the same as models2 with these edits applied`
-    /// - Cat is removed from index 1 of subItems
-    /// - Elephant is inserted at index 1 of subItems
-    func internalDiff(with anotherParent: Self) -> [DiffResult<InternalItemType>]
+    /// Internal Items whose `diff` should be considered in case of `update`
+    /// Typical usage would be to override this and return a set of items.
+    /// Those items should be considered both for equality and hashValue as normal.
+    /// Parent/Container are determined to be in `update` state, if either object
+    /// pointed by pointer changed or their internalItems aren't the same.
+    var children: [InternalItemType] { get }
+
+    /// Make sure to do 2 things:
+    /// 1. Provide a very unique hash value. If hash collision occurs,
+    ///    diff result will be false positive.
+    /// 2. If this is a parent container then exclude hash computation
+    ///    for the children Diffable. Two equal container models with same hash
+    ///    are checked for equality to determine either they are uniquely same
+    ///    or update.
+    /// This is defaulted to `hashValue` when conforming type conforms to Equatable
+    var diffHash: Int { get }
 
 }
 
 
-public extension Diffable {
+extension Diffable {
 
-    public func isContainerEqual(to anotherParent: Self) -> Bool {
-        return self == anotherParent
-    }
+    var diffHash: Int { return self.hashValue }
+    var children: [InternalItemType] { return [] }
 
-    public func internalDiff(with anotherParent: Self) -> [DiffResult<Self>] {
-        return []
+}
+
+
+extension Array: Diffable where Element: Diffable {
+
+    var diffHash: Int {
+        return reduce(0) { $0 ^ $1.diffHash }
     }
 
 }
+
+extension String: Diffable {}
+
+extension Int: Diffable {}
+
+extension Character: Diffable {}
+
+

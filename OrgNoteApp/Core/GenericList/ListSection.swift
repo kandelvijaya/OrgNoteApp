@@ -97,12 +97,14 @@ typealias AnyListSectionDescriptor = ListSectionDescriptor<AnyHashable>
 
 extension ListSectionDescriptor: Diffable {
 
-    func isContainerEqual(to anotherParent: ListSectionDescriptor<T>) -> Bool {
-        return self.footerText == anotherParent.footerText
+    typealias InternalItemType = ListCellDescriptor<T, UITableViewCell>
+
+    var diffHash: Int {
+        return footerText.hashValue
     }
 
-    func internalDiff(with anotherParent: ListSectionDescriptor<T>) -> [DiffResult<ListCellDescriptor<T, UITableViewCell>>] {
-        return diff(self.items, anotherParent.items)
+    var children: [ListCellDescriptor<T, UITableViewCell>] {
+        return items
     }
 
 }

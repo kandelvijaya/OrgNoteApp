@@ -41,15 +41,15 @@ final class OrgListDriver {
     func didSelect(item: OutlineViewModel) {
         let currentListState = controller.sectionDescriptors
 
-        let selected = currentListState.find { section in
-            let givenItemFoundInThisSection = section.items.find { outline in
+        let selected = currentListState.first { section in
+            let givenItemFoundInThisSection = section.items.first { outline in
                 outline.model as! OutlineViewModel == item
             }
             return givenItemFoundInThisSection != nil
         }
 
         guard let selectedItemsSectionDescriptor = selected,
-            let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find({ $0.model as! OutlineViewModel == item }) else {
+            let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find(where: { ($0.model as! OutlineViewModel) == item }) else {
             fatalError("A tapped item must correspond to current list of section")
         }
 
@@ -136,4 +136,16 @@ extension Array where Element: Equatable{
         return selfCopy
     }
 
+}
+
+
+extension Array {
+    func find(where precodition: (Element) -> Bool) -> Element? {
+        for index in self {
+            if precodition(index) {
+                return index
+            }
+        }
+        return nil
+    }
 }

@@ -28,28 +28,30 @@ final class ListViewController<T: Hashable>: UITableViewController {
     func update(with newModels: [ListSectionDescriptor<T>]) {
         let currentModels = self.sectionDescriptors
         self.sectionDescriptors = newModels
-        let diffResult = diffWithoutMove(currentModels, newModels)
+        let diffResult = orderedOperation(from: diff(currentModels, newModels))
 
-
+        
         /// first diff on deeper level
-        let internalDiff = diffResult.enumerated().map { ($0.0, $0.1) }.map { ( $0.0, $0.1.edits) }.filter { $0.1 != nil }.map { ($0.0, $0.1!) }
-        internalDiff.forEach { performRowChanges($0.1, at: $0.0) }
+        //TODO:-
+//        let internalDiff = diffResult.enumerated().map { ($0.0, $0.1) }.map { ( $0.0, $0.1.edits) }.filter { $0.1 != nil }.map { ($0.0, $0.1!) }
+//        internalDiff.forEach { performRowChanges($0.1, at: $0.0) }
+        let internalEdits = internalDiff(from: diffResult)
+        internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
 
         /// extenal diff
         performSectionChanges(diffResult)
     }
 
-    func performSectionChanges<T>(_ diffSet: [DiffResult<ListSectionDescriptor<T>>]) {
+    func performSectionChanges<T>(_ diffSet: [Operation<ListSectionDescriptor<T>>.Simple]) {
         tableView.beginUpdates()
         diffSet.forEach { item in
             switch item {
-            case let .deleted(item: _, fromIndex: idx):
-                self.tableView.deleteSections(IndexSet(integer: idx), with: .automatic)
-            case let .inserted(item: _, atIndex: idx):
-                self.tableView.insertSections(IndexSet(integer: idx), with: .automatic)
-                //        case let .moved(item: _, fromIndex: idx1, toIndex: idx2):
-            //            self.tableView.moveSection(idx1, toSection: idx2)
-            default:
+            case let .deletion(_, fromIndex):
+                self.tableView.deleteSections(IndexSet(integer: fromIndex), with: .automatic)
+            case let .addition(_, atIndex):
+                self.tableView.insertSections(IndexSet(integer: atIndex), with: .automatic)
+            case let .update(oldItem, newItem, index):
+                // This should be handled prior to the section update.
                 break
             }
         }
@@ -57,19 +59,17 @@ final class ListViewController<T: Hashable>: UITableViewController {
         tableView.endUpdates()
     }
 
-    func performRowChanges<T>(_ diffSet: [DiffResult<ListCellDescriptor<T, UITableViewCell>>], at sectionIndex: Int) {
+    func performRowChanges<T>(_ diffSet: [Operation<ListCellDescriptor<T, UITableViewCell>>.Simple], at sectionIndex: Int) {
         tableView.beginUpdates()
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
-            case let .deleted(item: _, fromIndex: idx):
-                self.tableView.deleteRows(at: [IndexPath(row: idx, section: sectionIndex)], with: .automatic)
-            case let .inserted(item: _, atIndex: idx):
+            case let .deletion(_, atIndex):
+                self.tableView.deleteRows(at: [IndexPath(row: atIndex, section: sectionIndex)], with: .automatic)
+            case let .addition(_, idx):
                 self.tableView.insertRows(at: [IndexPath(item: idx, section: sectionIndex)], with: .automatic)
-            // case let .moved(item: _, fromIndex: idx1, toIndex: idx2):
-                //self.tableView.moveRow(at: IndexPath(row: idx1, section: sectionIndex), to: IndexPath(row: idx2, section: sectionIndex))
             default:
                 // UITableView only supports section and cell level diffing.
-                // Any lowerlevel diff will be applied on cell level.
+                // Any lowerlevel diff will/should be applied on cell level.
                 break
             }
         }

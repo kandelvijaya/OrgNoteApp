@@ -11,6 +11,7 @@
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		282EE8E621599CE2004B425E /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282EE8E521599CE2004B425E /* InternalDiff.swift */; };
 		2836E3D720D7C14000CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
 		2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */; };
 		2836E3DC20D7C35900CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
@@ -105,6 +106,7 @@
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		282EE8E521599CE2004B425E /* InternalDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalDiff.swift; sourceTree = "<group>"; };
 		2836E3D620D7C14000CCA147 /* Diffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
 		2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithm.swift; sourceTree = "<group>"; };
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				2836E3D620D7C14000CCA147 /* Diffable.swift */,
 				2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */,
+				282EE8E521599CE2004B425E /* InternalDiff.swift */,
 			);
 			path = Diff;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
+				282EE8E621599CE2004B425E /* InternalDiff.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,

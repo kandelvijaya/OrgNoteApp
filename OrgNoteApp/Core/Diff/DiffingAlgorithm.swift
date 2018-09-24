@@ -8,160 +8,290 @@
 
 import Foundation
 
-/// Representation of diffing two sets of models.
-public enum DiffResult<T: Diffable>: Hashable {
-    case deleted(item: T, fromIndex: Int)
-    case inserted(item: T, atIndex: Int)
-    case unchanged(item: T, atIndex: Int)
-    case moved(item: T, fromIndex: Int, toIndex: Int)
-    case internalEdit(_ edits: [DiffResult<T.InternalItemType>], atIndex: Int, forItem: T)
+/// During the diff, we are mostly interested in this combination
+/// 1. one - one
+/// 2. one/many - one/many
+/// `zero` is the base or non-existing line count
+enum OccuranceCount {
+
+    case zero, one, many
+
+    func increment() -> OccuranceCount {
+        switch self {
+        case .zero:
+            return .one
+        case .one, .many:
+            return .many
+        }
+    }
+
 }
 
-extension DiffResult {
+/// SymEntry is modelled as reference type, so that we can keep
+/// a pointer NOT either a entire copy (value type) or
+/// unsafe raw pointer which requires manual pointer dance.
+class SymEntry {
 
-    var edits: [DiffResult<T.InternalItemType>]? {
-        if case let .internalEdit(edts, atIndex: _, forItem: _) = self {
-            return edts
+    /// Occurance in old file
+    var oc: OccuranceCount = .zero
+
+    /// Occurance in new file
+    var nc: OccuranceCount = .zero
+
+    /// Line number in old set
+    /// This only makes sense if OC == NC == .one
+    var olno: Int = -1
+
+    /// Detects if line is identically unique across both changes
+    func isIdenticallyUnqiueAcrossChanges() -> Bool {
+        return oc == nc && nc == .one
+    }
+
+}
+
+
+/// Represents either a SymEntry (pointer by class) or
+/// LineNumber in another change set if the changes were resolved
+enum LineLookup {
+    /// SymEntry should be a reference/pointer for efficiency
+    case sym(SymEntry)
+    case lineNumber(Int)
+
+    func pointsToSameSymEntry(as anotherLookup: LineLookup) -> Bool {
+        if case let (.sym(s1), .sym(s2)) = (self, anotherLookup) {
+            /// pointer check
+            return s1 === s2
         }
-        return nil
+        return false
+    }
+
+}
+
+
+/// Kinds of operation
+enum Operation<T> {
+    case addition(T, Int)
+    case deletion(T, Int)
+    case move(T, Int, Int)
+    case update(T,T,Int)
+
+    enum Simple {
+        case addition(T,Int)
+        case deletion(T, Int)
+        case update(T,T,Int)
+    }
+
+}
+
+extension Operation: Equatable where T: Equatable { }
+
+// MARK:- Playground view
+
+extension Operation: CustomStringConvertible {
+
+    var description: String {
+        switch self {
+        case let .addition(v, i):
+            return "A(\(v)@\(i))"
+        case let .deletion(v, i):
+            return "D(\(v)@\(i))"
+        case let .move(v,i,j):
+            return "M(\(v)from\(i)->\(j))"
+        case let .update(v1, v2, i):
+            return "U(\(v1)=>\(v2)@\(i))"
+        }
+    }
+
+}
+
+
+extension SymEntry: CustomStringConvertible {
+    var description: String {
+        return "{oc: \(oc), nc: \(nc), olno: \(olno)}"
     }
 }
 
 
-/// top level diff algorithm interface
-///
-/// Complexity: O(n^2) [Bear in mind the complexity can get worse if
-/// are more than 2 levels of nested structure]
-///
-/// `_detectMove()` contributes to the slowness of this algorithm.
-/// If you care speed but not the move instructions then use `_diffWithoutMove()` for
-/// near to O(n) performance. Again, when its single levelled diffing.
-public func diff<C: Collection>(_ old: C, _ new: C) -> [DiffResult<C.Element>] {
-    let oldItems = old.enumerated().map { ($0.offset, $0.element) }
-    let newItems = new.enumerated().map { ($0.offset, $0.element) }
-    let simpleDiff = _diffWithoutMove(oldItems, newItems)
-    let diffWithMove = _detectMove(in: simpleDiff)
-    let diffWithoutUnchanged = exceptUnchanged(diffWithMove)
-    return diffWithoutUnchanged
+extension LineLookup: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case let .lineNumber(l):
+            return "L(\(l))"
+        case let .sym(e):
+            return "S(\(e))"
+        }
+    }
 }
 
-public func diffWithoutMove<C: Collection>(_ old: C, _ new: C) -> [DiffResult<C.Element>] {
-    let oldItems = old.enumerated().map { ($0.offset, $0.element) }
-    let newItems = new.enumerated().map { ($0.offset, $0.element) }
-    let simpleDiff = _diffWithoutMove(oldItems, newItems)
-    let diffWithoutUnchanged = exceptUnchanged(simpleDiff)
-    return diffWithoutUnchanged
-}
 
-/// Time complexity O(n) for single level list of diffables.
-///
-/// time complexity really depends on how many nested levels of diffable items are present.
-///
-/// best case is O(n)
-/// worst case is O(n * m) where m is average length of items from the second level.
-/// If you have 3rd level of nesting then this diffing algorithm has a very very bad performance hit.
-/// O(n * m * p) where p is the avergae items lenght on 3rd level
-///
-/// Space complexity : ArraySlice should not be copied when calling into the function
-///                    accumulator has to adjust on every single mutation.
-///                    can we determine or estimate the size of the diff result.
-func _diffWithoutMove<T: Diffable, C: Collection>(_ old: C, _ new: C) -> [DiffResult<T>]
-    where C.Element == (Int, T) {
 
-        var accumulator = [DiffResult<T>]()
-        let newHead = new.first
-        let oldHead = old.first
-        let newRest = new.dropFirst()
-        let oldRest = old.dropFirst()
+func diff<T>(_ oldContent: [T], _ newContent: [T]) -> [Operation<T>] where T: Diffable {
 
-        switch (oldHead, newHead) {
-        case let (o?, n?):
-            if o.1 == n.1 {
-                accumulator.append(DiffResult.unchanged(item: o.1, atIndex: o.0))
-            } else if o.1.isContainerEqual(to: n.1) {
-                let internalEdits = o.1.internalDiff(with: n.1)
-                let edits = DiffResult.internalEdit(internalEdits, atIndex: o.0, forItem: o.1)
-                accumulator.append(edits)
-            } else {
-                accumulator.append(DiffResult.deleted(item: o.1, fromIndex: o.0))
-                accumulator.append(DiffResult.inserted(item: n.1, atIndex: n.0))
+    typealias HashValue = Int
+
+    var symTable: [HashValue: SymEntry] = [:]
+
+    /// LineLookup map for each index in old content
+    /// for index `i` in old content, acess LineLookup with `oas[i]`
+    var oas: [LineLookup] = []
+
+    /// LineLookup map for each index in new content
+    /// for index `i` in new content, acess LineLookup with `nas[i]`
+    var nas: [LineLookup] = []
+
+
+    /// Pass1
+    /// Iterate over new content and build both `symEntry`s and `nas`
+    for content in newContent {
+        let entry = symTable[content.diffHash] ?? SymEntry()
+        entry.nc = entry.nc.increment()
+        symTable[content.diffHash] = entry
+        nas.append(LineLookup.sym(entry))
+    }
+
+
+    /// Pass2
+    /// Iterate over old content and do the same as pass1
+    for (index, content) in oldContent.enumerated() {
+        let entry = symTable[content.diffHash] ?? SymEntry()
+        entry.oc = entry.oc.increment()
+        entry.olno = index
+        symTable[content.diffHash] = entry
+        oas.append(LineLookup.sym(entry))
+    }
+
+
+    /// Pass 3
+    /// Detect unique line pair across both new and old content
+    /// if OC == NC == .one, then for nas[i] substitute olno from its sym Emtry
+    for (index, lookup) in nas.enumerated() {
+        if case let .sym(entry) = lookup, entry.isIdenticallyUnqiueAcrossChanges() {
+            nas[index] = .lineNumber(entry.olno)
+            oas[entry.olno] = .lineNumber(index)
+        }
+    }
+
+
+    /// Pass 4
+    /// Check if line/s adjecent to unique identical pairs are the same.
+    /// This is to detect a block of changes. The detection moves from top to bottom.
+    /// i.e consider one/many pairs adjecent to found pair.
+    for (index, lookup) in nas.enumerated() {
+        if case let .lineNumber(oldLine) = lookup {
+            let incrIndex = index + 1
+            let incrOldLine = oldLine + 1
+            if incrIndex < nas.count, incrOldLine < oas.count, oas[incrOldLine].pointsToSameSymEntry(as: nas[incrIndex]) {
+                nas[incrIndex] = .lineNumber(incrOldLine)
+                oas[incrOldLine] = .lineNumber(incrIndex)
             }
-        case let (o?, nil):
-            accumulator.append(DiffResult.deleted(item: o.1, fromIndex: o.0))
-        case let (nil, n?):
-            accumulator.append(DiffResult.inserted(item: n.1, atIndex: n.0))
-        default:
-            return accumulator
         }
-
-        return accumulator + _diffWithoutMove(oldRest, newRest)
-}
-
-
-public func exceptUnchanged<T>(_ input: [DiffResult<T>]) -> [DiffResult<T>] where T: Diffable {
-    return input.filter {
-        if case  .unchanged(_) = $0 { return false }
-        return true
     }
-}
 
-/// find moves from a given list of simple diff
-/// [1,2,3]
-/// [2,3,1]
-/// ==> 2 moved to 0
-/// ==> 3 moved to 1
-/// ==> 1 moved to 2
-/// This has quadratic complexity
-/// FIXME: try to get the complexity down to O(n.log.n)
-///
-/// Complexity: O(n^2)
-fileprivate func _detectMove<T>(in diffResult: [DiffResult<T>]) -> [DiffResult<T>] {
-    let refined = diffResult.map { i -> DiffResult<T> in
-
-        guard let sameValuedContra = diffResult.first(where: { needle in
-            switch (i, needle) {
-            case let (.deleted(item: v, _), .inserted(item: v2,_ )) where v == v2:
-                return true
-            case let (.inserted(item: v, _), .deleted(item: v2,_ )) where v == v2:
-                return true
-            default:
-                return false
+    /// Pass 5
+    /// Same as pass 4 but looks before the unique identical pair
+    /// to find blocks.
+    for (index, lookup) in nas.enumerated().reversed() {
+        if case let .lineNumber(oldLine) = lookup {
+            let decrIndex = index - 1
+            let decrOldLine = oldLine - 1
+            if decrIndex >= 0, decrOldLine >= 0, oas[decrOldLine].pointsToSameSymEntry(as: nas[decrIndex]) {
+                nas[decrIndex] = .lineNumber(decrOldLine)
+                oas[decrOldLine] = .lineNumber(decrIndex)
             }
-        }) else {
-            return i
-        }
-
-        switch (i, sameValuedContra) {
-        case let (.deleted(item: v, fromIndex: v1i), .inserted(item: v2, atIndex: v2i)) where v == v2:
-            return .moved(item:v, fromIndex: v1i, toIndex: v2i)
-        case let (.inserted(item: v, atIndex: v1i), .deleted(item: v2, fromIndex: v2i)) where v == v2:
-            return .moved(item: v, fromIndex: v2i, toIndex: v1i)
-        default:
-            return i
         }
     }
 
-    return refined.unique()
-}
-
-
-extension Sequence where Iterator.Element: Hashable {
-
-    func unique() -> [Iterator.Element] {
-        var seen: [Iterator.Element: Bool] = [:]
-        return self.filter { seen.updateValue(true, forKey: $0) == nil }
+    /// Pass 6
+    /// Go through oas and nas and collect change set
+    ///      old: a b c d
+    ///      new: e a b d f
+    ///   change: [insert e at 0, insert f at 4]  [delete c from 2]
+    var operations = [Operation<T>]()
+    var deletionKeeper = [Int: Int]() // lineNum: how many lines deleted prior to this
+    var runningOffset = 0
+    for (index, item) in oas.enumerated() {
+        if case .sym(_) = item {
+            operations.append(.deletion(oldContent[index], index))
+            runningOffset += 1
+        }
+        deletionKeeper[index] = runningOffset
     }
 
+    runningOffset = 0
+    for (index, item) in nas.enumerated() {
+        switch item {
+        case .sym(_):
+            operations.append(.addition(newContent[index], index))
+            runningOffset += 1
+        case let .lineNumber(oldLineNumber):
+            /// Maybe the object hash is the same but the equality is not
+            /// good point for getting internal diff
+            if newContent[index] != oldContent[oldLineNumber] {
+                operations.append(.update(oldContent[oldLineNumber], newContent[index], index))
+            }
+            let deleteOffSetToNegect = deletionKeeper[oldLineNumber] ?? 0
+            let calculatedIndexAfterPreviousInsertionAndDeletionCounts = oldLineNumber - deleteOffSetToNegect + runningOffset
+            if calculatedIndexAfterPreviousInsertionAndDeletionCounts != index {
+                operations.append(.move(newContent[index], oldLineNumber, index))
+            }
+        }
+    }
+
+    return operations
+}
+
+/** Limitation: Can't extend a protocol with a generic typed enum (generic type in general)
+ extension Array where Element: Operation<T> { }
+ */
+func orderedOperation<T>(from operations: [Operation<T>]) -> [Operation<T>.Simple] {
+    /// Deletions need to happen from higher index to lower (to avoid corrupted indexes)
+    ///  [x, y, z] will be corrupt if we attempt [d(0), d(2), d(1)]
+    ///  d(0) succeeds then array is [x,y]. Attempting to delete at index 2 produces out of bounds error.
+    /// Therefore we sort in descending order of index
+    var deletions = [Int: Operation<T>.Simple]()
+    var insertions = [Operation<T>.Simple]()
+    var updates = [Operation<T>.Simple]()
+
+    for oper in operations {
+        switch oper {
+        case let .update(item, newItem, index):
+            updates.append(.update(item, newItem, index))
+        case let .addition(item, atIndex):
+            insertions.append(.addition(item, atIndex))
+        case let .deletion(item, from):
+            deletions[from] = .deletion(item, from)
+        case let .move(item, from, to):
+            insertions.append(.addition(item, to))
+            deletions[from] = .deletion(item, from)
+        }
+    }
+    let descendingOrderedIndexDeletions = deletions.sorted(by: {$0.0 > $1.0 }).map{ $0.1 }
+    return descendingOrderedIndexDeletions + insertions + updates
 }
 
 
-extension Array {
+extension Array where Element: Hashable {
 
-    func find(_ predicate: (Element) -> Bool) -> Element? {
-        for index in self where predicate(index) == true {
-            return index
+    func merged(with operations: [Operation<Element>]) -> Array {
+        let orderedOperations = orderedOperation(from: operations)
+        return self.merged(with: orderedOperations)
+    }
+
+    func merged(with operations: [Operation<Element>.Simple]) -> Array {
+        /// might not work on collection as we need to initialize a concrete type
+        var mutableCollection: [Element] = self
+        for operation in operations {
+            switch operation {
+            case let .addition(item, addAt):
+                mutableCollection.insert(item, at: addAt)
+            case let .update(oldItem, newItem, updateAt):
+                assert(mutableCollection[updateAt] == oldItem, "update doesnot have proper old value")
+                mutableCollection[updateAt] = newItem
+            case let .deletion(_, atIndex):
+                mutableCollection.remove(at: atIndex)
+            }
         }
-        return nil
+        return mutableCollection
     }
 
 }
