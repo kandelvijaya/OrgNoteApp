@@ -28,6 +28,7 @@ struct ListSectionDescriptor<T: Hashable>: Hashable {
 
     let items: [ListCellDescriptor<T, UITableViewCell>]
     let footerText: String? = nil
+    let identifier: Int
 
 }
 
@@ -35,6 +36,7 @@ extension ListSectionDescriptor {
 
     init(with items: [ListCellDescriptor<T, UITableViewCell>]) {
         self.items = items
+        self.identifier = Int.random(fittingSize: 1000)
     }
 
 }
@@ -93,14 +95,21 @@ extension ListCellDescriptor {
 typealias AnyListCellDescriptor = ListCellDescriptor<AnyHashable, UITableViewCell>
 typealias AnyListSectionDescriptor = ListSectionDescriptor<AnyHashable>
 
+extension ListSectionDescriptor {
 
+    func updated(with newItems: [ListCellDescriptor<T, UITableViewCell>]) -> ListSectionDescriptor {
+        let new = ListSectionDescriptor(items: newItems, identifier: self.identifier)
+        return new
+    }
+
+}
 
 extension ListSectionDescriptor: Diffable {
 
     typealias InternalItemType = ListCellDescriptor<T, UITableViewCell>
 
     var diffHash: Int {
-        return footerText.hashValue
+        return footerText.hashValue ^ identifier.hashValue
     }
 
     var children: [ListCellDescriptor<T, UITableViewCell>] {
@@ -111,3 +120,20 @@ extension ListSectionDescriptor: Diffable {
 
 
 extension ListCellDescriptor: Diffable { }
+
+extension ListSectionDescriptor: CustomStringConvertible {
+
+    var description: String {
+        return "SEC { \(items) }"
+    }
+
+}
+
+
+extension ListCellDescriptor: CustomStringConvertible {
+
+    var description: String {
+        return "CELL \(model.hashValue)"
+    }
+
+}

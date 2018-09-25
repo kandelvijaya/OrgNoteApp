@@ -31,11 +31,12 @@ final class OrgListDriver {
 
 
 
-    private func sectionDescriptor(for cellDescs: [AnyListCellDescriptor]) -> AnyListSectionDescriptor {
+    private func sectionDescriptor(with cellDescs: [AnyListCellDescriptor]) -> AnyListSectionDescriptor {
         return ListSectionDescriptor(with: cellDescs)
     }
 
-    lazy var sections = [cells |> self.sectionDescriptor]
+    lazy var celled = cells.map { [$0] }
+    lazy var sections = celled.map(sectionDescriptor)
     lazy var controller = ListViewController(with: sections)
 
     func didSelect(item: OutlineViewModel) {
@@ -53,6 +54,10 @@ final class OrgListDriver {
             fatalError("A tapped item must correspond to current list of section")
         }
 
+        if item.subModels.isEmpty {
+            return
+        }
+
         if item.isExpanded {
             let newSectionAfterCollapsing = removingAllNestedSubItems(for: item, from: selectedItemsSectionDescriptor)
             let toggledItems = newSectionAfterCollapsing.items.replace(matching: selectedItemCellDescriptor, with: toggledCellDescriptor(for: item))
@@ -67,7 +72,7 @@ final class OrgListDriver {
             let newAdded = selectedItemsSectionDescriptor.items.insert(items: newItemChildCellDescriptors, after: selectedItemCellDescriptor)
             let oldReplaced = newAdded.replace(matching: selectedItemCellDescriptor, with: modifiedSelectedItemCell)
 
-            let updatedSection = oldReplaced |> sectionDescriptor
+            let updatedSection = selectedItemsSectionDescriptor.updated(with: oldReplaced)
 
             let newSections = currentListState.replace(matching: selectedItemsSectionDescriptor, with: updatedSection)
 
@@ -149,3 +154,13 @@ extension Array {
         return nil
     }
 }
+
+
+extension Int {
+
+    static func random(fittingSize: Int) -> Int {
+        return Int.random(in: ClosedRange(uncheckedBounds: (lower: 0, upper: fittingSize)))
+    }
+
+}
+

@@ -50,7 +50,7 @@ final class ListViewController<T: Hashable>: UITableViewController {
                 self.tableView.deleteSections(IndexSet(integer: fromIndex), with: .automatic)
             case let .addition(_, atIndex):
                 self.tableView.insertSections(IndexSet(integer: atIndex), with: .automatic)
-            case let .update(oldItem, newItem, index):
+            case .update:
                 // This should be handled prior to the section update.
                 break
             }
