@@ -44,9 +44,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
         diffSet.forEach { item in
             switch item {
             case let .deletion(_, fromIndex):
-                self.tableView.deleteSections(IndexSet(integer: fromIndex), with: .automatic)
+                self.tableView.deleteSections(IndexSet(integer: fromIndex), with: .fade)
             case let .addition(_, atIndex):
-                self.tableView.insertSections(IndexSet(integer: atIndex), with: .automatic)
+                self.tableView.insertSections(IndexSet(integer: atIndex), with: .fade)
             case .update:
                 // This should be handled prior to the section update.
                 break
@@ -61,9 +61,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .deletion(_, atIndex):
-                self.tableView.deleteRows(at: [IndexPath(row: atIndex, section: sectionIndex)], with: .automatic)
+                self.tableView.deleteRows(at: [IndexPath(row: atIndex, section: sectionIndex)], with: .fade)
             case let .addition(_, idx):
-                self.tableView.insertRows(at: [IndexPath(item: idx, section: sectionIndex)], with: .automatic)
+                self.tableView.insertRows(at: [IndexPath(item: idx, section: sectionIndex)], with: .fade)
             default:
                 // UITableView only supports section and cell level diffing.
                 // Any lowerlevel diff will/should be applied on cell level.
