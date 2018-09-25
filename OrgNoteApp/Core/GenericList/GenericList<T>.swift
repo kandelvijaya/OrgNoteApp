@@ -32,9 +32,6 @@ final class ListViewController<T: Hashable>: UITableViewController {
 
         
         /// first diff on deeper level
-        //TODO:-
-//        let internalDiff = diffResult.enumerated().map { ($0.0, $0.1) }.map { ( $0.0, $0.1.edits) }.filter { $0.1 != nil }.map { ($0.0, $0.1!) }
-//        internalDiff.forEach { performRowChanges($0.1, at: $0.0) }
         let internalEdits = internalDiff(from: diffResult)
         internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
 
