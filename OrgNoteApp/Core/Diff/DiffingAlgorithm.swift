@@ -70,14 +70,14 @@ enum LineLookup {
 
 /// Kinds of operation
 enum Operation<T> {
-    case addition(T, Int)
-    case deletion(T, Int)
+    case add(T, Int)
+    case delete(T, Int)
     case move(T, Int, Int)
     case update(T,T,Int)
 
     enum Simple {
-        case addition(T,Int)
-        case deletion(T, Int)
+        case add(T,Int)
+        case delete(T, Int)
         case update(T,T,Int)
     }
 
@@ -91,9 +91,9 @@ extension Operation: CustomStringConvertible {
 
     var description: String {
         switch self {
-        case let .addition(v, i):
+        case let .add(v, i):
             return "A(\(v)@\(i))"
-        case let .deletion(v, i):
+        case let .delete(v, i):
             return "D(\(v)@\(i))"
         case let .move(v,i,j):
             return "M(\(v)from\(i)->\(j))"
@@ -211,7 +211,7 @@ func diff<T>(_ oldContent: [T], _ newContent: [T]) -> [Operation<T>] where T: Di
     var runningOffset = 0
     for (index, item) in oas.enumerated() {
         if case .sym(_) = item {
-            operations.append(.deletion(oldContent[index], index))
+            operations.append(.delete(oldContent[index], index))
             runningOffset += 1
         }
         deletionKeeper[index] = runningOffset
@@ -221,7 +221,7 @@ func diff<T>(_ oldContent: [T], _ newContent: [T]) -> [Operation<T>] where T: Di
     for (index, item) in nas.enumerated() {
         switch item {
         case .sym(_):
-            operations.append(.addition(newContent[index], index))
+            operations.append(.add(newContent[index], index))
             runningOffset += 1
         case let .lineNumber(oldLineNumber):
             /// Maybe the object hash is the same but the equality is not
@@ -256,13 +256,13 @@ func orderedOperation<T>(from operations: [Operation<T>]) -> [Operation<T>.Simpl
         switch oper {
         case let .update(item, newItem, index):
             updates.append(.update(item, newItem, index))
-        case let .addition(item, atIndex):
-            insertions.append(.addition(item, atIndex))
-        case let .deletion(item, from):
-            deletions[from] = .deletion(item, from)
+        case let .add(item, atIndex):
+            insertions.append(.add(item, atIndex))
+        case let .delete(item, from):
+            deletions[from] = .delete(item, from)
         case let .move(item, from, to):
-            insertions.append(.addition(item, to))
-            deletions[from] = .deletion(item, from)
+            insertions.append(.add(item, to))
+            deletions[from] = .delete(item, from)
         }
     }
     let descendingOrderedIndexDeletions = deletions.sorted(by: {$0.0 > $1.0 }).map{ $0.1 }
@@ -282,12 +282,12 @@ extension Array where Element: Hashable {
         var mutableCollection: [Element] = self
         for operation in operations {
             switch operation {
-            case let .addition(item, addAt):
+            case let .add(item, addAt):
                 mutableCollection.insert(item, at: addAt)
             case let .update(oldItem, newItem, updateAt):
                 assert(mutableCollection[updateAt] == oldItem, "update doesnot have proper old value")
                 mutableCollection[updateAt] = newItem
-            case let .deletion(_, atIndex):
+            case let .delete(_, atIndex):
                 mutableCollection.remove(at: atIndex)
             }
         }

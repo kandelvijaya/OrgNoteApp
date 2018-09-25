@@ -43,9 +43,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
         tableView.beginUpdates()
         diffSet.forEach { item in
             switch item {
-            case let .deletion(_, fromIndex):
+            case let .delete(_, fromIndex):
                 self.tableView.deleteSections(IndexSet(integer: fromIndex), with: .fade)
-            case let .addition(_, atIndex):
+            case let .add(_, atIndex):
                 self.tableView.insertSections(IndexSet(integer: atIndex), with: .fade)
             case .update:
                 // This should be handled prior to the section update.
@@ -60,9 +60,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
         tableView.beginUpdates()
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
-            case let .deletion(_, atIndex):
+            case let .delete(_, atIndex):
                 self.tableView.deleteRows(at: [IndexPath(row: atIndex, section: sectionIndex)], with: .fade)
-            case let .addition(_, idx):
+            case let .add(_, idx):
                 self.tableView.insertRows(at: [IndexPath(item: idx, section: sectionIndex)], with: .fade)
             default:
                 // UITableView only supports section and cell level diffing.
