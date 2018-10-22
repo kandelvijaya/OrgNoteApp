@@ -1,0 +1,6 @@
+module Pods_OrgNoteApp {
+  umbrella header "Pods-OrgNoteApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

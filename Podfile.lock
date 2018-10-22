@@ -1,0 +1,16 @@
+PODS:
+  - Kekka (0.7.1)
+
+DEPENDENCIES:
+  - Kekka
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kekka
+
+SPEC CHECKSUMS:
+  Kekka: 50a6a171a23b3bdf4c1468cee5b1a408eca893d6
+
+PODFILE CHECKSUM: 9a1a379a216011423a683a08506165c9041266c0
+
+COCOAPODS: 1.5.2
