@@ -127,9 +127,17 @@ extension LineLookup: CustomStringConvertible {
 
 func diff<T>(_ oldContent: [T], _ newContent: [T]) -> [Operation<T>] where T: Diffable {
 
-    typealias HashValue = Int
+    typealias DiffHash = Int
 
-    var symTable: [HashValue: SymEntry] = [:]
+    var symTable: [DiffHash: SymEntry] = [:]
+
+    //1. go over new and create table
+    //2. go over old and create/edit table
+    //3. go over new, lookup table and detect unique occurance
+    //4. go over new, check block of changes in ascending order
+    //5. go over new, check block of changes in descending order
+    //6. go over old and get deletions + go over new and
+    //   find insertion & deletion
 
     /// LineLookup map for each index in old content
     /// for index `i` in old content, acess LineLookup with `oas[i]`

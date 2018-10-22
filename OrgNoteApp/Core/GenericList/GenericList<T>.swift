@@ -27,20 +27,23 @@ final class ListViewController<T: Hashable>: UITableViewController {
 
     func update(with newModels: [ListSectionDescriptor<T>]) {
         let currentModels = self.sectionDescriptors
-        self.sectionDescriptors = newModels
         let diffResult = orderedOperation(from: diff(currentModels, newModels))
 
-        
-        /// first diff on deeper level
-        let internalEdits = internalDiff(from: diffResult)
-        internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
+        tableView.performBatchUpdates({
+            self.sectionDescriptors = newModels
 
-        /// extenal diff
-        performSectionChanges(diffResult)
+            /// first diff on deeper level
+            let internalEdits = internalDiff(from: diffResult)
+            internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
+
+            /// extenal diff
+            performSectionChanges(diffResult)
+        }) { (completed) in
+            print(completed)
+        }
     }
 
     func performSectionChanges<T>(_ diffSet: [Operation<ListSectionDescriptor<T>>.Simple]) {
-        tableView.beginUpdates()
         diffSet.forEach { item in
             switch item {
             case let .delete(_, fromIndex):
@@ -52,12 +55,9 @@ final class ListViewController<T: Hashable>: UITableViewController {
                 break
             }
         }
-
-        tableView.endUpdates()
     }
 
     func performRowChanges<T>(_ diffSet: [Operation<ListCellDescriptor<T, UITableViewCell>>.Simple], at sectionIndex: Int) {
-        tableView.beginUpdates()
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .delete(_, atIndex):
@@ -70,7 +70,6 @@ final class ListViewController<T: Hashable>: UITableViewController {
                 break
             }
         }
-        tableView.endUpdates()
     }
 
 
