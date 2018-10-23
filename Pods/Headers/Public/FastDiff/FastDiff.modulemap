@@ -1,0 +1,6 @@
+module FastDiff {
+  umbrella header "FastDiff-umbrella.h"
+
+  export *
+  module * { export * }
+}

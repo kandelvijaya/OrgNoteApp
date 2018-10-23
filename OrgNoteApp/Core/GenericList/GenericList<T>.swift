@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FastDiff
 
 /// A generic table view controller.
 /// A table view can contain different cells in a section and
@@ -43,7 +44,7 @@ final class ListViewController<T: Hashable>: UITableViewController {
         }
     }
 
-    func performSectionChanges<T>(_ diffSet: [Operation<ListSectionDescriptor<T>>.Simple]) {
+    func performSectionChanges<T>(_ diffSet: [DiffOperation<ListSectionDescriptor<T>>.Simple]) {
         diffSet.forEach { item in
             switch item {
             case let .delete(_, fromIndex):
@@ -57,7 +58,7 @@ final class ListViewController<T: Hashable>: UITableViewController {
         }
     }
 
-    func performRowChanges<T>(_ diffSet: [Operation<ListCellDescriptor<T, UITableViewCell>>.Simple], at sectionIndex: Int) {
+    func performRowChanges<T>(_ diffSet: [DiffOperation<ListCellDescriptor<T, UITableViewCell>>.Simple], at sectionIndex: Int) {
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .delete(_, atIndex):

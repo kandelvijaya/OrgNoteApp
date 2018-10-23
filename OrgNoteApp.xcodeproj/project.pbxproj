@@ -11,11 +11,6 @@
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		282EE8E621599CE2004B425E /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282EE8E521599CE2004B425E /* InternalDiff.swift */; };
-		2836E3D720D7C14000CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
-		2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */; };
-		2836E3DC20D7C35900CCA147 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D620D7C14000CCA147 /* Diffable.swift */; };
-		2836E3DD20D7C35C00CCA147 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */; };
 		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */; };
@@ -95,9 +90,6 @@
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		282EE8E521599CE2004B425E /* InternalDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalDiff.swift; sourceTree = "<group>"; };
-		2836E3D620D7C14000CCA147 /* Diffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
-		2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithm.swift; sourceTree = "<group>"; };
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithmTests.swift; sourceTree = "<group>"; };
@@ -169,16 +161,6 @@
 			path = EnablePlaygroundShare;
 			sourceTree = "<group>";
 		};
-		2836E3D120D7C12A00CCA147 /* Diff */ = {
-			isa = PBXGroup;
-			children = (
-				2836E3D620D7C14000CCA147 /* Diffable.swift */,
-				2836E3D820D7C15700CCA147 /* DiffingAlgorithm.swift */,
-				282EE8E521599CE2004B425E /* InternalDiff.swift */,
-			);
-			path = Diff;
-			sourceTree = "<group>";
-		};
 		28417E2520A844C000996941 /* supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				28BEF90520D7CEFD00BB7C19 /* GenericList */,
-				2836E3D120D7C12A00CCA147 /* Diff */,
 				2880A09A20C18FE400CD4ACC /* OutlineView */,
 				28703D3E20A85A0200DC8DBF /* OrgParser */,
 			);
@@ -552,8 +533,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2836E3DC20D7C35900CCA147 /* Diffable.swift in Sources */,
-				2836E3DD20D7C35C00CCA147 /* DiffingAlgorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,20 +540,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2836E3D720D7C14000CCA147 /* Diffable.swift in Sources */,
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
-				282EE8E621599CE2004B425E /* InternalDiff.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
-				2836E3D920D7C15700CCA147 /* DiffingAlgorithm.swift in Sources */,
 				28417E3420A84D8000996941 /* Operators.swift in Sources */,
 				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
 			);
@@ -796,7 +772,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC86076F5200C2BA7256D377 /* Pods-OrgNoteApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -817,7 +792,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

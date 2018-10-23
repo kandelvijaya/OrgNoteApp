@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FastDiff
 
 /// Describes a list section.
 struct ListSectionDescriptor<T: Hashable>: Hashable {
