@@ -40,6 +40,8 @@ final class OrgListDriver {
     lazy var controller = ListViewController(with: sections)
 
     func didSelect(item: OutlineViewModel) {
+        if item.subModels.isEmpty { return }
+
         let currentListState = controller.sectionDescriptors
 
         let selected = currentListState.first { section in
@@ -52,10 +54,6 @@ final class OrgListDriver {
         guard let selectedItemsSectionDescriptor = selected,
             let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find(where: { ($0.model as! OutlineViewModel) == item }) else {
             fatalError("A tapped item must correspond to current list of section")
-        }
-
-        if item.subModels.isEmpty {
-            return
         }
 
         if item.isExpanded {

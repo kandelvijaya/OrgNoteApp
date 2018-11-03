@@ -28,6 +28,7 @@ struct MainNavigator: Navigator {
 
     func start() {
         let controller = OrgListDriver().controller
+        controller.title = "View your notes"
         navigationController.pushViewController(controller, animated: true)
     }
 

@@ -11,39 +11,24 @@ import UIKit
 final class OutlineCell: UITableViewCell {
 
     lazy var outlineView = OutlineView()
+    private let holder = UIView()
+    private var holderToContentViewSpacing: NSLayoutConstraint?
 
     public func update(with model: OutlineViewModel) {
         outlineView.update(with: model)
-        embedInContentView(outlineView)
+        embedInContentView(outlineView, reflectingDepth: model.indentationLevel)
     }
 
-    public func embedInContentView(_ view: UIView) {
-        let holder = UIView()
-        contentView.addSubview(holder)
-
-        let consToContentView = [ holder.topAnchor.constraint(equalTo: contentView.topAnchor),
-                                  holder.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                                  holder.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-                                  holder.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)]
-        consToContentView.forEach {
-            $0.isActive = true 
-        }
-
-        let child = view
-
-        holder.translatesAutoresizingMaskIntoConstraints = false
-        child.translatesAutoresizingMaskIntoConstraints = false
-
-        holder.addSubview(child)
-        let cons = [child.leadingAnchor.constraint(equalTo: holder.leadingAnchor),
-                    child.trailingAnchor.constraint(equalTo: holder.trailingAnchor),
-                    child.topAnchor.constraint(equalTo: holder.topAnchor),
-                    child.bottomAnchor.constraint(equalTo: holder.bottomAnchor)]
-        cons.forEach { $0.isActive = true }
+    public func embedInContentView(_ view: UIView, reflectingDepth depth: Int) {
+        let layoutInfo = contentView.embed(holder)
+        holderToContentViewSpacing = layoutInfo.left
+        holder.embed(view)
+        layoutInfo.left.constant = indentationWidth * CGFloat(depth)
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        contentView.subviews.forEach { $0.removeFromSuperview() }
         outlineView.clearContents()
     }
 
@@ -52,17 +37,26 @@ final class OutlineCell: UITableViewCell {
 
 extension UIView {
 
-    public func embed(_ view: UIView) {
+    public struct LayoutInfo {
+        let left: NSLayoutConstraint
+        let right: NSLayoutConstraint
+        let top: NSLayoutConstraint
+        let bottom: NSLayoutConstraint
+    }
+
+    @discardableResult public func embed(_ view: UIView) -> LayoutInfo  {
         let holder = self
         let child = view
 
-        holder.translatesAutoresizingMaskIntoConstraints = false
+        child.translatesAutoresizingMaskIntoConstraints = false
         holder.addSubview(child)
         let cons = [child.leadingAnchor.constraint(equalTo: holder.leadingAnchor),
                     child.trailingAnchor.constraint(equalTo: holder.trailingAnchor),
                     child.topAnchor.constraint(equalTo: holder.topAnchor),
                     child.bottomAnchor.constraint(equalTo: holder.bottomAnchor)]
         cons.forEach { $0.isActive = true }
+
+        return LayoutInfo(left: cons[0], right: cons[1], top: cons[2], bottom: cons[3])
     }
 
 }

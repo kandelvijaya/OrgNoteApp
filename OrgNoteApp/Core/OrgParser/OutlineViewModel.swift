@@ -14,11 +14,13 @@ struct OutlineViewModel: Hashable {
     let content: String
     let subModels: [OutlineViewModel]
     var isExpanded: Bool = false
+    let indentationLevel: Int
 
     init(with outline: Outline) {
-        self.title = "*".replicate(outline.heading.depth) + "  " + outline.heading.title
+        self.title = "✦ " + outline.heading.title
         self.content = outline.content.joined(separator: "\n")
         self.subModels = outline.subItems.map(OutlineViewModel.init)
+        self.indentationLevel = outline.heading.depth
     }
 
 }
