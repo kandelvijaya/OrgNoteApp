@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct OutlineViewModel: Hashable {
 
@@ -21,6 +22,13 @@ struct OutlineViewModel: Hashable {
         self.content = outline.content.joined(separator: "\n")
         self.subModels = outline.subItems.map(OutlineViewModel.init)
         self.indentationLevel = outline.heading.depth
+    }
+
+    var indicativeBackgroundColor: UIColor {
+        // TODO:- Emit range of color based on content size or characterstics
+        let materialBlue = UIColor(displayP3Red: 52.0/255.0, green: 152.0/255.0, blue: 219.0/255.0, alpha: 0.3)
+        let materialWhite = UIColor(displayP3Red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 0.3)
+        return self.isExpanded ?  materialBlue : materialWhite
     }
 
 }

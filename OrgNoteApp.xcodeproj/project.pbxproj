@@ -13,8 +13,6 @@
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
-		28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */; };
-		28417E3420A84D8000996941 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3320A84D8000996941 /* Operators.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
@@ -92,8 +90,6 @@
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
-		28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingAlgorithmTests.swift; sourceTree = "<group>"; };
-		28417E3320A84D8000996941 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,7 +229,6 @@
 			children = (
 				2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */,
 				2855D40720A8431A0082EC00 /* Info.plist */,
-				28417E3120A84BD700996941 /* DiffingAlgorithmTests.swift */,
 				28703D4520A85C7600DC8DBF /* OrgParserTests.swift */,
 				2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */,
 				2814517420D349380006BBD7 /* OrgListDriverTests.swift */,
@@ -262,7 +257,6 @@
 		28703D3E20A85A0200DC8DBF /* OrgParser */ = {
 			isa = PBXGroup;
 			children = (
-				28417E3320A84D8000996941 /* Operators.swift */,
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
 				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
 			);
@@ -551,7 +545,6 @@
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
-				28417E3420A84D8000996941 /* Operators.swift in Sources */,
 				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +556,6 @@
 				2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */,
 				2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */,
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
-				28417E3220A84BD700996941 /* DiffingAlgorithmTests.swift in Sources */,
 				28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,8 +765,9 @@
 			baseConfigurationReference = AC86076F5200C2BA7256D377 /* Pods-OrgNoteApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46ETJSLJJM;
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,8 +786,9 @@
 			baseConfigurationReference = 8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46ETJSLJJM;
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

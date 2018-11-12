@@ -16,6 +16,7 @@ final class OutlineCell: UITableViewCell {
 
     public func update(with model: OutlineViewModel) {
         outlineView.update(with: model)
+        contentView.backgroundColor = model.indicativeBackgroundColor
         embedInContentView(outlineView, reflectingDepth: model.indentationLevel)
     }
 

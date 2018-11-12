@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A6D793E917C083F5B394CF1BD44E825 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE54BF3A95E4A2AF6893AA10E3A972 /* Result.swift */; };
-		0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F8CF8909B605E6A7A03C07429D3EC2 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		168C28CC52FAF1873B1FBC7818980935 /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC1B4FB9813C9CDBBB6A7CFC9A3615 /* ErrorEquality.swift */; };
-		30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B69EA2278869717ACEA25DC3CC8E2 /* DiffingAlgorithm.swift */; };
+		0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */; };
 		41036E065686F86D8DD7533E0A72C7C5 /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699808A7A70A9D0A1638F1C8540A1FF3 /* Diffable.swift */; };
-		5090EB1FA537384AEC14AD6442F22A4D /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2FAC008BA5D669C15522F711A4B5220 /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */; };
 		5B7A89F0308B7B24A654020A2D3C6007 /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */; };
-		61E1268D9FCCAAE86590F0440895A70D /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 789B2354A3852C8F38B2C44F7B75C47D /* Kekka-dummy.m */; };
-		A2D9F0117EF1196D43899A64B58013EB /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C1621A0F6D70F656BB8B47390E2BD7 /* Future.swift */; };
-		A3E0C8364E0945D4B54389D25995E2FD /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36983C3748B34DD59FC41070E4FF6BD9 /* FullyTypedResult.swift */; };
-		B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1F73D8C874A9BA1EDA17B2EF5D340 /* InternalDiff.swift */; };
-		CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D688281FA8E615CFAA025FD5F2B75FED /* FastDiff-dummy.m */; };
+		5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */; };
+		65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F01024246F25ADD3ACC9F383A49964 /* Future.swift */; };
+		6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C64772F31131F97466C5DB9CF273017 /* Operators.swift */; };
+		7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */; };
+		84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */; };
+		8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */; };
+		B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */; };
+		C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */; };
 		DBE1BF131BC8B673967C0963A37B31C5 /* Pods-OrgNoteAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F1B283894DD1AF3BCCBABCA9A152009;
+			remoteGlobalIDString = 4DCE6EBD3DEF2E45D4B62A118F239FD3;
 			remoteInfo = Kekka;
 		};
 		A813757BD95BD06630725DC62785DAE0 /* PBXContainerItemProxy */ = {
@@ -49,46 +50,54 @@
 
 /* Begin PBXFileReference section */
 		02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteApp-dummy.m"; sourceTree = "<group>"; };
+		03F01024246F25ADD3ACC9F383A49964 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
 		0575C4EC5DA033BD123B987DC9EBFFC2 /* Pods-OrgNoteAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-resources.sh"; sourceTree = "<group>"; };
 		152036AC56716AA54BB8C3059B92741E /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteAppTests-dummy.m"; sourceTree = "<group>"; };
-		185405307922D90399054389181C7463 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
+		1601530171015B16091D858095AAB913 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
+		182F0ED03610FE78AC0593EE1DE36820 /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = FastDiff.modulemap; path = ../../Headers/Public/FastDiff/FastDiff.modulemap; sourceTree = "<group>"; };
+		18D2E86A8445702CA42BE4462363B6B1 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = Kekka.modulemap; path = ../../Headers/Public/Kekka/Kekka.modulemap; sourceTree = "<group>"; };
 		192B8B00F5612B22D6974164EC1B9A0A /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2EE4305EE3AB55E24744B688FF2AB338 /* Pods-OrgNoteApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		36983C3748B34DD59FC41070E4FF6BD9 /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
+		36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Kekka-umbrella.h"; path = "../../Headers/Public/Kekka/Kekka-umbrella.h"; sourceTree = "<group>"; };
+		452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
 		481EA371DD8B7CDD6A0B6898789AC843 /* libKekka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKekka.a; path = libKekka.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		493BFDA777A9EBCB11C57880717D17B7 /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = FastDiff.modulemap; path = ../../Headers/Public/FastDiff/FastDiff.modulemap; sourceTree = "<group>"; };
 		4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		4C87EA8DBD2F357A1DD2CC986D945B02 /* Pods-OrgNoteApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-resources.sh"; sourceTree = "<group>"; };
 		542AFB34D6E2809B9D45C4F44B6AD186 /* Pods-OrgNoteApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteApp.modulemap"; sourceTree = "<group>"; };
-		5596578187D623270AFD557554E445F3 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
 		5FF87916C5518C5975CA0A0201EFD42B /* libFastDiff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFastDiff.a; path = libFastDiff.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		699808A7A70A9D0A1638F1C8540A1FF3 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
 		72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteApp-umbrella.h"; sourceTree = "<group>"; };
 		7321B8145CEA6E643B49EE758599E61D /* Pods-OrgNoteAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		74BFB0FF7F96B478F424666AECF6A4AE /* libPods-OrgNoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteApp.a"; path = "libPods-OrgNoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		789B2354A3852C8F38B2C44F7B75C47D /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
+		78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
+		8A135A4C8BB4E89D08C9D69AD9DBABD8 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
 		934AEE8B9FF4548A15444A3F54F00021 /* Pods-OrgNoteAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96B1F73D8C874A9BA1EDA17B2EF5D340 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
-		9CCE54BF3A95E4A2AF6893AA10E3A972 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
-		A2FAC008BA5D669C15522F711A4B5220 /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Kekka-umbrella.h"; path = "../../Headers/Public/Kekka/Kekka-umbrella.h"; sourceTree = "<group>"; };
+		9C64772F31131F97466C5DB9CF273017 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
 		A42F8EC0B243C9C69B1900C1C70C5925 /* Pods-OrgNoteApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A4BEFBBC716D1A587F87ADE241C289DA /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
 		A69BFFA69577C94F4A86737C0B4639ED /* Pods-OrgNoteAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
 		BE6A8AD71C4EC797B51D9C06A2C58BF1 /* libPods-OrgNoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteAppTests.a"; path = "libPods-OrgNoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3547FFB430D1C8D55DA858FF685D0D4 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = Kekka.modulemap; path = ../../Headers/Public/Kekka/Kekka.modulemap; sourceTree = "<group>"; };
-		D688281FA8E615CFAA025FD5F2B75FED /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
 		D9A1DFADF654144C8FFCFC25D94C7E71 /* Pods-OrgNoteApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-frameworks.sh"; sourceTree = "<group>"; };
-		E4C1621A0F6D70F656BB8B47390E2BD7 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
-		E871FBE57EA013EB52BF49DC5D6A8593 /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
-		E87B69EA2278869717ACEA25DC3CC8E2 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
-		F3F8CF8909B605E6A7A03C07429D3EC2 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastDiff-umbrella.h"; path = "../../Headers/Public/FastDiff/FastDiff-umbrella.h"; sourceTree = "<group>"; };
-		FCBC1B4FB9813C9CDBBB6A7CFC9A3615 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
+		ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastDiff-umbrella.h"; path = "../../Headers/Public/FastDiff/FastDiff-umbrella.h"; sourceTree = "<group>"; };
+		FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		367E1D2C961CF4D72F88F3A7DB7D60E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9B49758F9E12461A507FEBF389C0400 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,13 +106,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CDDE4A831F5A7A9D86443369F5BB8ED3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEB8F5F77CB68E72D5233A14128FFDBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,6 +131,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		031F82907F9C0899290BE9C7B66859FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				182F0ED03610FE78AC0593EE1DE36820 /* FastDiff.modulemap */,
+				452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */,
+				82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */,
+				1601530171015B16091D858095AAB913 /* FastDiff-prefix.pch */,
+				F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FastDiff";
+			sourceTree = "<group>";
+		};
 		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,66 +166,63 @@
 			path = "Target Support Files/Pods-OrgNoteAppTests";
 			sourceTree = "<group>";
 		};
-		59B37FA5F68CDADA16CFE13F1E46CB16 /* FastDiff */ = {
-			isa = PBXGroup;
-			children = (
-				699808A7A70A9D0A1638F1C8540A1FF3 /* Diffable.swift */,
-				E87B69EA2278869717ACEA25DC3CC8E2 /* DiffingAlgorithm.swift */,
-				96B1F73D8C874A9BA1EDA17B2EF5D340 /* InternalDiff.swift */,
-				AD853055E498B0B2C70ED371410D4B62 /* Support Files */,
-			);
-			name = FastDiff;
-			path = FastDiff;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				FF61D46FE88193DF588A68E5FF1E4B73 /* Pods */,
+				C4BBA625B18B573EEB0481CCCBC63F97 /* Pods */,
 				FCB34F370468577676BD8CD1BF74EAC0 /* Products */,
 				01FD67FE1CE8046F3C38B2DAA1E70AE4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		92C9624EBC13E975EF0B18C313AB91CD /* Kekka */ = {
+		832063F456D07E235A3206DFCF695716 /* FastDiff */ = {
 			isa = PBXGroup;
 			children = (
-				FCBC1B4FB9813C9CDBBB6A7CFC9A3615 /* ErrorEquality.swift */,
-				36983C3748B34DD59FC41070E4FF6BD9 /* FullyTypedResult.swift */,
-				E4C1621A0F6D70F656BB8B47390E2BD7 /* Future.swift */,
-				9CCE54BF3A95E4A2AF6893AA10E3A972 /* Result.swift */,
-				D259FA154B8AC91F4118008E808CB961 /* Support Files */,
+				367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */,
+				78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */,
+				BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */,
+				031F82907F9C0899290BE9C7B66859FA /* Support Files */,
 			);
-			name = Kekka;
-			path = Kekka;
+			name = FastDiff;
+			path = FastDiff;
 			sourceTree = "<group>";
 		};
-		AD853055E498B0B2C70ED371410D4B62 /* Support Files */ = {
+		BAD00B293415D05EF7E2923CCEE8CD6B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				493BFDA777A9EBCB11C57880717D17B7 /* FastDiff.modulemap */,
-				E871FBE57EA013EB52BF49DC5D6A8593 /* FastDiff.xcconfig */,
-				D688281FA8E615CFAA025FD5F2B75FED /* FastDiff-dummy.m */,
-				5596578187D623270AFD557554E445F3 /* FastDiff-prefix.pch */,
-				F3F8CF8909B605E6A7A03C07429D3EC2 /* FastDiff-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FastDiff";
-			sourceTree = "<group>";
-		};
-		D259FA154B8AC91F4118008E808CB961 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C3547FFB430D1C8D55DA858FF685D0D4 /* Kekka.modulemap */,
-				185405307922D90399054389181C7463 /* Kekka.xcconfig */,
-				789B2354A3852C8F38B2C44F7B75C47D /* Kekka-dummy.m */,
-				A4BEFBBC716D1A587F87ADE241C289DA /* Kekka-prefix.pch */,
-				A2FAC008BA5D669C15522F711A4B5220 /* Kekka-umbrella.h */,
+				18D2E86A8445702CA42BE4462363B6B1 /* Kekka.modulemap */,
+				FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */,
+				84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */,
+				8A135A4C8BB4E89D08C9D69AD9DBABD8 /* Kekka-prefix.pch */,
+				36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Kekka";
+			sourceTree = "<group>";
+		};
+		C4BBA625B18B573EEB0481CCCBC63F97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				832063F456D07E235A3206DFCF695716 /* FastDiff */,
+				D46A5D62C6711E8EC315EF2D49F9C4F8 /* Kekka */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D46A5D62C6711E8EC315EF2D49F9C4F8 /* Kekka */ = {
+			isa = PBXGroup;
+			children = (
+				ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */,
+				B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */,
+				03F01024246F25ADD3ACC9F383A49964 /* Future.swift */,
+				9C64772F31131F97466C5DB9CF273017 /* Operators.swift */,
+				E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */,
+				BAD00B293415D05EF7E2923CCEE8CD6B /* Support Files */,
+			);
+			name = Kekka;
+			path = Kekka;
 			sourceTree = "<group>";
 		};
 		F8CDDD95B647C8275559331111771D5B /* Pods-OrgNoteApp */ = {
@@ -241,15 +253,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF61D46FE88193DF588A68E5FF1E4B73 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				59B37FA5F68CDADA16CFE13F1E46CB16 /* FastDiff */,
-				92C9624EBC13E975EF0B18C313AB91CD /* Kekka */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -258,14 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A51EBCCDABD2A7AAB0C781087BBE4A3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5090EB1FA537384AEC14AD6442F22A4D /* Kekka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				41036E065686F86D8DD7533E0A72C7C5 /* Pods-OrgNoteApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F569AE2D61C84FF1C8711423FE3289E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +308,14 @@
 			productReference = 5FF87916C5518C5975CA0A0201EFD42B /* libFastDiff.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4F1B283894DD1AF3BCCBABCA9A152009 /* Kekka */ = {
+		4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F49F373532D3F802ED29EDCF7098B91 /* Build configuration list for PBXNativeTarget "Kekka" */;
+			buildConfigurationList = 1BFCA1C4492D407DBA63472A7E66989E /* Build configuration list for PBXNativeTarget "Kekka" */;
 			buildPhases = (
-				2A51EBCCDABD2A7AAB0C781087BBE4A3 /* Headers */,
-				55640FE8B4EE095EC291B8C0EEFDB19A /* Sources */,
-				CEB8F5F77CB68E72D5233A14128FFDBB /* Frameworks */,
-				E42E21F0A21CCCE070C158D8CD6D0C9F /* Copy generated compatibility header */,
+				F569AE2D61C84FF1C8711423FE3289E6 /* Headers */,
+				4240BBF1E9451C690811CDE485F3AD7C /* Sources */,
+				367E1D2C961CF4D72F88F3A7DB7D60E0 /* Frameworks */,
+				6E12480E2E2D04FA3521FFC4F8541C86 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -382,7 +385,7 @@
 			projectRoot = "";
 			targets = (
 				2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */,
-				4F1B283894DD1AF3BCCBABCA9A152009 /* Kekka */,
+				4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */,
 				99B14E23756B67693F801CBDE30FD3BB /* Pods-OrgNoteApp */,
 				9D105307579B2C2AFA9F21F41348AAA8 /* Pods-OrgNoteAppTests */,
 			);
@@ -415,7 +418,7 @@
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 			showEnvVarsInLog = 1;
 		};
-		E42E21F0A21CCCE070C158D8CD6D0C9F /* Copy generated compatibility header */ = {
+		6E12480E2E2D04FA3521FFC4F8541C86 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,6 +446,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4240BBF1E9451C690811CDE485F3AD7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */,
+				84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */,
+				65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */,
+				7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */,
+				6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */,
+				8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49A0576FF824A423CA1ED0B4D3454937 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,18 +467,6 @@
 				30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */,
 				CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */,
 				B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55640FE8B4EE095EC291B8C0EEFDB19A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				168C28CC52FAF1873B1FBC7818980935 /* ErrorEquality.swift in Sources */,
-				A3E0C8364E0945D4B54389D25995E2FD /* FullyTypedResult.swift in Sources */,
-				A2D9F0117EF1196D43899A64B58013EB /* Future.swift in Sources */,
-				61E1268D9FCCAAE86590F0440895A70D /* Kekka-dummy.m in Sources */,
-				0A6D793E917C083F5B394CF1BD44E825 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +504,7 @@
 		C6EF9443B3DBAA0028E3CBDF14FEE265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kekka;
-			target = 4F1B283894DD1AF3BCCBABCA9A152009 /* Kekka */;
+			target = 4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */;
 			targetProxy = 5629B01D0242A944C07407B3D8AEE78E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -567,7 +571,7 @@
 		};
 		0AFEF56D03194B56F48F4EDF8EB10831 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E871FBE57EA013EB52BF49DC5D6A8593 /* FastDiff.xcconfig */;
+			baseConfigurationReference = 452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -588,6 +592,34 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26F4433083F2178831AF0F8786EBFB13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Kekka;
+				PRODUCT_NAME = Kekka;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -640,7 +672,7 @@
 		};
 		A041C2B67825E8A11375806BD01D25D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E871FBE57EA013EB52BF49DC5D6A8593 /* FastDiff.xcconfig */;
+			baseConfigurationReference = 452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -660,32 +692,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A0781F56EFA8B206808F29DED1B62FD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 185405307922D90399054389181C7463 /* Kekka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Kekka;
-				PRODUCT_NAME = Kekka;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -711,34 +717,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D4B21C5148261D0504E87D884526EB2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 185405307922D90399054389181C7463 /* Kekka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Kekka;
-				PRODUCT_NAME = Kekka;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -833,23 +811,49 @@
 			};
 			name = Debug;
 		};
+		E9B2CFFFAE1A0AC3BFDC4DC997FCE7D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Kekka;
+				PRODUCT_NAME = Kekka;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1BFCA1C4492D407DBA63472A7E66989E /* Build configuration list for PBXNativeTarget "Kekka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B2CFFFAE1A0AC3BFDC4DC997FCE7D9 /* Debug */,
+				26F4433083F2178831AF0F8786EBFB13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E246FC26AF4A9832D7AA01080188D618 /* Debug */,
 				007F1066051A467FBEB0038594E9D7C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F49F373532D3F802ED29EDCF7098B91 /* Build configuration list for PBXNativeTarget "Kekka" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0781F56EFA8B206808F29DED1B62FD5 /* Debug */,
-				D4B21C5148261D0504E87D884526EB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

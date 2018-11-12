@@ -40,7 +40,10 @@ final class ListViewController<T: Hashable>: UITableViewController {
             /// extenal diff
             performSectionChanges(diffResult)
         }) { (completed) in
-            print(completed)
+            // Fall back if the batch update fails
+            if completed == false {
+                self.tableView.reloadData()
+            }
         }
     }
 

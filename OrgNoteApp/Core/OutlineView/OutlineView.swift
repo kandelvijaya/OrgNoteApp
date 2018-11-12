@@ -47,7 +47,7 @@ final class OutlineView: UIView {
         content.translatesAutoresizingMaskIntoConstraints = false
         subItemsStackView.translatesAutoresizingMaskIntoConstraints = false
 
-        let headingCons = [heading.topAnchor.constraint(equalTo: self.topAnchor),
+        let headingCons = [heading.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
                            heading.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                            heading.trailingAnchor.constraint(equalTo: self.trailingAnchor)
                         ]

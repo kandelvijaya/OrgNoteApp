@@ -1,6 +1,6 @@
 PODS:
   - FastDiff (1.1.1)
-  - Kekka (0.7.1)
+  - Kekka (0.7.2)
 
 DEPENDENCIES:
   - FastDiff
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
-  Kekka: 50a6a171a23b3bdf4c1468cee5b1a408eca893d6
+  Kekka: 7d8afb09fca095ce2840613aa263f127349ee35b
 
 PODFILE CHECKSUM: 8c131c3ef542fe42de4c25d9784f39e50c0666c8
 
