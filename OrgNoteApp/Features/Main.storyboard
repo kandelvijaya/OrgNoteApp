@@ -85,10 +85,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-Am-DEj">
+                                <rect key="frame" x="152" y="167" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99479166669999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View Note"/>
+                                <connections>
+                                    <action selector="viewNoteButtonTapped:" destination="xaJ-2B-IhC" eventType="touchUpInside" id="sBq-S8-BNg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72549019607843135" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Vz6-2K-ttO"/>
                     </view>
+                    <connections>
+                        <outlet property="viewNoteButton" destination="tAD-Am-DEj" id="brR-ag-Gaf"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="848.79999999999995" y="17.541229385307346"/>

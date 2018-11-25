@@ -20,7 +20,6 @@ final class OrgViewViewController: UIViewController {
     private var locateVC: OrgLocateViewController?
     private var viewVC: ListViewController<AnyHashable>?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if let model = previouslyKnownOrgFileExists {
@@ -40,6 +39,7 @@ final class OrgViewViewController: UIViewController {
     private func embedLocateVC() {
         let vc = OrgLocateViewController.create()
         locateVC = vc
+        locateVC?.delegate = self
         embed(controller: vc, in: locateView)
     }
 
@@ -55,6 +55,36 @@ final class OrgViewViewController: UIViewController {
         locateView.addSubview(controller.view)
         controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         controller.didMove(toParentViewController: self)
+    }
+
+}
+
+
+extension OrgViewViewController: OrgLocateViewControllerDelegate {
+
+    func userDidLocateOrgFilePath(_ url: URL) {
+        // 1. Validate the url contains proper Org file
+        // 2. Copy the url resource to know location
+        // 3. Parse the contents to orgfile format
+        // 4. animate out the locate view
+        // 5. Load the resource into the show view
+        animateOutLocateView()
+        loadResourceInShowView(with: url)
+    }
+
+    private func animateOutLocateView() {
+        view.layoutIfNeeded()
+        UIView.animate(withDuration: 1.0, animations: {
+            self.locateViewHeight.constant = 0
+            self.view.layoutIfNeeded()
+        }) { _ in
+            self.locateVC?.removeFromParentViewController()
+            self.locateView.subviews.forEach { $0.removeFromSuperview() }
+        }
+    }
+
+    private func loadResourceInShowView(with modelURL: URL) {
+        //embedViewVC(with: <#T##OrgFile#>)
     }
 
 }

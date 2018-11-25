@@ -13,6 +13,7 @@ struct ColorTheme {
     let normal: UIColor
     let text: UIColor
     let attention: UIColor
+    let buttonTint: UIColor
 }
 
 struct Theme {
@@ -21,7 +22,8 @@ struct Theme {
         return ColorTheme(alert: rgb(255, 185, 151),
                           normal: rgb(132, 59, 98),
                           text: rgb(11, 3, 45),
-                          attention: rgb(246, 126, 125))
+                          attention: rgb(246, 126, 125),
+                          buttonTint: rgb(210,39,128))
     }
     
 }
