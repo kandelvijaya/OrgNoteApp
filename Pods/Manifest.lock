@@ -1,20 +1,24 @@
 PODS:
   - FastDiff (1.1.1)
   - Kekka (0.7.2)
+  - SwiftyParserCombinator (1.0)
 
 DEPENDENCIES:
   - FastDiff
   - Kekka
+  - SwiftyParserCombinator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FastDiff
     - Kekka
+    - SwiftyParserCombinator
 
 SPEC CHECKSUMS:
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
   Kekka: 7d8afb09fca095ce2840613aa263f127349ee35b
+  SwiftyParserCombinator: c1390cfc79ccd4f6cd1bdf9a7e482ddfd2d0c7b0
 
-PODFILE CHECKSUM: 8c131c3ef542fe42de4c25d9784f39e50c0666c8
+PODFILE CHECKSUM: eed14881fb85debc54d51bcfc4db0f16bd2ae27f
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

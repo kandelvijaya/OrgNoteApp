@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ParserCombinator
+import SwiftyParserCombinator
 
 
 typealias OrgFile = [Outline]

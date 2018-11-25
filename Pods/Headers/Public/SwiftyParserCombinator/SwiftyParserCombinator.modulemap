@@ -1,0 +1,6 @@
+module SwiftyParserCombinator {
+  umbrella header "SwiftyParserCombinator-umbrella.h"
+
+  export *
+  module * { export * }
+}

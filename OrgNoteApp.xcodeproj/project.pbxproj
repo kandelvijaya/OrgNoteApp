@@ -20,7 +20,6 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
-		28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28703D3820A859BD00DC8DBF /* ParserCombinator.framework */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
 		28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4520A85C7600DC8DBF /* OrgParserTests.swift */; };
 		2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WLbig.org */; };
@@ -51,20 +50,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2855D3EC20A843180082EC00;
 			remoteInfo = OrgNoteApp;
-		};
-		28703D3720A859BD00DC8DBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 85253C8820710D240039ABA1;
-			remoteInfo = ParserCombinator;
-		};
-		28703D3920A859BD00DC8DBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 85253C9120710D240039ABA1;
-			remoteInfo = ParserCombinatorTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -101,7 +86,6 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ParserCombinator.xcodeproj; path = deps/OrgSwiftParser/ParserCombinator/ParserCombinator.xcodeproj; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
 		28703D4520A85C7600DC8DBF /* OrgParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserTests.swift; sourceTree = "<group>"; };
 		2880A09320C18DEE00CD4ACC /* WLbig.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WLbig.org; sourceTree = "<group>"; };
@@ -131,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28703D3D20A859C800DC8DBF /* ParserCombinator.framework in Frameworks */,
 				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
 				AEAE18F285067B610ED28E53 /* libPods-OrgNoteApp.a in Frameworks */,
 			);
@@ -191,7 +174,6 @@
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
-				28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */,
 				2855D3EF20A843180082EC00 /* OrgNoteApp */,
 				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
 				2814518720D3D4260006BBD7 /* EnablePlaygroundShare */,
@@ -234,15 +216,6 @@
 				2814517420D349380006BBD7 /* OrgListDriverTests.swift */,
 			);
 			path = OrgNoteAppTests;
-			sourceTree = "<group>";
-		};
-		28703D3320A859BD00DC8DBF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				28703D3820A859BD00DC8DBF /* ParserCombinator.framework */,
-				28703D3A20A859BD00DC8DBF /* ParserCombinatorTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		28703D3B20A859C800DC8DBF /* Frameworks */ = {
@@ -413,12 +386,6 @@
 			mainGroup = 2855D3E420A843180082EC00;
 			productRefGroup = 2855D3EE20A843180082EC00 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 28703D3320A859BD00DC8DBF /* Products */;
-					ProjectRef = 28703D3220A859BD00DC8DBF /* ParserCombinator.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2855D3EC20A843180082EC00 /* OrgNoteApp */,
@@ -427,23 +394,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		28703D3820A859BD00DC8DBF /* ParserCombinator.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ParserCombinator.framework;
-			remoteRef = 28703D3720A859BD00DC8DBF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		28703D3A20A859BD00DC8DBF /* ParserCombinatorTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ParserCombinatorTests.xctest;
-			remoteRef = 28703D3920A859BD00DC8DBF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2814518420D3D4260006BBD7 /* Resources */ = {
@@ -767,13 +717,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46ETJSLJJM;
+				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -788,13 +738,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46ETJSLJJM;
+				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

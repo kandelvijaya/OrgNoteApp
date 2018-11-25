@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */; };
-		41036E065686F86D8DD7533E0A72C7C5 /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */; };
-		5B7A89F0308B7B24A654020A2D3C6007 /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */; };
-		5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */; };
-		65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F01024246F25ADD3ACC9F383A49964 /* Future.swift */; };
-		6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C64772F31131F97466C5DB9CF273017 /* Operators.swift */; };
-		7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */; };
-		84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */; };
-		8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */; };
-		B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */; };
-		C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */; };
+		0B9395658E1F1F7182DE5DE68168F5FF /* SwiftyParserCombinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E238D7B46F2520536C4962E750AF1CF9 /* SwiftyParserCombinator-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFC9D26306AD3E8091D543D09E8CBBF /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0FBE91C59626726A789749C9ED9CF8FE /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511F0F8161DF6FC4FFFFAFA07E2105C /* ParserError.swift */; };
+		21344114C2DF130F3F7DC3D6F120DBE3 /* Parser+STDLIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2F92C947DCB1B1E6F4330936B63C4 /* Parser+STDLIB.swift */; };
+		27B92D282AE18EB58BD6B20F9AEF5B4A /* SwiftyParserCombinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59100BF228CB4F370E79F1D1174A92C2 /* SwiftyParserCombinator-dummy.m */; };
+		2CDFA5529F1645BBD9EEB5F49A5D06D9 /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DD6CEDCD3495002B5BA4C0651EA33F8 /* Parser+TypedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353BA8D0A009C90B1A6B93E93F05A311 /* Parser+TypedMethods.swift */; };
+		30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E08A3724F80A601C6EC832B4C6EA3 /* DiffingAlgorithm.swift */; };
+		41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DB76C6835A07AEF0D247782BD3950 /* Diffable.swift */; };
+		517E5E48758C93485CE80B9F7E20DED1 /* Parser+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3523B19DA214E922A4DA1414BDFE2CC /* Parser+Operators.swift */; };
+		5420E9FE77D93F536CAB84FC64CFB125 /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D543602E7F0FA3588D7F83AF47B8A2 /* InputState.swift */; };
+		5B6885C963F82C33825F889D0BD17DB7 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82CA830567BF6B9B0623D20B3019EAB /* Parser.swift */; };
+		5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF66946580EC7F72C08C76A66A9155 /* ErrorEquality.swift */; };
+		65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1218621B0FAA26AB4F69911A1F1DA /* Future.swift */; };
+		669B7F1D7C9B6DF9878B752017207093 /* Parser+Combinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F4200A5C893FA7E3017FD170307BC /* Parser+Combinator.swift */; };
+		6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E05208778175D4DE75B8DA69B43450 /* Operators.swift */; };
+		7281FB62F15B3642C60F4C2A4F946356 /* Parser+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C18434E59476DF5BFC628B2C303F16B /* Parser+Monad.swift */; };
+		7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D772DB67F241D784F5AB06F4CF5778A /* Kekka-dummy.m */; };
+		84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75159D267474E0B572ED6B4ADD5E1820 /* FullyTypedResult.swift */; };
+		8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D8022603DF8E9F1A9023301EF795BD /* Result.swift */; };
+		996A918470ED3D74C33E417E35D21E02 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08884C2CADC07B4DAB349D9EB3358C46 /* ArrayExtension.swift */; };
+		A43531C63264DB4A0B8F4A0E08FD0F29 /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FADE93F3C5D7CEFD40D1F3CA33C6 /* ParserResult.swift */; };
+		B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A034F959ECFA708BF9BB7E72935687F1 /* InternalDiff.swift */; };
+		C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA951C1469B725691D054204E77478FD /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8F77AED70BBDCCD3914C394105EB2C5 /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BC931845943467915340D34FF8F50 /* CharacterExtension.swift */; };
+		CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 961563FEBC9E9E1AE584533C33657362 /* FastDiff-dummy.m */; };
 		DBE1BF131BC8B673967C0963A37B31C5 /* Pods-OrgNoteAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */; };
+		FE22009E317EE450B54F6347172E05D2 /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,65 +42,89 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 99B14E23756B67693F801CBDE30FD3BB;
+			remoteGlobalIDString = 50E72EB93989C265C24CF1A13D62E019;
 			remoteInfo = "Pods-OrgNoteApp";
 		};
-		5629B01D0242A944C07407B3D8AEE78E /* PBXContainerItemProxy */ = {
+		68D350938BE7D8279A41BA7EACABE077 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4DCE6EBD3DEF2E45D4B62A118F239FD3;
-			remoteInfo = Kekka;
+			remoteGlobalIDString = 437AE63D131C54DE0092FF2C30AB9978;
+			remoteInfo = SwiftyParserCombinator;
 		};
-		A813757BD95BD06630725DC62785DAE0 /* PBXContainerItemProxy */ = {
+		9E89A750E46DFDC91CD4B5DC159C5968 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2535CF36550B9FB3C1D8A57DB2F77687;
 			remoteInfo = FastDiff;
 		};
+		CBD6D99DC1AFAC6FA0C1D3A5CA6ED0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DCE6EBD3DEF2E45D4B62A118F239FD3;
+			remoteInfo = Kekka;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteApp-dummy.m"; sourceTree = "<group>"; };
-		03F01024246F25ADD3ACC9F383A49964 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
 		0575C4EC5DA033BD123B987DC9EBFFC2 /* Pods-OrgNoteAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-resources.sh"; sourceTree = "<group>"; };
+		08884C2CADC07B4DAB349D9EB3358C46 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ParserCombinator/Sources/ArrayExtension.swift; sourceTree = "<group>"; };
+		089FB3806442BD8B369C238E0E8BD3C9 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = Kekka.modulemap; path = ../../Headers/Public/Kekka/Kekka.modulemap; sourceTree = "<group>"; };
+		0C18434E59476DF5BFC628B2C303F16B /* Parser+Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Monad.swift"; path = "ParserCombinator/Sources/Parser+Monad.swift"; sourceTree = "<group>"; };
+		0E04FADE93F3C5D7CEFD40D1F3CA33C6 /* ParserResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserResult.swift; path = ParserCombinator/Sources/ParserResult.swift; sourceTree = "<group>"; };
+		12EC56FFCF9BAE67F2CA1EF696EE73D0 /* SwiftyParserCombinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = SwiftyParserCombinator.modulemap; path = ../../Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap; sourceTree = "<group>"; };
+		1511F0F8161DF6FC4FFFFAFA07E2105C /* ParserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserError.swift; path = ParserCombinator/Sources/ParserError.swift; sourceTree = "<group>"; };
 		152036AC56716AA54BB8C3059B92741E /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteAppTests-dummy.m"; sourceTree = "<group>"; };
-		1601530171015B16091D858095AAB913 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
-		182F0ED03610FE78AC0593EE1DE36820 /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = FastDiff.modulemap; path = ../../Headers/Public/FastDiff/FastDiff.modulemap; sourceTree = "<group>"; };
-		18D2E86A8445702CA42BE4462363B6B1 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = Kekka.modulemap; path = ../../Headers/Public/Kekka/Kekka.modulemap; sourceTree = "<group>"; };
 		192B8B00F5612B22D6974164EC1B9A0A /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		291E87A15BB1354DA180E312E903DB02 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
+		2D3DB76C6835A07AEF0D247782BD3950 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
 		2EE4305EE3AB55E24744B688FF2AB338 /* Pods-OrgNoteApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
-		36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Kekka-umbrella.h"; path = "../../Headers/Public/Kekka/Kekka-umbrella.h"; sourceTree = "<group>"; };
-		452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
-		481EA371DD8B7CDD6A0B6898789AC843 /* libKekka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKekka.a; path = libKekka.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F023241E0061B66B0B0662F2B605B90 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
+		353BA8D0A009C90B1A6B93E93F05A311 /* Parser+TypedMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+TypedMethods.swift"; path = "ParserCombinator/Sources/Parser+TypedMethods.swift"; sourceTree = "<group>"; };
+		35E05208778175D4DE75B8DA69B43450 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
+		39D8022603DF8E9F1A9023301EF795BD /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
+		3F8BC931845943467915340D34FF8F50 /* CharacterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ParserCombinator/CharacterExtension.swift; sourceTree = "<group>"; };
+		444E336D5E158951A507D6CAE8418698 /* libKekka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKekka.a; path = libKekka.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
+		4B1658AC8B0D718F96B2AED0013DDA82 /* libPods-OrgNoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteApp.a"; path = "libPods-OrgNoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C87EA8DBD2F357A1DD2CC986D945B02 /* Pods-OrgNoteApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-resources.sh"; sourceTree = "<group>"; };
+		50F1218621B0FAA26AB4F69911A1F1DA /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
+		51D543602E7F0FA3588D7F83AF47B8A2 /* InputState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputState.swift; path = ParserCombinator/Sources/InputState.swift; sourceTree = "<group>"; };
 		542AFB34D6E2809B9D45C4F44B6AD186 /* Pods-OrgNoteApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteApp.modulemap"; sourceTree = "<group>"; };
-		5FF87916C5518C5975CA0A0201EFD42B /* libFastDiff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFastDiff.a; path = libFastDiff.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		586CCA50211CA10C3CED9BF3A422253D /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = FastDiff.modulemap; path = ../../Headers/Public/FastDiff/FastDiff.modulemap; sourceTree = "<group>"; };
+		59100BF228CB4F370E79F1D1174A92C2 /* SwiftyParserCombinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyParserCombinator-dummy.m"; sourceTree = "<group>"; };
+		60B1F8D0FBCCBAA8A8C978E103064F51 /* libFastDiff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFastDiff.a; path = libFastDiff.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		674ADA8A18EC5238A12E3CC89BB5979B /* SwiftyParserCombinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-prefix.pch"; sourceTree = "<group>"; };
+		70C898F17743036984550F2A9E52BA0A /* libSwiftyParserCombinator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftyParserCombinator.a; path = libSwiftyParserCombinator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteApp-umbrella.h"; sourceTree = "<group>"; };
 		7321B8145CEA6E643B49EE758599E61D /* Pods-OrgNoteAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		74BFB0FF7F96B478F424666AECF6A4AE /* libPods-OrgNoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteApp.a"; path = "libPods-OrgNoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
-		82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
-		84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
-		8A135A4C8BB4E89D08C9D69AD9DBABD8 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
+		75159D267474E0B572ED6B4ADD5E1820 /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		797E08A3724F80A601C6EC832B4C6EA3 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		7A4F4200A5C893FA7E3017FD170307BC /* Parser+Combinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Combinator.swift"; path = "ParserCombinator/Sources/Parser+Combinator.swift"; sourceTree = "<group>"; };
+		7D772DB67F241D784F5AB06F4CF5778A /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
 		934AEE8B9FF4548A15444A3F54F00021 /* Pods-OrgNoteAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C64772F31131F97466C5DB9CF273017 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
+		961563FEBC9E9E1AE584533C33657362 /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		9BC0407EA50D406B162C77D5F21F3576 /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
+		A034F959ECFA708BF9BB7E72935687F1 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
 		A42F8EC0B243C9C69B1900C1C70C5925 /* Pods-OrgNoteApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A69BFFA69577C94F4A86737C0B4639ED /* Pods-OrgNoteAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
-		BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
-		BE6A8AD71C4EC797B51D9C06A2C58BF1 /* libPods-OrgNoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteAppTests.a"; path = "libPods-OrgNoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4188D7FBC6CC31BC21956FD8C8FACB6 /* libPods-OrgNoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteAppTests.a"; path = "libPods-OrgNoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCF66946580EC7F72C08C76A66A9155 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		CA951C1469B725691D054204E77478FD /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Kekka-umbrella.h"; path = "../../Headers/Public/Kekka/Kekka-umbrella.h"; sourceTree = "<group>"; };
+		CE9222997AC68AEF460D436EC6A30394 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
 		D9A1DFADF654144C8FFCFC25D94C7E71 /* Pods-OrgNoteApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-frameworks.sh"; sourceTree = "<group>"; };
-		E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
-		ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
-		F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastDiff-umbrella.h"; path = "../../Headers/Public/FastDiff/FastDiff-umbrella.h"; sourceTree = "<group>"; };
-		FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
+		E238D7B46F2520536C4962E750AF1CF9 /* SwiftyParserCombinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftyParserCombinator-umbrella.h"; path = "../../Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h"; sourceTree = "<group>"; };
+		E3523B19DA214E922A4DA1414BDFE2CC /* Parser+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Operators.swift"; path = "ParserCombinator/Sources/Parser+Operators.swift"; sourceTree = "<group>"; };
+		E6A2F92C947DCB1B1E6F4330936B63C4 /* Parser+STDLIB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+STDLIB.swift"; path = "ParserCombinator/Sources/Parser+STDLIB.swift"; sourceTree = "<group>"; };
+		E82CA830567BF6B9B0623D20B3019EAB /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ParserCombinator/Sources/Parser.swift; sourceTree = "<group>"; };
+		EBFC9D26306AD3E8091D543D09E8CBBF /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastDiff-umbrella.h"; path = "../../Headers/Public/FastDiff/FastDiff-umbrella.h"; sourceTree = "<group>"; };
+		FEDC2F0D549002E2ED23E0C5E292255B /* SwiftyParserCombinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyParserCombinator.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,14 +135,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9B49758F9E12461A507FEBF389C0400 /* Frameworks */ = {
+		8DAA8F8F146E73B054039FE28301FE26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDDE4A831F5A7A9D86443369F5BB8ED3 /* Frameworks */ = {
+		B00BA15F1962D45C232F58575B7522FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B49758F9E12461A507FEBF389C0400 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,17 +175,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		031F82907F9C0899290BE9C7B66859FA /* Support Files */ = {
+		06B8C7E82617ABAEE0B0999346A1C484 /* Kekka */ = {
 			isa = PBXGroup;
 			children = (
-				182F0ED03610FE78AC0593EE1DE36820 /* FastDiff.modulemap */,
-				452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */,
-				82E1D84F913D6752B3FBE590C592C8CB /* FastDiff-dummy.m */,
-				1601530171015B16091D858095AAB913 /* FastDiff-prefix.pch */,
-				F2D509091D17F030C367C0D194368057 /* FastDiff-umbrella.h */,
+				BFCF66946580EC7F72C08C76A66A9155 /* ErrorEquality.swift */,
+				75159D267474E0B572ED6B4ADD5E1820 /* FullyTypedResult.swift */,
+				50F1218621B0FAA26AB4F69911A1F1DA /* Future.swift */,
+				35E05208778175D4DE75B8DA69B43450 /* Operators.swift */,
+				39D8022603DF8E9F1A9023301EF795BD /* Result.swift */,
+				E3033CF80EAA50A30D73D5A3B4DDD5A5 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FastDiff";
+			name = Kekka;
+			path = Kekka;
 			sourceTree = "<group>";
 		};
 		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
@@ -149,6 +194,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D024C49BBCC5360099A1574247E0F7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B97645CC078091381525E171AEF5503 /* FastDiff */,
+				06B8C7E82617ABAEE0B0999346A1C484 /* Kekka */,
+				427187AD5E41C578036FB3918E881C4E /* SwiftyParserCombinator */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		2CC8B8C4C94BC720EB947FEBD0D72271 /* Pods-OrgNoteAppTests */ = {
@@ -166,63 +221,98 @@
 			path = "Target Support Files/Pods-OrgNoteAppTests";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		3952B6CCA878BDE75CABA6B481E3262D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				C4BBA625B18B573EEB0481CCCBC63F97 /* Pods */,
-				FCB34F370468577676BD8CD1BF74EAC0 /* Products */,
-				01FD67FE1CE8046F3C38B2DAA1E70AE4 /* Targets Support Files */,
+				12EC56FFCF9BAE67F2CA1EF696EE73D0 /* SwiftyParserCombinator.modulemap */,
+				FEDC2F0D549002E2ED23E0C5E292255B /* SwiftyParserCombinator.xcconfig */,
+				59100BF228CB4F370E79F1D1174A92C2 /* SwiftyParserCombinator-dummy.m */,
+				674ADA8A18EC5238A12E3CC89BB5979B /* SwiftyParserCombinator-prefix.pch */,
+				E238D7B46F2520536C4962E750AF1CF9 /* SwiftyParserCombinator-umbrella.h */,
 			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyParserCombinator";
 			sourceTree = "<group>";
 		};
-		832063F456D07E235A3206DFCF695716 /* FastDiff */ = {
+		427187AD5E41C578036FB3918E881C4E /* SwiftyParserCombinator */ = {
 			isa = PBXGroup;
 			children = (
-				367C33EBCC8C9EDB1EC77CA8D8C0C5C2 /* Diffable.swift */,
-				78388366B973528633AEA0F99178B296 /* DiffingAlgorithm.swift */,
-				BB17FEA45A7D78D84B8889DB93A2BA58 /* InternalDiff.swift */,
-				031F82907F9C0899290BE9C7B66859FA /* Support Files */,
+				08884C2CADC07B4DAB349D9EB3358C46 /* ArrayExtension.swift */,
+				3F8BC931845943467915340D34FF8F50 /* CharacterExtension.swift */,
+				51D543602E7F0FA3588D7F83AF47B8A2 /* InputState.swift */,
+				E82CA830567BF6B9B0623D20B3019EAB /* Parser.swift */,
+				7A4F4200A5C893FA7E3017FD170307BC /* Parser+Combinator.swift */,
+				0C18434E59476DF5BFC628B2C303F16B /* Parser+Monad.swift */,
+				E3523B19DA214E922A4DA1414BDFE2CC /* Parser+Operators.swift */,
+				E6A2F92C947DCB1B1E6F4330936B63C4 /* Parser+STDLIB.swift */,
+				353BA8D0A009C90B1A6B93E93F05A311 /* Parser+TypedMethods.swift */,
+				1511F0F8161DF6FC4FFFFAFA07E2105C /* ParserError.swift */,
+				0E04FADE93F3C5D7CEFD40D1F3CA33C6 /* ParserResult.swift */,
+				3952B6CCA878BDE75CABA6B481E3262D /* Support Files */,
+			);
+			name = SwiftyParserCombinator;
+			path = SwiftyParserCombinator;
+			sourceTree = "<group>";
+		};
+		7B97645CC078091381525E171AEF5503 /* FastDiff */ = {
+			isa = PBXGroup;
+			children = (
+				2D3DB76C6835A07AEF0D247782BD3950 /* Diffable.swift */,
+				797E08A3724F80A601C6EC832B4C6EA3 /* DiffingAlgorithm.swift */,
+				A034F959ECFA708BF9BB7E72935687F1 /* InternalDiff.swift */,
+				DBD3E2B72B89332465038C4025B69C1E /* Support Files */,
 			);
 			name = FastDiff;
 			path = FastDiff;
 			sourceTree = "<group>";
 		};
-		BAD00B293415D05EF7E2923CCEE8CD6B /* Support Files */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				18D2E86A8445702CA42BE4462363B6B1 /* Kekka.modulemap */,
-				FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */,
-				84BC1C6C9BF52F673FC84BCC5FFD20C3 /* Kekka-dummy.m */,
-				8A135A4C8BB4E89D08C9D69AD9DBABD8 /* Kekka-prefix.pch */,
-				36B267E24317522472795EABCFB21DB2 /* Kekka-umbrella.h */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				1D024C49BBCC5360099A1574247E0F7F /* Pods */,
+				80D33C95F8253E9F238F21EBE6949085 /* Products */,
+				01FD67FE1CE8046F3C38B2DAA1E70AE4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80D33C95F8253E9F238F21EBE6949085 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60B1F8D0FBCCBAA8A8C978E103064F51 /* libFastDiff.a */,
+				444E336D5E158951A507D6CAE8418698 /* libKekka.a */,
+				4B1658AC8B0D718F96B2AED0013DDA82 /* libPods-OrgNoteApp.a */,
+				B4188D7FBC6CC31BC21956FD8C8FACB6 /* libPods-OrgNoteAppTests.a */,
+				70C898F17743036984550F2A9E52BA0A /* libSwiftyParserCombinator.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBD3E2B72B89332465038C4025B69C1E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				586CCA50211CA10C3CED9BF3A422253D /* FastDiff.modulemap */,
+				9BC0407EA50D406B162C77D5F21F3576 /* FastDiff.xcconfig */,
+				961563FEBC9E9E1AE584533C33657362 /* FastDiff-dummy.m */,
+				2F023241E0061B66B0B0662F2B605B90 /* FastDiff-prefix.pch */,
+				EBFC9D26306AD3E8091D543D09E8CBBF /* FastDiff-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FastDiff";
+			sourceTree = "<group>";
+		};
+		E3033CF80EAA50A30D73D5A3B4DDD5A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				089FB3806442BD8B369C238E0E8BD3C9 /* Kekka.modulemap */,
+				291E87A15BB1354DA180E312E903DB02 /* Kekka.xcconfig */,
+				7D772DB67F241D784F5AB06F4CF5778A /* Kekka-dummy.m */,
+				CE9222997AC68AEF460D436EC6A30394 /* Kekka-prefix.pch */,
+				CA951C1469B725691D054204E77478FD /* Kekka-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Kekka";
-			sourceTree = "<group>";
-		};
-		C4BBA625B18B573EEB0481CCCBC63F97 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				832063F456D07E235A3206DFCF695716 /* FastDiff */,
-				D46A5D62C6711E8EC315EF2D49F9C4F8 /* Kekka */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D46A5D62C6711E8EC315EF2D49F9C4F8 /* Kekka */ = {
-			isa = PBXGroup;
-			children = (
-				ECD5BBD7585475CB861FF8092DE35E12 /* ErrorEquality.swift */,
-				B1A027031CEBD6A714BB9ACD7BE08AAD /* FullyTypedResult.swift */,
-				03F01024246F25ADD3ACC9F383A49964 /* Future.swift */,
-				9C64772F31131F97466C5DB9CF273017 /* Operators.swift */,
-				E3FCE0575D71E13CF0DF00FAA3DA50EA /* Result.swift */,
-				BAD00B293415D05EF7E2923CCEE8CD6B /* Support Files */,
-			);
-			name = Kekka;
-			path = Kekka;
 			sourceTree = "<group>";
 		};
 		F8CDDD95B647C8275559331111771D5B /* Pods-OrgNoteApp */ = {
@@ -240,17 +330,6 @@
 			);
 			name = "Pods-OrgNoteApp";
 			path = "Target Support Files/Pods-OrgNoteApp";
-			sourceTree = "<group>";
-		};
-		FCB34F370468577676BD8CD1BF74EAC0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5FF87916C5518C5975CA0A0201EFD42B /* libFastDiff.a */,
-				481EA371DD8B7CDD6A0B6898789AC843 /* libKekka.a */,
-				74BFB0FF7F96B478F424666AECF6A4AE /* libPods-OrgNoteApp.a */,
-				BE6A8AD71C4EC797B51D9C06A2C58BF1 /* libPods-OrgNoteAppTests.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +350,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CC9599CA0FA05FD8558E624D2DBB37E /* Headers */ = {
+		4BFEC8338A9F85893033A1C16F23DFED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41036E065686F86D8DD7533E0A72C7C5 /* Pods-OrgNoteApp-umbrella.h in Headers */,
+				0B9395658E1F1F7182DE5DE68168F5FF /* SwiftyParserCombinator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +363,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F84FA7AF22E3E362FDF048EB857B5B05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDFA5529F1645BBD9EEB5F49A5D06D9 /* Pods-OrgNoteApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +392,25 @@
 			);
 			name = FastDiff;
 			productName = FastDiff;
-			productReference = 5FF87916C5518C5975CA0A0201EFD42B /* libFastDiff.a */;
+			productReference = 60B1F8D0FBCCBAA8A8C978E103064F51 /* libFastDiff.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		437AE63D131C54DE0092FF2C30AB9978 /* SwiftyParserCombinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6567AE38ADA7BEE784D5DE31ED080FE9 /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */;
+			buildPhases = (
+				4BFEC8338A9F85893033A1C16F23DFED /* Headers */,
+				CE297ED5A815524AB88434CA4175F18A /* Sources */,
+				8DAA8F8F146E73B054039FE28301FE26 /* Frameworks */,
+				D2E5C3AB7EA292687B9EEFF6F6EE2760 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyParserCombinator;
+			productName = SwiftyParserCombinator;
+			productReference = 70C898F17743036984550F2A9E52BA0A /* libSwiftyParserCombinator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */ = {
@@ -323,26 +428,27 @@
 			);
 			name = Kekka;
 			productName = Kekka;
-			productReference = 481EA371DD8B7CDD6A0B6898789AC843 /* libKekka.a */;
+			productReference = 444E336D5E158951A507D6CAE8418698 /* libKekka.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		99B14E23756B67693F801CBDE30FD3BB /* Pods-OrgNoteApp */ = {
+		50E72EB93989C265C24CF1A13D62E019 /* Pods-OrgNoteApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2977AF62AE304AB627A5957AEAC8140 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */;
+			buildConfigurationList = 78CC897417080DF0101C0EB6C23B8705 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */;
 			buildPhases = (
-				8CC9599CA0FA05FD8558E624D2DBB37E /* Headers */,
-				CD5799CFD0C5DE4FBC9F76D006A83A09 /* Sources */,
-				CDDE4A831F5A7A9D86443369F5BB8ED3 /* Frameworks */,
+				F84FA7AF22E3E362FDF048EB857B5B05 /* Headers */,
+				642371C63D40036ABB5757CFF857FE4D /* Sources */,
+				B00BA15F1962D45C232F58575B7522FC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2729FE2EE8E9CD6A181544A17C92610F /* PBXTargetDependency */,
-				C6EF9443B3DBAA0028E3CBDF14FEE265 /* PBXTargetDependency */,
+				7A657F5B9F378FB26123433940ADD38A /* PBXTargetDependency */,
+				532601F934A6BB8514108BC092FC3CDF /* PBXTargetDependency */,
+				007640607D04D17FEC1A354244A082C6 /* PBXTargetDependency */,
 			);
 			name = "Pods-OrgNoteApp";
 			productName = "Pods-OrgNoteApp";
-			productReference = 74BFB0FF7F96B478F424666AECF6A4AE /* libPods-OrgNoteApp.a */;
+			productReference = 4B1658AC8B0D718F96B2AED0013DDA82 /* libPods-OrgNoteApp.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9D105307579B2C2AFA9F21F41348AAA8 /* Pods-OrgNoteAppTests */ = {
@@ -360,7 +466,7 @@
 			);
 			name = "Pods-OrgNoteAppTests";
 			productName = "Pods-OrgNoteAppTests";
-			productReference = BE6A8AD71C4EC797B51D9C06A2C58BF1 /* libPods-OrgNoteAppTests.a */;
+			productReference = B4188D7FBC6CC31BC21956FD8C8FACB6 /* libPods-OrgNoteAppTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -380,14 +486,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FCB34F370468577676BD8CD1BF74EAC0 /* Products */;
+			productRefGroup = 80D33C95F8253E9F238F21EBE6949085 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */,
 				4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */,
-				99B14E23756B67693F801CBDE30FD3BB /* Pods-OrgNoteApp */,
+				50E72EB93989C265C24CF1A13D62E019 /* Pods-OrgNoteApp */,
 				9D105307579B2C2AFA9F21F41348AAA8 /* Pods-OrgNoteAppTests */,
+				437AE63D131C54DE0092FF2C30AB9978 /* SwiftyParserCombinator */,
 			);
 		};
 /* End PBXProject section */
@@ -443,6 +550,31 @@
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kekka/Kekka.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kekka/Kekka-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 			showEnvVarsInLog = 1;
 		};
+		D2E5C3AB7EA292687B9EEFF6F6EE2760 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap",
+				"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -470,11 +602,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD5799CFD0C5DE4FBC9F76D006A83A09 /* Sources */ = {
+		642371C63D40036ABB5757CFF857FE4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7A89F0308B7B24A654020A2D3C6007 /* Pods-OrgNoteApp-dummy.m in Sources */,
+				FE22009E317EE450B54F6347172E05D2 /* Pods-OrgNoteApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE297ED5A815524AB88434CA4175F18A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996A918470ED3D74C33E417E35D21E02 /* ArrayExtension.swift in Sources */,
+				C8F77AED70BBDCCD3914C394105EB2C5 /* CharacterExtension.swift in Sources */,
+				5420E9FE77D93F536CAB84FC64CFB125 /* InputState.swift in Sources */,
+				669B7F1D7C9B6DF9878B752017207093 /* Parser+Combinator.swift in Sources */,
+				7281FB62F15B3642C60F4C2A4F946356 /* Parser+Monad.swift in Sources */,
+				517E5E48758C93485CE80B9F7E20DED1 /* Parser+Operators.swift in Sources */,
+				21344114C2DF130F3F7DC3D6F120DBE3 /* Parser+STDLIB.swift in Sources */,
+				2DD6CEDCD3495002B5BA4C0651EA33F8 /* Parser+TypedMethods.swift in Sources */,
+				5B6885C963F82C33825F889D0BD17DB7 /* Parser.swift in Sources */,
+				0FBE91C59626726A789749C9ED9CF8FE /* ParserError.swift in Sources */,
+				A43531C63264DB4A0B8F4A0E08FD0F29 /* ParserResult.swift in Sources */,
+				27B92D282AE18EB58BD6B20F9AEF5B4A /* SwiftyParserCombinator-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,23 +640,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2729FE2EE8E9CD6A181544A17C92610F /* PBXTargetDependency */ = {
+		007640607D04D17FEC1A354244A082C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyParserCombinator;
+			target = 437AE63D131C54DE0092FF2C30AB9978 /* SwiftyParserCombinator */;
+			targetProxy = 68D350938BE7D8279A41BA7EACABE077 /* PBXContainerItemProxy */;
+		};
+		532601F934A6BB8514108BC092FC3CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kekka;
+			target = 4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */;
+			targetProxy = CBD6D99DC1AFAC6FA0C1D3A5CA6ED0B0 /* PBXContainerItemProxy */;
+		};
+		7A657F5B9F378FB26123433940ADD38A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FastDiff;
 			target = 2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */;
-			targetProxy = A813757BD95BD06630725DC62785DAE0 /* PBXContainerItemProxy */;
+			targetProxy = 9E89A750E46DFDC91CD4B5DC159C5968 /* PBXContainerItemProxy */;
 		};
 		B884D5BFA0602B5D464536EEA21CE213 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OrgNoteApp";
-			target = 99B14E23756B67693F801CBDE30FD3BB /* Pods-OrgNoteApp */;
+			target = 50E72EB93989C265C24CF1A13D62E019 /* Pods-OrgNoteApp */;
 			targetProxy = 2ACB6412A1BE96016CACAA620FFF10E7 /* PBXContainerItemProxy */;
-		};
-		C6EF9443B3DBAA0028E3CBDF14FEE265 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kekka;
-			target = 4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */;
-			targetProxy = 5629B01D0242A944C07407B3D8AEE78E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -571,7 +728,7 @@
 		};
 		0AFEF56D03194B56F48F4EDF8EB10831 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */;
+			baseConfigurationReference = 9BC0407EA50D406B162C77D5F21F3576 /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -597,9 +754,35 @@
 			};
 			name = Release;
 		};
+		0BA716DF53630333A1CF862DFFB23CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		26F4433083F2178831AF0F8786EBFB13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */;
+			baseConfigurationReference = 291E87A15BB1354DA180E312E903DB02 /* Kekka.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -670,9 +853,62 @@
 			};
 			name = Release;
 		};
+		882079A4ACC18BF4D8A397C4D2E7742C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C7FCEB2F432A755CBE7FDE4F66515B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDC2F0D549002E2ED23E0C5E292255B /* SwiftyParserCombinator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftyParserCombinator;
+				PRODUCT_NAME = SwiftyParserCombinator;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A041C2B67825E8A11375806BD01D25D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 452BBD83524CEC379D371146970835AA /* FastDiff.xcconfig */;
+			baseConfigurationReference = 9BC0407EA50D406B162C77D5F21F3576 /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -696,53 +932,28 @@
 			};
 			name = Debug;
 		};
-		D0280BAD74D3E71597E295D73F48C062 /* Release */ = {
+		CFF2F49B92B4151C915B0CD310660079 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */;
+			baseConfigurationReference = FEDC2F0D549002E2ED23E0C5E292255B /* SwiftyParserCombinator.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftyParserCombinator;
+				PRODUCT_NAME = SwiftyParserCombinator;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E21F6BCE37C88F9E0E628031E0E06CE3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -813,7 +1024,7 @@
 		};
 		E9B2CFFFAE1A0AC3BFDC4DC997FCE7D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB96B740AA726C18A2DC824CB97BD44 /* Kekka.xcconfig */;
+			baseConfigurationReference = 291E87A15BB1354DA180E312E903DB02 /* Kekka.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -858,20 +1069,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6567AE38ADA7BEE784D5DE31ED080FE9 /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFF2F49B92B4151C915B0CD310660079 /* Debug */,
+				8C7FCEB2F432A755CBE7FDE4F66515B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78CC897417080DF0101C0EB6C23B8705 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882079A4ACC18BF4D8A397C4D2E7742C /* Debug */,
+				0BA716DF53630333A1CF862DFFB23CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		984AC0FCE59BD1594220055BA80962D2 /* Build configuration list for PBXNativeTarget "FastDiff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A041C2B67825E8A11375806BD01D25D2 /* Debug */,
 				0AFEF56D03194B56F48F4EDF8EB10831 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A2977AF62AE304AB627A5957AEAC8140 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E21F6BCE37C88F9E0E628031E0E06CE3 /* Debug */,
-				D0280BAD74D3E71597E295D73F48C062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
