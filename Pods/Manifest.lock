@@ -1,24 +1,33 @@
 PODS:
+  - CommonCryptoModule (1.0.2)
   - FastDiff (1.1.1)
   - Kekka (0.7.2)
+  - OAuthorize2 (0.1.5):
+    - CommonCryptoModule
+    - Kekka (~> 0.6)
   - SwiftyParserCombinator (1.0)
 
 DEPENDENCIES:
   - FastDiff
   - Kekka
+  - OAuthorize2
   - SwiftyParserCombinator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CommonCryptoModule
     - FastDiff
     - Kekka
+    - OAuthorize2
     - SwiftyParserCombinator
 
 SPEC CHECKSUMS:
+  CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
   Kekka: 7d8afb09fca095ce2840613aa263f127349ee35b
+  OAuthorize2: 6c9e63f3fc5005ef846b141ab763059fee4758bc
   SwiftyParserCombinator: c1390cfc79ccd4f6cd1bdf9a7e482ddfd2d0c7b0
 
-PODFILE CHECKSUM: eed14881fb85debc54d51bcfc4db0f16bd2ae27f
+PODFILE CHECKSUM: 7d9ac527e25a700bb96948f44189cc014fde989f
 
 COCOAPODS: 1.5.3

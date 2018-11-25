@@ -12,11 +12,13 @@ import Kekka
 typealias OutlineCellDesc = ListCellDescriptor<OutlineViewModel, OutlineCell>
 typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
 
+
 final class OrgListDriver {
 
-    var cells: [AnyListCellDescriptor] {
-        let model = Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value!
-        return model.map(OutlineViewModel.init).map(cellDescriptor)
+    private var cells: [AnyListCellDescriptor] = []
+
+    init(with orgModel: OrgFile) {
+        self.cells = orgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
     }
 
     private func cellDescriptor(for viewModel: OutlineViewModel) -> AnyListCellDescriptor {
@@ -29,14 +31,12 @@ final class OrgListDriver {
         return cellDesc.any()
     }
 
-
-
     private func sectionDescriptor(with cellDescs: [AnyListCellDescriptor]) -> AnyListSectionDescriptor {
         return ListSectionDescriptor(with: cellDescs)
     }
 
-    lazy var celled = cells.map { [$0] }
-    lazy var sections = celled.map(sectionDescriptor)
+    // each top level cell is transformed to section
+    lazy var sections = cells.map { [$0] }.map(sectionDescriptor)
     lazy var controller = ListViewController(with: sections)
 
     func didSelect(item: OutlineViewModel) {

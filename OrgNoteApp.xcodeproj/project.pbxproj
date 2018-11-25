@@ -323,6 +323,7 @@
 				2855D3EA20A843180082EC00 /* Frameworks */,
 				2855D3EB20A843180082EC00 /* Resources */,
 				2814519220D3D4260006BBD7 /* Embed Frameworks */,
+				18B2A9A8D169CAAE702948D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,6 +427,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18B2A9A8D169CAAE702948D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-resources.sh",
+				"${PODS_ROOT}/CommonCryptoModule/CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h",
+				"${PODS_ROOT}/CommonCryptoModule/CommonCryptoModule/CommonCryptoBridge/module.modulemap",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CommonCryptoBridge.h",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/module.modulemap",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		47E83F03AEF52FA63B42270F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

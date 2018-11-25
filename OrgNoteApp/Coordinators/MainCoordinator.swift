@@ -27,7 +27,8 @@ struct MainNavigator: Navigator {
     }
 
     func start() {
-        let controller = OrgListDriver().controller
+        let model = Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value!
+        let controller = OrgListDriver(with: model).controller
         controller.title = "View your notes"
         navigationController.pushViewController(controller, animated: true)
     }
