@@ -11,10 +11,13 @@
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		28417E2920A8469800996941 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2820A8469800996941 /* MainCoordinator.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
+		284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */; };
+		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
+		284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */; };
+		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
 		2855D3F320A843180082EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F220A843180082EC00 /* ViewController.swift */; };
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
@@ -73,10 +76,13 @@
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28417E2820A8469800996941 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
+		284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgLocateViewController.swift; sourceTree = "<group>"; };
+		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewViewController.swift; sourceTree = "<group>"; };
+		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D3F020A843180082EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2855D3F220A843180082EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,22 +159,55 @@
 			path = supporting;
 			sourceTree = "<group>";
 		};
-		28417E2720A844D700996941 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				28417E2820A8469800996941 /* MainCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				284C7D1921AB1A3B00C0F290 /* Color Palette */,
+				284C7D0A21AB11E500C0F290 /* LocalStorage */,
 				28BEF90520D7CEFD00BB7C19 /* GenericList */,
 				2880A09A20C18FE400CD4ACC /* OutlineView */,
 				28703D3E20A85A0200DC8DBF /* OrgParser */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		284C7D0121AB072200C0F290 /* Org View */ = {
+			isa = PBXGroup;
+			children = (
+				284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */,
+			);
+			path = "Org View";
+			sourceTree = "<group>";
+		};
+		284C7D0221AB073F00C0F290 /* Org Locate */ = {
+			isa = PBXGroup;
+			children = (
+				284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */,
+			);
+			path = "Org Locate";
+			sourceTree = "<group>";
+		};
+		284C7D0721AB11A100C0F290 /* Org List */ = {
+			isa = PBXGroup;
+			children = (
+				2880A0A020C196E700CD4ACC /* OrgListDriver.swift */,
+			);
+			path = "Org List";
+			sourceTree = "<group>";
+		};
+		284C7D0A21AB11E500C0F290 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		284C7D1921AB1A3B00C0F290 /* Color Palette */ = {
+			isa = PBXGroup;
+			children = (
+				284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */,
+			);
+			path = "Color Palette";
 			sourceTree = "<group>";
 		};
 		2855D3E420A843180082EC00 = {
@@ -200,7 +239,6 @@
 				2880A09F20C196CD00CD4ACC /* Features */,
 				28417E2C20A8494D00996941 /* Core */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
-				28417E2720A844D700996941 /* Coordinators */,
 				28417E2520A844C000996941 /* supporting */,
 			);
 			path = OrgNoteApp;
@@ -248,8 +286,10 @@
 		2880A09F20C196CD00CD4ACC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				2880A0A020C196E700CD4ACC /* OrgListDriver.swift */,
-				28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */,
+				284C7D0721AB11A100C0F290 /* Org List */,
+				284C7D0521AB111900C0F290 /* Main.storyboard */,
+				284C7D0221AB073F00C0F290 /* Org Locate */,
+				284C7D0121AB072200C0F290 /* Org View */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -257,6 +297,7 @@
 		2880A0A220C197DC00CD4ACC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */,
 				2880A0A320C197E600CD4ACC /* OrgFileService.swift */,
 			);
 			path = Service;
@@ -412,6 +453,7 @@
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
+				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,11 +554,13 @@
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
-				28417E2920A8469800996941 /* MainCoordinator.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
+				284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */,
+				284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
+				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
