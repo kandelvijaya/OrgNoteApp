@@ -1,4 +1,4 @@
-module SwiftyParserCombinator {
+framework module SwiftyParserCombinator {
   umbrella header "SwiftyParserCombinator-umbrella.h"
 
   export *

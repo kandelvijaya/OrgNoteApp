@@ -1,11 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule" "${PODS_CONFIGURATION_BUILD_DIR}/FastDiff" "${PODS_CONFIGURATION_BUILD_DIR}/Kekka" "${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CommonCryptoModule" "${PODS_ROOT}/Headers/Public/OAuthorize2"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule" "${PODS_CONFIGURATION_BUILD_DIR}/FastDiff" "${PODS_CONFIGURATION_BUILD_DIR}/Kekka" "${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CommonCryptoModule" -isystem "${PODS_ROOT}/Headers/Public/OAuthorize2" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule/CommonCryptoModule.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/FastDiff/FastDiff.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Kekka/Kekka.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2/OAuthorize2.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC
-OTHER_SWIFT_FLAGS = $(inherited) -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule/CommonCryptoModule.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/FastDiff/FastDiff.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Kekka/Kekka.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2/OAuthorize2.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.modulemap"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule/CommonCryptoModule.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FastDiff/FastDiff.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kekka/Kekka.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2/OAuthorize2.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework/Headers"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule" "${PODS_CONFIGURATION_BUILD_DIR}/FastDiff" "${PODS_CONFIGURATION_BUILD_DIR}/Kekka" "${PODS_CONFIGURATION_BUILD_DIR}/OAuthorize2" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyParserCombinator"

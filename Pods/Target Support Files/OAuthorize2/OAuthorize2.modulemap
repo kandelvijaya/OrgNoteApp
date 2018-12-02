@@ -1,4 +1,4 @@
-module OAuthorize2 {
+framework module OAuthorize2 {
   umbrella header "OAuthorize2-umbrella.h"
 
   export *

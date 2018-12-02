@@ -1,5 +1,6 @@
+use_frameworks!
+
 target 'OrgNoteApp' do
-  # Pods for OrgNoteApp
   pod 'Kekka'
   pod 'FastDiff'
   pod 'SwiftyParserCombinator'

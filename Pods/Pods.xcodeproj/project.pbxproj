@@ -7,600 +7,598 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D66C13C771390133E12F6EE827375BB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62163775AE6848CAA3431B2E95B17D0 /* ArrayExtension.swift */; };
-		0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB939B18EF54325290C302458AF64D8 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1236913469ACDA11A6368E29FCF10F8E /* SwiftyParserCombinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA26D5C5EF1E3F1F81C086F89F489D1 /* SwiftyParserCombinator-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		17347CDF9546CA12DA7E83C2587F33C7 /* OAuth2AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D06C64E994EA6464AFE3F3F2A71E /* OAuth2AccessToken.swift */; };
-		1D7BB37991FFD5E242E6C926A20B5D97 /* OAuthorize2.h in Headers */ = {isa = PBXBuildFile; fileRef = B30E9A7D166DA55E18ADDCC9E7A90C15 /* OAuthorize2.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2FD965DEE7A2E4AFA8E867C8C1CFC74B /* OAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A10E28C7545D5115CA22ACDD38526 /* OAuth2Config.swift */; };
-		30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F5D766B1285065E7D3A248DDB0CD1 /* DiffingAlgorithm.swift */; };
-		3470AEC1527A51919E684C996E12227C /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B730CE6C8A7912A1195138C49D21BBF /* OAuth2.swift */; };
-		3D69251D55FD2607DD3AB2E7882DD12C /* OAuth2NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A477DBDD8CE79ECD7BA7DF42E3F9F30 /* OAuth2NetworkService.swift */; };
-		41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9167B6061F6B43FC543995BBB1FC /* Diffable.swift */; };
-		50DD34921354394302257BF57F8C7F4C /* OAuthorize2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 826297386C82AF875245E6433A70775A /* OAuthorize2-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		513E110815DBB6DD36907947FB82C6DD /* CommonCryptoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A02FCAE73A8C1174A9408E1DAD7ECC /* CommonCryptoModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = F583C597E1D4AF8BE843CB2E7C909820 /* ErrorEquality.swift */; };
-		6260D735565F649123B7AFBD4F5AE95D /* Parser+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD5D6A00BA9518B7057E5AFA297F906 /* Parser+Monad.swift */; };
-		64F356C97CAD38761E61DA5BD249E4F2 /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */; };
-		65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E58EDA5B285C45F75DA637B3CFC3C /* Future.swift */; };
-		66B132DF85E6035E6821ED161B6E1BFE /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395AC48EBEAC1656F2A34A8C58CA186 /* CharacterExtension.swift */; };
-		6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE274EF917D54DDCD56DA33FDAA2E50 /* Operators.swift */; };
-		7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C605584A13AC6FBF50EDCD2B34FCE9E /* Kekka-dummy.m */; };
-		84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FF45384C68DB368A92E2EF7FB5CF3 /* FullyTypedResult.swift */; };
-		85E7C2EEF26E8D1C74C605667D4EF16B /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0844459F6989EF4FE2663858474C00 /* InputState.swift */; };
-		8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D23ABF4912559DC332D514F68C64 /* Result.swift */; };
-		89A5B89201FB79A705644F56F903BC34 /* Parser+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FFD3990BBCD54550D424C6DF1F74B /* Parser+Operators.swift */; };
-		8F8224F783979CA8CC9482F0D3479D9D /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9B127ECED710F0D36027EF0B57BE907F /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD5148315711378668FBEEF7F80321 /* ParserError.swift */; };
-		A82094D836872414F700DC26D33FF29B /* SwiftyParserCombinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 418250656F04897CE44E9B9F384E9189 /* SwiftyParserCombinator-dummy.m */; };
-		AB6A9E63BE5BC24CBBBC999F47C096CB /* CommonCryptoModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B4C1D5A21821B42F970FC11C6A4E5C /* CommonCryptoModule-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C753D674AEEB4EB2C720191A57D63 /* InternalDiff.swift */; };
-		C1297DA7E9A9C6832859A622147368FF /* OAuth2AccessTokenStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB955AFAA3CBB663A80F562CE4E8045 /* OAuth2AccessTokenStorageService.swift */; };
-		C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C9288A6A9A66B9D566ED765680E603 /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6C21820DBB0A21B0DD9BADCEBA34 /* FastDiff-dummy.m */; };
-		D75BD96E379FDCDC71FB0FC80EE7232E /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B21B183026345A79C34F277890C88 /* Empty.swift */; };
-		DBE1BF131BC8B673967C0963A37B31C5 /* Pods-OrgNoteAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */; };
-		DE69F01AB094B1AE0C98F211E8849903 /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42BEBADA89D7338D94DD34D044F1AF /* ParserResult.swift */; };
-		EAC88671BE38A94AE8B918624C5C1E3E /* OAuthorize2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 652F1A5C79B7F418FEFF335F464ADD37 /* OAuthorize2-dummy.m */; };
-		EE73E88D5E46E4EF22D017DD2589EEA6 /* Parser+TypedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62305C92DF48ABBF3057CAC199C3FDF8 /* Parser+TypedMethods.swift */; };
-		F4CAEC2D7BA1FE1C49308D905C987787 /* Parser+STDLIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C42424EA52829507D4F5EC7FF6B57 /* Parser+STDLIB.swift */; };
-		F530768DC71891603A5AC7B5E95B2F3C /* Parser+Combinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98485B5BC1E8686DBB173F36ED8417D /* Parser+Combinator.swift */; };
-		F882ABB3B4D47AE85E4ED882904F0984 /* CommonCryptoModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C86F5DBCE13DFE33DEA45F5104E9ED /* CommonCryptoModule-dummy.m */; };
-		F8F834587773A81CE5056CBB2D59ED99 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287FBD03752F728CCE677263AFEF83 /* Parser.swift */; };
+		0153E4A4D723549F429B3500AD313B4C /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 319FEFF4DAF6658EFDB16CBCA281611F /* FastDiff-dummy.m */; };
+		0744D0093D40ECDECCF7752D462D63B5 /* Parser+STDLIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0542A8D2C6068432F5D940D29F921B9E /* Parser+STDLIB.swift */; };
+		0AB47B891F139C2195D6B4512437CFB0 /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF256D8923C978816EF0DAABF65BB8C /* FullyTypedResult.swift */; };
+		0B6671C671B27F9E158CD1B8D0B5F592 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405AF1C776B27EFC2863083F3DDFCF9 /* InternalDiff.swift */; };
+		1114340E10CE0216BDDA57D596972756 /* Parser+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CA8D3357E41A167BEA03EA98C98DC /* Parser+Monad.swift */; };
+		14C0398EFA441A2F1A5A4FD82FAA8B8B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7A952621D869E51BEBCD0B91EEEC28 /* Future.swift */; };
+		1B9BE4F9E1E7DD99D1A4BF41CA5F1D3B /* OAuthorize2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE0A6ED1CC581BE47C789A040DA50A8 /* OAuthorize2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20055E08457CBD76BC50B6E4182A2AB9 /* Parser+TypedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4AFB3818BD5488CB5B003C3405F03 /* Parser+TypedMethods.swift */; };
+		203E1A85474C8B57794CF304CEAB7D23 /* SwiftyParserCombinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B64A6AAF84C8BCDD26B0910DEB97D98 /* SwiftyParserCombinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB78245EC8447E39AF10BC1D1FC90D1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD3617F559B369C9EF59DCF582D7AE /* Result.swift */; };
+		2F86CE6642823B104F0D43EEEC480371 /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC46CC95F2E25D514CB8FC614DEE3DEA /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31389AC1D80EA57AFC4DEACADB4CD3EF /* CommonCryptoModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1B1119A3310E983F83DCC31BE6B757 /* CommonCryptoModule-dummy.m */; };
+		3417A2D59A7BA62C498C6375E13CAEE2 /* Pods-OrgNoteAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8E39B23101627A35837D31AC20A59 /* Pods-OrgNoteAppTests-dummy.m */; };
+		41573111C0E9DA1924217F88B8B7D5C3 /* OAuthorize2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5012E6B1C769D4925BE54E3436D660D9 /* OAuthorize2-dummy.m */; };
+		420CF864DD47C0DBE5509C01644DA6E7 /* OAuth2AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B01199AE8789998A724DF6234BDDE /* OAuth2AccessToken.swift */; };
+		4D05F1C3F2C3AC6D1A49EF4FA27F8CD3 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 517D19DCDD1D915D3381FCA2B370EF6D /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E5EA3500866332E557F7CC253C6C485 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E233258DC3273B9BE3143AD956C4EAF /* Parser.swift */; };
+		5387A3BBA20792EB7F12C0FD32E0A2B1 /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48409899552131596912C9D0DA290C26 /* CharacterExtension.swift */; };
+		592A2BFEE2CB13746F71D4C65638FD65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		5AF078FE872F4BD4FD85C9193987C8A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		696D873A5DD426262ED4904ADD66206D /* module.modulemap in Resources */ = {isa = PBXBuildFile; fileRef = C66C446F7AAA9A2243B2832153F75F4C /* module.modulemap */; };
+		69960B24CFD4E079FDAA45764E8B7A92 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455806AE0644EEF611336872DC7E5D1 /* Diffable.swift */; };
+		699B3FAAD61B0CD86A7DBD9D2FA996D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9238B0B582DEAFC047318C4FCCEEE /* Operators.swift */; };
+		71A40FCEBE7BBA897AA969889182C597 /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918941946157C2EE5734F9145DBE7 /* ParserResult.swift */; };
+		748CBAF79F3EA7EDCFA8CD6E3328FC24 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B773398107C20586439379C4B67126 /* DiffingAlgorithm.swift */; };
+		789FCBACF2847EB892E0F1871A4B114A /* Parser+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6132AE4A84F122FC07AC41C9E0C67 /* Parser+Operators.swift */; };
+		78B99FE9FFDBC0E52A95BCBFB037DDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		78C0133E0FB2799E5128E49F1C711760 /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4DED1FD313E0192F40515949A3BED /* InputState.swift */; };
+		80E9B810609DED3895A9A1E5395F0482 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADFCE0817A35CE5EE119C83FE7EAC2 /* Empty.swift */; };
+		866C1719BDBFB72ECB5D91DB2C786CDF /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8785A3C15713618CFBD428A7C61C5B0D /* OAuth2.swift */; };
+		9927CF8FB3B9830C5F974516F614EBCA /* Kekka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA8C03847770FA6E57CE7211486D3D9 /* Kekka.framework */; };
+		A1791E37C0EDB60A040479B157B58635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		A245CCAB12556D201390C3DFBE6FB25E /* SwiftyParserCombinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DEF01CDB4D5D837FB55BD7BA04BBF2 /* SwiftyParserCombinator-dummy.m */; };
+		A2C8ECC28B8760C35BD5E67AD452313A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		A4003B42DC7DFF80348060C4852CC0B0 /* OAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669F2C6E557FDE0233590E516127094 /* OAuth2Config.swift */; };
+		ACA53AE20F08DEF642309827207050A3 /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DCDD2961BAD6962C09FAE06E3B69D9 /* Kekka-dummy.m */; };
+		B87CAF30F401409F68746F7FE009E7B2 /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 406B7975005FA99FD1C132BC6DC144BA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA5902368F4EC0F5BFFA010EFCB3CA66 /* CommonCryptoModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F1A274962F4372D8E139C7FDC86057 /* CommonCryptoModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF5DBB8F3B7F797AFFB1815FCCAC09B8 /* OAuthorize2.h in Headers */ = {isa = PBXBuildFile; fileRef = 77F6F270E2416EBA5E38977830CBC40B /* OAuthorize2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A1587E5CE091FF0F4869A4229B404C /* CommonCryptoBridge.h in Resources */ = {isa = PBXBuildFile; fileRef = F7B27CFC0EA14538BA8188527E22655B /* CommonCryptoBridge.h */; };
+		C6076226BC41442CA480318FF1BABEA9 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F813B10146BA47182A0E64414FA3 /* ArrayExtension.swift */; };
+		C838ADC60229E2C0F458202784190957 /* CommonCryptoModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C16FF9DDEED342DB0282CC12285A3F25 /* CommonCryptoModule.framework */; };
+		C8BC263E0F7848B390EA48CA92B7443C /* OAuth2AccessTokenStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6364BBCF5DB227A83B3D5110C95CE4 /* OAuth2AccessTokenStorageService.swift */; };
+		CCDF80DB0A1AC1A17E671A18360C0EB4 /* CommonCryptoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF33E9AB07A7A2C7A6727EE1F106B28 /* CommonCryptoModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3366E3121079733CEE2D5BB40F16D9B /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E3B2AAACAA07B454AAC5F414024BF /* Pods-OrgNoteApp-dummy.m */; };
+		DCF7E106310D4180030FD80FD3BB78C5 /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F4604B83088AB679A2DD1AD689296 /* ErrorEquality.swift */; };
+		DD6BBC8140417784794CCC09FD5662BB /* Pods-OrgNoteAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71777AF5BC7007046B6CA3C24D9965F5 /* Pods-OrgNoteAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EACFD7551782E6DC7A6FCA93434853BA /* OAuth2NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87EB136FCE453294F2B4F6AED4945A /* OAuth2NetworkService.swift */; };
+		F0045C0062B5B8B083A4782C947EA2C4 /* Parser+Combinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61CBB16FAD150E44D31BBCA331B3C64 /* Parser+Combinator.swift */; };
+		F53EA0AA9F94061DE165DF91D066F841 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		FBE8BD6BE4873B40529A472137819EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */; };
+		FF1B37DCE4130CF04707A3E0D4104A2F /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F92760F0B8BEFE0E71558A0DB144EA /* ParserError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2ACB6412A1BE96016CACAA620FFF10E7 /* PBXContainerItemProxy */ = {
+		0406FD2AABED5B51594E6248FFEF1F5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AC7AD8265E439095C3FE241BAD76AE13;
-			remoteInfo = "Pods-OrgNoteApp";
-		};
-		56F86952A92F04AAA97EF7136335E369 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2535CF36550B9FB3C1D8A57DB2F77687;
+			remoteGlobalIDString = C9597B4A1A0A54CC820779FFEB382CEC;
 			remoteInfo = FastDiff;
 		};
-		902AD8712B5981281B72A97E5D33A791 /* PBXContainerItemProxy */ = {
+		239403EF17AB70D111832CE9D896385B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4DCE6EBD3DEF2E45D4B62A118F239FD3;
-			remoteInfo = Kekka;
-		};
-		A6F41310EDD9A686F576713A95508B38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B245F075871035E41EC9881110EAA5E;
+			remoteGlobalIDString = D1902D0802D30C33B8AC4CDE622E2856;
 			remoteInfo = OAuthorize2;
 		};
-		AF46E4AAD7A671A15C01FBF0D0031A30 /* PBXContainerItemProxy */ = {
+		38A45A2D9FBFFE485D4CE416569ED692 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 23AB915B3FA2B9F63C15FA68604A4455;
+			remoteGlobalIDString = A6033E8A4F21945ED92E55254715B409;
+			remoteInfo = "Pods-OrgNoteApp";
+		};
+		416DB3D5425539317264A227C5E870CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB623F2D517A80877A87196B6AE778B7;
 			remoteInfo = SwiftyParserCombinator;
 		};
-		B06FD9B01330B3973B7DB9FFBBE3B5D5 /* PBXContainerItemProxy */ = {
+		7903F5F4D63C3A78D4BF271FFA7B1CD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 510F28158AC144732F03368E916B78F0;
-			remoteInfo = CommonCryptoModule;
-		};
-		BEB42B03369E034FE1ADB2D78208B2D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DCE6EBD3DEF2E45D4B62A118F239FD3;
+			remoteGlobalIDString = 6272890E0003B365E28392A2AD63BE32;
 			remoteInfo = Kekka;
 		};
-		E4188F8F9B00BD80610711CE493BF72B /* PBXContainerItemProxy */ = {
+		7FC30D7E1EE7882B6757E059D185000A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 510F28158AC144732F03368E916B78F0;
+			remoteGlobalIDString = 6272890E0003B365E28392A2AD63BE32;
+			remoteInfo = Kekka;
+		};
+		AC30A46C010B47D34198E05C5C13CD0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3C7398A2CCCB26C5028794C1B09F08;
+			remoteInfo = CommonCryptoModule;
+		};
+		FE2295839F8DFFC562C70804E49BAA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3C7398A2CCCB26C5028794C1B09F08;
 			remoteInfo = CommonCryptoModule;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		013DD64E47A731E5AA06CFF5D37788CB /* SwiftyParserCombinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-prefix.pch"; sourceTree = "<group>"; };
-		02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteApp-dummy.m"; sourceTree = "<group>"; };
-		0575C4EC5DA033BD123B987DC9EBFFC2 /* Pods-OrgNoteAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-resources.sh"; sourceTree = "<group>"; };
-		070AFAA188BC9553FCD3F5A11944A39A /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
-		0B287FBD03752F728CCE677263AFEF83 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ParserCombinator/Sources/Parser.swift; sourceTree = "<group>"; };
-		133014FDF4B75C676CD0902F24097D11 /* OAuthorize2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = OAuthorize2.modulemap; path = ../../Headers/Public/OAuthorize2/OAuthorize2.modulemap; sourceTree = "<group>"; };
-		152036AC56716AA54BB8C3059B92741E /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteAppTests-dummy.m"; sourceTree = "<group>"; };
-		16EAB559FC5370569CBD29E5D4AB6A4E /* libOAuthorize2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libOAuthorize2.a; path = libOAuthorize2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		18C5D23ABF4912559DC332D514F68C64 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
-		192B8B00F5612B22D6974164EC1B9A0A /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		19A02FCAE73A8C1174A9408E1DAD7ECC /* CommonCryptoModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoModule.h; path = CommonCryptoModule/CommonCryptoModule.h; sourceTree = "<group>"; };
-		1C605584A13AC6FBF50EDCD2B34FCE9E /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
-		1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
-		254A10E28C7545D5115CA22ACDD38526 /* OAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Config.swift; path = OAuthorize2/OAuth2Config.swift; sourceTree = "<group>"; };
-		27972EC92C72CD057C56BE824AB34DDD /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
-		2EE4305EE3AB55E24744B688FF2AB338 /* Pods-OrgNoteApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		342B12DC82740F608128AB6CEB562217 /* SwiftyParserCombinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = SwiftyParserCombinator.modulemap; path = ../../Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap; sourceTree = "<group>"; };
-		36C9288A6A9A66B9D566ED765680E603 /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Kekka-umbrella.h"; path = "../../Headers/Public/Kekka/Kekka-umbrella.h"; sourceTree = "<group>"; };
-		3B1E58EDA5B285C45F75DA637B3CFC3C /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
-		418250656F04897CE44E9B9F384E9189 /* SwiftyParserCombinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyParserCombinator-dummy.m"; sourceTree = "<group>"; };
-		4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
-		4BB939B18EF54325290C302458AF64D8 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastDiff-umbrella.h"; path = "../../Headers/Public/FastDiff/FastDiff-umbrella.h"; sourceTree = "<group>"; };
-		4C87EA8DBD2F357A1DD2CC986D945B02 /* Pods-OrgNoteApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-resources.sh"; sourceTree = "<group>"; };
-		542AFB34D6E2809B9D45C4F44B6AD186 /* Pods-OrgNoteApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteApp.modulemap"; sourceTree = "<group>"; };
-		55873242F68292DC8861A4EC4C41FE97 /* CommonCryptoModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = CommonCryptoModule.modulemap; path = ../../Headers/Public/CommonCryptoModule/CommonCryptoModule.modulemap; sourceTree = "<group>"; };
-		5A42BEBADA89D7338D94DD34D044F1AF /* ParserResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserResult.swift; path = ParserCombinator/Sources/ParserResult.swift; sourceTree = "<group>"; };
-		5B730CE6C8A7912A1195138C49D21BBF /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = OAuthorize2/OAuth2.swift; sourceTree = "<group>"; };
-		5F3C42424EA52829507D4F5EC7FF6B57 /* Parser+STDLIB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+STDLIB.swift"; path = "ParserCombinator/Sources/Parser+STDLIB.swift"; sourceTree = "<group>"; };
-		616C753D674AEEB4EB2C720191A57D63 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
-		61BD5148315711378668FBEEF7F80321 /* ParserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserError.swift; path = ParserCombinator/Sources/ParserError.swift; sourceTree = "<group>"; };
-		62305C92DF48ABBF3057CAC199C3FDF8 /* Parser+TypedMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+TypedMethods.swift"; path = "ParserCombinator/Sources/Parser+TypedMethods.swift"; sourceTree = "<group>"; };
-		643E6835AD4D93362707E5EA407B231D /* CommonCryptoModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCryptoModule.xcconfig; sourceTree = "<group>"; };
-		652F1A5C79B7F418FEFF335F464ADD37 /* OAuthorize2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthorize2-dummy.m"; sourceTree = "<group>"; };
-		659FFD3990BBCD54550D424C6DF1F74B /* Parser+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Operators.swift"; path = "ParserCombinator/Sources/Parser+Operators.swift"; sourceTree = "<group>"; };
-		6DB7B1FF8176B076E19928E003E5A746 /* CommonCryptoModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-prefix.pch"; sourceTree = "<group>"; };
-		727F61CD6542611534B4CD648BBC56BA /* OAuthorize2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-prefix.pch"; sourceTree = "<group>"; };
-		72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteApp-umbrella.h"; sourceTree = "<group>"; };
-		7321B8145CEA6E643B49EE758599E61D /* Pods-OrgNoteAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		789FF45384C68DB368A92E2EF7FB5CF3 /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
-		78E998D20B179A37859886BA69915D29 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = Kekka.modulemap; path = ../../Headers/Public/Kekka/Kekka.modulemap; sourceTree = "<group>"; };
-		7AE274EF917D54DDCD56DA33FDAA2E50 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
-		7D0844459F6989EF4FE2663858474C00 /* InputState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputState.swift; path = ParserCombinator/Sources/InputState.swift; sourceTree = "<group>"; };
-		7D23039ACB28F6C9B01D1DD16C81D40B /* libSwiftyParserCombinator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftyParserCombinator.a; path = libSwiftyParserCombinator.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		80442C4D864704496995F10FD649CED4 /* libPods-OrgNoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteAppTests.a"; path = "libPods-OrgNoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		826297386C82AF875245E6433A70775A /* OAuthorize2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OAuthorize2-umbrella.h"; path = "../../Headers/Public/OAuthorize2/OAuthorize2-umbrella.h"; sourceTree = "<group>"; };
-		8A477DBDD8CE79ECD7BA7DF42E3F9F30 /* OAuth2NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2NetworkService.swift; path = OAuthorize2/OAuth2NetworkService.swift; sourceTree = "<group>"; };
-		8BD5D6A00BA9518B7057E5AFA297F906 /* Parser+Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Monad.swift"; path = "ParserCombinator/Sources/Parser+Monad.swift"; sourceTree = "<group>"; };
-		8E9B21B183026345A79C34F277890C88 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = CommonCryptoModule/Empty.swift; sourceTree = "<group>"; };
-		934AEE8B9FF4548A15444A3F54F00021 /* Pods-OrgNoteAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		0405AF1C776B27EFC2863083F3DDFCF9 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
+		0422AC405CD0C6B64E918F5E8DB8BC11 /* CommonCryptoModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CommonCryptoModule.modulemap; sourceTree = "<group>"; };
+		0542A8D2C6068432F5D940D29F921B9E /* Parser+STDLIB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+STDLIB.swift"; path = "ParserCombinator/Sources/Parser+STDLIB.swift"; sourceTree = "<group>"; };
+		0A3CA8D3357E41A167BEA03EA98C98DC /* Parser+Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Monad.swift"; path = "ParserCombinator/Sources/Parser+Monad.swift"; sourceTree = "<group>"; };
+		0C211222ACD907FB1EE385D4D798FC74 /* OAuthorize2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthorize2.xcconfig; sourceTree = "<group>"; };
+		16AAB47A0ED92F90556C24B574673121 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		194C080440437D4538911D9F278826C2 /* SwiftyParserCombinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyParserCombinator.modulemap; sourceTree = "<group>"; };
+		19DEF01CDB4D5D837FB55BD7BA04BBF2 /* SwiftyParserCombinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyParserCombinator-dummy.m"; sourceTree = "<group>"; };
+		1BF4DED1FD313E0192F40515949A3BED /* InputState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputState.swift; path = ParserCombinator/Sources/InputState.swift; sourceTree = "<group>"; };
+		1D6684AB064C0BF83933C592F96671D2 /* Pods-OrgNoteAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		23BEBE3F788A63996C58FD0F1E856339 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2535381DA03A33653A3C7CC7DA9D6C48 /* SwiftyParserCombinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyParserCombinator.xcconfig; sourceTree = "<group>"; };
+		2EE0A6ED1CC581BE47C789A040DA50A8 /* OAuthorize2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-umbrella.h"; sourceTree = "<group>"; };
+		30F92760F0B8BEFE0E71558A0DB144EA /* ParserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserError.swift; path = ParserCombinator/Sources/ParserError.swift; sourceTree = "<group>"; };
+		319FEFF4DAF6658EFDB16CBCA281611F /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		3669F2C6E557FDE0233590E516127094 /* OAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Config.swift; path = OAuthorize2/OAuth2Config.swift; sourceTree = "<group>"; };
+		38C4637A127479224D79F4C944C93D1F /* Pods-OrgNoteApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-resources.sh"; sourceTree = "<group>"; };
+		397B59F593FCF9D27E75226C082A963E /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39DCDD2961BAD6962C09FAE06E3B69D9 /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
+		406B7975005FA99FD1C132BC6DC144BA /* Pods-OrgNoteApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteApp-umbrella.h"; sourceTree = "<group>"; };
+		44C6EB77F60D01A1F1272E67C45A6D78 /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrgNoteAppTests.framework; path = "Pods-OrgNoteAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48409899552131596912C9D0DA290C26 /* CharacterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ParserCombinator/CharacterExtension.swift; sourceTree = "<group>"; };
+		495F86431BA5B14AD524107AD238953D /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FastDiff.modulemap; sourceTree = "<group>"; };
+		4AE4AFB3818BD5488CB5B003C3405F03 /* Parser+TypedMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+TypedMethods.swift"; path = "ParserCombinator/Sources/Parser+TypedMethods.swift"; sourceTree = "<group>"; };
+		4BA8C03847770FA6E57CE7211486D3D9 /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBB06515A92A92C8FA0E2125E619441 /* Pods-OrgNoteApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteApp.modulemap"; sourceTree = "<group>"; };
+		5012E6B1C769D4925BE54E3436D660D9 /* OAuthorize2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthorize2-dummy.m"; sourceTree = "<group>"; };
+		517D19DCDD1D915D3381FCA2B370EF6D /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-umbrella.h"; sourceTree = "<group>"; };
+		51FD52DC3C4A8C33B07E9AFE8921E24D /* Pods-OrgNoteAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		55703ACFB6FA6817C0F088C9EAE42819 /* CommonCryptoModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CommonCryptoModule.framework; path = CommonCryptoModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		573B01199AE8789998A724DF6234BDDE /* OAuth2AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessToken.swift; path = OAuthorize2/OAuth2AccessToken.swift; sourceTree = "<group>"; };
+		5B64A6AAF84C8BCDD26B0910DEB97D98 /* SwiftyParserCombinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-umbrella.h"; sourceTree = "<group>"; };
+		5E233258DC3273B9BE3143AD956C4EAF /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ParserCombinator/Sources/Parser.swift; sourceTree = "<group>"; };
+		5E6A2F142C6FAF826EAD2B82295D27CA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FFD3617F559B369C9EF59DCF582D7AE /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
+		687FE0A9C86A5EA132E5F3AE250AEC79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C9996A265F955B298AB77EF9DDB036A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CA8E39B23101627A35837D31AC20A59 /* Pods-OrgNoteAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteAppTests-dummy.m"; sourceTree = "<group>"; };
+		6E4C5351DC489798D3393B6144ACD92B /* Pods_OrgNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrgNoteApp.framework; path = "Pods-OrgNoteApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E710886828D31D9238792625E45CBA7 /* OAuthorize2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-prefix.pch"; sourceTree = "<group>"; };
+		713FDBDA42317EFDD41E091F6F9FD1B5 /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		71777AF5BC7007046B6CA3C24D9965F5 /* Pods-OrgNoteAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteAppTests-umbrella.h"; sourceTree = "<group>"; };
+		77F6F270E2416EBA5E38977830CBC40B /* OAuthorize2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAuthorize2.h; path = OAuthorize2/OAuthorize2.h; sourceTree = "<group>"; };
+		7F6730FFA63949B147A9C37F2214750C /* CommonCryptoModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-prefix.pch"; sourceTree = "<group>"; };
+		8354FEC3B883A80FB69B571A016E3465 /* FastDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FastDiff.framework; path = FastDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		866E3B2AAACAA07B454AAC5F414024BF /* Pods-OrgNoteApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteApp-dummy.m"; sourceTree = "<group>"; };
+		8785A3C15713618CFBD428A7C61C5B0D /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = OAuthorize2/OAuth2.swift; sourceTree = "<group>"; };
+		894CB0D5C90BEA47F407F48D5F13AA41 /* OAuthorize2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OAuthorize2.framework; path = OAuthorize2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6364BBCF5DB227A83B3D5110C95CE4 /* OAuth2AccessTokenStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessTokenStorageService.swift; path = OAuthorize2/OAuth2AccessTokenStorageService.swift; sourceTree = "<group>"; };
+		8BB82CB4BD4F86C4B4B2C3DCDC2CE084 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DADFCE0817A35CE5EE119C83FE7EAC2 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = CommonCryptoModule/Empty.swift; sourceTree = "<group>"; };
+		8E7A952621D869E51BEBCD0B91EEEC28 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
+		8EF256D8923C978816EF0DAABF65BB8C /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		8EF33E9AB07A7A2C7A6727EE1F106B28 /* CommonCryptoModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoModule.h; path = CommonCryptoModule/CommonCryptoModule.h; sourceTree = "<group>"; };
+		91E3C3E6C3A0A19BE51E81D8931B5EC1 /* Pods-OrgNoteApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95697EA7338EDD1CBB33A73F2B1F6C67 /* libFastDiff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFastDiff.a; path = libFastDiff.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		962D7A72CED1FBC72F3B755FBBFA33E8 /* SwiftyParserCombinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyParserCombinator.xcconfig; sourceTree = "<group>"; };
-		A01C7BB05A97278BC10B592A393F7378 /* OAuthorize2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthorize2.xcconfig; sourceTree = "<group>"; };
-		A395AC48EBEAC1656F2A34A8C58CA186 /* CharacterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ParserCombinator/CharacterExtension.swift; sourceTree = "<group>"; };
-		A42F8EC0B243C9C69B1900C1C70C5925 /* Pods-OrgNoteApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A69BFFA69577C94F4A86737C0B4639ED /* Pods-OrgNoteAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ABA26D5C5EF1E3F1F81C086F89F489D1 /* SwiftyParserCombinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftyParserCombinator-umbrella.h"; path = "../../Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h"; sourceTree = "<group>"; };
-		ABDF7DA72681CFD8FC5409800450BC1C /* libKekka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKekka.a; path = libKekka.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9F5D766B1285065E7D3A248DDB0CD1 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
-		B30E9A7D166DA55E18ADDCC9E7A90C15 /* OAuthorize2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAuthorize2.h; path = OAuthorize2/OAuthorize2.h; sourceTree = "<group>"; };
-		B758D06C64E994EA6464AFE3F3F2A71E /* OAuth2AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessToken.swift; path = OAuthorize2/OAuth2AccessToken.swift; sourceTree = "<group>"; };
-		BEB955AFAA3CBB663A80F562CE4E8045 /* OAuth2AccessTokenStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessTokenStorageService.swift; path = OAuthorize2/OAuth2AccessTokenStorageService.swift; sourceTree = "<group>"; };
-		BF5D9C73FD9C086F41AB5AF6F1F5589A /* libPods-OrgNoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OrgNoteApp.a"; path = "libPods-OrgNoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2B5C7839FA5A5C1783FE4E815B20552 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = CommonCryptoModule/CommonCryptoBridge/module.modulemap; sourceTree = "<group>"; };
-		C6C86F5DBCE13DFE33DEA45F5104E9ED /* CommonCryptoModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCryptoModule-dummy.m"; sourceTree = "<group>"; };
-		C98485B5BC1E8686DBB173F36ED8417D /* Parser+Combinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Combinator.swift"; path = "ParserCombinator/Sources/Parser+Combinator.swift"; sourceTree = "<group>"; };
-		D62163775AE6848CAA3431B2E95B17D0 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ParserCombinator/Sources/ArrayExtension.swift; sourceTree = "<group>"; };
-		D9A1DFADF654144C8FFCFC25D94C7E71 /* Pods-OrgNoteApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-frameworks.sh"; sourceTree = "<group>"; };
-		D9FFC5FF402FC5A8FF8E52542F63E717 /* libCommonCryptoModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCommonCryptoModule.a; path = libCommonCryptoModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA848ABD7984CC5BD36CB6351133C598 /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = FastDiff.modulemap; path = ../../Headers/Public/FastDiff/FastDiff.modulemap; sourceTree = "<group>"; };
-		E0CF29BF27995A4EFF38DB6178E40E44 /* CommonCryptoBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoBridge.h; path = CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h; sourceTree = "<group>"; };
-		F22D9167B6061F6B43FC543995BBB1FC /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
-		F45FA557FFAD85F5EB8E9423C8E65243 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
-		F583C597E1D4AF8BE843CB2E7C909820 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
-		F5B4C1D5A21821B42F970FC11C6A4E5C /* CommonCryptoModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CommonCryptoModule-umbrella.h"; path = "../../Headers/Public/CommonCryptoModule/CommonCryptoModule-umbrella.h"; sourceTree = "<group>"; };
-		F93C5DAC820F199CBC6A9791FFC754C0 /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
-		FD5C6C21820DBB0A21B0DD9BADCEBA34 /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		97B773398107C20586439379C4B67126 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		9D74B6A25ADB0CF92B6602A676CADC41 /* CommonCryptoModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCryptoModule.xcconfig; sourceTree = "<group>"; };
+		AC46CC95F2E25D514CB8FC614DEE3DEA /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-umbrella.h"; sourceTree = "<group>"; };
+		B07BD3A1B78EC68BE8FEB9257155F815 /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kekka.framework; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61CBB16FAD150E44D31BBCA331B3C64 /* Parser+Combinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Combinator.swift"; path = "ParserCombinator/Sources/Parser+Combinator.swift"; sourceTree = "<group>"; };
+		B796F813B10146BA47182A0E64414FA3 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ParserCombinator/Sources/ArrayExtension.swift; sourceTree = "<group>"; };
+		BF87EB136FCE453294F2B4F6AED4945A /* OAuth2NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2NetworkService.swift; path = OAuthorize2/OAuth2NetworkService.swift; sourceTree = "<group>"; };
+		BFDE3E0FF55BC248BD4F4DCD07E249BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C16FF9DDEED342DB0282CC12285A3F25 /* CommonCryptoModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCryptoModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C358C1E41E845767AF6EF7030D726466 /* Pods-OrgNoteAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-resources.sh"; sourceTree = "<group>"; };
+		C3C9F4AEBD9A6B51ECE3E177A39A73C4 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
+		C455806AE0644EEF611336872DC7E5D1 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
+		C66066BEF208DE4D7B8622105F8B0F2A /* Pods-OrgNoteApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C66C446F7AAA9A2243B2832153F75F4C /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = CommonCryptoModule/CommonCryptoBridge/module.modulemap; sourceTree = "<group>"; };
+		CB1B1119A3310E983F83DCC31BE6B757 /* CommonCryptoModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCryptoModule-dummy.m"; sourceTree = "<group>"; };
+		CCA9238B0B582DEAFC047318C4FCCEEE /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
+		DC15F93E129394D0A20DBFDB88ED6770 /* Pods-OrgNoteAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E1803665D4E64405E8DB1C289CF5096E /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kekka.modulemap; sourceTree = "<group>"; };
+		E53C2BD899F517C13600DA8E28AAF5FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E64F4604B83088AB679A2DD1AD689296 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		E6DF49FC932EEB85B94CA6D6536F1636 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
+		E6F1A274962F4372D8E139C7FDC86057 /* CommonCryptoModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-umbrella.h"; sourceTree = "<group>"; };
+		E77918941946157C2EE5734F9145DBE7 /* ParserResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserResult.swift; path = ParserCombinator/Sources/ParserResult.swift; sourceTree = "<group>"; };
+		E9F6132AE4A84F122FC07AC41C9E0C67 /* Parser+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Operators.swift"; path = "ParserCombinator/Sources/Parser+Operators.swift"; sourceTree = "<group>"; };
+		ED377F91FE804DF63721F193BF94E98E /* SwiftyParserCombinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-prefix.pch"; sourceTree = "<group>"; };
+		EE1741FBEE597A7EE7022696315C937D /* Pods-OrgNoteApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-frameworks.sh"; sourceTree = "<group>"; };
+		F0DE102B0B4E17FA843E56ED669ADAAE /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
+		F3B9E2202D92F2F7C5253DAC07BE6FCE /* OAuthorize2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthorize2.modulemap; sourceTree = "<group>"; };
+		F790D8408691B8BABCF2E0502EA3E20D /* SwiftyParserCombinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyParserCombinator.framework; path = SwiftyParserCombinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B27CFC0EA14538BA8188527E22655B /* CommonCryptoBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoBridge.h; path = CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h; sourceTree = "<group>"; };
+		F7DA146966DC587B9416BF1609D929B9 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
+		FC7D414464479AFA2E8473B944A1D6D2 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
+		FE5A55E1CC6628F698C1104C65E557FC /* Pods-OrgNoteAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteAppTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		367E1D2C961CF4D72F88F3A7DB7D60E0 /* Frameworks */ = {
+		3622E0F3C5119604752E8E2D2C9700E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1791E37C0EDB60A040479B157B58635 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93E920EEF2F1628F18F0D7B7FD91830E /* Frameworks */ = {
+		4D5437E3952F5ED263CCBC0914B0E2D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53EA0AA9F94061DE165DF91D066F841 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9B49758F9E12461A507FEBF389C0400 /* Frameworks */ = {
+		5AB685F850822397F1FE53DF0D71D6FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B99FE9FFDBC0E52A95BCBFB037DDF6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1B8784F28AF59C673D11087E05D2F5D /* Frameworks */ = {
+		A39248C139C4D62249CD250C58F34233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C838ADC60229E2C0F458202784190957 /* CommonCryptoModule.framework in Frameworks */,
+				592A2BFEE2CB13746F71D4C65638FD65 /* Foundation.framework in Frameworks */,
+				9927CF8FB3B9830C5F974516F614EBCA /* Kekka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D81E2B6DEF50B9B8D972B03E7DFD8219 /* Frameworks */ = {
+		B8FCCCFC78D442C76667A5D0793FA63F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF078FE872F4BD4FD85C9193987C8A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E064DF98ECD63C8D97C5D6FAC2660735 /* Frameworks */ = {
+		D2D4627DE192D4580E0A0BA5D3F380C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE8BD6BE4873B40529A472137819EF9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3852F8F72A65C054782D89AB14BF9A6 /* Frameworks */ = {
+		DCEC7E3736C8F955A20B833C9C7A8EB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C8ECC28B8760C35BD5E67AD452313A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01FD67FE1CE8046F3C38B2DAA1E70AE4 /* Targets Support Files */ = {
+		025C87B9A4AAFEB7ACA0BFC7FCFF1A89 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8CDDD95B647C8275559331111771D5B /* Pods-OrgNoteApp */,
-				2CC8B8C4C94BC720EB947FEBD0D72271 /* Pods-OrgNoteAppTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		0BE61F22C0A198BE25024F738E9540F4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				133014FDF4B75C676CD0902F24097D11 /* OAuthorize2.modulemap */,
-				A01C7BB05A97278BC10B592A393F7378 /* OAuthorize2.xcconfig */,
-				652F1A5C79B7F418FEFF335F464ADD37 /* OAuthorize2-dummy.m */,
-				727F61CD6542611534B4CD648BBC56BA /* OAuthorize2-prefix.pch */,
-				826297386C82AF875245E6433A70775A /* OAuthorize2-umbrella.h */,
+				495F86431BA5B14AD524107AD238953D /* FastDiff.modulemap */,
+				F0DE102B0B4E17FA843E56ED669ADAAE /* FastDiff.xcconfig */,
+				319FEFF4DAF6658EFDB16CBCA281611F /* FastDiff-dummy.m */,
+				C3C9F4AEBD9A6B51ECE3E177A39A73C4 /* FastDiff-prefix.pch */,
+				517D19DCDD1D915D3381FCA2B370EF6D /* FastDiff-umbrella.h */,
+				23BEBE3F788A63996C58FD0F1E856339 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/OAuthorize2";
+			path = "../Target Support Files/FastDiff";
 			sourceTree = "<group>";
 		};
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		072DEF384C17479CC88D4C012DCA4C24 /* SwiftyParserCombinator */ = {
 			isa = PBXGroup;
 			children = (
+				B796F813B10146BA47182A0E64414FA3 /* ArrayExtension.swift */,
+				48409899552131596912C9D0DA290C26 /* CharacterExtension.swift */,
+				1BF4DED1FD313E0192F40515949A3BED /* InputState.swift */,
+				5E233258DC3273B9BE3143AD956C4EAF /* Parser.swift */,
+				B61CBB16FAD150E44D31BBCA331B3C64 /* Parser+Combinator.swift */,
+				0A3CA8D3357E41A167BEA03EA98C98DC /* Parser+Monad.swift */,
+				E9F6132AE4A84F122FC07AC41C9E0C67 /* Parser+Operators.swift */,
+				0542A8D2C6068432F5D940D29F921B9E /* Parser+STDLIB.swift */,
+				4AE4AFB3818BD5488CB5B003C3405F03 /* Parser+TypedMethods.swift */,
+				30F92760F0B8BEFE0E71558A0DB144EA /* ParserError.swift */,
+				E77918941946157C2EE5734F9145DBE7 /* ParserResult.swift */,
+				6298214D509EE08C8779AF59FBBB3CE7 /* Support Files */,
+			);
+			name = SwiftyParserCombinator;
+			path = SwiftyParserCombinator;
+			sourceTree = "<group>";
+		};
+		1E81341340E5CFB791351F17DF93AE43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C16FF9DDEED342DB0282CC12285A3F25 /* CommonCryptoModule.framework */,
+				4BA8C03847770FA6E57CE7211486D3D9 /* Kekka.framework */,
+				FF4A90959C88A4A6E6A5769F6854B862 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1D32DC424379757038260A6DB7A90999 /* Kekka */ = {
+		37E6BF18E851527E48C70F3970C12AA3 /* Pods-OrgNoteAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F583C597E1D4AF8BE843CB2E7C909820 /* ErrorEquality.swift */,
-				789FF45384C68DB368A92E2EF7FB5CF3 /* FullyTypedResult.swift */,
-				3B1E58EDA5B285C45F75DA637B3CFC3C /* Future.swift */,
-				7AE274EF917D54DDCD56DA33FDAA2E50 /* Operators.swift */,
-				18C5D23ABF4912559DC332D514F68C64 /* Result.swift */,
-				F516E5828292E6F242075B24D92F4E5E /* Support Files */,
-			);
-			name = Kekka;
-			path = Kekka;
-			sourceTree = "<group>";
-		};
-		20CD7240E40369F98B0CD2CDA1601533 /* FastDiff */ = {
-			isa = PBXGroup;
-			children = (
-				F22D9167B6061F6B43FC543995BBB1FC /* Diffable.swift */,
-				AF9F5D766B1285065E7D3A248DDB0CD1 /* DiffingAlgorithm.swift */,
-				616C753D674AEEB4EB2C720191A57D63 /* InternalDiff.swift */,
-				C06998C4B095C949D87A2E7D64BFA389 /* Support Files */,
-			);
-			name = FastDiff;
-			path = FastDiff;
-			sourceTree = "<group>";
-		};
-		2CC8B8C4C94BC720EB947FEBD0D72271 /* Pods-OrgNoteAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				A69BFFA69577C94F4A86737C0B4639ED /* Pods-OrgNoteAppTests-acknowledgements.markdown */,
-				7321B8145CEA6E643B49EE758599E61D /* Pods-OrgNoteAppTests-acknowledgements.plist */,
-				15357F999626E6CAB8EA2F15666F3148 /* Pods-OrgNoteAppTests-dummy.m */,
-				934AEE8B9FF4548A15444A3F54F00021 /* Pods-OrgNoteAppTests-frameworks.sh */,
-				0575C4EC5DA033BD123B987DC9EBFFC2 /* Pods-OrgNoteAppTests-resources.sh */,
-				192B8B00F5612B22D6974164EC1B9A0A /* Pods-OrgNoteAppTests.debug.xcconfig */,
-				152036AC56716AA54BB8C3059B92741E /* Pods-OrgNoteAppTests.release.xcconfig */,
+				E53C2BD899F517C13600DA8E28AAF5FD /* Info.plist */,
+				FE5A55E1CC6628F698C1104C65E557FC /* Pods-OrgNoteAppTests.modulemap */,
+				DC15F93E129394D0A20DBFDB88ED6770 /* Pods-OrgNoteAppTests-acknowledgements.markdown */,
+				1D6684AB064C0BF83933C592F96671D2 /* Pods-OrgNoteAppTests-acknowledgements.plist */,
+				6CA8E39B23101627A35837D31AC20A59 /* Pods-OrgNoteAppTests-dummy.m */,
+				51FD52DC3C4A8C33B07E9AFE8921E24D /* Pods-OrgNoteAppTests-frameworks.sh */,
+				C358C1E41E845767AF6EF7030D726466 /* Pods-OrgNoteAppTests-resources.sh */,
+				71777AF5BC7007046B6CA3C24D9965F5 /* Pods-OrgNoteAppTests-umbrella.h */,
+				397B59F593FCF9D27E75226C082A963E /* Pods-OrgNoteAppTests.debug.xcconfig */,
+				713FDBDA42317EFDD41E091F6F9FD1B5 /* Pods-OrgNoteAppTests.release.xcconfig */,
 			);
 			name = "Pods-OrgNoteAppTests";
 			path = "Target Support Files/Pods-OrgNoteAppTests";
 			sourceTree = "<group>";
 		};
-		36230AB33BFCBA868B7CFC99C820CCC6 /* Resources */ = {
+		3E2918831A3C55F82279E9F1B69329FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E0CF29BF27995A4EFF38DB6178E40E44 /* CommonCryptoBridge.h */,
-				C2B5C7839FA5A5C1783FE4E815B20552 /* module.modulemap */,
+				F7B27CFC0EA14538BA8188527E22655B /* CommonCryptoBridge.h */,
+				C66C446F7AAA9A2243B2832153F75F4C /* module.modulemap */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		3D09C36DE23F287A7779D54FE5DA714E /* Support Files */ = {
+		406485C6D885F47377A0969267A92D4A /* FastDiff */ = {
 			isa = PBXGroup;
 			children = (
-				342B12DC82740F608128AB6CEB562217 /* SwiftyParserCombinator.modulemap */,
-				962D7A72CED1FBC72F3B755FBBFA33E8 /* SwiftyParserCombinator.xcconfig */,
-				418250656F04897CE44E9B9F384E9189 /* SwiftyParserCombinator-dummy.m */,
-				013DD64E47A731E5AA06CFF5D37788CB /* SwiftyParserCombinator-prefix.pch */,
-				ABA26D5C5EF1E3F1F81C086F89F489D1 /* SwiftyParserCombinator-umbrella.h */,
+				C455806AE0644EEF611336872DC7E5D1 /* Diffable.swift */,
+				97B773398107C20586439379C4B67126 /* DiffingAlgorithm.swift */,
+				0405AF1C776B27EFC2863083F3DDFCF9 /* InternalDiff.swift */,
+				025C87B9A4AAFEB7ACA0BFC7FCFF1A89 /* Support Files */,
+			);
+			name = FastDiff;
+			path = FastDiff;
+			sourceTree = "<group>";
+		};
+		5DC5CD70F8FC13C08C4AA6D1EEC43E41 /* OAuthorize2 */ = {
+			isa = PBXGroup;
+			children = (
+				8785A3C15713618CFBD428A7C61C5B0D /* OAuth2.swift */,
+				573B01199AE8789998A724DF6234BDDE /* OAuth2AccessToken.swift */,
+				8B6364BBCF5DB227A83B3D5110C95CE4 /* OAuth2AccessTokenStorageService.swift */,
+				3669F2C6E557FDE0233590E516127094 /* OAuth2Config.swift */,
+				BF87EB136FCE453294F2B4F6AED4945A /* OAuth2NetworkService.swift */,
+				77F6F270E2416EBA5E38977830CBC40B /* OAuthorize2.h */,
+				BAEF4576711352B53E8EA89947642B14 /* Support Files */,
+			);
+			name = OAuthorize2;
+			path = OAuthorize2;
+			sourceTree = "<group>";
+		};
+		5F40E61F34A7946E31E4C80FA3296757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55703ACFB6FA6817C0F088C9EAE42819 /* CommonCryptoModule.framework */,
+				8354FEC3B883A80FB69B571A016E3465 /* FastDiff.framework */,
+				B07BD3A1B78EC68BE8FEB9257155F815 /* Kekka.framework */,
+				894CB0D5C90BEA47F407F48D5F13AA41 /* OAuthorize2.framework */,
+				6E4C5351DC489798D3393B6144ACD92B /* Pods_OrgNoteApp.framework */,
+				44C6EB77F60D01A1F1272E67C45A6D78 /* Pods_OrgNoteAppTests.framework */,
+				F790D8408691B8BABCF2E0502EA3E20D /* SwiftyParserCombinator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6298214D509EE08C8779AF59FBBB3CE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFDE3E0FF55BC248BD4F4DCD07E249BC /* Info.plist */,
+				194C080440437D4538911D9F278826C2 /* SwiftyParserCombinator.modulemap */,
+				2535381DA03A33653A3C7CC7DA9D6C48 /* SwiftyParserCombinator.xcconfig */,
+				19DEF01CDB4D5D837FB55BD7BA04BBF2 /* SwiftyParserCombinator-dummy.m */,
+				ED377F91FE804DF63721F193BF94E98E /* SwiftyParserCombinator-prefix.pch */,
+				5B64A6AAF84C8BCDD26B0910DEB97D98 /* SwiftyParserCombinator-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyParserCombinator";
 			sourceTree = "<group>";
 		};
-		6EA1446EB4C1063B4187059B8D136197 /* SwiftyParserCombinator */ = {
+		640E3010F19568A8DFC46EFA35065DE9 /* Kekka */ = {
 			isa = PBXGroup;
 			children = (
-				D62163775AE6848CAA3431B2E95B17D0 /* ArrayExtension.swift */,
-				A395AC48EBEAC1656F2A34A8C58CA186 /* CharacterExtension.swift */,
-				7D0844459F6989EF4FE2663858474C00 /* InputState.swift */,
-				0B287FBD03752F728CCE677263AFEF83 /* Parser.swift */,
-				C98485B5BC1E8686DBB173F36ED8417D /* Parser+Combinator.swift */,
-				8BD5D6A00BA9518B7057E5AFA297F906 /* Parser+Monad.swift */,
-				659FFD3990BBCD54550D424C6DF1F74B /* Parser+Operators.swift */,
-				5F3C42424EA52829507D4F5EC7FF6B57 /* Parser+STDLIB.swift */,
-				62305C92DF48ABBF3057CAC199C3FDF8 /* Parser+TypedMethods.swift */,
-				61BD5148315711378668FBEEF7F80321 /* ParserError.swift */,
-				5A42BEBADA89D7338D94DD34D044F1AF /* ParserResult.swift */,
-				3D09C36DE23F287A7779D54FE5DA714E /* Support Files */,
+				E64F4604B83088AB679A2DD1AD689296 /* ErrorEquality.swift */,
+				8EF256D8923C978816EF0DAABF65BB8C /* FullyTypedResult.swift */,
+				8E7A952621D869E51BEBCD0B91EEEC28 /* Future.swift */,
+				CCA9238B0B582DEAFC047318C4FCCEEE /* Operators.swift */,
+				5FFD3617F559B369C9EF59DCF582D7AE /* Result.swift */,
+				7F5F4322D0CA32BE77E30A73312B9E1F /* Support Files */,
 			);
-			name = SwiftyParserCombinator;
-			path = SwiftyParserCombinator;
+			name = Kekka;
+			path = Kekka;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				1E81341340E5CFB791351F17DF93AE43 /* Frameworks */,
 				F21C1300278308587A93813D47540B70 /* Pods */,
-				A68CFA5052A8E42E57EAC04F32F71192 /* Products */,
-				01FD67FE1CE8046F3C38B2DAA1E70AE4 /* Targets Support Files */,
+				5F40E61F34A7946E31E4C80FA3296757 /* Products */,
+				A0E45B40EAAB9D05AD9AAE4C5A192C3F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A17CF76CF02F1FBC2AF17E8EFBCDD59B /* Support Files */ = {
+		7F5F4322D0CA32BE77E30A73312B9E1F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				55873242F68292DC8861A4EC4C41FE97 /* CommonCryptoModule.modulemap */,
-				643E6835AD4D93362707E5EA407B231D /* CommonCryptoModule.xcconfig */,
-				C6C86F5DBCE13DFE33DEA45F5104E9ED /* CommonCryptoModule-dummy.m */,
-				6DB7B1FF8176B076E19928E003E5A746 /* CommonCryptoModule-prefix.pch */,
-				F5B4C1D5A21821B42F970FC11C6A4E5C /* CommonCryptoModule-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CommonCryptoModule";
-			sourceTree = "<group>";
-		};
-		A68CFA5052A8E42E57EAC04F32F71192 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D9FFC5FF402FC5A8FF8E52542F63E717 /* libCommonCryptoModule.a */,
-				95697EA7338EDD1CBB33A73F2B1F6C67 /* libFastDiff.a */,
-				ABDF7DA72681CFD8FC5409800450BC1C /* libKekka.a */,
-				16EAB559FC5370569CBD29E5D4AB6A4E /* libOAuthorize2.a */,
-				BF5D9C73FD9C086F41AB5AF6F1F5589A /* libPods-OrgNoteApp.a */,
-				80442C4D864704496995F10FD649CED4 /* libPods-OrgNoteAppTests.a */,
-				7D23039ACB28F6C9B01D1DD16C81D40B /* libSwiftyParserCombinator.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C06998C4B095C949D87A2E7D64BFA389 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DA848ABD7984CC5BD36CB6351133C598 /* FastDiff.modulemap */,
-				F93C5DAC820F199CBC6A9791FFC754C0 /* FastDiff.xcconfig */,
-				FD5C6C21820DBB0A21B0DD9BADCEBA34 /* FastDiff-dummy.m */,
-				070AFAA188BC9553FCD3F5A11944A39A /* FastDiff-prefix.pch */,
-				4BB939B18EF54325290C302458AF64D8 /* FastDiff-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FastDiff";
-			sourceTree = "<group>";
-		};
-		E24A1124F62DAF7B5AC917B5F0595816 /* CommonCryptoModule */ = {
-			isa = PBXGroup;
-			children = (
-				19A02FCAE73A8C1174A9408E1DAD7ECC /* CommonCryptoModule.h */,
-				8E9B21B183026345A79C34F277890C88 /* Empty.swift */,
-				36230AB33BFCBA868B7CFC99C820CCC6 /* Resources */,
-				A17CF76CF02F1FBC2AF17E8EFBCDD59B /* Support Files */,
-			);
-			name = CommonCryptoModule;
-			path = CommonCryptoModule;
-			sourceTree = "<group>";
-		};
-		EBB43B773878D2A82EF2C8BFD8E00A3E /* OAuthorize2 */ = {
-			isa = PBXGroup;
-			children = (
-				5B730CE6C8A7912A1195138C49D21BBF /* OAuth2.swift */,
-				B758D06C64E994EA6464AFE3F3F2A71E /* OAuth2AccessToken.swift */,
-				BEB955AFAA3CBB663A80F562CE4E8045 /* OAuth2AccessTokenStorageService.swift */,
-				254A10E28C7545D5115CA22ACDD38526 /* OAuth2Config.swift */,
-				8A477DBDD8CE79ECD7BA7DF42E3F9F30 /* OAuth2NetworkService.swift */,
-				B30E9A7D166DA55E18ADDCC9E7A90C15 /* OAuthorize2.h */,
-				0BE61F22C0A198BE25024F738E9540F4 /* Support Files */,
-			);
-			name = OAuthorize2;
-			path = OAuthorize2;
-			sourceTree = "<group>";
-		};
-		F21C1300278308587A93813D47540B70 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E24A1124F62DAF7B5AC917B5F0595816 /* CommonCryptoModule */,
-				20CD7240E40369F98B0CD2CDA1601533 /* FastDiff */,
-				1D32DC424379757038260A6DB7A90999 /* Kekka */,
-				EBB43B773878D2A82EF2C8BFD8E00A3E /* OAuthorize2 */,
-				6EA1446EB4C1063B4187059B8D136197 /* SwiftyParserCombinator */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F516E5828292E6F242075B24D92F4E5E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				78E998D20B179A37859886BA69915D29 /* Kekka.modulemap */,
-				F45FA557FFAD85F5EB8E9423C8E65243 /* Kekka.xcconfig */,
-				1C605584A13AC6FBF50EDCD2B34FCE9E /* Kekka-dummy.m */,
-				27972EC92C72CD057C56BE824AB34DDD /* Kekka-prefix.pch */,
-				36C9288A6A9A66B9D566ED765680E603 /* Kekka-umbrella.h */,
+				6C9996A265F955B298AB77EF9DDB036A /* Info.plist */,
+				E1803665D4E64405E8DB1C289CF5096E /* Kekka.modulemap */,
+				E6DF49FC932EEB85B94CA6D6536F1636 /* Kekka.xcconfig */,
+				39DCDD2961BAD6962C09FAE06E3B69D9 /* Kekka-dummy.m */,
+				FC7D414464479AFA2E8473B944A1D6D2 /* Kekka-prefix.pch */,
+				AC46CC95F2E25D514CB8FC614DEE3DEA /* Kekka-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Kekka";
 			sourceTree = "<group>";
 		};
-		F8CDDD95B647C8275559331111771D5B /* Pods-OrgNoteApp */ = {
+		9496A3A76AB019466B686C8B3833828A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				542AFB34D6E2809B9D45C4F44B6AD186 /* Pods-OrgNoteApp.modulemap */,
-				A42F8EC0B243C9C69B1900C1C70C5925 /* Pods-OrgNoteApp-acknowledgements.markdown */,
-				2EE4305EE3AB55E24744B688FF2AB338 /* Pods-OrgNoteApp-acknowledgements.plist */,
-				02B3B19A29DABD1FCA17397B11FE88F6 /* Pods-OrgNoteApp-dummy.m */,
-				D9A1DFADF654144C8FFCFC25D94C7E71 /* Pods-OrgNoteApp-frameworks.sh */,
-				4C87EA8DBD2F357A1DD2CC986D945B02 /* Pods-OrgNoteApp-resources.sh */,
-				72E341D7E2B0E8BFA209948A93192FCA /* Pods-OrgNoteApp-umbrella.h */,
-				1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */,
-				4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */,
+				0422AC405CD0C6B64E918F5E8DB8BC11 /* CommonCryptoModule.modulemap */,
+				9D74B6A25ADB0CF92B6602A676CADC41 /* CommonCryptoModule.xcconfig */,
+				CB1B1119A3310E983F83DCC31BE6B757 /* CommonCryptoModule-dummy.m */,
+				7F6730FFA63949B147A9C37F2214750C /* CommonCryptoModule-prefix.pch */,
+				E6F1A274962F4372D8E139C7FDC86057 /* CommonCryptoModule-umbrella.h */,
+				5E6A2F142C6FAF826EAD2B82295D27CA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CommonCryptoModule";
+			sourceTree = "<group>";
+		};
+		A0E45B40EAAB9D05AD9AAE4C5A192C3F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F93A472AC9A1FBAAAB514999127DACE1 /* Pods-OrgNoteApp */,
+				37E6BF18E851527E48C70F3970C12AA3 /* Pods-OrgNoteAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BAEF4576711352B53E8EA89947642B14 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BB82CB4BD4F86C4B4B2C3DCDC2CE084 /* Info.plist */,
+				F3B9E2202D92F2F7C5253DAC07BE6FCE /* OAuthorize2.modulemap */,
+				0C211222ACD907FB1EE385D4D798FC74 /* OAuthorize2.xcconfig */,
+				5012E6B1C769D4925BE54E3436D660D9 /* OAuthorize2-dummy.m */,
+				6E710886828D31D9238792625E45CBA7 /* OAuthorize2-prefix.pch */,
+				2EE0A6ED1CC581BE47C789A040DA50A8 /* OAuthorize2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OAuthorize2";
+			sourceTree = "<group>";
+		};
+		BAFE1CC049C7795773C8282DCEA27564 /* CommonCryptoModule */ = {
+			isa = PBXGroup;
+			children = (
+				8EF33E9AB07A7A2C7A6727EE1F106B28 /* CommonCryptoModule.h */,
+				8DADFCE0817A35CE5EE119C83FE7EAC2 /* Empty.swift */,
+				3E2918831A3C55F82279E9F1B69329FF /* Resources */,
+				9496A3A76AB019466B686C8B3833828A /* Support Files */,
+			);
+			name = CommonCryptoModule;
+			path = CommonCryptoModule;
+			sourceTree = "<group>";
+		};
+		F21C1300278308587A93813D47540B70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAFE1CC049C7795773C8282DCEA27564 /* CommonCryptoModule */,
+				406485C6D885F47377A0969267A92D4A /* FastDiff */,
+				640E3010F19568A8DFC46EFA35065DE9 /* Kekka */,
+				5DC5CD70F8FC13C08C4AA6D1EEC43E41 /* OAuthorize2 */,
+				072DEF384C17479CC88D4C012DCA4C24 /* SwiftyParserCombinator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F93A472AC9A1FBAAAB514999127DACE1 /* Pods-OrgNoteApp */ = {
+			isa = PBXGroup;
+			children = (
+				687FE0A9C86A5EA132E5F3AE250AEC79 /* Info.plist */,
+				4CBB06515A92A92C8FA0E2125E619441 /* Pods-OrgNoteApp.modulemap */,
+				C66066BEF208DE4D7B8622105F8B0F2A /* Pods-OrgNoteApp-acknowledgements.markdown */,
+				91E3C3E6C3A0A19BE51E81D8931B5EC1 /* Pods-OrgNoteApp-acknowledgements.plist */,
+				866E3B2AAACAA07B454AAC5F414024BF /* Pods-OrgNoteApp-dummy.m */,
+				EE1741FBEE597A7EE7022696315C937D /* Pods-OrgNoteApp-frameworks.sh */,
+				38C4637A127479224D79F4C944C93D1F /* Pods-OrgNoteApp-resources.sh */,
+				406B7975005FA99FD1C132BC6DC144BA /* Pods-OrgNoteApp-umbrella.h */,
+				16AAB47A0ED92F90556C24B574673121 /* Pods-OrgNoteApp.debug.xcconfig */,
+				F7DA146966DC587B9416BF1609D929B9 /* Pods-OrgNoteApp.release.xcconfig */,
 			);
 			name = "Pods-OrgNoteApp";
 			path = "Target Support Files/Pods-OrgNoteApp";
 			sourceTree = "<group>";
 		};
+		FF4A90959C88A4A6E6A5769F6854B862 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				232E1A4A51D63506C9C2289348AB9B68 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0489072A2130DC101BF3C73AB7CBB2DB /* Headers */ = {
+		04F7F6A8E772B454AAF8DA0479F3B65B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0D133EBB480F1BBDF847FD92C76733 /* FastDiff-umbrella.h in Headers */,
+				B87CAF30F401409F68746F7FE009E7B2 /* Pods-OrgNoteApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08684C2604B3DE2A7CAFC2053F2A29A9 /* Headers */ = {
+		1990DD43BD0EA523932EF73A3058DFC7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6A9E63BE5BC24CBBBC999F47C096CB /* CommonCryptoModule-umbrella.h in Headers */,
-				513E110815DBB6DD36907947FB82C6DD /* CommonCryptoModule.h in Headers */,
+				BA5902368F4EC0F5BFFA010EFCB3CA66 /* CommonCryptoModule-umbrella.h in Headers */,
+				CCDF80DB0A1AC1A17E671A18360C0EB4 /* CommonCryptoModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C002AF9089D33457D23CE6CA9E7D524 /* Headers */ = {
+		24893EACD0ED8F214BB8DAA3F34018CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8224F783979CA8CC9482F0D3479D9D /* Pods-OrgNoteApp-umbrella.h in Headers */,
+				4D05F1C3F2C3AC6D1A49EF4FA27F8CD3 /* FastDiff-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48F14F0721636B341035FB9A80A19AB2 /* Headers */ = {
+		523ED563D7A545791F358E5CA4BACCC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9BE4F9E1E7DD99D1A4BF41CA5F1D3B /* OAuthorize2-umbrella.h in Headers */,
+				BF5DBB8F3B7F797AFFB1815FCCAC09B8 /* OAuthorize2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C26AA9AFD53B9463D3CFFF323489747 /* Headers */ = {
+		9E92BE00B71E0EB6CE55C5156E5D983B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1236913469ACDA11A6368E29FCF10F8E /* SwiftyParserCombinator-umbrella.h in Headers */,
+				2F86CE6642823B104F0D43EEEC480371 /* Kekka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		696AD69CB872A6D469892BCD415F1009 /* Headers */ = {
+		E409F27699F0CC189A0FC6E4DBDBEE35 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DD34921354394302257BF57F8C7F4C /* OAuthorize2-umbrella.h in Headers */,
-				1D7BB37991FFD5E242E6C926A20B5D97 /* OAuthorize2.h in Headers */,
+				DD6BBC8140417784794CCC09FD5662BB /* Pods-OrgNoteAppTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F569AE2D61C84FF1C8711423FE3289E6 /* Headers */ = {
+		FB7E42AF626582AE96623AEAA62A0A18 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E5301D6661192B3751CB6A8641AD5F /* Kekka-umbrella.h in Headers */,
+				203E1A85474C8B57794CF304CEAB7D23 /* SwiftyParserCombinator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23AB915B3FA2B9F63C15FA68604A4455 /* SwiftyParserCombinator */ = {
+		6272890E0003B365E28392A2AD63BE32 /* Kekka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0445BDBCB36342D9A7AC78255278A44B /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */;
+			buildConfigurationList = D2AC93EA3C3963ED3C82D1E296643F2F /* Build configuration list for PBXNativeTarget "Kekka" */;
 			buildPhases = (
-				4C26AA9AFD53B9463D3CFFF323489747 /* Headers */,
-				73A5E97B0CECBD598812F56F8F91CA87 /* Sources */,
-				93E920EEF2F1628F18F0D7B7FD91830E /* Frameworks */,
-				AB4D1975DD698E126E69CF796527326D /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyParserCombinator;
-			productName = SwiftyParserCombinator;
-			productReference = 7D23039ACB28F6C9B01D1DD16C81D40B /* libSwiftyParserCombinator.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 984AC0FCE59BD1594220055BA80962D2 /* Build configuration list for PBXNativeTarget "FastDiff" */;
-			buildPhases = (
-				0489072A2130DC101BF3C73AB7CBB2DB /* Headers */,
-				49A0576FF824A423CA1ED0B4D3454937 /* Sources */,
-				E064DF98ECD63C8D97C5D6FAC2660735 /* Frameworks */,
-				1BAC711D8CB945DA26A41F87E9F4BE45 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FastDiff;
-			productName = FastDiff;
-			productReference = 95697EA7338EDD1CBB33A73F2B1F6C67 /* libFastDiff.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		3B245F075871035E41EC9881110EAA5E /* OAuthorize2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A4C9F2D8A485CC7238F830E558AB28E0 /* Build configuration list for PBXNativeTarget "OAuthorize2" */;
-			buildPhases = (
-				696AD69CB872A6D469892BCD415F1009 /* Headers */,
-				8C008DE12658CECE12E4132F003EE8EE /* Sources */,
-				C1B8784F28AF59C673D11087E05D2F5D /* Frameworks */,
-				18EDB8A41F5F252F86768E4AFF35B3C0 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				213EA0C52EB96E30B754D459F4BA67CF /* PBXTargetDependency */,
-				19304B0EDF8EF276F03F9EA93A72AFC2 /* PBXTargetDependency */,
-			);
-			name = OAuthorize2;
-			productName = OAuthorize2;
-			productReference = 16EAB559FC5370569CBD29E5D4AB6A4E /* libOAuthorize2.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1BFCA1C4492D407DBA63472A7E66989E /* Build configuration list for PBXNativeTarget "Kekka" */;
-			buildPhases = (
-				F569AE2D61C84FF1C8711423FE3289E6 /* Headers */,
-				4240BBF1E9451C690811CDE485F3AD7C /* Sources */,
-				367E1D2C961CF4D72F88F3A7DB7D60E0 /* Frameworks */,
-				6E12480E2E2D04FA3521FFC4F8541C86 /* Copy generated compatibility header */,
+				9E92BE00B71E0EB6CE55C5156E5D983B /* Headers */,
+				6FF521B21FBAF8CA8B6DD052C6A6CD74 /* Sources */,
+				B8FCCCFC78D442C76667A5D0793FA63F /* Frameworks */,
+				AF31A43E0047B57F9D4B5E1E1922448E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -608,17 +606,59 @@
 			);
 			name = Kekka;
 			productName = Kekka;
-			productReference = ABDF7DA72681CFD8FC5409800450BC1C /* libKekka.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = B07BD3A1B78EC68BE8FEB9257155F815 /* Kekka.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		510F28158AC144732F03368E916B78F0 /* CommonCryptoModule */ = {
+		820C985D00849C1778EE78BEF5782B9A /* Pods-OrgNoteAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6752FD40CCA8F05DAB35FFDA3D2DC63 /* Build configuration list for PBXNativeTarget "CommonCryptoModule" */;
+			buildConfigurationList = 901820263248B374E713C6902BCFF529 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteAppTests" */;
 			buildPhases = (
-				08684C2604B3DE2A7CAFC2053F2A29A9 /* Headers */,
-				312E32259B56CC76FAD4A915F91D7811 /* Sources */,
-				D81E2B6DEF50B9B8D972B03E7DFD8219 /* Frameworks */,
-				D2331C14226D563CC10E35A0E3E9CAD9 /* Copy generated compatibility header */,
+				E409F27699F0CC189A0FC6E4DBDBEE35 /* Headers */,
+				2776544FBCA94BB3A5F54D8F454FF84A /* Sources */,
+				D2D4627DE192D4580E0A0BA5D3F380C2 /* Frameworks */,
+				1D29A9E78174A9B28A53D17F2B8C252D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1B94189B6749F8246385C18015906E3 /* PBXTargetDependency */,
+			);
+			name = "Pods-OrgNoteAppTests";
+			productName = "Pods-OrgNoteAppTests";
+			productReference = 44C6EB77F60D01A1F1272E67C45A6D78 /* Pods_OrgNoteAppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A6033E8A4F21945ED92E55254715B409 /* Pods-OrgNoteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA93F7C509A525B3F41F18D6720F530 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */;
+			buildPhases = (
+				04F7F6A8E772B454AAF8DA0479F3B65B /* Headers */,
+				2167140C070C787532F668EA8949FEA5 /* Sources */,
+				4D5437E3952F5ED263CCBC0914B0E2D1 /* Frameworks */,
+				E8417D98263C135F1BD5B143A5E1ED33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8B994352C34BF49916D159EA40AC3FF /* PBXTargetDependency */,
+				84BDE5B10B3B3BC7B1F19DB4344C2E58 /* PBXTargetDependency */,
+				36886D3ECCE900DE87B64FEF077CF1C1 /* PBXTargetDependency */,
+				38208B66C24C571F476C95534C27ED26 /* PBXTargetDependency */,
+				FA719D437B2648F03940665B0908DAD3 /* PBXTargetDependency */,
+			);
+			name = "Pods-OrgNoteApp";
+			productName = "Pods-OrgNoteApp";
+			productReference = 6E4C5351DC489798D3393B6144ACD92B /* Pods_OrgNoteApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA3C7398A2CCCB26C5028794C1B09F08 /* CommonCryptoModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718946DAD755CB59A629F7431481AA94 /* Build configuration list for PBXNativeTarget "CommonCryptoModule" */;
+			buildPhases = (
+				1990DD43BD0EA523932EF73A3058DFC7 /* Headers */,
+				4D4C4E83FF5D0ACA0E04AA0EC68A2D5F /* Sources */,
+				5AB685F850822397F1FE53DF0D71D6FF /* Frameworks */,
+				92891289F964B89BD777857219E8475D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -626,48 +666,64 @@
 			);
 			name = CommonCryptoModule;
 			productName = CommonCryptoModule;
-			productReference = D9FFC5FF402FC5A8FF8E52542F63E717 /* libCommonCryptoModule.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 55703ACFB6FA6817C0F088C9EAE42819 /* CommonCryptoModule.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		9D105307579B2C2AFA9F21F41348AAA8 /* Pods-OrgNoteAppTests */ = {
+		C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB942582C091C7230146089E7D97507F /* Build configuration list for PBXNativeTarget "Pods-OrgNoteAppTests" */;
+			buildConfigurationList = 2941B1F84FA38B085C1049B14301E6F5 /* Build configuration list for PBXNativeTarget "FastDiff" */;
 			buildPhases = (
-				48F14F0721636B341035FB9A80A19AB2 /* Headers */,
-				EA350C16F83165331E09E0B043C5EB3A /* Sources */,
-				B9B49758F9E12461A507FEBF389C0400 /* Frameworks */,
+				24893EACD0ED8F214BB8DAA3F34018CE /* Headers */,
+				FF33E46BC6EF4F55E60C89E44BDB74BA /* Sources */,
+				3622E0F3C5119604752E8E2D2C9700E7 /* Frameworks */,
+				D96074718DF47125DC4994A19A1D4132 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B884D5BFA0602B5D464536EEA21CE213 /* PBXTargetDependency */,
 			);
-			name = "Pods-OrgNoteAppTests";
-			productName = "Pods-OrgNoteAppTests";
-			productReference = 80442C4D864704496995F10FD649CED4 /* libPods-OrgNoteAppTests.a */;
-			productType = "com.apple.product-type.library.static";
+			name = FastDiff;
+			productName = FastDiff;
+			productReference = 8354FEC3B883A80FB69B571A016E3465 /* FastDiff.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		AC7AD8265E439095C3FE241BAD76AE13 /* Pods-OrgNoteApp */ = {
+		D1902D0802D30C33B8AC4CDE622E2856 /* OAuthorize2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9495D5CEDD205F78FD3CC2B4A0480820 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */;
+			buildConfigurationList = 599DEB0ABAAEAC167833079B1C9CDB47 /* Build configuration list for PBXNativeTarget "OAuthorize2" */;
 			buildPhases = (
-				3C002AF9089D33457D23CE6CA9E7D524 /* Headers */,
-				9AD9C069FBFE1CB6EA0ACC5249DD9B41 /* Sources */,
-				E3852F8F72A65C054782D89AB14BF9A6 /* Frameworks */,
+				523ED563D7A545791F358E5CA4BACCC4 /* Headers */,
+				37650D9F968928BE398939B4D4ED33CE /* Sources */,
+				A39248C139C4D62249CD250C58F34233 /* Frameworks */,
+				5F35F2ADA74F67CB07B968067B875BBD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3EC4B342FD95963F9CF568167A3BD8F4 /* PBXTargetDependency */,
-				3B608FB452EAC49B7BB774C1C6E3BE54 /* PBXTargetDependency */,
-				EF129D7A3CEFF14A0BE64B4DA62B35E2 /* PBXTargetDependency */,
-				07C0FC5681580BC7B21EFB38E2191A41 /* PBXTargetDependency */,
-				1D03B50133A573CD2B58BF422CA309C4 /* PBXTargetDependency */,
+				5C625FFA8057A7DB7817C2BA087CA329 /* PBXTargetDependency */,
+				F33CE17D34E0E816A1E294D6FFFCD0C4 /* PBXTargetDependency */,
 			);
-			name = "Pods-OrgNoteApp";
-			productName = "Pods-OrgNoteApp";
-			productReference = BF5D9C73FD9C086F41AB5AF6F1F5589A /* libPods-OrgNoteApp.a */;
-			productType = "com.apple.product-type.library.static";
+			name = OAuthorize2;
+			productName = OAuthorize2;
+			productReference = 894CB0D5C90BEA47F407F48D5F13AA41 /* OAuthorize2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FB623F2D517A80877A87196B6AE778B7 /* SwiftyParserCombinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52CD8454353C109092C2AAF5A4F773E /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */;
+			buildPhases = (
+				FB7E42AF626582AE96623AEAA62A0A18 /* Headers */,
+				41E0D9AF1998145B0043A51A4719663C /* Sources */,
+				DCEC7E3736C8F955A20B833C9C7A8EB5 /* Frameworks */,
+				43BAB8E78CEAD156DB25DB8DB0D4AB44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyParserCombinator;
+			productName = SwiftyParserCombinator;
+			productReference = F790D8408691B8BABCF2E0502EA3E20D /* SwiftyParserCombinator.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -686,281 +742,207 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A68CFA5052A8E42E57EAC04F32F71192 /* Products */;
+			productRefGroup = 5F40E61F34A7946E31E4C80FA3296757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				510F28158AC144732F03368E916B78F0 /* CommonCryptoModule */,
-				2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */,
-				4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */,
-				3B245F075871035E41EC9881110EAA5E /* OAuthorize2 */,
-				AC7AD8265E439095C3FE241BAD76AE13 /* Pods-OrgNoteApp */,
-				9D105307579B2C2AFA9F21F41348AAA8 /* Pods-OrgNoteAppTests */,
-				23AB915B3FA2B9F63C15FA68604A4455 /* SwiftyParserCombinator */,
+				AA3C7398A2CCCB26C5028794C1B09F08 /* CommonCryptoModule */,
+				C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */,
+				6272890E0003B365E28392A2AD63BE32 /* Kekka */,
+				D1902D0802D30C33B8AC4CDE622E2856 /* OAuthorize2 */,
+				A6033E8A4F21945ED92E55254715B409 /* Pods-OrgNoteApp */,
+				820C985D00849C1778EE78BEF5782B9A /* Pods-OrgNoteAppTests */,
+				FB623F2D517A80877A87196B6AE778B7 /* SwiftyParserCombinator */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		18EDB8A41F5F252F86768E4AFF35B3C0 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		1D29A9E78174A9B28A53D17F2B8C252D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/OAuthorize2/OAuthorize2.modulemap",
-				"${PODS_ROOT}/Headers/Public/OAuthorize2/OAuthorize2-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/OAuthorize2-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/OAuthorize2/OAuthorize2.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/OAuthorize2/OAuthorize2-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
-		1BAC711D8CB945DA26A41F87E9F4BE45 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+		43BAB8E78CEAD156DB25DB8DB0D4AB44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff.modulemap",
-				"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/FastDiff-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FastDiff/FastDiff-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
-		6E12480E2E2D04FA3521FFC4F8541C86 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+		5F35F2ADA74F67CB07B968067B875BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/Kekka/Kekka.modulemap",
-				"${PODS_ROOT}/Headers/Public/Kekka/Kekka-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/Kekka-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92891289F964B89BD777857219E8475D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A1587E5CE091FF0F4869A4229B404C /* CommonCryptoBridge.h in Resources */,
+				696D873A5DD426262ED4904ADD66206D /* module.modulemap in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kekka/Kekka.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kekka/Kekka-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
-		AB4D1975DD698E126E69CF796527326D /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+		AF31A43E0047B57F9D4B5E1E1922448E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap",
-				"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
-		D2331C14226D563CC10E35A0E3E9CAD9 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+		D96074718DF47125DC4994A19A1D4132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/CommonCryptoModule/CommonCryptoModule.modulemap",
-				"${PODS_ROOT}/Headers/Public/CommonCryptoModule/CommonCryptoModule-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8417D98263C135F1BD5B143A5E1ED33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CommonCryptoModule/CommonCryptoModule.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CommonCryptoModule/CommonCryptoModule-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
-/* End PBXShellScriptBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		312E32259B56CC76FAD4A915F91D7811 /* Sources */ = {
+		2167140C070C787532F668EA8949FEA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F882ABB3B4D47AE85E4ED882904F0984 /* CommonCryptoModule-dummy.m in Sources */,
-				D75BD96E379FDCDC71FB0FC80EE7232E /* Empty.swift in Sources */,
+				D3366E3121079733CEE2D5BB40F16D9B /* Pods-OrgNoteApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4240BBF1E9451C690811CDE485F3AD7C /* Sources */ = {
+		2776544FBCA94BB3A5F54D8F454FF84A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAF3A430263C4A2D4CAAB0E77E1081B /* ErrorEquality.swift in Sources */,
-				84660BFDE0D19CD703A6C48867236AED /* FullyTypedResult.swift in Sources */,
-				65C12B60CF6B0B5C9771DC2319091A7A /* Future.swift in Sources */,
-				7CD329348DFA455BE021A98C2FB23BCC /* Kekka-dummy.m in Sources */,
-				6A5C1DAD1042D20409CD1E1BC33500E6 /* Operators.swift in Sources */,
-				8922C80748BE425B4D1B2C36C8628D0C /* Result.swift in Sources */,
+				3417A2D59A7BA62C498C6375E13CAEE2 /* Pods-OrgNoteAppTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49A0576FF824A423CA1ED0B4D3454937 /* Sources */ = {
+		37650D9F968928BE398939B4D4ED33CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E6324F889252CC1A478B44B2C81027 /* Diffable.swift in Sources */,
-				30DF4E53368FDECD475E1CAC319003A2 /* DiffingAlgorithm.swift in Sources */,
-				CD9E204343BE7F898FA1764FB6B371A4 /* FastDiff-dummy.m in Sources */,
-				B655669D816B72CFD9B6635027E4E9A1 /* InternalDiff.swift in Sources */,
+				866C1719BDBFB72ECB5D91DB2C786CDF /* OAuth2.swift in Sources */,
+				420CF864DD47C0DBE5509C01644DA6E7 /* OAuth2AccessToken.swift in Sources */,
+				C8BC263E0F7848B390EA48CA92B7443C /* OAuth2AccessTokenStorageService.swift in Sources */,
+				A4003B42DC7DFF80348060C4852CC0B0 /* OAuth2Config.swift in Sources */,
+				EACFD7551782E6DC7A6FCA93434853BA /* OAuth2NetworkService.swift in Sources */,
+				41573111C0E9DA1924217F88B8B7D5C3 /* OAuthorize2-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73A5E97B0CECBD598812F56F8F91CA87 /* Sources */ = {
+		41E0D9AF1998145B0043A51A4719663C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D66C13C771390133E12F6EE827375BB /* ArrayExtension.swift in Sources */,
-				66B132DF85E6035E6821ED161B6E1BFE /* CharacterExtension.swift in Sources */,
-				85E7C2EEF26E8D1C74C605667D4EF16B /* InputState.swift in Sources */,
-				F530768DC71891603A5AC7B5E95B2F3C /* Parser+Combinator.swift in Sources */,
-				6260D735565F649123B7AFBD4F5AE95D /* Parser+Monad.swift in Sources */,
-				89A5B89201FB79A705644F56F903BC34 /* Parser+Operators.swift in Sources */,
-				F4CAEC2D7BA1FE1C49308D905C987787 /* Parser+STDLIB.swift in Sources */,
-				EE73E88D5E46E4EF22D017DD2589EEA6 /* Parser+TypedMethods.swift in Sources */,
-				F8F834587773A81CE5056CBB2D59ED99 /* Parser.swift in Sources */,
-				9B127ECED710F0D36027EF0B57BE907F /* ParserError.swift in Sources */,
-				DE69F01AB094B1AE0C98F211E8849903 /* ParserResult.swift in Sources */,
-				A82094D836872414F700DC26D33FF29B /* SwiftyParserCombinator-dummy.m in Sources */,
+				C6076226BC41442CA480318FF1BABEA9 /* ArrayExtension.swift in Sources */,
+				5387A3BBA20792EB7F12C0FD32E0A2B1 /* CharacterExtension.swift in Sources */,
+				78C0133E0FB2799E5128E49F1C711760 /* InputState.swift in Sources */,
+				F0045C0062B5B8B083A4782C947EA2C4 /* Parser+Combinator.swift in Sources */,
+				1114340E10CE0216BDDA57D596972756 /* Parser+Monad.swift in Sources */,
+				789FCBACF2847EB892E0F1871A4B114A /* Parser+Operators.swift in Sources */,
+				0744D0093D40ECDECCF7752D462D63B5 /* Parser+STDLIB.swift in Sources */,
+				20055E08457CBD76BC50B6E4182A2AB9 /* Parser+TypedMethods.swift in Sources */,
+				4E5EA3500866332E557F7CC253C6C485 /* Parser.swift in Sources */,
+				FF1B37DCE4130CF04707A3E0D4104A2F /* ParserError.swift in Sources */,
+				71A40FCEBE7BBA897AA969889182C597 /* ParserResult.swift in Sources */,
+				A245CCAB12556D201390C3DFBE6FB25E /* SwiftyParserCombinator-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C008DE12658CECE12E4132F003EE8EE /* Sources */ = {
+		4D4C4E83FF5D0ACA0E04AA0EC68A2D5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3470AEC1527A51919E684C996E12227C /* OAuth2.swift in Sources */,
-				17347CDF9546CA12DA7E83C2587F33C7 /* OAuth2AccessToken.swift in Sources */,
-				C1297DA7E9A9C6832859A622147368FF /* OAuth2AccessTokenStorageService.swift in Sources */,
-				2FD965DEE7A2E4AFA8E867C8C1CFC74B /* OAuth2Config.swift in Sources */,
-				3D69251D55FD2607DD3AB2E7882DD12C /* OAuth2NetworkService.swift in Sources */,
-				EAC88671BE38A94AE8B918624C5C1E3E /* OAuthorize2-dummy.m in Sources */,
+				31389AC1D80EA57AFC4DEACADB4CD3EF /* CommonCryptoModule-dummy.m in Sources */,
+				80E9B810609DED3895A9A1E5395F0482 /* Empty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AD9C069FBFE1CB6EA0ACC5249DD9B41 /* Sources */ = {
+		6FF521B21FBAF8CA8B6DD052C6A6CD74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F356C97CAD38761E61DA5BD249E4F2 /* Pods-OrgNoteApp-dummy.m in Sources */,
+				DCF7E106310D4180030FD80FD3BB78C5 /* ErrorEquality.swift in Sources */,
+				0AB47B891F139C2195D6B4512437CFB0 /* FullyTypedResult.swift in Sources */,
+				14C0398EFA441A2F1A5A4FD82FAA8B8B /* Future.swift in Sources */,
+				ACA53AE20F08DEF642309827207050A3 /* Kekka-dummy.m in Sources */,
+				699B3FAAD61B0CD86A7DBD9D2FA996D6 /* Operators.swift in Sources */,
+				2BB78245EC8447E39AF10BC1D1FC90D1 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA350C16F83165331E09E0B043C5EB3A /* Sources */ = {
+		FF33E46BC6EF4F55E60C89E44BDB74BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBE1BF131BC8B673967C0963A37B31C5 /* Pods-OrgNoteAppTests-dummy.m in Sources */,
+				69960B24CFD4E079FDAA45764E8B7A92 /* Diffable.swift in Sources */,
+				748CBAF79F3EA7EDCFA8CD6E3328FC24 /* DiffingAlgorithm.swift in Sources */,
+				0153E4A4D723549F429B3500AD313B4C /* FastDiff-dummy.m in Sources */,
+				0B6671C671B27F9E158CD1B8D0B5F592 /* InternalDiff.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07C0FC5681580BC7B21EFB38E2191A41 /* PBXTargetDependency */ = {
+		36886D3ECCE900DE87B64FEF077CF1C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kekka;
+			target = 6272890E0003B365E28392A2AD63BE32 /* Kekka */;
+			targetProxy = 7903F5F4D63C3A78D4BF271FFA7B1CD7 /* PBXContainerItemProxy */;
+		};
+		38208B66C24C571F476C95534C27ED26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OAuthorize2;
-			target = 3B245F075871035E41EC9881110EAA5E /* OAuthorize2 */;
-			targetProxy = A6F41310EDD9A686F576713A95508B38 /* PBXContainerItemProxy */;
+			target = D1902D0802D30C33B8AC4CDE622E2856 /* OAuthorize2 */;
+			targetProxy = 239403EF17AB70D111832CE9D896385B /* PBXContainerItemProxy */;
 		};
-		19304B0EDF8EF276F03F9EA93A72AFC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kekka;
-			target = 4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */;
-			targetProxy = BEB42B03369E034FE1ADB2D78208B2D9 /* PBXContainerItemProxy */;
-		};
-		1D03B50133A573CD2B58BF422CA309C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyParserCombinator;
-			target = 23AB915B3FA2B9F63C15FA68604A4455 /* SwiftyParserCombinator */;
-			targetProxy = AF46E4AAD7A671A15C01FBF0D0031A30 /* PBXContainerItemProxy */;
-		};
-		213EA0C52EB96E30B754D459F4BA67CF /* PBXTargetDependency */ = {
+		5C625FFA8057A7DB7817C2BA087CA329 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CommonCryptoModule;
-			target = 510F28158AC144732F03368E916B78F0 /* CommonCryptoModule */;
-			targetProxy = E4188F8F9B00BD80610711CE493BF72B /* PBXContainerItemProxy */;
+			target = AA3C7398A2CCCB26C5028794C1B09F08 /* CommonCryptoModule */;
+			targetProxy = AC30A46C010B47D34198E05C5C13CD0A /* PBXContainerItemProxy */;
 		};
-		3B608FB452EAC49B7BB774C1C6E3BE54 /* PBXTargetDependency */ = {
+		84BDE5B10B3B3BC7B1F19DB4344C2E58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FastDiff;
-			target = 2535CF36550B9FB3C1D8A57DB2F77687 /* FastDiff */;
-			targetProxy = 56F86952A92F04AAA97EF7136335E369 /* PBXContainerItemProxy */;
+			target = C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */;
+			targetProxy = 0406FD2AABED5B51594E6248FFEF1F5C /* PBXContainerItemProxy */;
 		};
-		3EC4B342FD95963F9CF568167A3BD8F4 /* PBXTargetDependency */ = {
+		A8B994352C34BF49916D159EA40AC3FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CommonCryptoModule;
-			target = 510F28158AC144732F03368E916B78F0 /* CommonCryptoModule */;
-			targetProxy = B06FD9B01330B3973B7DB9FFBBE3B5D5 /* PBXContainerItemProxy */;
+			target = AA3C7398A2CCCB26C5028794C1B09F08 /* CommonCryptoModule */;
+			targetProxy = FE2295839F8DFFC562C70804E49BAA7F /* PBXContainerItemProxy */;
 		};
-		B884D5BFA0602B5D464536EEA21CE213 /* PBXTargetDependency */ = {
+		F1B94189B6749F8246385C18015906E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OrgNoteApp";
-			target = AC7AD8265E439095C3FE241BAD76AE13 /* Pods-OrgNoteApp */;
-			targetProxy = 2ACB6412A1BE96016CACAA620FFF10E7 /* PBXContainerItemProxy */;
+			target = A6033E8A4F21945ED92E55254715B409 /* Pods-OrgNoteApp */;
+			targetProxy = 38A45A2D9FBFFE485D4CE416569ED692 /* PBXContainerItemProxy */;
 		};
-		EF129D7A3CEFF14A0BE64B4DA62B35E2 /* PBXTargetDependency */ = {
+		F33CE17D34E0E816A1E294D6FFFCD0C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kekka;
-			target = 4DCE6EBD3DEF2E45D4B62A118F239FD3 /* Kekka */;
-			targetProxy = 902AD8712B5981281B72A97E5D33A791 /* PBXContainerItemProxy */;
+			target = 6272890E0003B365E28392A2AD63BE32 /* Kekka */;
+			targetProxy = 7FC30D7E1EE7882B6757E059D185000A /* PBXContainerItemProxy */;
+		};
+		FA719D437B2648F03940665B0908DAD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyParserCombinator;
+			target = FB623F2D517A80877A87196B6AE778B7 /* SwiftyParserCombinator */;
+			targetProxy = 416DB3D5425539317264A227C5E870CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1024,287 +1006,531 @@
 			};
 			name = Release;
 		};
-		0AFEF56D03194B56F48F4EDF8EB10831 /* Release */ = {
+		0544BD2ED596D169F870EEB20393BF83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F93C5DAC820F199CBC6A9791FFC754C0 /* FastDiff.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FastDiff/FastDiff-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/FastDiff/FastDiff.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FastDiff;
-				PRODUCT_NAME = FastDiff;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		141B170B10B7AF7ACE420C30AB4FAC59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D6BEDF0BDF609805DDA69E3E021FCA3 /* Pods-OrgNoteApp.debug.xcconfig */;
+			baseConfigurationReference = F7DA146966DC587B9416BF1609D929B9 /* Pods-OrgNoteApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrgNoteApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0F05CA5847C97AFFA653E51D9597DCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DF49FC932EEB85B94CA6D6536F1636 /* Kekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kekka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Kekka/Kekka.modulemap";
+				PRODUCT_MODULE_NAME = Kekka;
+				PRODUCT_NAME = Kekka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		138041D974AD6BF9D4DEDD8033C0D400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16AAB47A0ED92F90556C24B574673121 /* Pods-OrgNoteApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrgNoteApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		26F4433083F2178831AF0F8786EBFB13 /* Release */ = {
+		16B7221B6C22DDD48577A186D3F189A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F45FA557FFAD85F5EB8E9423C8E65243 /* Kekka.xcconfig */;
+			baseConfigurationReference = 0C211222ACD907FB1EE385D4D798FC74 /* OAuthorize2.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OAuthorize2/OAuthorize2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OAuthorize2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Kekka;
-				PRODUCT_NAME = Kekka;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OAuthorize2/OAuthorize2.modulemap";
+				PRODUCT_MODULE_NAME = OAuthorize2;
+				PRODUCT_NAME = OAuthorize2;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		2FF7715E4A2369936A4EE3D72E21DD95 /* Debug */ = {
+		18CDB244E575A123ADFF3F2488EA3C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 962D7A72CED1FBC72F3B755FBBFA33E8 /* SwiftyParserCombinator.xcconfig */;
+			baseConfigurationReference = 2535381DA03A33653A3C7CC7DA9D6C48 /* SwiftyParserCombinator.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyParserCombinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyParserCombinator;
 				PRODUCT_NAME = SwiftyParserCombinator;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		490033839EDA3874723B271E4F1ABD13 /* Debug */ = {
+		2BE3C22CA549B63E922BE4F66D45961A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192B8B00F5612B22D6974164EC1B9A0A /* Pods-OrgNoteAppTests.debug.xcconfig */;
+			baseConfigurationReference = F0DE102B0B4E17FA843E56ED669ADAAE /* FastDiff.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4F4CA8033C43E9935EBCCA7088528641 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 152036AC56716AA54BB8C3059B92741E /* Pods-OrgNoteAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A041C2B67825E8A11375806BD01D25D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F93C5DAC820F199CBC6A9791FFC754C0 /* FastDiff.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/FastDiff/FastDiff-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FastDiff/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/FastDiff/FastDiff.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FastDiff/FastDiff.modulemap";
 				PRODUCT_MODULE_NAME = FastDiff;
 				PRODUCT_NAME = FastDiff;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		36F624FE8986AE3D25EB7031A247CA62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C211222ACD907FB1EE385D4D798FC74 /* OAuthorize2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OAuthorize2/OAuthorize2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OAuthorize2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OAuthorize2/OAuthorize2.modulemap";
+				PRODUCT_MODULE_NAME = OAuthorize2;
+				PRODUCT_NAME = OAuthorize2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4FA2202297103B07907FEE462FBD994E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D74B6A25ADB0CF92B6602A676CADC41 /* CommonCryptoModule.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CommonCryptoModule/CommonCryptoModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CommonCryptoModule/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CommonCryptoModule/CommonCryptoModule.modulemap";
+				PRODUCT_MODULE_NAME = CommonCryptoModule;
+				PRODUCT_NAME = CommonCryptoModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50C0DDBDC030FCEB8AEACC88725188B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D74B6A25ADB0CF92B6602A676CADC41 /* CommonCryptoModule.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CommonCryptoModule/CommonCryptoModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CommonCryptoModule/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CommonCryptoModule/CommonCryptoModule.modulemap";
+				PRODUCT_MODULE_NAME = CommonCryptoModule;
+				PRODUCT_NAME = CommonCryptoModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62DEFAB4AA4A01BB6D223D829318450D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0DE102B0B4E17FA843E56ED669ADAAE /* FastDiff.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FastDiff/FastDiff-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FastDiff/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FastDiff/FastDiff.modulemap";
+				PRODUCT_MODULE_NAME = FastDiff;
+				PRODUCT_NAME = FastDiff;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		AB350E28B06EE791B97AC5ED81D5708C /* Release */ = {
+		7A8D833A1EF17BF05CDE75B53128857C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AA98A80C5433790385A8FC6038426A0 /* Pods-OrgNoteApp.release.xcconfig */;
+			baseConfigurationReference = 713FDBDA42317EFDD41E091F6F9FD1B5 /* Pods-OrgNoteAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrgNoteAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		B284FC3F3E844FFB91CA51C959759CD8 /* Debug */ = {
+		90B587421791E9ADA3BAC16FD030F581 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 643E6835AD4D93362707E5EA407B231D /* CommonCryptoModule.xcconfig */;
+			baseConfigurationReference = 2535381DA03A33653A3C7CC7DA9D6C48 /* SwiftyParserCombinator.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CommonCryptoModule/CommonCryptoModule-prefix.pch";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyParserCombinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/CommonCryptoModule/CommonCryptoModule.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CommonCryptoModule;
-				PRODUCT_NAME = CommonCryptoModule;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyParserCombinator;
+				PRODUCT_NAME = SwiftyParserCombinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5E6284F2DC5EE743F50EBB600C9B237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DF49FC932EEB85B94CA6D6536F1636 /* Kekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kekka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Kekka/Kekka.modulemap";
+				PRODUCT_MODULE_NAME = Kekka;
+				PRODUCT_NAME = Kekka;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C4479A0E1CCDF57FA9022990AAEB5EDF /* Release */ = {
+		D5DFA75A4D33ACA768090F4CEC4E92A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A01C7BB05A97278BC10B592A393F7378 /* OAuthorize2.xcconfig */;
+			baseConfigurationReference = 397B59F593FCF9D27E75226C082A963E /* Pods-OrgNoteAppTests.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/OAuthorize2/OAuthorize2-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/OAuthorize2/OAuthorize2.modulemap;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrgNoteAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = OAuthorize2;
-				PRODUCT_NAME = OAuthorize2;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E0CCBDB3C7F1FB4335FC6EE812044F07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A01C7BB05A97278BC10B592A393F7378 /* OAuthorize2.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/OAuthorize2/OAuthorize2-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/OAuthorize2/OAuthorize2.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = OAuthorize2;
-				PRODUCT_NAME = OAuthorize2;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1372,105 +1598,14 @@
 			};
 			name = Debug;
 		};
-		E69288BD670FC38F9C79F6778BF7598C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 962D7A72CED1FBC72F3B755FBBFA33E8 /* SwiftyParserCombinator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyParserCombinator/SwiftyParserCombinator-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/SwiftyParserCombinator/SwiftyParserCombinator.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SwiftyParserCombinator;
-				PRODUCT_NAME = SwiftyParserCombinator;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E9B2CFFFAE1A0AC3BFDC4DC997FCE7D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F45FA557FFAD85F5EB8E9423C8E65243 /* Kekka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Kekka/Kekka-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/Kekka/Kekka.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Kekka;
-				PRODUCT_NAME = Kekka;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		EA9F3D81B9E991524565CA5780A6133E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 643E6835AD4D93362707E5EA407B231D /* CommonCryptoModule.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CommonCryptoModule/CommonCryptoModule-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/CommonCryptoModule/CommonCryptoModule.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CommonCryptoModule;
-				PRODUCT_NAME = CommonCryptoModule;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0445BDBCB36342D9A7AC78255278A44B /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */ = {
+		2941B1F84FA38B085C1049B14301E6F5 /* Build configuration list for PBXNativeTarget "FastDiff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FF7715E4A2369936A4EE3D72E21DD95 /* Debug */,
-				E69288BD670FC38F9C79F6778BF7598C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1BFCA1C4492D407DBA63472A7E66989E /* Build configuration list for PBXNativeTarget "Kekka" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E9B2CFFFAE1A0AC3BFDC4DC997FCE7D9 /* Debug */,
-				26F4433083F2178831AF0F8786EBFB13 /* Release */,
+				62DEFAB4AA4A01BB6D223D829318450D /* Debug */,
+				2BE3C22CA549B63E922BE4F66D45961A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1484,47 +1619,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9495D5CEDD205F78FD3CC2B4A0480820 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */ = {
+		599DEB0ABAAEAC167833079B1C9CDB47 /* Build configuration list for PBXNativeTarget "OAuthorize2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				141B170B10B7AF7ACE420C30AB4FAC59 /* Debug */,
-				AB350E28B06EE791B97AC5ED81D5708C /* Release */,
+				16B7221B6C22DDD48577A186D3F189A2 /* Debug */,
+				36F624FE8986AE3D25EB7031A247CA62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		984AC0FCE59BD1594220055BA80962D2 /* Build configuration list for PBXNativeTarget "FastDiff" */ = {
+		718946DAD755CB59A629F7431481AA94 /* Build configuration list for PBXNativeTarget "CommonCryptoModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A041C2B67825E8A11375806BD01D25D2 /* Debug */,
-				0AFEF56D03194B56F48F4EDF8EB10831 /* Release */,
+				50C0DDBDC030FCEB8AEACC88725188B1 /* Debug */,
+				4FA2202297103B07907FEE462FBD994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4C9F2D8A485CC7238F830E558AB28E0 /* Build configuration list for PBXNativeTarget "OAuthorize2" */ = {
+		901820263248B374E713C6902BCFF529 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0CCBDB3C7F1FB4335FC6EE812044F07 /* Debug */,
-				C4479A0E1CCDF57FA9022990AAEB5EDF /* Release */,
+				D5DFA75A4D33ACA768090F4CEC4E92A1 /* Debug */,
+				7A8D833A1EF17BF05CDE75B53128857C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB942582C091C7230146089E7D97507F /* Build configuration list for PBXNativeTarget "Pods-OrgNoteAppTests" */ = {
+		C52CD8454353C109092C2AAF5A4F773E /* Build configuration list for PBXNativeTarget "SwiftyParserCombinator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				490033839EDA3874723B271E4F1ABD13 /* Debug */,
-				4F4CA8033C43E9935EBCCA7088528641 /* Release */,
+				18CDB244E575A123ADFF3F2488EA3C42 /* Debug */,
+				90B587421791E9ADA3BAC16FD030F581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6752FD40CCA8F05DAB35FFDA3D2DC63 /* Build configuration list for PBXNativeTarget "CommonCryptoModule" */ = {
+		D2AC93EA3C3963ED3C82D1E296643F2F /* Build configuration list for PBXNativeTarget "Kekka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B284FC3F3E844FFB91CA51C959759CD8 /* Debug */,
-				EA9F3D81B9E991524565CA5780A6133E /* Release */,
+				C5E6284F2DC5EE743F50EBB600C9B237 /* Debug */,
+				0F05CA5847C97AFFA653E51D9597DCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA93F7C509A525B3F41F18D6720F530 /* Build configuration list for PBXNativeTarget "Pods-OrgNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				138041D974AD6BF9D4DEDD8033C0D400 /* Debug */,
+				0544BD2ED596D169F870EEB20393BF83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

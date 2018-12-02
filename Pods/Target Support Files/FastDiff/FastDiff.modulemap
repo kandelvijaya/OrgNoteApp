@@ -1,4 +1,4 @@
-module FastDiff {
+framework module FastDiff {
   umbrella header "FastDiff-umbrella.h"
 
   export *

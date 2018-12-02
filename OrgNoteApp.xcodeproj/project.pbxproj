@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
@@ -38,8 +39,7 @@
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
-		AEAE18F285067B610ED28E53 /* libPods-OrgNoteApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F63BE4E98736035D1F1A2E3 /* libPods-OrgNoteApp.a */; };
-		EE3B30CF8A5B14890266F9A4 /* libPods-OrgNoteAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D111731E5DAD201A9B388E /* libPods-OrgNoteAppTests.a */; };
+		980266756A61043EF909D38F /* Pods_OrgNoteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		23D111731E5DAD201A9B388E /* libPods-OrgNoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrgNoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814517420D349380006BBD7 /* OrgListDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverTests.swift; sourceTree = "<group>"; };
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
@@ -109,10 +108,11 @@
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 		2B4CED12D5748F616CCAEACB /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2F63BE4E98736035D1F1A2E3 /* libPods-OrgNoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrgNoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		8F3749A49DE485E46AE35369 /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC86076F5200C2BA7256D377 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
-				AEAE18F285067B610ED28E53 /* libPods-OrgNoteApp.a in Frameworks */,
+				1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3B30CF8A5B14890266F9A4 /* libPods-OrgNoteAppTests.a in Frameworks */,
+				980266756A61043EF909D38F /* Pods_OrgNoteAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +266,8 @@
 		28703D3B20A859C800DC8DBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F63BE4E98736035D1F1A2E3 /* libPods-OrgNoteApp.a */,
-				23D111731E5DAD201A9B388E /* libPods-OrgNoteAppTests.a */,
+				CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */,
+				50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				2855D3EA20A843180082EC00 /* Frameworks */,
 				2855D3EB20A843180082EC00 /* Resources */,
 				2814519220D3D4260006BBD7 /* Embed Frameworks */,
-				18B2A9A8D169CAAE702948D3 /* [CP] Copy Pods Resources */,
+				A9FDE7474DE33D00D0D1782D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,30 +478,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18B2A9A8D169CAAE702948D3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-resources.sh",
-				"${PODS_ROOT}/CommonCryptoModule/CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h",
-				"${PODS_ROOT}/CommonCryptoModule/CommonCryptoModule/CommonCryptoBridge/module.modulemap",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CommonCryptoBridge.h",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/module.modulemap",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		47E83F03AEF52FA63B42270F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +498,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9FDE7474DE33D00D0D1782D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
+				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthorize2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CDFE1EC30A1299DB03A0C38B /* [CP] Check Pods Manifest.lock */ = {
