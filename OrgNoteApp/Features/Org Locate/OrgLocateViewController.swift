@@ -38,7 +38,16 @@ final class OrgLocateViewController: UIViewController, Initializable {
     @IBOutlet weak var secondaryLabel: UILabel!
 
     @IBAction func viewNoteButtonTapped(_ sender: UIButton) {
-        
+        guard let urlText = textField.text else {
+            secondaryLabel.text = "Cannot locate resource. Path is empty"
+            return
+        }
+        guard let url = URL(string: urlText) else {
+            secondaryLabel.text = "\(urlText) is not a valid URL path."
+            return
+        }
+        delegate?.userDidLocateOrgFilePath(url)
+        textField.text = nil
     }
 
 }

@@ -10,7 +10,12 @@ import Foundation
 import Kekka
 import UIKit
 
-final class NetworkService {
+protocol NetworkServiceProtocol {
+    func getOrgFile(_ path: URL) -> Future<Result<OrgFile>>
+}
+
+
+final class NetworkService: NetworkServiceProtocol {
 
     enum NetworkServiceError: Error {
         case error(Error)
@@ -53,7 +58,7 @@ final class NetworkService {
                     aCompletion?(.success(value: data!))
                     return
                 }
-            })
+            }).resume()
         }
     }
 

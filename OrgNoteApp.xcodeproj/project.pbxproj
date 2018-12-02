@@ -24,6 +24,8 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+		286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */; };
+		286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
 		28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4520A85C7600DC8DBF /* OrgParserTests.swift */; };
 		2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A09320C18DEE00CD4ACC /* WLbig.org */; };
@@ -94,6 +96,8 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileRetrieveService.swift; sourceTree = "<group>"; };
+		286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtension.swift; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
 		28703D4520A85C7600DC8DBF /* OrgParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserTests.swift; sourceTree = "<group>"; };
 		2880A09320C18DEE00CD4ACC /* WLbig.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WLbig.org; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				28BEF90520D7CEFD00BB7C19 /* GenericList */,
 				2880A09A20C18FE400CD4ACC /* OutlineView */,
 				28703D3E20A85A0200DC8DBF /* OrgParser */,
+				286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 		2880A0A220C197DC00CD4ACC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */,
 				28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */,
 				2880A0A320C197E600CD4ACC /* OrgFileService.swift */,
 				284C7D1C21AB5C7F00C0F290 /* NetworkService.swift */,
@@ -560,8 +566,10 @@
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */,
 				284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */,
+				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
+				286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,

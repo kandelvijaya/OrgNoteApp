@@ -17,6 +17,8 @@ final class OrgViewViewController: UIViewController {
 
     private let previouslyKnownOrgFileExists: OrgFile? = nil
 
+    private let orgFileRetrivalService = OrgFileRetrieveService(orgParser: OrgParser.parse)
+
     private var locateVC: OrgLocateViewController?
     private var viewVC: ListViewController<AnyHashable>?
 
@@ -63,11 +65,6 @@ final class OrgViewViewController: UIViewController {
 extension OrgViewViewController: OrgLocateViewControllerDelegate {
 
     func userDidLocateOrgFilePath(_ url: URL) {
-        // 1. Validate the url contains proper Org file
-        // 2. Copy the url resource to know location
-        // 3. Parse the contents to orgfile format
-        // 4. animate out the locate view
-        // 5. Load the resource into the show view
         animateOutLocateView()
         loadResourceInShowView(with: url)
     }
@@ -84,7 +81,16 @@ extension OrgViewViewController: OrgLocateViewControllerDelegate {
     }
 
     private func loadResourceInShowView(with modelURL: URL) {
-        //embedViewVC(with: <#T##OrgFile#>)
+        orgFileRetrivalService.retrieveOrgFile(for: modelURL).then { [weak self] res -> Void in
+            switch res {
+            case let .success(v):
+                self?.embedViewVC(with: v)
+            case let .failure(e):
+                // TODO: Failure
+                print(e)
+            }
+            return
+        }.execute()
     }
 
 }

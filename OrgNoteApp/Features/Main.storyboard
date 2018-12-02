@@ -55,7 +55,6 @@
         <!--Org Locate View Controller-->
         <scene sceneID="Pvg-Lv-5aV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R79-aD-9q9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="OrgLocateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xaJ-2B-IhC" customClass="OrgLocateViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iMP-tq-jqi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -99,9 +98,12 @@
                         <viewLayoutGuide key="safeArea" id="Vz6-2K-ttO"/>
                     </view>
                     <connections>
+                        <outlet property="secondaryLabel" destination="q3z-of-cdK" id="etx-0i-kkH"/>
+                        <outlet property="textField" destination="VPj-5x-MHr" id="6Rm-re-nnd"/>
                         <outlet property="viewNoteButton" destination="tAD-Am-DEj" id="brR-ag-Gaf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R79-aD-9q9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="848.79999999999995" y="17.541229385307346"/>
         </scene>

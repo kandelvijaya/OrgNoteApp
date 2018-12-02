@@ -29,7 +29,7 @@ public extension Future {
             } else {
                 NSLog("%@ doesnot work when running asynchronously or other thread than main.", #function)
             }
-            }.execute()
+        }.execute()
 
         let lastExecutedResult = _LocalCapture.value as? T
         defer {
