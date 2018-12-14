@@ -27,7 +27,11 @@ struct Outline: Hashable {
     let content: [String]
     let subItems: [Outline]
 
-    init(heading: OutlineHeading, content: [String], subItems: [Outline] = []) {
+    // this is not doable without changing the parser input stream
+    // let fileLineNumber: Int
+
+
+    init(heading: OutlineHeading, content: [String], subItems: [Outline] = []) { //fileLineNumber: Int) {
         self.heading = heading
         self.content = content
         self.subItems = subItems

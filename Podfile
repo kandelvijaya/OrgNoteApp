@@ -8,6 +8,7 @@ target 'OrgNoteApp' do
 
   target 'OrgNoteAppTests' do
     inherit! :search_paths
+    pod 'SwiftyParserCombinator'
     # Pods for testing
   end
 

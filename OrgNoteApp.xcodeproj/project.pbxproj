@@ -12,6 +12,8 @@
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */; };
+		281BA96621C3AA5900319B0A /* OrgStringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
@@ -78,6 +80,8 @@
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentable.swift; sourceTree = "<group>"; };
+		281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentableTests.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
+				281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */,
+				281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */,
 				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
 			);
 			path = OrgParser;
@@ -393,6 +399,7 @@
 				2855D3FD20A8431A0082EC00 /* Sources */,
 				2855D3FE20A8431A0082EC00 /* Frameworks */,
 				2855D3FF20A8431A0082EC00 /* Resources */,
+				ABCF228C3AA96DF8538D1229 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -530,6 +537,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ABCF228C3AA96DF8538D1229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CDFE1EC30A1299DB03A0C38B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -577,6 +606,7 @@
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
+				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
@@ -591,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */,
+				281BA96621C3AA5900319B0A /* OrgStringRepresentableTests.swift in Sources */,
 				2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */,
 				2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */,
 				28703D4620A85C7600DC8DBF /* OrgParserTests.swift in Sources */,

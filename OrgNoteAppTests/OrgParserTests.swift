@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ParserCombinator
+@testable import SwiftyParserCombinator
 @testable import OrgNoteApp
 
 final class OrgParserTests: XCTestCase {

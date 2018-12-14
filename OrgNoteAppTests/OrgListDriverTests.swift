@@ -15,7 +15,6 @@ final class OrgListDriverTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        listDriver = OrgListDriver()
     }
 
     func test_whenCurrentStateCellIsTappedForFirstTime_itsSubItemsWillBeAdded() {
