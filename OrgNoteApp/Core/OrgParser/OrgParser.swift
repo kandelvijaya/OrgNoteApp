@@ -27,11 +27,7 @@ struct Outline: Hashable {
     let content: [String]
     let subItems: [Outline]
 
-    // this is not doable without changing the parser input stream
-    // let fileLineNumber: Int
-
-
-    init(heading: OutlineHeading, content: [String], subItems: [Outline] = []) { //fileLineNumber: Int) {
+    init(heading: OutlineHeading, content: [String], subItems: [Outline] = []) {
         self.heading = heading
         self.content = content
         self.subItems = subItems
@@ -42,7 +38,7 @@ struct Outline: Hashable {
 struct OrgParser {
 
     static func parse(_ contents: String) -> OrgFile? {
-        let parsed = orgParser() |> many |> run(contents)
+        let parsed = orgParser(start: 1) |> many |> run(contents)
         return parsed.value()?.0
     }
 
@@ -113,13 +109,30 @@ fileprivate func outlineParser(for level: Int) -> Parser<Outline> {
     return headingParser(depth: level) ->>- contentParser() |>> { Outline(heading: $0, content: $1) }
 }
 
+private func outlineParserTry(from level: Int, to maxLevel: Int) -> Parser<Outline> {
+    let choiced = (level..<maxLevel).map(outlineParser(for:)) |> choice
+    return choiced
+}
 
-fileprivate func orgParser(start startLevel: Int = 1) -> Parser<Outline> {
+
+/// Takes a org file string and parses to OrgFile.
+/// OrgFile is a array of [Outline] where each Outline can have childrens recursively
+///
+/// - Parameters:
+///   - startLevel: Usually 1
+///   - maxLevel: By default this is limitted to 32.
+/// - Returns: Parsed Outline
+///
+/// - Note:
+///   The complexity of the algorithm might be hard to tackle. We will try to
+///   find not uniform childrens too. i.e. `** H2\n******* Hsomething` is parsed
+///   although they are not direct childs.
+fileprivate func orgParser(start startLevel: Int, maxLevel: Int = 32) -> Parser<Outline> {
     typealias Output = ParserResult<(Outline, Parser<Outline>.RemainingStream)>
     return Parser<Outline> { input in
-        let thisLevel = outlineParser(for: startLevel) |> run(input)
+        let thisLevel = outlineParserTry(from: startLevel, to: maxLevel) |> run(input)
         let mapped: Output = thisLevel.flatMap { v in
-            let nextLevel = startLevel + 1
+            let nextLevel = v.0.heading.depth + 1
             let nextRun = orgParser(start: nextLevel) |> many |> run(v.1)
 
             let inner: Output = nextRun.map { subV in
@@ -131,5 +144,4 @@ fileprivate func orgParser(start startLevel: Int = 1) -> Parser<Outline> {
         return mapped
     }
 }
-
 

@@ -39,6 +39,21 @@ final class OrgParserTests: XCTestCase {
         XCTAssertGreaterThan(output!.count, 0)
     }
 
+    func test_whenMinDepthIsLevel2_thenFileIsParsed() {
+        let orgRaw = "** This is second level heading."
+        let parsed = OrgParser.parse(orgRaw)!
+        XCTAssertEqual(parsed.count, 1)
+        XCTAssertEqual(parsed.first!.heading.fileString, orgRaw)
+    }
+
+    func test_whenDepth2ItemIsFirst_HasDepth4Items_thenItIsParsed() {
+        let orgRaw = "** This is heading\n**** This is subheading\n**** This is next heading.\n** This is another heading at depth2"
+        let parsed = OrgParser.parse(orgRaw)!
+        XCTAssertEqual(parsed.count, 2)
+        XCTAssertEqual(parsed[0].subItems.count, 2)
+    }
+
+
 }
 
 
