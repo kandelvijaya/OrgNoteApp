@@ -15,10 +15,10 @@ typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
 
 final class OrgListDriver {
 
-    private var cells: [AnyListCellDescriptor] = []
+    private var topLevelcellDescriptors: [AnyListCellDescriptor] = []
 
     init(with orgModel: OrgFile) {
-        self.cells = orgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
+        self.topLevelcellDescriptors = orgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
     }
 
     private func cellDescriptor(for viewModel: OutlineViewModel) -> AnyListCellDescriptor {
@@ -36,13 +36,26 @@ final class OrgListDriver {
     }
 
     // each top level cell is transformed to section
-    lazy var sections = cells.map { [$0] }.map(sectionDescriptor)
+    lazy var sections = topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
     lazy var controller = ListViewController(with: sections)
 
     func didSelect(item: OutlineViewModel) {
-        if item.subModels.isEmpty { return }
+        generateNewSectionItemsWhenTappedOn(item: item, with: controller.sectionDescriptors) |> controller.update
+    }
 
-        let currentListState = controller.sectionDescriptors
+
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - item: <#item description#>
+    ///   - currentSections: <#currentSections description#>
+    /// - Returns: <#return value description#>
+    func generateNewSectionItemsWhenTappedOn(item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
+
+        // When on leaf return as is.
+        if item.subModels.isEmpty { return currentSections }
+
+        let currentListState = currentSections
 
         let selected = currentListState.first { section in
             let givenItemFoundInThisSection = section.items.first { outline in
@@ -53,7 +66,7 @@ final class OrgListDriver {
 
         guard let selectedItemsSectionDescriptor = selected,
             let selectedItemCellDescriptor = selectedItemsSectionDescriptor.items.find(where: { ($0.model as! OutlineViewModel) == item }) else {
-            fatalError("A tapped item must correspond to current list of section")
+                fatalError("A tapped item must correspond to current list of section")
         }
 
         if item.isExpanded {
@@ -61,7 +74,8 @@ final class OrgListDriver {
             let toggledItems = newSectionAfterCollapsing.items.replace(matching: selectedItemCellDescriptor, with: toggledCellDescriptor(for: item))
             let toggledSections = toggledItems |> sectionDescriptor
             let newSections = currentListState.replace(matching: selectedItemsSectionDescriptor, with: toggledSections)
-            controller.update(with: newSections)
+            return newSections
+
         } else {
             let modifiedSelectedItemCell = toggledCellDescriptor(for: item)
 
@@ -74,7 +88,7 @@ final class OrgListDriver {
 
             let newSections = currentListState.replace(matching: selectedItemsSectionDescriptor, with: updatedSection)
 
-            controller.update(with: newSections)
+            return newSections
         }
     }
 

@@ -15,7 +15,8 @@ final class OrgViewViewController: UIViewController {
     @IBOutlet weak var locateView: UIView!
     @IBOutlet weak var showView: UIView!
 
-    private let previouslyKnownOrgFileExists: OrgFile? = nil
+    /// FIXME:
+    private let previouslyKnownOrgFileExists: OrgFile? = nil // Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value
 
     private let orgFileRetrivalService = OrgFileRetrieveService(orgParser: OrgParser.parse)
 
@@ -26,6 +27,7 @@ final class OrgViewViewController: UIViewController {
         super.viewDidLoad()
         if let model = previouslyKnownOrgFileExists {
             embedViewVC(with: model)
+            expandShowViewToEntireScreen()
         } else {
             embedLocateVC()
         }
@@ -51,12 +53,16 @@ final class OrgViewViewController: UIViewController {
         embed(controller: vc, in: showView)
     }
 
-    private func embed(controller: UIViewController, in view: UIView) {
+    private func embed(controller: UIViewController, in containerView: UIView) {
         controller.willMove(toParentViewController: self)
         addChildViewController(controller)
-        locateView.addSubview(controller.view)
+        containerView.addSubview(controller.view)
         controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         controller.didMove(toParentViewController: self)
+    }
+
+    private func expandShowViewToEntireScreen() {
+        locateViewHeight.constant = 0
     }
 
 }
