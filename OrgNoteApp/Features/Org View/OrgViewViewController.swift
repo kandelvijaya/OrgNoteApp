@@ -16,7 +16,7 @@ final class OrgViewViewController: UIViewController {
     @IBOutlet weak var showView: UIView!
 
     /// FIXME:
-    private let previouslyKnownOrgFileExists: OrgFile? = nil // Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value
+    private let previouslyKnownOrgFileExists: OrgFile? =  Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value
 
     private let orgFileRetrivalService = OrgFileRetrieveService(orgParser: OrgParser.parse)
 

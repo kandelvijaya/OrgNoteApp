@@ -14,6 +14,9 @@
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */; };
 		281BA96621C3AA5900319B0A /* OrgStringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */; };
+		281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */; };
+		281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */; };
+		281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96E21C6FCE100319B0A /* IntExtension.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
@@ -82,6 +85,9 @@
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentable.swift; sourceTree = "<group>"; };
 		281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentableTests.swift; sourceTree = "<group>"; };
+		281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverInteractionHandler.swift; sourceTree = "<group>"; };
+		281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		281BA96E21C6FCE100319B0A /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
@@ -156,6 +162,15 @@
 			path = EnablePlaygroundShare;
 			sourceTree = "<group>";
 		};
+		281BA96B21C6FCC500319B0A /* GlobalExtension */ = {
+			isa = PBXGroup;
+			children = (
+				281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */,
+				281BA96E21C6FCE100319B0A /* IntExtension.swift */,
+			);
+			path = GlobalExtension;
+			sourceTree = "<group>";
+		};
 		28417E2520A844C000996941 /* supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +187,7 @@
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				281BA96B21C6FCC500319B0A /* GlobalExtension */,
 				284C7D1921AB1A3B00C0F290 /* Color Palette */,
 				284C7D0A21AB11E500C0F290 /* LocalStorage */,
 				28BEF90520D7CEFD00BB7C19 /* GenericList */,
@@ -202,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2880A0A020C196E700CD4ACC /* OrgListDriver.swift */,
+				281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */,
 			);
 			path = "Org List";
 			sourceTree = "<group>";
@@ -596,6 +613,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
+				281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */,
+				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
@@ -605,6 +624,7 @@
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */,
+				281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
 				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
