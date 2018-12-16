@@ -40,8 +40,12 @@ final class OrgListDriver {
     lazy var controller = ListViewController(with: sections)
 
     func didSelect(item: OutlineViewModel) {
+        generateNewSectionItemsWhenTappedOn(for: item, with: controller.sectionDescriptors) |> controller.update
+    }
+
+    func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
         let interactionHandler = OrgListDriverInteractionHandler(cellDescriptor: self.cellDescriptor, sectionDescriptor: self.sectionDescriptor)
-        interactionHandler.generateNewSectionItemsWhenTappedOn(item, with: controller.sectionDescriptors) |> controller.update
+        return interactionHandler.generateNewSectionItemsWhenTappedOn(item, with: controller.sectionDescriptors)
     }
 
 }

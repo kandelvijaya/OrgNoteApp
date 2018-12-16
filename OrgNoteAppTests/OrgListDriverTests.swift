@@ -41,7 +41,7 @@ final class OrgListDriverTests: XCTestCase {
         let listDriver = OrgListDriver(with: orgModel!)
         let currentListSections = listDriver.controller.sectionDescriptors
         let leafItem = orgModel!.first!.subItems.first! |> OutlineViewModel.init
-        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(item: leafItem, with: currentListSections)
+        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: leafItem, with: currentListSections)
         XCTAssertEqual(newSections, currentListSections)
     }
 
@@ -50,7 +50,7 @@ final class OrgListDriverTests: XCTestCase {
         let listDriver = OrgListDriver(with: orgModel!)
         let currentListSections = listDriver.controller.sectionDescriptors
         let parentItem = orgModel!.first! |> OutlineViewModel.init
-        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(item: parentItem, with: currentListSections)
+        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: parentItem, with: currentListSections)
         XCTAssertNotEqual(newSections, currentListSections)
     }
 
