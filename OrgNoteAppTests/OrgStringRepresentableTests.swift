@@ -36,7 +36,7 @@ final class OrgFileWriteToStringTests: XCTestCase {
 
     /// Proof that we can parse the file.
     /// Proof that the parsed structure can be written ditto to file.
-    /// Conversion complete. 
+    /// Conversion complete.
     func test_multiItemOutlinesCanBeWrittenToString() {
         let orgFileStringContents =   """
                                 * 2018/04/01 Task

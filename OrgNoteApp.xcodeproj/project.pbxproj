@@ -258,6 +258,7 @@
 		2855D40420A8431A0082EC00 /* OrgNoteAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */,
 				2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */,
 				2855D40720A8431A0082EC00 /* Info.plist */,
 				28703D4520A85C7600DC8DBF /* OrgParserTests.swift */,
@@ -281,7 +282,6 @@
 			children = (
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
 				281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */,
-				281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */,
 				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
 			);
 			path = OrgParser;

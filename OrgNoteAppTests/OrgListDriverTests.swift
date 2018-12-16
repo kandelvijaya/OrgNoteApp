@@ -26,14 +26,8 @@ final class OrgListDriverTests: XCTestCase {
 
         let currentListSections = OrgListDriver(with: orgModel!).controller.sectionDescriptors
         XCTAssertEqual(currentListSections.count, 3)
-
-        /// NOTE:- This equality is not equal because of the instance of cells are different in each case.
-        /// TODO:- Come up with either looking into the section descriptors or something
-        // let topMatching = "* Hello\n* Hello Again\n* ThirdParent\n" |> OrgParser.parse
-        // let expectedListSections = OrgListDriver(with: topMatching!).controller.sectionDescriptors
-        // XCTAssertEqual(currentListSections, expectedListSections)
     }
-    
+
     func test_orgDriverPromotesTopLevelOutlineWithMinDepthLvelToSections() {
         let orgModel = "** Hello\n*** LeafNode\n** Hello Again\n*** SecondNode\n*** leafNode\n** ThirdParent\n" |> OrgParser.parse
 

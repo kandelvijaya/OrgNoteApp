@@ -53,50 +53,91 @@ final class OrgParserTests: XCTestCase {
         XCTAssertEqual(parsed[0].subItems.count, 2)
     }
 
+    func test_whenFragmentedOrgNotesAreParsed_thenWePreserveTheOriginalOrdering() {
+        let fragmented = """
+        * This is the main Heading
+        *** This is the outside living 3rd heading
+        ********** This is that
+        ** This is the second heading
+        ** This is another second heading
+        *** This is nested one
+        """
+
+        let parsed = OrgParser.parse(fragmented)!
+        XCTAssertEqual(parsed[0].subItems.count, 3)
+        XCTAssertEqual(parsed[0].subItems.first!.heading.fileString, "*** This is the outside living 3rd heading")
+        XCTAssertEqual(parsed.fileString, fragmented)
+    }
+
+    func test_sanity() {
+        let allExamples = Example.allCases
+        for item in allExamples {
+            XCTAssertEqual(OrgParser.parse(item.rawValue)!.fileString, item.rawValue)
+        }
+    }
+
+    func test_headingWithLeadingSpacesAreNotParsedAsHeadingButAsContents() {
+        let example = """
+        * H1
+            * H2
+        * H1 Second
+        """
+        let orgfile = OrgParser.parse(example)!
+        XCTAssertEqual(orgfile.count, 2)
+        XCTAssertEqual(orgfile[0].subItems.count, 0)
+        /// The above *H2 has leading spaces, which is not a valid Org-Mode heading but content
+        XCTAssertEqual(orgfile[0].content.first!.trimLeadingTrailingWhitespacesFromLine,"* H2")
+    }
+
+}
+
+extension String {
+
+    var trimLeadingTrailingWhitespacesFromLine: String {
+        return split(separator: "\n").map{ $0.trimmingCharacters(in: CharacterSet(charactersIn: " ")) }.joined(separator: "\n")
+    }
 
 }
 
 
-let str =   """
-* 2018/04/01 Task
-** Q1:
-*** TODO: Work on Org Parser
-- list item 1
-- list item 2
-*** This is H1 -> H2 -> H3
-- list item H3
-- list item H3 2
-** This is H1 -> H2Second
-- list item 1 H2 second
-- list item 2 H2 second
-** This is H1 -> H2 Three
-- list item 1 H2 3
-- list item 2 H2 3
-*** This is H1 -> H2 4 -> H3
-- list item 1
-- list item 2
-"""
+fileprivate enum Example: String, CaseIterable {
+    case example1 = """
+    * 2018/04/01 Task
+    ** Q1:
+    *** TODO: Work on Org Parser
+    - list item 1
+    - list item 2
+    *** This is H1 -> H2 -> H3
+    - list item H3
+    - list item H3 2
+    ** This is H1 -> H2Second
+    - list item 1 H2 second
+    - list item 2 H2 second
+    ** This is H1 -> H2 Three
+    - list item 1 H2 3
+    - list item 2 H2 3
+    *** This is H1 -> H2 4 -> H3
+    - list item 1
+    - list item 2
+    """
+    case example2 = """
+    * B This is another heading H1 without content
+    ** This is B's subheading
+    - list item 1
+    - list item 2
+    """
 
-let strWithSub =   """
-* B This is another heading H1 without content
-** This is B's subheading
-- list item 1
-- list item 2
-"""
-let strC =   """
-This is the content line 1
-This is content line 2
-* B This is another heading H1 without content
-"""
-let strWithoutContent =  """
-* This is the content line 1
-This is content line 2
-* B This is another heading H1 without content
-"""
+    case example3 = """
+    * This is the content line 1
+    This is content line 2
+    * B This is another heading H1 without content
+    """
 
-
-//let orgParsed = orgParser() |> many |> run(eventFileContent())
-//orgParsed |> consoleOut
-//
-//orgParsed.value()?.0[0].heading.title
-//orgParsed.value()?.0[1].subItems.count
+    case unindentedExample = """
+    * This is a heading
+            ** This is a subheading
+            ** This is another
+        * This is second heading
+    ** This is nested
+    """
+}
