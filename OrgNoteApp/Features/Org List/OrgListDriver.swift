@@ -45,7 +45,7 @@ final class OrgListDriver {
 
     func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
         let interactionHandler = OrgListDriverInteractionHandler(cellDescriptor: self.cellDescriptor, sectionDescriptor: self.sectionDescriptor)
-        return interactionHandler.generateNewSectionItemsWhenTappedOn(item, with: controller.sectionDescriptors)
+        return interactionHandler.generateNewSectionItemsWhenTappedOn(item, with: currentSections)
     }
 
 }

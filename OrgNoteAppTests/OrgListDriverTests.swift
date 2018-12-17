@@ -51,7 +51,31 @@ final class OrgListDriverTests: XCTestCase {
         let currentListSections = listDriver.controller.sectionDescriptors
         let parentItem = orgModel!.first! |> OutlineViewModel.init
         let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: parentItem, with: currentListSections)
-        XCTAssertNotEqual(newSections, currentListSections)
+        XCTAssertNotEqual(newSections[0], currentListSections[0])
+    }
+
+    func test_whenGeneratedSectionsContainExpandedItems_AndItIsTapped_thenSubItemsOfExpandedItemsAreCollapsed() {
+        let orgModel = "* Hello\n** LeafNode" |> OrgParser.parse
+        let listDriver = OrgListDriver(with: orgModel!)
+        let initialSections = listDriver.controller.sectionDescriptors
+        let parentItem = orgModel!.first! |> OutlineViewModel.init
+        listDriver.didSelect(item: parentItem)
+        var expandedParentItem = parentItem
+        expandedParentItem.isExpanded.toggle()
+        listDriver.didSelect(item: expandedParentItem)
+        XCTAssertEqual(listDriver.controller.sectionDescriptors, initialSections)
+    }
+
+    func test_whenNodeIsExpandedOn2Levles_thenParentIsTapped_thenEverythingIsCollapsed() {
+        let orgModel = "* H1\n** H2\n*** H3" |> OrgParser.parse
+        let listDriver = OrgListDriver(with: orgModel!)
+        listDriver.didSelect(item: orgModel!.first! |> OutlineViewModel.init)
+        listDriver.didSelect(item: orgModel!.first!.subItems.first! |> OutlineViewModel.init)
+        XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 3)
+        var firstParent = orgModel!.first! |> OutlineViewModel.init
+        firstParent.isExpanded = true
+        listDriver.didSelect(item: firstParent)
+        XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 1)
     }
 
 }

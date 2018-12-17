@@ -98,9 +98,14 @@ typealias AnyListSectionDescriptor = ListSectionDescriptor<AnyHashable>
 
 extension ListSectionDescriptor {
 
-    func updated(with newItems: [ListCellDescriptor<T, UITableViewCell>]) -> ListSectionDescriptor {
-        let new = ListSectionDescriptor(items: newItems, identifier: self.identifier)
-        return new
+    /// Copies metaData from existing `sectionDescriptor` to produce `newSectionDescriptors`
+    func insertReplacing(newItems: [ListCellDescriptor<T, UITableViewCell>]) -> ListSectionDescriptor {
+        return ListSectionDescriptor(items: newItems, identifier: self.identifier)
+    }
+
+    /// Copies metaData from existing `sectionDescriptor` to produce `newSectionDescriptors`
+    func insertReplacing(new: ListSectionDescriptor) -> ListSectionDescriptor {
+        return ListSectionDescriptor(items: new.items, identifier: self.identifier)
     }
 
 }

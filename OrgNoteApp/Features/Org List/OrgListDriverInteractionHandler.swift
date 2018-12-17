@@ -8,6 +8,7 @@
 
 import Foundation
 import Kekka
+import UIKit
 
 
 protocol OrgListDriverInteractionServiceProtocol {
@@ -57,13 +58,16 @@ struct OrgListDriverInteractionHandler: OrgListDriverInteractionServiceProtocol 
                 fatalError("A tapped item must correspond to current list of section")
         }
 
+        // If the item's isExpanded is not the same as cellDesc then we certainly got malformed item
+        guard (selectedItemsCellDesc.model as! OutlineViewModel).isExpanded == item.isExpanded else { return currentSections }
+
         if item.isExpanded {
             // Remove all subItems descriptor from this section descriptor
             // collapses
             // Complexity:- O(depthOfExpandedItem. item'sCount^2 at each level)
             let newSectionAfterCollapsing = removingAllNestedSubItems(for: item, from: selectedItemsSectionDesc)
             let toggledItems = newSectionAfterCollapsing.items.replace(matching: selectedItemsCellDesc, with: toggledCellDescriptor(for: item))
-            let toggledSections = toggledItems |> sectionDescriptor
+            let toggledSections = toggledItems |> sectionDescriptor |> selectedItemsSectionDesc.insertReplacing
             let newSections = currentListState.replace(matching: selectedItemsSectionDesc, with: toggledSections)
             return newSections
         } else {
@@ -77,7 +81,7 @@ struct OrgListDriverInteractionHandler: OrgListDriverInteractionServiceProtocol 
             let newAdded = selectedItemsSectionDesc.items.insert(items: newItemChildCellDescriptors, after: selectedItemsCellDesc)
             let oldReplaced = newAdded.replace(matching: selectedItemsCellDesc, with: modifiedSelectedItemCell)
 
-            let updatedSection = selectedItemsSectionDesc.updated(with: oldReplaced)
+            let updatedSection = selectedItemsSectionDesc.insertReplacing(newItems: oldReplaced)
 
             let newSections = currentListState.replace(matching: selectedItemsSectionDesc, with: updatedSection)
 
