@@ -25,7 +25,7 @@ struct Outline: Hashable {
 
     let heading: OutlineHeading
     let content: [String]
-    let subItems: [Outline]
+    var subItems: [Outline]
 
     init(heading: OutlineHeading, content: [String], subItems: [Outline] = []) {
         self.heading = heading
