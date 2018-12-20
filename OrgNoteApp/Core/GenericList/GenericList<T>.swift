@@ -15,7 +15,7 @@ import FastDiff
 /// using a type erased CellDescriptor.
 ///
 /// - note: see `CellDescriptor.any()` for more info
-final class ListViewController<T: Hashable>: UITableViewController {
+class ListViewController<T: Hashable>: UITableViewController {
 
     private(set) var sectionDescriptors: [ListSectionDescriptor<T>]
 

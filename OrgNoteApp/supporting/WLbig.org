@@ -5,10 +5,10 @@
 *** TODO Preview effect on home TNA 
 
 ** Q2 Task(Urgent & Not Important)         
-*** 
+*** Same item
 
 ** Q3 Task(Not-urgent & Important)         
-*** 
+*** Same item
 
 ** Q4 Task(Neither Urgent nor Important)  
 *** 

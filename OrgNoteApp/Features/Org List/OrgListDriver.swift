@@ -37,7 +37,7 @@ final class OrgListDriver {
 
     // each top level cell is transformed to section
     lazy var sections = topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
-    lazy var controller = ListViewController(with: sections)
+    lazy var controller = EditableListController(with: sections)
 
     func didSelect(item: OutlineViewModel) {
         generateNewSectionItemsWhenTappedOn(for: item, with: controller.sectionDescriptors) |> controller.update
