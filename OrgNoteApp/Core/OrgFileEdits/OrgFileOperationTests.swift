@@ -56,6 +56,15 @@ final class OrgFileOperationTests: XCTestCase {
         XCTAssertEqual(newRoot, root)
     }
 
+    func test_whenItemIsTriedToAddAt3rdeLvel_ItIsPossible() {
+        let graph = [ "* H1\n**H2 \n*** H3" |> outline]
+        let expected = "* H1\n**H2 \n*** H3\n**** H4\n***** H5\n content"
+        let root = "*** H3" |> outline
+        let child = "**** H4\n***** H5\n content" |> outline
+        let newGraph = graph.add(child, childOf: root)
+        XCTAssertEqual(newGraph.fileString, expected)
+    }
+
     private func outline(_ string: String) -> Outline {
         return (string |> OrgParser.parse)!.first!
     }

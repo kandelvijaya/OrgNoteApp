@@ -89,6 +89,11 @@ final class OrgParserTests: XCTestCase {
         XCTAssertEqual(orgfile[0].content.first!.trimLeadingTrailingWhitespacesFromLine,"* H2")
     }
 
+    func test_whenSameLevel2ItemsCanBeParsed() {
+        let child = "**** H4 \n**** H4 another" |> OrgParser.parse
+        XCTAssertEqual(child!.count, 2)
+    }
+
 }
 
 extension String {
