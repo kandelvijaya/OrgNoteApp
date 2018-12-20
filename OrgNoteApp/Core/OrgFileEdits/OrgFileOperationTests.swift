@@ -96,6 +96,14 @@ final class OrgFileOperationTests: XCTestCase {
         XCTAssertEqual(graph.fileString, "* H1\n** H2\nContent \n*** H3 some more")
     }
 
+    func test_editCannotBeDoneWithDiferentLevelOutline() {
+        let graph = ["* H1\n** H2" |> outline].update(old: "** H2" |> outline, new: "* H1 again \n** H2\nContent \n*** H3 some more" |> outline, childOf: "* H1\n** H2" |> outline)
+        XCTAssertEqual(graph.fileString, "* H1\n** H2")
+
+        let graph2 = ["* H1\n** H2" |> outline].update(old: "** H2" |> outline, new: "*** H2\nContent \n*** H3 some more" |> outline, childOf: "* H1\n** H2" |> outline)
+        XCTAssertEqual(graph2.fileString, "* H1\n** H2")
+    }
+
     private func outline(_ string: String) -> Outline {
         return (string |> OrgParser.parse)!.first!
     }
