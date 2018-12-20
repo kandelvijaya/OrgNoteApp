@@ -19,6 +19,8 @@ final class OrgFileOperationTests: XCTestCase {
         return value!
     }
 
+    // MARK:- Add
+
     func test_givenEmptyOrgFile_insertAtRootWorks() {
         let emptyOrg = [Outline]()
         let outline = outlineText |> OrgParser.parse
@@ -65,6 +67,8 @@ final class OrgFileOperationTests: XCTestCase {
         XCTAssertEqual(newGraph.fileString, expected)
     }
 
+    // MARK:- Delete
+
     func test_whenItemIsDeletedFromRootLevel_thenItWorks() {
         let graph = ["* H1" |> outline].deleteRoot("* H1" |> outline)
         XCTAssertEqual(graph.count, 0)
@@ -83,6 +87,13 @@ final class OrgFileOperationTests: XCTestCase {
     func test_whenItemIsDeletedFrom3rdLevelWithNestedGraph_thenItWorks() {
         let graph = ["* H1\n** H2\n*** H3\n**** H4\n*** H3 again\n** H2 again\n*** H3 on H2 again" |> outline].delete("*** H3\n**** H4" |> outline, childOf: "** H2\n*** H3\n**** H4\n*** H3 again" |> outline)
         XCTAssertEqual(graph.fileString, "* H1\n** H2\n*** H3 again\n** H2 again\n*** H3 on H2 again")
+    }
+
+    // MARK:- edit
+
+    func test_whenItemIsEditedOnTheFirstLevel_thenItWorks() {
+        let graph = ["* H1\n** H2" |> outline].update(old: "** H2" |> outline, new: "** H2\nContent \n*** H3 some more" |> outline, childOf: "* H1\n** H2" |> outline)
+        XCTAssertEqual(graph.fileString, "* H1\n** H2\nContent \n*** H3 some more")
     }
 
     private func outline(_ string: String) -> Outline {

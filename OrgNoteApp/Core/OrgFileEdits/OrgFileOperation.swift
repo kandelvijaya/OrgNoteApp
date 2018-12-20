@@ -45,8 +45,18 @@ extension Array where Element == Outline {
         }
     }
 
-    func update(old item: Outline, new newItem: Outline) -> OrgFile {
-        return []
+    func update(old item: Outline, new newItem: Outline, childOf parent: Outline) -> OrgFile {
+        guard item.heading.depth == newItem.heading.depth else { return self }
+        guard item.heading.depth > parent.heading.depth else { return self }
+
+        //1. Delete the old item
+        let intermediate = self.delete(item, childOf: parent)
+
+        //2. Delete the item from parent to get new parent
+        let mutatedParent = parent.delete(item: item, childOf: parent)
+
+        //3. add the new item as child of mutated parent
+        return intermediate.add(newItem, childOf: mutatedParent)
     }
 
 }
