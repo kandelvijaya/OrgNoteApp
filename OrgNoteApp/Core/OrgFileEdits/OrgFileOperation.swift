@@ -31,12 +31,18 @@ extension Array where Element == Outline {
         return self + [item]
     }
 
+    /// Simple filtering
     func deleteRoot(_ item: Outline) -> OrgFile {
-        return []
+        return self.filter { $0 != item }
     }
 
+    /// reverse of `add(_:_)`
     func delete(_ item: Outline, childOf: Outline) -> OrgFile {
-        return []
+        if item.heading.depth > childOf.heading.depth {
+            return self.map{ $0.delete(item: item, childOf: childOf) }
+        } else {
+            return self
+        }
     }
 
     func update(old item: Outline, new newItem: Outline) -> OrgFile {
@@ -67,6 +73,31 @@ extension Outline {
             var accumulatedSubItems: [Outline] = []
             for thisItem in self.subItems {
                 accumulatedSubItems.append(thisItem.insert(item: item, asChildOf: parent))
+            }
+            var mutatedSelf = self
+            mutatedSelf.subItems = accumulatedSubItems
+            return mutatedSelf
+        }
+    }
+
+    func delete(item: Outline, childOf parent: Outline) -> Outline {
+        if parent == self {
+            var mutableSelf = self
+            mutableSelf.subItems = mutableSelf.subItems.filter { $0 != item }
+            return mutableSelf
+        }
+
+        if let parentIndex = self.subItems.index(where: { $0 == parent }) {
+            var mutableSelf = self
+            var mutableParent = parent
+            mutableParent.subItems = parent.subItems.filter { $0 != item }
+            mutableSelf.subItems[parentIndex] = mutableParent
+            return mutableSelf
+        } else {
+            // this might be deeper level parent we are looking for
+            var accumulatedSubItems: [Outline] = []
+            for thisItem in self.subItems {
+                accumulatedSubItems.append(thisItem.delete(item: item, childOf: parent))
             }
             var mutatedSelf = self
             mutatedSelf.subItems = accumulatedSubItems
