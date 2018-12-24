@@ -16,12 +16,14 @@ struct OutlineViewModel: Hashable {
     let subModels: [OutlineViewModel]
     var isExpanded: Bool = false
     let indentationLevel: Int
+    let _backingModel: Outline
 
     init(with outline: Outline) {
         self.title = "✦ " + outline.heading.title
         self.content = outline.content.joined(separator: "\n")
         self.subModels = outline.subItems.map(OutlineViewModel.init)
         self.indentationLevel = outline.heading.depth
+        self._backingModel = outline
     }
 
     var indicativeBackgroundColor: UIColor {
