@@ -35,6 +35,7 @@
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
 		285F41D321D0535D00E66D6A /* AddOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D221D0535D00E66D6A /* AddOutlineViewController.swift */; };
 		285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */; };
+		285F41D721D05C9600E66D6A /* OutlineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D621D05C9600E66D6A /* OutlineAction.swift */; };
 		286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */; };
 		286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
@@ -115,6 +116,7 @@
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285F41D221D0535D00E66D6A /* AddOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOutlineViewController.swift; sourceTree = "<group>"; };
 		285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrgViewController.storyboard; sourceTree = "<group>"; };
+		285F41D621D05C9600E66D6A /* OutlineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineAction.swift; sourceTree = "<group>"; };
 		286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileRetrieveService.swift; sourceTree = "<group>"; };
 		286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtension.swift; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 			children = (
 				2880A09B20C18FFC00CD4ACC /* OutlineView.swift */,
 				2880A09D20C194BE00CD4ACC /* OutlineCell.swift */,
+				285F41D621D05C9600E66D6A /* OutlineAction.swift */,
 			);
 			path = OutlineView;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
 				281BA97421C9006E00319B0A /* OrgFileOperation.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
+				285F41D721D05C9600E66D6A /* OutlineAction.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
 				286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */,
 				281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */,

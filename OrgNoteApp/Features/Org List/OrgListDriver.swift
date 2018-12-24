@@ -28,6 +28,11 @@ final class OrgListDriver {
         cellDesc.onSelect = {
             self.didSelect(item: viewModel)
         }
+
+        cellDesc.onPerfromAction = { action in
+            self.perfromAction(action, on: viewModel)
+        }
+
         return cellDesc.any()
     }
 
@@ -38,6 +43,10 @@ final class OrgListDriver {
     // each top level cell is transformed to section
     lazy var sections = topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
     lazy var controller = EditableListController(with: sections)
+
+    func perfromAction(_ action: OutlineAction, on itemViewModel: OutlineViewModel) {
+        print("\(action) on \(itemViewModel)")
+    }
 
     func didSelect(item: OutlineViewModel) {
         generateNewSectionItemsWhenTappedOn(for: item, with: controller.sectionDescriptors) |> controller.update

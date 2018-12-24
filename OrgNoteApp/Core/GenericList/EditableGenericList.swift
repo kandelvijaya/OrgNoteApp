@@ -58,12 +58,12 @@ final class EditableListController<T: Hashable>: ListViewController<T> {
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let moreAction = UITableViewRowAction(style: .normal, title: "More...") { (action, indexPath) in
-            print("More action at \(indexPath)")
+            self.model(at: indexPath).onPerfromAction?(.changeStatus)
         }
         moreAction.backgroundColor = Theme.blueish.normal.withAlphaComponent(0.7)
 
         let removeAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            print("delete action at \(indexPath)")
+            self.model(at: indexPath).onPerfromAction?(.deleteItem)
         }
 
         return [moreAction, removeAction]
@@ -71,36 +71,21 @@ final class EditableListController<T: Hashable>: ListViewController<T> {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
-            print("adding item at \(indexPath)")
+            self.model(at: indexPath).onPerfromAction?(OutlineAction.addItemBelow)
         }
     }
 
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let addAction = UIContextualAction(style: .normal, title: "Add") { (action, view, completion) in
-
+            self.model(at: indexPath).onPerfromAction?(OutlineAction.addItemBelow)
         }
         addAction.backgroundColor = Theme.blueish.normal
         let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, completion) in
-
+            self.model(at: indexPath).onPerfromAction?(OutlineAction.editItem)
         }
         editAction.backgroundColor = Theme.blueish.normal.withAlphaComponent(0.7)
         let config = UISwipeActionsConfiguration(actions: [addAction, editAction])
         return config
-    }
-
-}
-
-
-extension EditableListController {
-
-    enum ListItemAction {
-        case add(IndexPath), edit(IndexPath), delete(IndexPath), more(IndexPath)
-        // In future
-        enum More {}
-    }
-
-    func userInitiated(_ action: ListItemAction, when currentSections: [AnyListSectionDescriptor], on tableView: UITableView) {
-
     }
 
 }

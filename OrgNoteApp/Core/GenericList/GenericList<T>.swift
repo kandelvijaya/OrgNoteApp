@@ -81,7 +81,7 @@ class ListViewController<T: Hashable>: UITableViewController {
         fatalError("initCoder: not implemented")
     }
 
-    private func model(at indexPath: IndexPath) -> ListCellDescriptor<T, UITableViewCell> {
+    func model(at indexPath: IndexPath) -> ListCellDescriptor<T, UITableViewCell> {
         return self.sectionDescriptors[indexPath.section].items[indexPath.row]
     }
 

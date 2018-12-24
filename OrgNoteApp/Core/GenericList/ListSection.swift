@@ -62,6 +62,7 @@ struct ListCellDescriptor<Model: Hashable, CellType: UITableViewCell>: Hashable 
     let cellClass: CellType.Type
     let configure: (CellType) -> Void
     var onSelect: (() -> Void)? = nil
+    var onPerfromAction: ((OutlineAction) -> Void)? = nil
 
     init(_ model: Model, identifier: String, cellClass: CellType.Type, configure: @escaping ((CellType) -> Void) = {_ in }) {
         self.model = model
@@ -88,6 +89,7 @@ extension ListCellDescriptor {
                                                                                 self.configure(cell as! CellType)
         })
         anyDescriptor.onSelect = onSelect
+        anyDescriptor.onPerfromAction = onPerfromAction
         return anyDescriptor
     }
 
