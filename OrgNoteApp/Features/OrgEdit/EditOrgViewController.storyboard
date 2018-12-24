@@ -27,7 +27,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGf-Vh-eUS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjx-pY-czS">
                                         <rect key="frame" x="0.0" y="20.5" width="375" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -39,14 +39,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-6n-7zt">
-                                        <rect key="frame" x="0.0" y="71" width="375" height="516"/>
-                                        <nil key="textColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qWp-nr-4nz">
+                                        <rect key="frame" x="0.0" y="71" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="ELD-bz-bfT"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17X-lG-er2">
-                                        <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17X-lG-er2">
+                                        <rect key="frame" x="0.0" y="199" width="375" height="418"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="cancel:" destination="dW6-5N-mTe" eventType="touchUpInside" id="FR1-Pm-dnG"/>
@@ -74,10 +77,10 @@
                     <connections>
                         <outlet property="cancelButton" destination="17X-lG-er2" id="chC-4s-aiN"/>
                         <outlet property="contentLabel" destination="7kh-P8-wML" id="psI-S4-7YY"/>
-                        <outlet property="contentTextField" destination="xFx-6n-7zt" id="LVM-9L-HnP"/>
+                        <outlet property="contentTextView" destination="qWp-nr-4nz" id="1lr-2h-2bl"/>
                         <outlet property="doneButton" destination="DH4-Ud-Sb3" id="zXx-PT-RDv"/>
                         <outlet property="headingLabel" destination="rAi-fr-MQ0" id="cWj-5h-nz2"/>
-                        <outlet property="headingTextField" destination="zGf-Vh-eUS" id="AI2-EL-wlc"/>
+                        <outlet property="headingTextField" destination="rjx-pY-czS" id="gUD-sW-Ahz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pt-O9-E0o" userLabel="First Responder" sceneMemberID="firstResponder"/>

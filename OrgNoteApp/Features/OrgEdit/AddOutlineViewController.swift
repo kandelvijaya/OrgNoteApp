@@ -27,7 +27,7 @@ final class AddOutlineViewController: UIViewController {
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var headingTextField: UITextField!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
@@ -54,7 +54,7 @@ final class AddOutlineViewController: UIViewController {
 
         // contentTextField should be formatted properly
         // This is enforced by using org moded TextField later on
-        let contentText = contentTextField.text ?? ""
+        let contentText = contentTextView.text ?? ""
         let entireText = headingText + "\n" + contentText
         let orgf = entireText |> OrgParser.parse
         return orgf?.first
@@ -70,9 +70,8 @@ final class AddOutlineViewController: UIViewController {
         [headingLabel, contentLabel].forEach {
             $0?.textColor = Theme.blueish.normal
         }
-        [contentTextField, headingTextField].forEach {
-            $0?.textColor = Theme.blueish.text
-        }
+        contentTextView.textColor = Theme.blueish.text
+        headingTextField.textColor = Theme.blueish.text
 
         cancelButton.tintColor = Theme.blueish.attention
         doneButton.tintColor = Theme.blueish.buttonTint

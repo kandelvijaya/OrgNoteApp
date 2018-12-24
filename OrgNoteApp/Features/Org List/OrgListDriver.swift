@@ -15,10 +15,23 @@ typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
 
 final class OrgListDriver {
 
-    private var topLevelcellDescriptors: [AnyListCellDescriptor] = []
+    private var topLevelcellDescriptors: [AnyListCellDescriptor] {
+        return self.backingOrgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
+    }
+
+    // each top level cell is transformed to section
+    var sections: [AnyListSectionDescriptor] {
+        return topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
+    }
+
+    private var backingOrgModel: OrgFile
 
     init(with orgModel: OrgFile) {
-        self.topLevelcellDescriptors = orgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
+        self.backingOrgModel = orgModel
+    }
+
+    private func update(with newModel: OrgFile) {
+        self.backingOrgModel = newModel
     }
 
     private func cellDescriptor(for viewModel: OutlineViewModel) -> AnyListCellDescriptor {
@@ -40,12 +53,20 @@ final class OrgListDriver {
         return ListSectionDescriptor(with: cellDescs)
     }
 
-    // each top level cell is transformed to section
-    lazy var sections = topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
     lazy var controller = EditableListController(with: sections)
 
     func perfromAction(_ action: OutlineAction, on itemViewModel: OutlineViewModel) {
-        print("\(action) on \(itemViewModel)")
+        switch action {
+        case .addItemBelow:
+            let addItemController = AddOutlineViewController.create(childOf: itemViewModel._backingModel, entireModel: backingOrgModel) { [weak self] (newModel) in
+                guard let this = self else { return }
+                this.update(with: newModel)
+                this.controller.update(with: this.sections)
+            }
+            controller.show(addItemController, sender: self)
+        default:
+            break
+        }
     }
 
     func didSelect(item: OutlineViewModel) {
