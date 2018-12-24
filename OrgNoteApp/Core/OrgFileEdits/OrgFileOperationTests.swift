@@ -15,10 +15,6 @@ final class OrgFileOperationTests: XCTestCase {
     private let outlineText = "* H1\n ** H2\nContent"
     private let outlineText2 = "* H1 another"
 
-    private func unwrapped<T>(_ value: T?) -> T {
-        return value!
-    }
-
     // MARK:- Add
 
     func test_givenEmptyOrgFile_insertAtRootWorks() {

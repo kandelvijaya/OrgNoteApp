@@ -33,6 +33,8 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+		285F41D321D0535D00E66D6A /* AddOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D221D0535D00E66D6A /* AddOutlineViewController.swift */; };
+		285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */; };
 		286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */; };
 		286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
@@ -111,6 +113,8 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285F41D221D0535D00E66D6A /* AddOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOutlineViewController.swift; sourceTree = "<group>"; };
+		285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrgViewController.storyboard; sourceTree = "<group>"; };
 		286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileRetrieveService.swift; sourceTree = "<group>"; };
 		286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtension.swift; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 			path = OrgNoteAppTests;
 			sourceTree = "<group>";
 		};
+		285F41D121D0535000E66D6A /* OrgEdit */ = {
+			isa = PBXGroup;
+			children = (
+				285F41D221D0535D00E66D6A /* AddOutlineViewController.swift */,
+				285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */,
+			);
+			path = OrgEdit;
+			sourceTree = "<group>";
+		};
 		28703D3B20A859C800DC8DBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +345,7 @@
 		2880A09F20C196CD00CD4ACC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				285F41D121D0535000E66D6A /* OrgEdit */,
 				284C7D0721AB11A100C0F290 /* Org List */,
 				284C7D0521AB111900C0F290 /* Main.storyboard */,
 				284C7D0221AB073F00C0F290 /* Org Locate */,
@@ -503,6 +517,7 @@
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
+				285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */,
 				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +647,7 @@
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
+				285F41D321D0535D00E66D6A /* AddOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,

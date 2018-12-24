@@ -9,8 +9,9 @@
 import Foundation
 import Kekka
 
+/// TODO:- The complexity can be reduced by copying the struct to class first
+/// then convert back to stucts within the method body. Given searching is not needed. 
 extension Array where Element == Outline {
-
 
     /// Adds a new `Outline` as child of given parent `Outline`
     ///
@@ -18,6 +19,7 @@ extension Array where Element == Outline {
     ///   - item: new Outline
     ///   - childOf: Parent Outline. This is for sanity
     /// - Returns: New OrgFile
+    /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
     func add(_ item: Outline, childOf: Outline) -> OrgFile {
         if item.heading.depth > childOf.heading.depth {
             return self.map{ $0.insert(item: item, asChildOf: childOf) }
@@ -37,6 +39,12 @@ extension Array where Element == Outline {
     }
 
     /// reverse of `add(_:_)`
+    ///
+    /// - Parameters:
+    ///   - item: new Outline
+    ///   - childOf: Parent Outline. This is for sanity
+    /// - Returns: New OrgFile
+    /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
     func delete(_ item: Outline, childOf: Outline) -> OrgFile {
         if item.heading.depth > childOf.heading.depth {
             return self.map{ $0.delete(item: item, childOf: childOf) }
@@ -45,6 +53,7 @@ extension Array where Element == Outline {
         }
     }
 
+    /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
     func update(old item: Outline, new newItem: Outline, childOf parent: Outline) -> OrgFile {
         guard item.heading.depth == newItem.heading.depth else { return self }
         guard item.heading.depth > parent.heading.depth else { return self }
