@@ -8,6 +8,7 @@
 
 import Foundation
 import Kekka
+import FastDiff
 
 typealias OutlineCellDesc = ListCellDescriptor<OutlineViewModel, OutlineCell>
 typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
@@ -60,10 +61,19 @@ final class OrgListDriver {
         case .addItemBelow:
             let addItemController = AddOutlineViewController.create(childOf: itemViewModel._backingModel, entireModel: backingOrgModel) { [weak self] (newModel) in
                 guard let this = self else { return }
+                if this.backingOrgModel == newModel { return }
+
                 this.update(with: newModel)
-                this.controller.update(with: this.sections)
+                DispatchQueue.main.async {
+                    this.controller.update(with: this.sections)
+                }
             }
-            controller.show(addItemController, sender: self)
+            let pop = PopoverController.create(embedding: addItemController)
+            addItemController.onDone =  { [weak pop] in
+                pop?.dismiss()
+            }
+            pop.modalPresentationStyle = .overFullScreen
+            controller.present(pop, animated: true, completion: nil)
         default:
             break
         }

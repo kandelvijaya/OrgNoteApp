@@ -16,6 +16,7 @@ final class AddOutlineViewController: UIViewController {
     private var immediateParent: Outline!
     private var entireModel: OrgFile!
     private var onCompletion: ((OrgFile) -> Void)!
+    var onDone: (() -> Void)?
 
     static func create(childOf: Outline, entireModel: OrgFile, onCompletion: @escaping ((OrgFile) -> Void)) -> AddOutlineViewController {
         let controller = UIStoryboard(name: "EditOrgViewController", bundle: Bundle.main).instantiateInitialViewController() as! AddOutlineViewController
@@ -33,11 +34,13 @@ final class AddOutlineViewController: UIViewController {
     
 
     @IBAction func cancel(_ sender: Any) {
+        defer { onDone?() }
         // no changes saved
         onCompletion(entireModel)
     }
 
     @IBAction func done(_ sender: Any) {
+        defer { onDone?() }
         guard let toAdd = newOutline() else {
             // error report
             onCompletion(entireModel)

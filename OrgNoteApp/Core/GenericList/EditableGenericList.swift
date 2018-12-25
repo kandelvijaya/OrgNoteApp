@@ -78,10 +78,12 @@ final class EditableListController<T: Hashable>: ListViewController<T> {
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let addAction = UIContextualAction(style: .normal, title: "Add") { (action, view, completion) in
             self.model(at: indexPath).onPerfromAction?(OutlineAction.addItemBelow)
+            completion(true)
         }
         addAction.backgroundColor = Theme.blueish.normal
         let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, completion) in
             self.model(at: indexPath).onPerfromAction?(OutlineAction.editItem)
+            completion(true)
         }
         editAction.backgroundColor = Theme.blueish.normal.withAlphaComponent(0.7)
         let config = UISwipeActionsConfiguration(actions: [addAction, editAction])
