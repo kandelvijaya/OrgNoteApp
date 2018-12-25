@@ -91,6 +91,18 @@ final class OrgListDriver {
             }
             pop.modalPresentationStyle = .overFullScreen
             controller.present(pop, animated: true, completion: nil)
+        case .deleteItem:
+
+            if let immediateParent = backingOrgModel.immediateParent(ofFirst: itemViewModel._backingModel) {
+                let newModel = backingOrgModel.delete(itemViewModel._backingModel, childOf: immediateParent)
+                update(with: newModel)
+                controller.update(with: sections)
+            } else {
+                let newModels = backingOrgModel.deleteRoot(itemViewModel._backingModel)
+                update(with: newModels)
+                controller.update(with: sections)
+            }
+
         default:
             break
         }
