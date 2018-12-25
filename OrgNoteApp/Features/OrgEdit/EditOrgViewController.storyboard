@@ -13,7 +13,7 @@
         <!--Add Outline View Controller-->
         <scene sceneID="43s-xW-Pig">
             <objects>
-                <viewController id="dW6-5N-mTe" customClass="AddOutlineViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddOutlineViewController" id="dW6-5N-mTe" customClass="AddOutlineViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2VD-tS-qS1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH4-Ud-Sb3">
                                         <rect key="frame" x="183.5" y="0.0" width="159.5" height="30"/>
-                                        <state key="normal" title="Done"/>
+                                        <state key="normal" title="Add Item"/>
                                         <connections>
                                             <action selector="done:" destination="dW6-5N-mTe" eventType="touchUpInside" id="LMV-l1-0lO"/>
                                         </connections>
@@ -103,6 +103,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pt-O9-E0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="168.6656671664168"/>
+        </scene>
+        <!--Add Outline View Controller-->
+        <scene sceneID="cCf-6x-ihG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wtm-Dg-PCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="EditOutlineViewController" id="JUx-0u-l1y" customClass="AddOutlineViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8z7-OY-E3U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-GJ-tkI">
+                                <rect key="frame" x="0.0" y="96" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-Fj-XDU">
+                                <rect key="frame" x="4" y="120.5" width="367" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content &amp; Sub Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWI-Zv-DrS">
+                                <rect key="frame" x="0.0" y="174.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="244" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XKM-7B-SqG">
+                                <rect key="frame" x="4" y="199" width="367" height="398"/>
+                                <color key="backgroundColor" white="0.68999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-sM-ouW">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD5-WZ-Ua7">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="JUx-0u-l1y" eventType="touchUpInside" id="Vhg-HT-zew"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-NV-G7l">
+                                        <rect key="frame" x="183.5" y="0.0" width="159.5" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="done:" destination="JUx-0u-l1y" eventType="touchUpInside" id="vNb-S8-GLr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lri-WS-a8k">
+                                <rect key="frame" x="144" y="36" width="87" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LYc-6Y-bBh" firstAttribute="bottom" secondItem="YHt-sM-ouW" secondAttribute="bottom" constant="16" id="1x3-cP-JdR"/>
+                            <constraint firstItem="NWI-Zv-DrS" firstAttribute="trailing" secondItem="LYc-6Y-bBh" secondAttribute="trailing" id="4TF-6b-El0"/>
+                            <constraint firstItem="ibG-GJ-tkI" firstAttribute="trailing" secondItem="LYc-6Y-bBh" secondAttribute="trailing" id="I7Y-ee-XQh"/>
+                            <constraint firstItem="NWI-Zv-DrS" firstAttribute="leading" secondItem="LYc-6Y-bBh" secondAttribute="leading" id="RCJ-Hq-AXx"/>
+                            <constraint firstItem="YHt-sM-ouW" firstAttribute="top" secondItem="XKM-7B-SqG" secondAttribute="bottom" constant="24" id="aIh-hg-19g"/>
+                            <constraint firstItem="ibG-GJ-tkI" firstAttribute="leading" secondItem="LYc-6Y-bBh" secondAttribute="leading" id="bva-4Y-x1V"/>
+                            <constraint firstItem="XKM-7B-SqG" firstAttribute="top" secondItem="NWI-Zv-DrS" secondAttribute="bottom" constant="4" id="c5a-dw-Qhd"/>
+                            <constraint firstItem="b5v-Fj-XDU" firstAttribute="trailing" secondItem="LYc-6Y-bBh" secondAttribute="trailing" constant="-4" id="cW1-eq-7V4"/>
+                            <constraint firstItem="NWI-Zv-DrS" firstAttribute="top" secondItem="b5v-Fj-XDU" secondAttribute="bottom" constant="24" id="dh7-S9-fSa"/>
+                            <constraint firstItem="b5v-Fj-XDU" firstAttribute="leading" secondItem="LYc-6Y-bBh" secondAttribute="leading" constant="4" id="eMW-ou-GTX"/>
+                            <constraint firstItem="XKM-7B-SqG" firstAttribute="trailing" secondItem="LYc-6Y-bBh" secondAttribute="trailing" constant="-4" id="f3p-gb-now"/>
+                            <constraint firstItem="Lri-WS-a8k" firstAttribute="top" secondItem="8z7-OY-E3U" secondAttribute="topMargin" constant="16" id="gOI-cA-qa5"/>
+                            <constraint firstItem="Lri-WS-a8k" firstAttribute="centerX" secondItem="LYc-6Y-bBh" secondAttribute="centerX" id="lTt-AC-LYf"/>
+                            <constraint firstItem="ibG-GJ-tkI" firstAttribute="top" secondItem="Lri-WS-a8k" secondAttribute="bottom" constant="36" id="m0Y-dH-TlX"/>
+                            <constraint firstItem="XKM-7B-SqG" firstAttribute="leading" secondItem="LYc-6Y-bBh" secondAttribute="leading" constant="4" id="m8Z-M3-MWa"/>
+                            <constraint firstItem="b5v-Fj-XDU" firstAttribute="top" secondItem="ibG-GJ-tkI" secondAttribute="bottom" constant="4" id="q2E-BA-T4l"/>
+                            <constraint firstItem="LYc-6Y-bBh" firstAttribute="trailing" secondItem="YHt-sM-ouW" secondAttribute="trailing" constant="16" id="tDx-5r-L9p"/>
+                            <constraint firstItem="YHt-sM-ouW" firstAttribute="leading" secondItem="LYc-6Y-bBh" secondAttribute="leading" constant="16" id="tI1-wd-qvA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LYc-6Y-bBh"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="tD5-WZ-Ua7" id="RBe-td-eAT"/>
+                        <outlet property="contentLabel" destination="NWI-Zv-DrS" id="iya-mp-Bku"/>
+                        <outlet property="contentTextView" destination="XKM-7B-SqG" id="A2C-dB-R44"/>
+                        <outlet property="doneButton" destination="wdJ-NV-G7l" id="53w-uU-8hX"/>
+                        <outlet property="headingLabel" destination="ibG-GJ-tkI" id="PdA-cv-SY2"/>
+                        <outlet property="headingTextField" destination="b5v-Fj-XDU" id="mip-oV-xmd"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="794" y="169"/>
         </scene>
     </scenes>
 </document>

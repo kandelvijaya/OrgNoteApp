@@ -1,5 +1,5 @@
 //
-//  AddOutlineController.swift
+//  EditOutlineController.swift
 //  OrgNoteApp
 //
 //  Created by Vijaya Prakash Kandel on 25.12.18.
@@ -9,17 +9,24 @@
 import Foundation
 import UIKit
 
-final class AddOutlineViewController: BaseEditOutlineViewController {
+final class EditOutlineViewController: BaseEditOutlineViewController {
 
     private var entireModel: OrgFile!
+    private var modelToEdit: Outline!
     private var onCompletion: ((OrgFile) -> Void)!
 
-    static func create(childOf: Outline, entireModel: OrgFile, onCompletion: @escaping ((OrgFile) -> Void)) -> AddOutlineViewController {
-        let controller = AddOutlineViewController.create()
+    static func create(childOf: Outline, edit: Outline, entireModel: OrgFile, onCompletion: @escaping ((OrgFile) -> Void)) -> EditOutlineViewController {
+        let controller = EditOutlineViewController.create()
         controller.immediateParent = childOf
         controller.entireModel = entireModel
+        controller.modelToEdit = edit
         controller.onCompletion = onCompletion
         return controller
+    }
+
+    private func updateUIWithToEditModel() {
+        headingTextField.text = modelToEdit.heading.title
+        contentTextView.text = modelToEdit.fileString.split(separator: "\n").dropFirst().joined(separator: "\n")
     }
 
     override func onCancel() {
@@ -34,7 +41,13 @@ final class AddOutlineViewController: BaseEditOutlineViewController {
             onCompletion(entireModel)
             return
         }
-        let entireModelAfterAdding = entireModel.add(newModel, childOf: immediateParent)
+
+        if newModel == modelToEdit {
+            // nothing to save. No changes
+            return
+        }
+
+        let entireModelAfterAdding = entireModel.update(old: modelToEdit, new: newModel, childOf: immediateParent)
         onCompletion(entireModelAfterAdding)
     }
 

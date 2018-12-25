@@ -68,6 +68,20 @@ extension Array where Element == Outline {
         return intermediate.add(newItem, childOf: mutatedParent)
     }
 
+    func immediateParent(ofFirst firstMatching: Outline) -> Outline? {
+        for item in self {
+            if item.subItems.contains(firstMatching) {
+                return item
+            } else {
+                if let innerMatch = item.subItems.immediateParent(ofFirst: firstMatching) {
+                    return innerMatch
+                }
+            }
+        }
+        return nil
+    }
+
+
 }
 
 
