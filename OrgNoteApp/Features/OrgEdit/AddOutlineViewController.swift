@@ -26,6 +26,11 @@ final class AddOutlineViewController: BaseEditOutlineViewController {
         // nothing
     }
 
+    override func itemHeadingDepth() -> Int {
+        assert(immediateParent != nil, "Can't add new item if the parent is unknown")
+        return immediateParent!.heading.depth + 1
+    }
+
     override func onDone(with outline: Outline?) {
         guard let newModel = outline else {
             // error report
@@ -34,7 +39,7 @@ final class AddOutlineViewController: BaseEditOutlineViewController {
             onCompletion(entireModel)
             return
         }
-        let entireModelAfterAdding = entireModel.add(newModel, childOf: immediateParent)
+        let entireModelAfterAdding = entireModel.add(newModel, childOf: immediateParent!)
         onCompletion(entireModelAfterAdding)
     }
 

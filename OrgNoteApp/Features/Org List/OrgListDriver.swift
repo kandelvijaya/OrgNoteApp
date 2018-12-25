@@ -74,6 +74,23 @@ final class OrgListDriver {
             }
             pop.modalPresentationStyle = .overFullScreen
             controller.present(pop, animated: true, completion: nil)
+        case .editItem:
+            let immediateParentOfSelectedItem = backingOrgModel.immediateParent(ofFirst: itemViewModel._backingModel)
+            let editItemController = EditOutlineViewController.create(childOf: immediateParentOfSelectedItem, edit: itemViewModel._backingModel, entireModel: backingOrgModel) { [weak self] newModel in
+                guard let this = self else { return }
+                if this.backingOrgModel == newModel { return }
+
+                this.update(with: newModel)
+                DispatchQueue.main.async {
+                    this.controller.update(with: this.sections)
+                }
+            }
+            let pop = PopoverController.create(embedding: editItemController)
+            editItemController.onDone =  { [weak pop] in
+                pop?.dismiss()
+            }
+            pop.modalPresentationStyle = .overFullScreen
+            controller.present(pop, animated: true, completion: nil)
         default:
             break
         }

@@ -104,11 +104,11 @@
             </objects>
             <point key="canvasLocation" x="112.8" y="168.6656671664168"/>
         </scene>
-        <!--Add Outline View Controller-->
+        <!--Edit Outline View Controller-->
         <scene sceneID="cCf-6x-ihG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtm-Dg-PCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="EditOutlineViewController" id="JUx-0u-l1y" customClass="AddOutlineViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditOutlineViewController" id="JUx-0u-l1y" customClass="EditOutlineViewController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8z7-OY-E3U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

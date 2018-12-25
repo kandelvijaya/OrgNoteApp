@@ -54,7 +54,19 @@ extension Array where Element == Outline {
     }
 
     /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
-    func update(old item: Outline, new newItem: Outline, childOf parent: Outline) -> OrgFile {
+    func update(old item: Outline, new newItem: Outline, childOf parent: Outline?) -> OrgFile {
+        /// This is the case when top level item needs edit
+        guard let parent = parent else {
+            if let oldIndex = self.lastIndex(where: { $0 == item }) {
+                var copySelf = self
+                copySelf[oldIndex] = newItem
+                return copySelf
+            } else {
+                assertionFailure("The edited item is not the root item. In such case, provide immediateParent")
+                return self
+            }
+        }
+
         guard item.heading.depth == newItem.heading.depth else { return self }
         guard item.heading.depth > parent.heading.depth else { return self }
 

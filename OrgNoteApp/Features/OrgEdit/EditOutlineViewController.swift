@@ -15,13 +15,18 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
     private var modelToEdit: Outline!
     private var onCompletion: ((OrgFile) -> Void)!
 
-    static func create(childOf: Outline, edit: Outline, entireModel: OrgFile, onCompletion: @escaping ((OrgFile) -> Void)) -> EditOutlineViewController {
+    static func create(childOf: Outline?, edit: Outline, entireModel: OrgFile, onCompletion: @escaping ((OrgFile) -> Void)) -> EditOutlineViewController {
         let controller = EditOutlineViewController.create()
         controller.immediateParent = childOf
         controller.entireModel = entireModel
         controller.modelToEdit = edit
         controller.onCompletion = onCompletion
         return controller
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUIWithToEditModel()
     }
 
     private func updateUIWithToEditModel() {
@@ -31,6 +36,10 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
 
     override func onCancel() {
         // nothing
+    }
+
+    override func itemHeadingDepth() -> Int {
+        return modelToEdit.heading.depth
     }
 
     override func onDone(with outline: Outline?) {

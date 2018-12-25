@@ -12,7 +12,7 @@ import Kekka
 
 class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
 
-    var immediateParent: Outline!
+    var immediateParent: Outline?
     var onDone: (() -> Void)?
 
     static var storyboardName: String {
@@ -40,6 +40,11 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
         //no-op
     }
 
+    func itemHeadingDepth() -> Int {
+        //must be subclassed
+        return 0
+    }
+
     @IBAction func done(_ sender: Any) {
         defer { onDone?() }
         onDone(with: newOutline())
@@ -47,7 +52,7 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
 
     private func newOutline() -> Outline? {
         let headingContent = headingTextField.text ?? ""
-        let headingDepth = immediateParent.heading.depth + 1
+        let headingDepth = itemHeadingDepth()
         let headingText = "*".replicate(headingDepth) + " " + headingContent
 
         // contentTextField should be formatted properly
