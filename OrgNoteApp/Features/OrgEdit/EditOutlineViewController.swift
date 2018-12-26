@@ -51,11 +51,6 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
             return
         }
 
-        if newModel == modelToEdit {
-            // nothing to save. No changes
-            return
-        }
-
         let entireModelAfterAdding = entireModel.update(old: modelToEdit, new: newModel, childOf: immediateParent)
         onCompletion(entireModelAfterAdding)
     }
