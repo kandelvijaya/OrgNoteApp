@@ -42,6 +42,8 @@
 		285F42A021D250D600E66D6A /* AddOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F429F21D250D600E66D6A /* AddOutlineViewController.swift */; };
 		285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A121D250EA00E66D6A /* EditOutlineViewController.swift */; };
 		285F42A421D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A321D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift */; };
+		285F42A721D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */; };
+		285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */; };
 		286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */; };
 		286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
@@ -56,6 +58,12 @@
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
+		28D22A6021E00F8500ED3BEF /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A5F21E00F8500ED3BEF /* InitialController.swift */; };
+		28D22A6221E0102000ED3BEF /* BitbucketCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6121E0102000ED3BEF /* BitbucketCache.swift */; };
+		28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */; };
+		28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6521E013A800ED3BEF /* AuthorizeController.swift */; };
+		28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */; };
+		28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */; };
 		980266756A61043EF909D38F /* Pods_OrgNoteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +137,8 @@
 		285F429F21D250D600E66D6A /* AddOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOutlineViewController.swift; sourceTree = "<group>"; };
 		285F42A121D250EA00E66D6A /* EditOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOutlineViewController.swift; sourceTree = "<group>"; };
 		285F42A321D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListEditInteractionCoordintaingController.swift; sourceTree = "<group>"; };
+		285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgSyntaxHighlighter.swift; sourceTree = "<group>"; };
+		285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgHighlightingTheme.swift; sourceTree = "<group>"; };
 		286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileRetrieveService.swift; sourceTree = "<group>"; };
 		286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtension.swift; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
@@ -141,6 +151,12 @@
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
+		28D22A5F21E00F8500ED3BEF /* InitialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
+		28D22A6121E0102000ED3BEF /* BitbucketCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketCache.swift; sourceTree = "<group>"; };
+		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
+		28D22A6521E013A800ED3BEF /* AuthorizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
+		28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAwaker.swift; sourceTree = "<group>"; };
+		28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2B4CED12D5748F616CCAEACB /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +207,7 @@
 			children = (
 				281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */,
 				281BA96E21C6FCE100319B0A /* IntExtension.swift */,
+				28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */,
 			);
 			path = GlobalExtension;
 			sourceTree = "<group>";
@@ -220,6 +237,8 @@
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				28D22A6721E0144200ED3BEF /* StoryboardAwaker */,
+				285F42A521D3AE4600E66D6A /* OrgSyntaxHighlighter */,
 				281BA97221C9005900319B0A /* OrgFileEdits */,
 				281BA96B21C6FCC500319B0A /* GlobalExtension */,
 				284C7D1921AB1A3B00C0F290 /* Color Palette */,
@@ -298,8 +317,8 @@
 		2855D3EF20A843180082EC00 /* OrgNoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				28D22A5921E00EDB00ED3BEF /* Flows */,
 				2880A0A220C197DC00CD4ACC /* Service */,
-				2880A09F20C196CD00CD4ACC /* Features */,
 				28417E2C20A8494D00996941 /* Core */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
 				28417E2520A844C000996941 /* supporting */,
@@ -341,6 +360,15 @@
 			path = PopoverPresenter;
 			sourceTree = "<group>";
 		};
+		285F42A521D3AE4600E66D6A /* OrgSyntaxHighlighter */ = {
+			isa = PBXGroup;
+			children = (
+				285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */,
+				285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */,
+			);
+			path = OrgSyntaxHighlighter;
+			sourceTree = "<group>";
+		};
 		28703D3B20A859C800DC8DBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,19 +398,6 @@
 			path = OutlineView;
 			sourceTree = "<group>";
 		};
-		2880A09F20C196CD00CD4ACC /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				285F429721D1AD1900E66D6A /* PopoverPresenter */,
-				285F41D121D0535000E66D6A /* OrgEdit */,
-				284C7D0721AB11A100C0F290 /* Org List */,
-				284C7D0521AB111900C0F290 /* Main.storyboard */,
-				284C7D0221AB073F00C0F290 /* Org Locate */,
-				284C7D0121AB072200C0F290 /* Org View */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
 		2880A0A220C197DC00CD4ACC /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +417,63 @@
 				281BA97021C7EB5500319B0A /* EditableGenericList.swift */,
 			);
 			path = GenericList;
+			sourceTree = "<group>";
+		};
+		28D22A5921E00EDB00ED3BEF /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				284C7D0521AB111900C0F290 /* Main.storyboard */,
+				28D22A5E21E00F3800ED3BEF /* SaveBackToRepo */,
+				28D22A5D21E00F0800ED3BEF /* App Flow  */,
+				28D22A5C21E00EFB00ED3BEF /* LocateOrgInRepo */,
+				28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */,
+				28D22A5F21E00F8500ED3BEF /* InitialController.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */ = {
+			isa = PBXGroup;
+			children = (
+				28D22A6121E0102000ED3BEF /* BitbucketCache.swift */,
+				28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */,
+				28D22A6521E013A800ED3BEF /* AuthorizeController.swift */,
+			);
+			path = LogInToBitbucket;
+			sourceTree = "<group>";
+		};
+		28D22A5C21E00EFB00ED3BEF /* LocateOrgInRepo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocateOrgInRepo;
+			sourceTree = "<group>";
+		};
+		28D22A5D21E00F0800ED3BEF /* App Flow  */ = {
+			isa = PBXGroup;
+			children = (
+				285F429721D1AD1900E66D6A /* PopoverPresenter */,
+				285F41D121D0535000E66D6A /* OrgEdit */,
+				284C7D0721AB11A100C0F290 /* Org List */,
+				284C7D0221AB073F00C0F290 /* Org Locate */,
+				284C7D0121AB072200C0F290 /* Org View */,
+			);
+			path = "App Flow ";
+			sourceTree = "<group>";
+		};
+		28D22A5E21E00F3800ED3BEF /* SaveBackToRepo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaveBackToRepo;
+			sourceTree = "<group>";
+		};
+		28D22A6721E0144200ED3BEF /* StoryboardAwaker */ = {
+			isa = PBXGroup;
+			children = (
+				28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */,
+			);
+			path = StoryboardAwaker;
 			sourceTree = "<group>";
 		};
 		C8EE73EDA9192329D6DAB47D /* Pods */ = {
@@ -546,6 +618,7 @@
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
+				28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */,
 				285F429B21D1ADA200E66D6A /* PopoverController.storyboard in Resources */,
 				285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */,
 				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
@@ -676,16 +749,23 @@
 			files = (
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */,
+				28D22A6221E0102000ED3BEF /* BitbucketCache.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
+				28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */,
 				285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
+				28D22A6021E00F8500ED3BEF /* InitialController.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
+				28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */,
+				285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */,
 				284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */,
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
 				281BA97421C9006E00319B0A /* OrgFileOperation.swift in Sources */,
+				285F42A721D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift in Sources */,
+				28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */,
 				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
 				285F41D721D05C9600E66D6A /* OutlineAction.swift in Sources */,
 				285F42A021D250D600E66D6A /* AddOutlineViewController.swift in Sources */,
