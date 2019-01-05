@@ -17,5 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        if let authorizationCode = BitbucketOauth2.shared.extractAuthCode(from: url) {
+            BitbucketOauth2.shared.askForAccessToken(with: authorizationCode).then { item in
+                NotificationCenter.default.post(name: userDidReceiveAccessTokenNotification, object: nil)
+            }.execute()
+        }
+        return true 
+    }
+
 }
 
+
+let userDidReceiveAccessTokenNotification = NSNotification.Name(rawValue: "userDidReceiveAccessToken")

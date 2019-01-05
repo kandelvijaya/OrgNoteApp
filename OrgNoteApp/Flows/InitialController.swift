@@ -9,21 +9,22 @@
 import Foundation
 import UIKit
 
-enum State {
-    case userNeedsToAuthorize
-    case userIsAuthorizedButHasNotSelectedAnyRepo
-    case userIsAuthorizedAndHasSelectedRepo(repo: String)
-    case userWantsToViewNote(noteURL: URL)
-
-    var associatedController: UIViewController {
-        switch self {
-        case .userNeedsToAuthorize:
-            return AuthorizeController.created
-        default:
-           return UIViewController()
-        }
-    }
+struct UserSelectedRepository {
+    let repoName: String
+    let remoteURL: URL
+    let clonedURL: URL
 }
+
+struct UserState {
+    let oauth2Client: BitbucketOauth2
+    var userSelectedRepo: UserSelectedRepository?
+
+    init(with oauth2Client: BitbucketOauth2 = .shared) {
+        self.oauth2Client = oauth2Client
+    }
+
+}
+
 
 final class InitialController: UIViewController {
 
@@ -39,29 +40,46 @@ final class InitialController: UIViewController {
         }
     }
 
+    private var userEnviornment = UserState()
+
+    func computeCurrentState() -> State {
+        return OrgFlowCurrentState(userState: self.userEnviornment).current
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.state = OrgFlowController().currentState
+        self.state = computeCurrentState()
+        setupAccessTokenReceivedNotification()
+    }
+
+    private func setupAccessTokenReceivedNotification() {
+        NotificationCenter.default.addObserver(forName: userDidReceiveAccessTokenNotification, object: self, queue: .main) { notification in
+            self.state = self.computeCurrentState()
+        }
     }
 
 }
 
 
-struct OrgFlowController {
+extension InitialController {
 
-    private let cache: BitbucketCache
-
-    init(cache: BitbucketCache = BitbucketCache()) {
-        self.cache = cache
-    }
-
-    var currentState: State {
-        if cache.clientSecret == nil {
-            return .userNeedsToAuthorize
-        } else {
-            return .userIsAuthorizedButHasNotSelectedAnyRepo
+    func controller(for state: State) -> UIViewController{
+        switch state {
+        case .userNeedsToAuthorize:
+            return AuthorizeController.created
+        case .userIsAuthorizedButHasNotSelectedAnyRepo:
+            return LocateUserRepoController.create(with: self)
+        default:
+            return UIViewController()
         }
     }
 
+}
+
+extension InitialController: LocateUserRepoControllerDelegate {
+
+    func userDidSelectAndCloned(repo: Result<UserSelectedRepository>) {
+        self.userEnviornment.userSelectedRepo = repo.value
+    }
 
 }
