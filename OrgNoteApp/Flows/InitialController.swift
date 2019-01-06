@@ -33,12 +33,22 @@ final class InitialController: UIViewController {
     private var embeddedController: UIViewController?
     private var state: State! {
         willSet {
-            embeddedController.map(org_removeChildController)
+            if case .userWantsToViewNote? = newValue {
+                // We need to push on top of file selector
+                //FXIME:- is there a better way
+            } else {
+                embeddedController.map(org_removeChildController)
+            }
         }
 
         didSet {
-            embeddedController = controller(for: state)
-            org_addChildController(embeddedController!)
+            if case .userWantsToViewNote? = state {
+                (embeddedController as? UINavigationController)?.pushViewController(controller(for: state), animated: true)
+            } else {
+                embeddedController = controller(for: state)
+                org_addChildController(embeddedController!)
+            }
+
         }
     }
 
@@ -79,7 +89,11 @@ extension InitialController {
         case let .userIsAuthorizedAndHasSelectedRepo(repo: v):
             return RepoExploreCoordinatingController.created(with: self, userSelectedRepo: v)
         case let .userWantsToViewNote(file):
-            return UIViewController()
+            guard let fileContents = try? String(contentsOf: file.url), let orgFile = OrgParser.parse(fileContents) else {
+                fatalError("File \(file.name) at url \(file.url.path) cant be processed as ORG file")
+                return UIViewController()
+            }
+            return OrgListDriver(with: orgFile).controller
         }
     }
 
