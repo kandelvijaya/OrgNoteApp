@@ -15,28 +15,30 @@ public protocol OAuth2NetworkServiceProtocol {
 
 struct OAuthNetworkService: OAuth2NetworkServiceProtocol {
 
-    enum NetworkError: Error {
-        case unknown
-    }
-
     public func post(withRequest urlRequest: URLRequest) -> Future<Result<OAuth2AccessToken>> {
         return Future { aCompletion in
             let session = URLSession(configuration: .default)
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-                if error != nil {
-                    aCompletion?(.failure(error: error!))
-                } else if data != nil {
-                    guard let token = try? JSONDecoder().decode(OAuth2AccessToken.self, from: data!) else {
-                        aCompletion?(.failure(error: NetworkError.unknown))
-                        return
+                if let error = error {
+                    asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.networkFailed(with: error))) }
+                } else if let _ = response as? HTTPURLResponse, let data = data {
+                    do {
+                        let token = try JSONDecoder().decode(OAuth2AccessToken.self, from: data)
+                        asyncOnMain{ aCompletion?(.success(value: token)) }
+                    } catch {
+                        asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.dataConversionFailed(with: error))) }
                     }
-                    aCompletion?(.success(value: token))
+
                 } else {
-                    aCompletion?(.failure(error: NetworkError.unknown))
+                    asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.unknownNetworkError)) }
                 }
 
             }).resume()
         }
     }
 
+}
+
+func asyncOnMain(_ block: @escaping () -> Void) {
+    DispatchQueue.main.async(execute: block)
 }

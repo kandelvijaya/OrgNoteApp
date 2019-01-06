@@ -36,16 +36,22 @@ public protocol OAuth2: class {
     /// When successful, this will return AccessToken object
     /// STEP 2
     func askForAccessToken(with authorizationCode: String) -> Future<Result<OAuth2AccessToken>>
+    func askForAccessToken(with authorizationCode: String, onCompletion: @escaping ((OAuth2AccessToken?) -> Void))
 
-    /// Helper function to extract code and call into `askForAccessToken(with:)`
-    func askForAccessToken(withAuthorizationRedirectURL url: URL) -> Future<Result<OAuth2AccessToken>>
 
     /// Take a mutable request and inserts access token when possible
     /// - When the access token is expired; it should perform `refeshToken` and verifies the request
     /// - When the access token is not found; it should perform `askForAuthorization` and returns nil immediately
     ///   It is the client that has to call `verifiedRequest` after the authorization succeeds.
     /// - STEP 3
-    func verifyRequest(from request: NSMutableURLRequest) -> Bool
+    func verifyRequest(from request: NSMutableURLRequest) -> Result<NSMutableURLRequest>
+
+    /// Aks for accessToken with the use of previously stored refresh token
+    func refreshAccessToken() -> Future<Result<OAuth2AccessToken>>
+    func refreshAccessToken(_ onCompletion: @escaping ((OAuth2AccessToken?) -> Void))
+
+    // MARK:- utility
+    func extractAuthCode(from url: URL) -> String?
 
 }
 
@@ -79,14 +85,24 @@ public extension OAuth2 {
         }
     }
 
-    public func askForAccessToken(withAuthorizationRedirectURL url: URL) -> Future<Result<OAuth2AccessToken>> {
-        return askForAccessToken(with: extractAuthCode(from: url))
-    }
-
     public func askForAccessToken(with authorizationCode: String) -> Future<Result<OAuth2AccessToken>> {
         let request = tokenServerRequest(with: authorizationCode)
-        let Future = accessTokenNetworkService.post(withRequest: request)
-        return Future.then { response in
+        return fetchStoreAccessToken(with: request)
+    }
+
+    func askForAccessToken(with authorizationCode: String, onCompletion: @escaping ((OAuth2AccessToken?) -> Void)) {
+        askForAccessToken(with: authorizationCode).then { res in
+            if case let .success(v) = res {
+                onCompletion(v)
+            } else {
+                onCompletion(nil)
+            }
+        }.execute()
+    }
+
+    private func fetchStoreAccessToken(with request: URLRequest) -> Future<Result<OAuth2AccessToken>> {
+        let future = accessTokenNetworkService.post(withRequest: request)
+        return future.then { response in
             switch response {
             case let .success(token):
                 self.accessTokenStorageService.store(token: token, for: self.config)
@@ -97,15 +113,19 @@ public extension OAuth2 {
         }
     }
 
-    public func verifyRequest(from request: NSMutableURLRequest) -> Bool {
-        guard let accessToken = accessTokenStorageService.retrieve(tokenFor: config) else { return false }
+    public func verifyRequest(from request: NSMutableURLRequest) -> Result<NSMutableURLRequest> {
+        guard let accessToken = accessTokenStorageService.retrieve(tokenFor: config) else {
+            return .failure(error: OAuth2Error.accessTokenNotFound)
+        }
         let bearerToken = "Bearer \(accessToken.accessToken)"
         request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
-        return true
+        return .success(value: request)
     }
 
     // MARK:- Private helper functions
-    private func extractAuthCode(from url: URL) -> String {
+
+    /// checks if the url contains authorization code
+    public func extractAuthCode(from url: URL) -> String? {
         if var q = url.query {
             q.removeSubrange(q.range(of: "code=")!)
             return q
@@ -114,18 +134,50 @@ public extension OAuth2 {
             let code = str.split(separator: "?").first.map(String.init) ?? String(str)
             return code
         } else {
-            // Dont know where the code is or if there is a code
-            fatalError("Didnt find code in the url")
+            return nil
         }
     }
 
     private func tokenServerRequest(with authorizationCode: String) -> URLRequest {
+        var bodyData = "code=\(authorizationCode)&client_id=\(config.clientId)&redirect_uri=\(config.redirectURI.absoluteString)&grant_type=\(config.grantType)"
+        if let secret = config.clientSecret {
+            bodyData += "&client_secret=\(secret)"
+        }
+        return canonicalRequest(with: bodyData)
+    }
+
+    private func canonicalRequest(with bodyData: String) -> URLRequest {
         let mutableRequest = NSMutableURLRequest(url: config.tokenServer)
         mutableRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         mutableRequest.httpMethod = "POST"
-        let bodyData = "code=\(authorizationCode)&client_id=\(config.clientId)&redirect_uri=\(config.redirectURI.absoluteString)&grant_type=\(config.grantType)"
         mutableRequest.httpBody = bodyData.data(using: .utf8)!
         return mutableRequest as URLRequest
+    }
+
+    private func tokenServerRefreshTokenRequest(with refreshToken: String) -> URLRequest {
+        var bodyData = "client_id=\(config.clientId)&grant_type=refresh_token&refresh_token=\(refreshToken)"
+        if let secret = config.clientSecret {
+            bodyData += "&client_secret=\(secret)"
+        }
+        return canonicalRequest(with: bodyData)
+    }
+
+    public func refreshAccessToken() -> Future<Result<OAuth2AccessToken>> {
+        guard let refreshToken = accessTokenStorageService.retrieve(tokenFor: config)?.refreshToken else {
+            return Future<Result<OAuth2AccessToken>> { $0?(.failure(error: OAuth2Error.refreshTokenNotFound)) }
+        }
+        let request = tokenServerRefreshTokenRequest(with: refreshToken)
+        return fetchStoreAccessToken(with: request)
+    }
+
+    func refreshAccessToken(_ onCompletion: @escaping ((OAuth2AccessToken?) -> Void)) {
+        refreshAccessToken().then { res in
+            if case let .success(v) = res {
+                onCompletion(v)
+            } else {
+                onCompletion(nil)
+            }
+        }.execute()
     }
 
 }

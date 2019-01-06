@@ -11,6 +11,10 @@ public struct OAuth2Config: Codable {
     /// `client_id` is generated during registration of the client app
     public let clientId: String
 
+    /// `client_secret` is generated during registration of the client app
+    /// Some services require to pass a clientSecret along with id.
+    public let clientSecret: String?
+
     /// Refer to the provided scope url endpoint
     /// i.e. google developer
     public let scopes: [String]
@@ -40,12 +44,13 @@ public struct OAuth2Config: Codable {
 
 public extension OAuth2Config {
 
-    public init(clientId: String, scopes: [String], authServer: URL, tokenServer: URL, redirectURI: URL) {
+    public init(clientId: String, scopes: [String], authServer: URL, tokenServer: URL, redirectURI: URL, clientSecret: String? = nil) {
         self.clientId = clientId
         self.scopes = scopes
         self.authServer = authServer
         self.tokenServer = tokenServer
         self.redirectURI = redirectURI
+        self.clientSecret = clientSecret
         self.grantType = "authorization_code"
     }
 

@@ -23,6 +23,15 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
     override func viewDidLoad() {
         super.viewDidLoad()
         indicatorView.startAnimating()
+        BitbucketAPI().fetchRepositories().then { item in
+            print(item.error)
+            self.createAndEmbedRepositoryList(with: item.value?.values ?? [])
+        }.execute()
+    }
+
+    private func createAndEmbedRepositoryList(with repos: [BitbucketRepository.Value]) {
+        var driver = RepositoryDriver(with: repos)
+        org_addChildController(driver.controller)
     }
 
     static func create(with delegate: LocateUserRepoControllerDelegate) -> LocateUserRepoController {
@@ -32,3 +41,5 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
     }
 
 }
+
+

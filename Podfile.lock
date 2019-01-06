@@ -1,10 +1,10 @@
 PODS:
   - CommonCryptoModule (1.0.2)
   - FastDiff (1.1.1)
-  - Kekka (0.7.2)
-  - OAuthorize2 (0.1.5):
+  - Kekka (0.7.3)
+  - OAuthorize2 (0.3.5):
     - CommonCryptoModule
-    - Kekka (~> 0.6)
+    - Kekka
   - SwiftyParserCombinator (1.0)
 
 DEPENDENCIES:
@@ -24,8 +24,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
-  Kekka: 7d8afb09fca095ce2840613aa263f127349ee35b
-  OAuthorize2: 6c9e63f3fc5005ef846b141ab763059fee4758bc
+  Kekka: 5da34ad719887ec0e43e2b8e7383ef6f77b0bbda
+  OAuthorize2: bf01bee7d7283bed82f89fa206ec092bbfd29e06
   SwiftyParserCombinator: c1390cfc79ccd4f6cd1bdf9a7e482ddfd2d0c7b0
 
 PODFILE CHECKSUM: 92ab3d35878a55ea54a4b79a134c470f1d0733f1

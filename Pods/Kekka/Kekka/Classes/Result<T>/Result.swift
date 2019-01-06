@@ -68,14 +68,14 @@ public extension Result {
 
 public extension Result {
 
-    var value: T? {
+    public var value: T? {
         if case .success(value: let value) = self {
             return value
         }
         return nil
     }
 
-    var error: Error? {
+    public var error: Error? {
         if case .failure(error: let error) = self {
             return error
         }
@@ -86,14 +86,14 @@ public extension Result {
 
 public extension Result {
 
-    var succeeded: Bool {
+    public var succeeded: Bool {
         switch self {
             case .success: return true
             case .failure: return false
         }
     }
 
-    var failed: Bool {
+    public var failed: Bool {
         switch self {
             case .success: return false
             case .failure: return true

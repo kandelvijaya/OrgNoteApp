@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let authorizationCode = BitbucketOauth2.shared.extractAuthCode(from: url) {
             BitbucketOauth2.shared.askForAccessToken(with: authorizationCode).then { item in
-                NotificationCenter.default.post(name: userDidReceiveAccessTokenNotification, object: nil)
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: userDidReceiveAccessTokenNotification, object: self)
+                }
             }.execute()
         }
         return true 

@@ -11,7 +11,9 @@ import UIKit
 import Kekka
 
 final class RepositoryItemCell: UITableViewCell {}
-typealias RepoModel = String
+typealias RepoModel = BitbucketRepository.Value
+
+
 
 struct RepositoryDriver {
 
@@ -28,7 +30,7 @@ struct RepositoryDriver {
 
     func cellDescriptor(for model: RepoModel) -> ListCellDescriptor<RepoModel, UITableViewCell> {
         var desc = ListCellDescriptor<RepoModel, UITableViewCell>(model, identifier: cellIDentifier, cellClass: RepositoryItemCell.self) { cell in
-            cell.textLabel?.text = model
+            cell.textLabel?.text = model.full_name
         }
 
         desc.onSelect = {

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kekka
 
 struct UserSelectedRepository {
     let repoName: String
@@ -35,8 +36,8 @@ final class InitialController: UIViewController {
         }
 
         didSet {
-            embeddedController = state.associatedController
-            org_addChildController(state.associatedController)
+            embeddedController = controller(for: state)
+            org_addChildController(embeddedController!)
         }
     }
 
@@ -50,6 +51,10 @@ final class InitialController: UIViewController {
         super.viewDidLoad()
         self.state = computeCurrentState()
         setupAccessTokenReceivedNotification()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     private func setupAccessTokenReceivedNotification() {
@@ -79,6 +84,10 @@ extension InitialController {
 extension InitialController: LocateUserRepoControllerDelegate {
 
     func userDidSelectAndCloned(repo: Result<UserSelectedRepository>) {
+        if let error = repo.error {
+            //TODO:- a toast or notifiation
+            print(error)
+        }
         self.userEnviornment.userSelectedRepo = repo.value
     }
 

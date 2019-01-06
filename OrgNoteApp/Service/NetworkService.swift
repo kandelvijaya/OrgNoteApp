@@ -44,18 +44,22 @@ final class NetworkService: NetworkServiceProtocol {
     }
 
     private func get(_ path: URL) -> Future<Result<Data>> {
+        return dataTask(URLRequest(url: path))
+    }
+
+    func dataTask(_ request: URLRequest) -> Future<Result<Data>> {
         return Future { aCompletion in
-            URLSession.shared.dataTask(with: path, completionHandler: { (data, response, error) in
+            URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
                 if error != nil {
-                    aCompletion?(Result<Data>.failure(error: NetworkServiceError.error(error!)))
+                    asyncOnMain{ aCompletion?(Result<Data>.failure(error: NetworkServiceError.error(error!))) }
                     return
                 }
 
                 if data == nil {
-                    aCompletion?(.failure(error: NetworkServiceError.emptyResourceFound))
+                    asyncOnMain{ aCompletion?(.failure(error: NetworkServiceError.emptyResourceFound)) }
                     return
                 } else {
-                    aCompletion?(.success(value: data!))
+                    asyncOnMain{ aCompletion?(.success(value: data!)) }
                     return
                 }
             }).resume()
@@ -63,3 +67,4 @@ final class NetworkService: NetworkServiceProtocol {
     }
 
 }
+
