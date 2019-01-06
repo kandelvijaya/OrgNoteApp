@@ -54,8 +54,8 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         guard let client = userState?.oauth2Client, let accessToken = client.accessTokenStorageService.retrieve(tokenFor: client.config) else {
             fatalError("Access Token Not found")
         }
-        let cloneResult = BitbucketClone(with: accessToken.accessToken).clone(repoModel)
-        print(cloneResult)
+        let cloningResult = BitbucketClone(with: accessToken.accessToken).clone(repoModel)
+        delegate?.userDidSelectAndCloned(repo: cloningResult)
     }
 
 }

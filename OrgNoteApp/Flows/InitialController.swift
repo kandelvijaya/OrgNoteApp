@@ -19,6 +19,7 @@ struct UserSelectedRepository {
 struct UserState {
     let oauth2Client: BitbucketOauth2
     var userSelectedRepo: UserSelectedRepository?
+    var userSelectedFileInRepo: FileItem.File?
 
     init(with oauth2Client: BitbucketOauth2 = .shared) {
         self.oauth2Client = oauth2Client
@@ -75,7 +76,9 @@ extension InitialController {
             return AuthorizeController.created
         case .userIsAuthorizedButHasNotSelectedAnyRepo:
             return LocateUserRepoController.create(with: self, userState: self.userEnviornment)
-        default:
+        case let .userIsAuthorizedAndHasSelectedRepo(repo: v):
+            return RepoExploreCoordinatingController.created(with: self, userSelectedRepo: v)
+        case let .userWantsToViewNote(file):
             return UIViewController()
         }
     }
@@ -90,6 +93,32 @@ extension InitialController: LocateUserRepoControllerDelegate {
             print(error)
         }
         self.userEnviornment.userSelectedRepo = repo.value
+        self.state = computeCurrentState()
+    }
+
+}
+
+
+extension InitialController: RepoExploreCoordinatingControllerDelegate {
+
+    func userDidSelectOrgFile(_ file: FileItem.File) {
+        if isOrgModeFile(file) {
+            userEnviornment.userSelectedFileInRepo = file
+            self.state = computeCurrentState()
+        } else {
+            let oops = UIAlertController(title: "OOPS 😉", message: "We can only process ORG mode file. Please select org mode file to proceed.", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Got it!", style: .cancel) { action in
+
+            }
+            oops.addAction(okayAction)
+            self.present(oops, animated: true, completion: nil)
+        }
+
+    }
+
+    func isOrgModeFile(_ file: FileItem.File) -> Bool {
+        // FIXME:- Use also parser
+        return file.ext == "org"
     }
 
 }

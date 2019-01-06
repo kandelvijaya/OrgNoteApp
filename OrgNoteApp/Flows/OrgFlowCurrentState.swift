@@ -13,7 +13,7 @@ enum State {
     case userNeedsToAuthorize
     case userIsAuthorizedButHasNotSelectedAnyRepo
     case userIsAuthorizedAndHasSelectedRepo(repo: UserSelectedRepository)
-    case userWantsToViewNote(noteURL: URL)
+    case userWantsToViewNote(noteURL: FileItem.File)
 }
 
 struct OrgFlowCurrentState {
@@ -32,7 +32,11 @@ struct OrgFlowCurrentState {
             return .userIsAuthorizedButHasNotSelectedAnyRepo
         }
 
-        return .userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo)
+        guard let orgFile = userState.userSelectedFileInRepo else {
+            return .userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo)
+        }
+
+        return .userWantsToViewNote(noteURL: orgFile)
     }
 
 
