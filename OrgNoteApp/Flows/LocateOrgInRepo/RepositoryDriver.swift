@@ -19,24 +19,25 @@ struct RepositoryDriver {
 
     private let models: [RepoModel]
     private let cellIDentifier: String = "cell"
+    private let onSelect: (RepoModel) -> Void
 
     private var sectionDescs: [ListSectionDescriptor<RepoModel>] {
         return [self.models.map(cellDescriptor) |> ListSectionDescriptor.init(with:)]
     }
 
-    init(with models: [RepoModel]) {
+    init(with models: [RepoModel], onSelect: @escaping ((RepoModel) -> Void)) {
         self.models = models
+        self.onSelect = onSelect
     }
 
     func cellDescriptor(for model: RepoModel) -> ListCellDescriptor<RepoModel, UITableViewCell> {
         var desc = ListCellDescriptor<RepoModel, UITableViewCell>(model, identifier: cellIDentifier, cellClass: RepositoryItemCell.self) { cell in
             cell.textLabel?.text = model.full_name
         }
-
+        
         desc.onSelect = {
-            print(model)
+            self.onSelect(model)
         }
-
         return desc
     }
 

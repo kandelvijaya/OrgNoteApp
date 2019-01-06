@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 import Kekka
+import ObjectiveGit
 
 protocol LocateUserRepoControllerDelegate: class {
     func userDidSelectAndCloned(repo: Result<UserSelectedRepository>)
@@ -24,13 +25,20 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         super.viewDidLoad()
         indicatorView.startAnimating()
         BitbucketAPI().fetchRepositories().then { item in
-            print(item.error)
-            self.createAndEmbedRepositoryList(with: item.value?.values ?? [])
+            switch item {
+            case let .success(value: v):
+                self.createAndEmbedRepositoryList(with: v.values)
+            case let .failure(error: e):
+                // TODO:-
+                self.indicatorView.stopAnimating()
+                print(e)
+            }
+
         }.execute()
     }
 
     private func createAndEmbedRepositoryList(with repos: [BitbucketRepository.Value]) {
-        var driver = RepositoryDriver(with: repos)
+        var driver = RepositoryDriver(with: repos, onSelect: self.repositorySelected)
         org_addChildController(driver.controller)
     }
 
@@ -38,6 +46,10 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         let controller = created
         created.delegate = delegate
         return controller
+    }
+
+    private func repositorySelected(_ repoModel: BitbucketRepository.Value) {
+
     }
 
 }

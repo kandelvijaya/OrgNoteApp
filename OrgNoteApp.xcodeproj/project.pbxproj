@@ -16,6 +16,8 @@
 		2810BCBF21E17D10009067BF /* RefreshAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCBE21E17D10009067BF /* RefreshAccessTokenModel.swift */; };
 		2810BCC121E1881C009067BF /* BitbucketUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCC021E1881C009067BF /* BitbucketUser.swift */; };
 		2810BCC321E18C81009067BF /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCC221E18C81009067BF /* BitbucketRepository.swift */; };
+		2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; };
+		2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
@@ -99,6 +101,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */,
+				2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +117,7 @@
 		2810BCBE21E17D10009067BF /* RefreshAccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAccessTokenModel.swift; sourceTree = "<group>"; };
 		2810BCC021E1881C009067BF /* BitbucketUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketUser.swift; sourceTree = "<group>"; };
 		2810BCC221E18C81009067BF /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
+		2810BCC421E243E3009067BF /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectiveGit.framework; sourceTree = "<group>"; };
 		2814517420D349380006BBD7 /* OrgListDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverTests.swift; sourceTree = "<group>"; };
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
+				2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */,
 				1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +403,7 @@
 		28703D3B20A859C800DC8DBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2810BCC421E243E3009067BF /* ObjectiveGit.framework */,
 				CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */,
 				50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */,
 			);
@@ -1044,6 +1050,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1065,6 +1076,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
