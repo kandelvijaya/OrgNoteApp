@@ -20,6 +20,7 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
 
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     private weak var delegate: LocateUserRepoControllerDelegate?
+    private var userState: UserState?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +43,19 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         org_addChildController(driver.controller)
     }
 
-    static func create(with delegate: LocateUserRepoControllerDelegate) -> LocateUserRepoController {
+    static func create(with delegate: LocateUserRepoControllerDelegate, userState: UserState) -> LocateUserRepoController {
         let controller = created
-        created.delegate = delegate
+        controller.delegate = delegate
+        controller.userState = userState
         return controller
     }
 
     private func repositorySelected(_ repoModel: BitbucketRepository.Value) {
-
+        guard let client = userState?.oauth2Client, let accessToken = client.accessTokenStorageService.retrieve(tokenFor: client.config) else {
+            fatalError("Access Token Not found")
+        }
+        let cloneResult = BitbucketClone(with: accessToken.accessToken).clone(repoModel)
+        print(cloneResult)
     }
 
 }

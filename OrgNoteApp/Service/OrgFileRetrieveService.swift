@@ -38,7 +38,7 @@ final class OrgFileRetrieveService: OrgFileRetrieveServiceProtocol {
                 return Result.failure(error: ServiceError.localFileDoesnotExist) |> Future.init
             }
 
-            let parsed = doTry(try String(contentsOfFile: filePath)).flatMap { str -> Result<OrgFile> in
+            let parsed = doTry{ try String(contentsOfFile: filePath) }.flatMap { str -> Result<OrgFile> in
                 guard let orgFile = orgParser(str) else {
                     return ServiceError.localFileIsNotOrgFile |> Result.failure
                 }

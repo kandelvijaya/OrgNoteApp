@@ -9,7 +9,11 @@
 import Foundation
 import Kekka
 
-func doTry<T>(_ tryBlock: @autoclosure () throws -> T, elseBlock: ((Error) -> Error)? = nil ) -> Result<T> {
+func doTry<T>(_ tryBlock: () throws -> T) -> Result<T> {
+    return doTry(tryBlock, elseBlock: nil)
+}
+
+func doTry<T>(_ tryBlock: () throws -> T, elseBlock: ((Error) -> Error)? ) -> Result<T> {
     do {
         let result = try tryBlock()
         return result |> Result.success

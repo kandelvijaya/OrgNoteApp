@@ -11,7 +11,7 @@ import UIKit
 import Kekka
 
 struct UserSelectedRepository {
-    let repoName: String
+    let model: BitbucketRepository.Value
     let remoteURL: URL
     let clonedURL: URL
 }
@@ -58,6 +58,7 @@ final class InitialController: UIViewController {
     }
 
     private func setupAccessTokenReceivedNotification() {
+        // TODO:- figure out why this is not working.
         NotificationCenter.default.addObserver(forName: userDidReceiveAccessTokenNotification, object: self, queue: .main) { notification in
             self.state = self.computeCurrentState()
         }
@@ -73,7 +74,7 @@ extension InitialController {
         case .userNeedsToAuthorize:
             return AuthorizeController.created
         case .userIsAuthorizedButHasNotSelectedAnyRepo:
-            return LocateUserRepoController.create(with: self)
+            return LocateUserRepoController.create(with: self, userState: self.userEnviornment)
         default:
             return UIViewController()
         }
