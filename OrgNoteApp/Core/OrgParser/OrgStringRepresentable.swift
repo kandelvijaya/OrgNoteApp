@@ -22,6 +22,15 @@ extension Array: OrgStringRepresentable where Element == Outline {
 
 }
 
+extension OrgFile: OrgStringRepresentable {
+
+    var fileString: String {
+        return self.topComments.joined(separator: "\n") + self.outlines.fileString
+    }
+
+}
+
+
 
 extension Outline: OrgStringRepresentable {
 

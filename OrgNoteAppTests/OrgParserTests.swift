@@ -16,8 +16,8 @@ final class OrgParserTests: XCTestCase {
         let heading = "* This is a heading level 1"
         let output = OrgParser.parse(heading)
         XCTAssertNotNil(output)
-        XCTAssertEqual(output!.count, 1)
-        let thisOutline = output!.first!
+        XCTAssertEqual(output!.outlines.count, 1)
+        let thisOutline = output!.outlines.first!
         let expectedHeading = OutlineHeading(title: "This is a heading level 1", depth: 1)
         let expectedOutline = Outline(heading: expectedHeading, content: [])
         XCTAssertEqual(thisOutline, expectedOutline)
@@ -36,21 +36,21 @@ final class OrgParserTests: XCTestCase {
 
         let output = OrgParser.parse(fileContentBuffer)
         XCTAssertNotNil(output)
-        XCTAssertGreaterThan(output!.count, 0)
+        XCTAssertGreaterThan(output!.outlines.count, 0)
     }
 
     func test_whenMinDepthIsLevel2_thenFileIsParsed() {
         let orgRaw = "** This is second level heading."
         let parsed = OrgParser.parse(orgRaw)!
-        XCTAssertEqual(parsed.count, 1)
-        XCTAssertEqual(parsed.first!.heading.fileString, orgRaw)
+        XCTAssertEqual(parsed.outlines.count, 1)
+        XCTAssertEqual(parsed.outlines.first!.heading.fileString, orgRaw)
     }
 
     func test_whenDepth2ItemIsFirst_HasDepth4Items_thenItIsParsed() {
         let orgRaw = "** This is heading\n**** This is subheading\n**** This is next heading.\n** This is another heading at depth2"
         let parsed = OrgParser.parse(orgRaw)!
-        XCTAssertEqual(parsed.count, 2)
-        XCTAssertEqual(parsed[0].subItems.count, 2)
+        XCTAssertEqual(parsed.outlines.count, 2)
+        XCTAssertEqual(parsed.outlines[0].subItems.count, 2)
     }
 
     func test_whenFragmentedOrgNotesAreParsed_thenWePreserveTheOriginalOrdering() {
@@ -64,15 +64,15 @@ final class OrgParserTests: XCTestCase {
         """
 
         let parsed = OrgParser.parse(fragmented)!
-        XCTAssertEqual(parsed[0].subItems.count, 3)
-        XCTAssertEqual(parsed[0].subItems.first!.heading.fileString, "*** This is the outside living 3rd heading")
-        XCTAssertEqual(parsed.fileString, fragmented)
+        XCTAssertEqual(parsed.outlines[0].subItems.count, 3)
+        XCTAssertEqual(parsed.outlines[0].subItems.first!.heading.fileString, "*** This is the outside living 3rd heading")
+        XCTAssertEqual(parsed.outlines.fileString, fragmented)
     }
 
     func test_sanity() {
         let allExamples = Example.allCases
         for item in allExamples {
-            XCTAssertEqual(OrgParser.parse(item.rawValue)!.fileString, item.rawValue)
+            XCTAssertEqual(OrgParser.parse(item.rawValue)!.outlines.fileString, item.rawValue)
         }
     }
 
@@ -83,15 +83,40 @@ final class OrgParserTests: XCTestCase {
         * H1 Second
         """
         let orgfile = OrgParser.parse(example)!
-        XCTAssertEqual(orgfile.count, 2)
-        XCTAssertEqual(orgfile[0].subItems.count, 0)
+        XCTAssertEqual(orgfile.outlines.count, 2)
+        XCTAssertEqual(orgfile.outlines[0].subItems.count, 0)
         /// The above *H2 has leading spaces, which is not a valid Org-Mode heading but content
-        XCTAssertEqual(orgfile[0].content.first!.trimLeadingTrailingWhitespacesFromLine,"* H2")
+        XCTAssertEqual(orgfile.outlines[0].content.first!.trimLeadingTrailingWhitespacesFromLine,"* H2")
     }
 
     func test_whenSameLevel2ItemsCanBeParsed() {
         let child = "**** H4 \n**** H4 another" |> OrgParser.parse
-        XCTAssertEqual(child!.count, 2)
+        XCTAssertEqual(child!.outlines.count, 2)
+    }
+
+    func test_whenOrgNoteWithCommentsCanBeParsed() {
+        let orgRaw = """
+        #+This is a comment
+        #+This is second comment
+
+        * H1
+        ** H2
+        H2 Content
+        """
+
+        let parsed = OrgParser.parse(orgRaw)
+        XCTAssertEqual(parsed!.topComments.count, 2)
+        XCTAssertEqual(parsed!.outlines.fileString, """
+        * H1
+        ** H2
+        H2 Content
+        """)
+    }
+
+    func test_whenTwoHeadingsHaveSpaceBetweenThem_ItIsNotRespected() {
+        let rawOrg = "* Heading1 \n\n * H2"
+        let parsed = OrgParser.parse(rawOrg)
+        XCTAssertEqual(parsed!.outlines.fileString, rawOrg)
     }
 
 }

@@ -20,7 +20,7 @@ final class OrgFileOperationTests: XCTestCase {
     func test_givenEmptyOrgFile_insertAtRootWorks() {
         let emptyOrg = [Outline]()
         let outline = outlineText |> OrgParser.parse
-        let result = emptyOrg.addAtRoot(outline!.first!)
+        let result = emptyOrg.addAtRoot(outline!.outlines.first!)
         XCTAssertEqual(result.fileString, outlineText)
     }
 
@@ -28,13 +28,13 @@ final class OrgFileOperationTests: XCTestCase {
         let emptyOrg = [Outline]()
         let outline = outlineText |> OrgParser.parse
         let outline2 = outlineText2 |> OrgParser.parse
-        let result = emptyOrg.addAtRoot(outline!.first!)
-        let result2 = result.addAtRoot(outline2!.first!)
+        let result = emptyOrg.addAtRoot(outline!.outlines.first!)
+        let result2 = result.addAtRoot(outline2!.outlines.first!)
         XCTAssertEqual(result2.fileString, outlineText + "\n" + outlineText2)
     }
 
     func test_givenOrgFileWith1RootNode_insertionAsChildWorks() {
-        let root = (outlineText |> OrgParser.parse)!.first!
+        let root = (outlineText |> OrgParser.parse)!.outlines.first!
         let subNode = "** H2\nContent" |> outline
         let result = [Outline]().addAtRoot(root)
         let addedResult = result.add(subNode, childOf: root)
@@ -101,7 +101,7 @@ final class OrgFileOperationTests: XCTestCase {
     }
 
     private func outline(_ string: String) -> Outline {
-        return (string |> OrgParser.parse)!.first!
+        return (string |> OrgParser.parse)!.outlines.first!
     }
 
 

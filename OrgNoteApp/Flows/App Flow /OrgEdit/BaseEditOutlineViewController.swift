@@ -60,7 +60,7 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
         let contentText = contentTextView.text ?? ""
         let entireText = headingText + "\n" + contentText
         let orgf = entireText |> OrgParser.parse
-        return orgf?.first
+        return orgf?.outlines.first
     }
 
 

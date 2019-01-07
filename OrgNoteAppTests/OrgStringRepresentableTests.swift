@@ -59,7 +59,7 @@ final class OrgFileWriteToStringTests: XCTestCase {
                                 """
 
         let orgfile = OrgParser.parse(orgFileStringContents)!
-        let representedString = orgfile.fileString
+        let representedString = orgfile.outlines.fileString
         XCTAssertEqual(orgFileStringContents, representedString)
     }
 

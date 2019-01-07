@@ -9,9 +9,10 @@
 import Foundation
 import SwiftyParserCombinator
 
-
-typealias OrgFile = [Outline]
-
+struct OrgFile: Hashable {
+    let topComments: [String]
+    let outlines: [Outline]
+}
 
 struct OutlineHeading: Hashable {
 
@@ -38,7 +39,8 @@ struct Outline: Hashable {
 struct OrgParser {
 
     static func parse(_ contents: String) -> OrgFile? {
-        let parsed = orgParser(start: 1) |> many |> run(contents)
+        let parser = comments() ->>- (orgParser(start: 1) |> many) |>> { OrgFile(topComments: $0.0, outlines: $0.1) }
+        let parsed = parser |> run(contents)
         return parsed.value()?.0
     }
 
@@ -69,6 +71,15 @@ fileprivate func headingParser(depth: Int) -> Parser<OutlineHeading> {
     let p = (depthStars ->> (pchar(" ") |> many1)) ->>- (anyCharacterBesidesNewLine |> many1) ->> newLine
     let pH = p |>> { OutlineHeading(title: String($1), depth: $0.count) }
     return pH <?> "Org Heading"
+}
+
+fileprivate func comments() -> Parser<[String]> {
+    let commentLine = pstring("#+") ->>- (anyCharacterBesidesNewLine |> many1) ->> (newLine |> many)
+    let comments = commentLine |> many
+    let formatted = comments.map { lines in
+        return lines.map { "\($0.0)\(String($0.1))" }
+    }
+    return formatted
 }
 
 /// Run the parser Parser<U> unless the next stream is satisfied with Parser<T>

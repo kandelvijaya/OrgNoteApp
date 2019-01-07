@@ -9,6 +9,35 @@
 import Foundation
 import Kekka
 
+extension OrgFile {
+
+    func immediateParent(ofFirst firstMatching: Outline) -> Outline? {
+        return self.outlines.immediateParent(ofFirst: firstMatching)
+    }
+
+    func add(_ item: Outline, childOf: Outline) -> OrgFile {
+        let added = self.outlines.add(item, childOf: childOf)
+        return OrgFile(topComments: self.topComments, outlines: added)
+    }
+
+    func addAtRoot(_ item: Outline) -> OrgFile {
+        return OrgFile(topComments: self.topComments, outlines: self.outlines.addAtRoot(item))
+    }
+
+    func deleteRoot(_ item: Outline) -> OrgFile {
+        return OrgFile(topComments: self.topComments, outlines: self.outlines.deleteRoot(item))
+    }
+
+    func delete(_ item: Outline, childOf: Outline) -> OrgFile {
+        return OrgFile(topComments: self.topComments, outlines: self.outlines.delete(item, childOf: childOf))
+    }
+
+    func update(old item: Outline, new newItem: Outline, childOf parent: Outline?) -> OrgFile {
+        return OrgFile(topComments: self.topComments, outlines: self.outlines.update(old: item, new: newItem, childOf: parent))
+    }
+
+}
+
 /// TODO:- The complexity can be reduced by copying the struct to class first
 /// then convert back to stucts within the method body. Given searching is not needed. 
 extension Array where Element == Outline {
@@ -20,7 +49,7 @@ extension Array where Element == Outline {
     ///   - childOf: Parent Outline. This is for sanity
     /// - Returns: New OrgFile
     /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
-    func add(_ item: Outline, childOf: Outline) -> OrgFile {
+    func add(_ item: Outline, childOf: Outline) -> [Outline] {
         if item.heading.depth > childOf.heading.depth {
             return self.map{ $0.insert(item: item, asChildOf: childOf) }
         } else {
@@ -29,12 +58,12 @@ extension Array where Element == Outline {
     }
 
     /// appends at root
-    func addAtRoot(_ item: Outline) -> OrgFile {
+    func addAtRoot(_ item: Outline) -> [Outline] {
         return self + [item]
     }
 
     /// Simple filtering
-    func deleteRoot(_ item: Outline) -> OrgFile {
+    func deleteRoot(_ item: Outline) -> [Outline] {
         return self.filter { $0 != item }
     }
 
@@ -45,7 +74,7 @@ extension Array where Element == Outline {
     ///   - childOf: Parent Outline. This is for sanity
     /// - Returns: New OrgFile
     /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
-    func delete(_ item: Outline, childOf: Outline) -> OrgFile {
+    func delete(_ item: Outline, childOf: Outline) -> [Outline] {
         if item.heading.depth > childOf.heading.depth {
             return self.map{ $0.delete(item: item, childOf: childOf) }
         } else {
@@ -54,7 +83,7 @@ extension Array where Element == Outline {
     }
 
     /// - Complexity:- O(depthOfGraph*EachLevelWidth) kind of O(n^2)
-    func update(old item: Outline, new newItem: Outline, childOf parent: Outline?) -> OrgFile {
+    func update(old item: Outline, new newItem: Outline, childOf parent: Outline?) -> [Outline] {
         /// This is the case when top level item needs edit
         guard let parent = parent else {
             if let oldIndex = self.lastIndex(where: { $0 == item }) {

@@ -17,7 +17,7 @@ typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
 final class OrgListDriver {
 
     private var topLevelcellDescriptors: [AnyListCellDescriptor] {
-        return self.backingOrgModel.map(OutlineViewModel.init).map(self.cellDescriptor)
+        return self.backingOrgModel.outlines.map(OutlineViewModel.init).map(self.cellDescriptor)
     }
 
     // each top level cell is transformed to section
