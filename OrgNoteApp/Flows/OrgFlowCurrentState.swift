@@ -9,11 +9,10 @@
 import Foundation
 import OAuthorize2
 
-enum State {
+enum FlowState {
     case userNeedsToAuthorize
     case userIsAuthorizedButHasNotSelectedAnyRepo
     case userIsAuthorizedAndHasSelectedRepo(repo: UserSelectedRepository)
-    case userWantsToViewNote(noteURL: FileItem.File)
 }
 
 struct OrgFlowCurrentState {
@@ -24,7 +23,7 @@ struct OrgFlowCurrentState {
         self.userState = userState
     }
 
-    var current: State {
+    var current: FlowState {
         if userState.oauth2Client.isAuthorizationRequired() {
             return .userNeedsToAuthorize
         }
@@ -32,11 +31,7 @@ struct OrgFlowCurrentState {
             return .userIsAuthorizedButHasNotSelectedAnyRepo
         }
 
-        guard let orgFile = userState.userSelectedFileInRepo else {
-            return .userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo)
-        }
-
-        return .userWantsToViewNote(noteURL: orgFile)
+        return .userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo)
     }
 
 

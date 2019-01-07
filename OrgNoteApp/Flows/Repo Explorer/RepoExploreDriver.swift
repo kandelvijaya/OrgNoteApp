@@ -17,22 +17,21 @@ struct RepoExploreDriver {
 
     private let models: [FileItem]
     private let navController: UINavigationController
+    private let parent: FileItem?
 
     var onFileSelected: (FileItem.File) -> Void
 
     init(with items: [FileItem], parent: FileItem?, onNavigationController: UINavigationController,onFileSelected: @escaping (FileItem.File) -> Void) {
         self.navController = onNavigationController
+        self.parent = parent
         self.models = items
         self.onFileSelected = onFileSelected
-        onNavigationController.pushViewController(controller, animated: true)
-        if let parent = parent {
-            onNavigationController.title = parent.name
-        }
     }
 
-    private lazy var controller: UIViewController = {
+    lazy var controller: UIViewController = {
         let sectionDescs = [ self.models.map(self.cellDescriptor) |> ListSectionDescriptor.init ]
         let controller = ListViewController(with: sectionDescs, style: .plain)
+        controller.title = "\(parent?.name ?? "")"
         return controller
     }()
 
@@ -66,7 +65,9 @@ struct RepoExploreDriver {
     }
 
     private func push(_ items: [FileItem], from: FileItem) {
-        _ = RepoExploreDriver(with: items, parent: from, onNavigationController: navController, onFileSelected: onFileSelected)
+        var driver = RepoExploreDriver(with: items, parent: from, onNavigationController: navController, onFileSelected: onFileSelected)
+        let controller = driver.controller
+        navController.pushViewController(controller, animated: true)
     }
 
 

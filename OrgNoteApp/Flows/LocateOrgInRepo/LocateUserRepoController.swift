@@ -47,6 +47,7 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         let controller = created
         controller.delegate = delegate
         controller.userState = userState
+        controller.title = "Select notes repository"
         return controller
     }
 

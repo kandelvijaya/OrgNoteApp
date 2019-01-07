@@ -22,8 +22,8 @@ final class RepoExploreCoordinatingController: UIViewController, StoryboardAwake
         let controller = created
         controller.delegate = delegate
         controller.userSelectedRepo = userSelectedRepo
-        let navigationController = UINavigationController(rootViewController: controller)
-        return navigationController
+        controller.title = "select note from \(userSelectedRepo.model.full_name)"
+        return controller
     }
 
     override func viewDidLoad() {
@@ -31,7 +31,9 @@ final class RepoExploreCoordinatingController: UIViewController, StoryboardAwake
         let repoItem = FileItem.buildFileItem(from: self.userSelectedRepo)
         switch repoItem {
         case let .directory(dir):
-            let _ = RepoExploreDriver(with: dir.subItems, parent: repoItem, onNavigationController: self.navigationController!, onFileSelected: self.onFileSelected)
+            var driver = RepoExploreDriver(with: dir.subItems, parent: repoItem, onNavigationController: self.navigationController!, onFileSelected: self.onFileSelected)
+            let controller = driver.controller
+            org_addChildController(controller)
         default:
             assertionFailure("Expected Directory found file!")
         }

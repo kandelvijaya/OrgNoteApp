@@ -12,7 +12,7 @@ enum FileItem: Hashable {
 
     case file(File), directory(Directory)
 
-    struct File: Hashable {
+    struct File: Codable, Hashable {   // Codable required to store item 
         let url: URL
         let name: String
         let ext: String?

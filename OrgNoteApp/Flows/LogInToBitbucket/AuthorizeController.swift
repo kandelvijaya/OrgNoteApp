@@ -19,6 +19,12 @@ final class AuthorizeController: UIViewController, StoryboardAwaker {
         oauth.askForAuthorizationCodeIfNeeded()
     }
 
+    static func create() -> AuthorizeController {
+        let controller = created
+        controller.title = "Authorize with Bitbucket"
+        return controller
+    }
+
 
 
 }
