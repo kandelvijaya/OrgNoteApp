@@ -18,9 +18,11 @@ import FastDiff
 class ListViewController<T: Hashable>: UITableViewController {
 
     private(set) var sectionDescriptors: [ListSectionDescriptor<T>]
+    private let onExit: ClosedBlock
 
-    init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped) {
+    init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped, onExit: @escaping ClosedBlock) {
         self.sectionDescriptors = models
+        self.onExit = onExit
         super.init(style: style)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50
@@ -114,6 +116,11 @@ class ListViewController<T: Hashable>: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return sectionDescriptors[section].footerText
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        onExit()
     }
 
 }

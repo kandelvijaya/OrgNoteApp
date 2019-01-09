@@ -27,8 +27,12 @@ final class OrgListDriver {
 
     private var backingOrgModel: OrgFile
 
-    init(with orgModel: OrgFile) {
+    // report back the model onExit
+    private var onExit: (OrgFile) -> Void
+
+    init(with orgModel: OrgFile, onExit: @escaping (OrgFile) -> Void) {
         self.backingOrgModel = orgModel
+        self.onExit = onExit
     }
 
     private func update(with newModel: OrgFile) {
@@ -54,7 +58,13 @@ final class OrgListDriver {
         return ListSectionDescriptor(with: cellDescs)
     }
 
-    lazy var controller = EditableListController(with: sections)
+    lazy var controller: ListViewController<AnyHashable> = {
+        let temp = EditableListController(with: sections, onExit: { [weak self] in
+            guard let this = self else { return }
+            this.onExit(this.backingOrgModel)
+        })
+        return temp
+    }()
 
     func perfromAction(_ action: OutlineAction, on itemViewModel: OutlineViewModel) {
         let onCompletion = { [weak self] (newModel: OrgFile) in

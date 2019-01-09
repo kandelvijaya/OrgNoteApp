@@ -30,7 +30,7 @@ struct RepoExploreDriver {
 
     lazy var controller: UIViewController = {
         let sectionDescs = [ self.models.map(self.cellDescriptor) |> ListSectionDescriptor.init ]
-        let controller = ListViewController(with: sectionDescs, style: .plain)
+        let controller = ListViewController(with: sectionDescs, style: .plain, onExit: {})
         controller.title = "\(parent?.name ?? "")"
         return controller
     }()

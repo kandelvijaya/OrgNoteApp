@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Kekka
+import FastDiff
 
 
 final class FlowRoutinNavigationController: UINavigationController {
@@ -76,9 +77,31 @@ extension FlowRoutinNavigationController {
         guard let fileContents = try? String(contentsOf: file.url), let orgFile = OrgParser.parse(fileContents) else {
             fatalError("File \(file.name) at url \(file.url.path) cant be processed as ORG file")
         }
-        let controller = OrgListDriver(with: orgFile).controller
+        let controller = OrgListDriver(with: orgFile, onExit: { [weak self] newOrgFile in
+            if orgFile == newOrgFile {
+                // no changes
+            } else {
+                let newContent = newOrgFile.fileString
+                let writing = doTry { try newContent.write(to: file.url, atomically: true, encoding: .utf8) }
+                assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(file.url.path)")
+                self?.addAndCommit(file)
+            }
+        }).controller
         controller.title = "Viewing \(file.name)"
         return controller
+    }
+
+    private func addAndCommit(_ file: FileItem.File) {
+        guard let git = userEnviornment.userSelectedRepo.map({ Git(repoInfo: $0) }) else {
+            return
+        }
+        let result = git.addAll().flatMap { _ in
+            git.commit(with: "@synced From @app @\(NSDate().timeIntervalSince1970) @ \(file.name)")
+        }.flatMap { _ in
+            git.push()
+        }
+
+        print(result)
     }
 
 }

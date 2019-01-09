@@ -26,6 +26,7 @@
 		2810BCD421E2DB21009067BF /* FlowRoutingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */; };
 		2810BCD621E380CB009067BF /* DefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD521E380CB009067BF /* DefaultsStorage.swift */; };
 		2810BCD821E380F1009067BF /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD721E380F1009067BF /* UserState.swift */; };
+		2810BCDA21E39835009067BF /* GitInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD921E39835009067BF /* GitInteraction.swift */; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
@@ -133,6 +134,7 @@
 		2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRoutingNavigationController.swift; sourceTree = "<group>"; };
 		2810BCD521E380CB009067BF /* DefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorage.swift; sourceTree = "<group>"; };
 		2810BCD721E380F1009067BF /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
+		2810BCD921E39835009067BF /* GitInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInteraction.swift; sourceTree = "<group>"; };
 		2814517420D349380006BBD7 /* OrgListDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverTests.swift; sourceTree = "<group>"; };
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
@@ -482,7 +484,7 @@
 			children = (
 				2810BCCA21E2A969009067BF /* Repo Explorer */,
 				284C7D0521AB111900C0F290 /* Main.storyboard */,
-				28D22A5E21E00F3800ED3BEF /* SaveBackToRepo */,
+				28D22A5E21E00F3800ED3BEF /* Git Interaction */,
 				28D22A5D21E00F0800ED3BEF /* App Flow  */,
 				28D22A5C21E00EFB00ED3BEF /* LocateOrgInRepo */,
 				28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */,
@@ -508,7 +510,6 @@
 				2810BCB521E1663E009067BF /* RepositoryDriver.swift */,
 				2810BCB721E16A08009067BF /* LocateUserRepoController.swift */,
 				2810BCB921E16A13009067BF /* LocateUserRepoController.storyboard */,
-				2810BCC821E2466F009067BF /* BitbucketCloner.swift */,
 			);
 			path = LocateOrgInRepo;
 			sourceTree = "<group>";
@@ -525,11 +526,13 @@
 			path = "App Flow ";
 			sourceTree = "<group>";
 		};
-		28D22A5E21E00F3800ED3BEF /* SaveBackToRepo */ = {
+		28D22A5E21E00F3800ED3BEF /* Git Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				2810BCC821E2466F009067BF /* BitbucketCloner.swift */,
+				2810BCD921E39835009067BF /* GitInteraction.swift */,
 			);
-			path = SaveBackToRepo;
+			path = "Git Interaction";
 			sourceTree = "<group>";
 		};
 		28D22A6721E0144200ED3BEF /* StoryboardAwaker */ = {
@@ -834,6 +837,7 @@
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				2810BCBF21E17D10009067BF /* RefreshAccessTokenModel.swift in Sources */,
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
+				2810BCDA21E39835009067BF /* GitInteraction.swift in Sources */,
 				281BA97421C9006E00319B0A /* OrgFileOperation.swift in Sources */,
 				285F42A721D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift in Sources */,
 				28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */,

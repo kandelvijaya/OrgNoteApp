@@ -48,7 +48,7 @@ final class OrgViewViewController: UIViewController {
     }
 
     private func embedViewVC(with model: OrgFile) {
-        let vc = OrgListDriver(with: model).controller
+        let vc = OrgListDriver(with: model, onExit: {_ in }).controller
         viewVC = vc
         embed(controller: vc, in: showView)
     }
