@@ -9,6 +9,17 @@
 import UIKit
 import FastDiff
 
+struct ListActionHandler {
+
+    var onExit: ClosedBlock?
+    var onRefreshContents: ClosedBlock?
+
+    fileprivate static func empty() -> ListActionHandler {
+        return ListActionHandler(onExit: nil, onRefreshContents: nil)
+    }
+
+}
+
 /// A generic table view controller.
 /// A table view can contain different cells in a section and
 /// different kinds of sections. This property is acheived by
@@ -18,11 +29,11 @@ import FastDiff
 class ListViewController<T: Hashable>: UITableViewController {
 
     private(set) var sectionDescriptors: [ListSectionDescriptor<T>]
-    private let onExit: ClosedBlock
+    private let handlers: ListActionHandler
 
-    init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped, onExit: @escaping ClosedBlock) {
+    init(with models: [ListSectionDescriptor<T>], style: UITableViewStyle = .grouped, actionsHandler: ListActionHandler = .empty()) {
         self.sectionDescriptors = models
-        self.onExit = onExit
+        self.handlers = actionsHandler
         super.init(style: style)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50
@@ -120,7 +131,21 @@ class ListViewController<T: Hashable>: UITableViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        onExit()
+        handlers.onExit?()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if handlers.onRefreshContents != nil {
+            self.refreshControl = UIRefreshControl()
+            self.refreshControl?.tintColor = .purple
+            self.refreshControl?.addTarget(self, action: #selector(refreshContents), for: UIControlEvents.valueChanged)
+        }
+    }
+
+    @objc private func refreshContents(_ sender: Any) {
+        self.handlers.onRefreshContents?()
+        self.refreshControl?.endRefreshing()
     }
 
 }

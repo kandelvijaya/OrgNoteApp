@@ -94,10 +94,12 @@ final class BitbucketAPI: BitbucketAPIProtocol {
     private func dataTask(_ request: URLRequest) -> Future<Result<Data>> {
         return NetworkService().dataTask(request).then { item  in
             return item.flatMap { value -> Result<Data> in
-                if let _ = try? JSONDecoder().decode(RefreshAccessTokenModel.self, from: value) {
+                if let _ = doTry({ try JSONDecoder().decode(RefreshAccessTokenModel.self, from: value) }).value {
                     return Result<Data>.failure(error: APIError.requireRefreshAccessToken)
+                } else {
+                    // is not asking for access token refresh. must be other value
+                    return Result<Data>.success(value: value)
                 }
-                return Result<Data>.success(value: value)
             }
         }
     }

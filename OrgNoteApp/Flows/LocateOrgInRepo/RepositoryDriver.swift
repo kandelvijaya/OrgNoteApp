@@ -41,6 +41,6 @@ struct RepositoryDriver {
         return desc
     }
 
-    lazy var controller: ListViewController = ListViewController(with: self.sectionDescs, style: .plain, onExit: {})
+    lazy var controller: ListViewController = ListViewController(with: self.sectionDescs, style: .plain)
 
 }

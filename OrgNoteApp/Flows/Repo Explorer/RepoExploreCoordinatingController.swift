@@ -11,6 +11,7 @@ import UIKit
 
 protocol RepoExploreCoordinatingControllerDelegate: class {
     func userDidSelectOrgFile(_ file: FileItem.File)
+    func userWantsToRefreshRepoContents(for repo: UserSelectedRepository)
 }
 
 final class RepoExploreCoordinatingController: UIViewController, StoryboardAwaker {
@@ -31,7 +32,7 @@ final class RepoExploreCoordinatingController: UIViewController, StoryboardAwake
         let repoItem = FileItem.buildFileItem(from: self.userSelectedRepo)
         switch repoItem {
         case let .directory(dir):
-            var driver = RepoExploreDriver(with: dir.subItems, parent: repoItem, onNavigationController: self.navigationController!, onFileSelected: self.onFileSelected)
+            var driver = RepoExploreDriver(with: dir.subItems, parent: repoItem, onNavigationController: navigationController!, onFileSelected: onFileSelected, onRefreshRepo: onRefreshContents)
             let controller = driver.controller
             org_addChildController(controller)
         default:
@@ -41,6 +42,10 @@ final class RepoExploreCoordinatingController: UIViewController, StoryboardAwake
 
     private func onFileSelected(_ item: FileItem.File) {
         delegate?.userDidSelectOrgFile(item)
+    }
+
+    private func onRefreshContents() {
+        delegate?.userWantsToRefreshRepoContents(for: self.userSelectedRepo)
     }
 
 }

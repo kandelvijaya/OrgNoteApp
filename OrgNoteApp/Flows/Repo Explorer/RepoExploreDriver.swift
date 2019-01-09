@@ -19,18 +19,21 @@ struct RepoExploreDriver {
     private let navController: UINavigationController
     private let parent: FileItem?
 
-    var onFileSelected: (FileItem.File) -> Void
+    private let onFileSelected: (FileItem.File) -> Void
+    private let onRefreshRepo: ClosedBlock?
 
-    init(with items: [FileItem], parent: FileItem?, onNavigationController: UINavigationController,onFileSelected: @escaping (FileItem.File) -> Void) {
+    init(with items: [FileItem], parent: FileItem?, onNavigationController: UINavigationController, onFileSelected: @escaping (FileItem.File) -> Void, onRefreshRepo: ClosedBlock?) {
         self.navController = onNavigationController
         self.parent = parent
         self.models = items
         self.onFileSelected = onFileSelected
+        self.onRefreshRepo = onRefreshRepo
     }
 
     lazy var controller: UIViewController = {
+        let actionsHandler = ListActionHandler(onExit: nil, onRefreshContents: self.onRefreshRepo)
         let sectionDescs = [ self.models.map(self.cellDescriptor) |> ListSectionDescriptor.init ]
-        let controller = ListViewController(with: sectionDescs, style: .plain, onExit: {})
+        let controller = ListViewController(with: sectionDescs, style: .plain, actionsHandler: actionsHandler)
         controller.title = "\(parent?.name ?? "")"
         return controller
     }()
@@ -65,7 +68,8 @@ struct RepoExploreDriver {
     }
 
     private func push(_ items: [FileItem], from: FileItem) {
-        var driver = RepoExploreDriver(with: items, parent: from, onNavigationController: navController, onFileSelected: onFileSelected)
+        let refreshRepo = self.parent == nil ? onRefreshRepo : nil  // allow refresh on main dir only
+        var driver = RepoExploreDriver(with: items, parent: from, onNavigationController: navController, onFileSelected: onFileSelected, onRefreshRepo: refreshRepo)
         let controller = driver.controller
         navController.pushViewController(controller, animated: true)
     }

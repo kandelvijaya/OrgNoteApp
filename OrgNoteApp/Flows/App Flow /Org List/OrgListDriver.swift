@@ -59,10 +59,11 @@ final class OrgListDriver {
     }
 
     lazy var controller: ListViewController<AnyHashable> = {
-        let temp = EditableListController(with: sections, onExit: { [weak self] in
+        let actionsHandler = ListActionHandler(onExit: { [weak self] in
             guard let this = self else { return }
             this.onExit(this.backingOrgModel)
-        })
+        }, onRefreshContents: nil)
+        let temp = EditableListController(with: sections, actionsHandler: actionsHandler)
         return temp
     }()
 

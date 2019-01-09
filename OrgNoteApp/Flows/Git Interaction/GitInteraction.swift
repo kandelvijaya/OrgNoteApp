@@ -98,6 +98,22 @@ struct Git {
         }
     }
 
+    func pull() -> Result<Affirmitive>{
+        do {
+            let repo = try GTRepository(url: self.repoInfo.clonedURL)
+            let branch = try repo.currentBranch()
+
+            guard let remoteName = try repo.remoteNames().first else {
+                return .failure(error: GitInteractionError.remoteDoesNotExist)
+            }
+            let remote = try GTRemote(name: remoteName, in: repo)
+            try repo.pull(branch, from: remote, withOptions: [:], progress: nil)
+            return .success(value: .affirm)
+        } catch {
+            return .failure(error: error)
+        }
+    }
+
     func stash() -> Result<Affirmitive> {
         return .failure(error: NSError(domain: "git interaction to  be implemented", code: 123, userInfo: nil))
     }

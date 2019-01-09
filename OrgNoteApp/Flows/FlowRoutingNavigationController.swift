@@ -136,6 +136,19 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
 
     }
 
+    func userWantsToRefreshRepoContents(for repo: UserSelectedRepository) {
+        let git = Git(repoInfo: repo)
+        let success = git.pull().value != nil
+        if success {
+            // we know its going to be the only one on top
+            self.navigationController?.popViewController(animated: true)
+            self.state = computeCurrentState()
+        } else {
+            // no-op. show error
+            print("cant pull to refresh for given repo")
+        }
+    }
+
     func isOrgModeFile(_ file: FileItem.File) -> Bool {
         // FIXME:- Use also parser
         return file.ext == "org"
