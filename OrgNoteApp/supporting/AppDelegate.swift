@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-
         if let authorizationCode = BitbucketOauth2.shared.extractAuthCode(from: url) {
             BitbucketOauth2.shared.askForAccessToken(with: authorizationCode).then { item in
                 DispatchQueue.main.async {

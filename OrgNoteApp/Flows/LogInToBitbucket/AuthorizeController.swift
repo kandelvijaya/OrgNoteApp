@@ -11,21 +11,26 @@ import UIKit
 import OAuthorize2
 
 final class AuthorizeController: UIViewController, StoryboardAwaker {
+
+    private var onDone: ClosedBlock!
+
+    static func created(_ onAuthorized: @escaping ClosedBlock) -> AuthorizeController {
+        let controller = created
+        controller.onDone = onAuthorized
+        controller.title = "Authorize to proceed"
+        return controller
+    }
     
     @IBOutlet weak var authorizeButton: UIButton!
 
     @IBAction func authorizeUser(_ sender: Any) {
         let oauth = BitbucketOauth2.shared
-        oauth.askForAuthorizationCodeIfNeeded()
+        if oauth.isAuthorizationRequired() {
+            oauth.askForAuthorizationCodeIfNeeded()
+        } else {
+            onDone()
+        }
     }
-
-    static func create() -> AuthorizeController {
-        let controller = created
-        controller.title = "Authorize with Bitbucket"
-        return controller
-    }
-
-
 
 }
 

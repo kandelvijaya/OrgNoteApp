@@ -17,10 +17,6 @@ final class FlowRoutinNavigationController: UINavigationController {
     private var embeddedController: UIViewController?
 
     private var state: FlowState! {
-        willSet {
-            self.popViewController(animated: true)
-        }
-
         didSet {
             self.pushViewController(controller(for: state), animated: true)
         }
@@ -52,7 +48,7 @@ final class FlowRoutinNavigationController: UINavigationController {
 
     private func setupAccessTokenReceivedNotification() {
         // TODO:- figure out why this is not working.
-        NotificationCenter.default.addObserver(forName: userDidReceiveAccessTokenNotification, object: self, queue: .main) { notification in
+        NotificationCenter.default.addObserver(forName: userDidReceiveAccessTokenNotification, object: nil, queue: .main) { notification in
             self.state = self.computeCurrentState()
         }
     }
@@ -65,7 +61,9 @@ extension FlowRoutinNavigationController {
     func controller(for state: FlowState) -> UIViewController{
         switch state {
         case .userNeedsToAuthorize:
-            return AuthorizeController.create()
+            return AuthorizeController.created { [weak self] in
+                self?.state = self?.computeCurrentState()
+            }
         case .userIsAuthorizedButHasNotSelectedAnyRepo:
             return LocateUserRepoController.create(with: self, userState: self.userEnviornment)
         case let .userIsAuthorizedAndHasSelectedRepo(repo: v):
