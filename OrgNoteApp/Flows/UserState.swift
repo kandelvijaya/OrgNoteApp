@@ -22,8 +22,39 @@ struct UserState {
     private let userSelectedRepoKey = "userSelectedRepoKey"
     private let userSelectedFileKey = "userSelectedFileKey"
 
-    var userSelectedRepo: UserSelectedRepository?
-    var userSelectedFileInRepo: FileItem.File?
+    private var _backingInSyncedSelectedRepo: UserSelectedRepository?
+
+    var userSelectedRepo: UserSelectedRepository? {
+        set {
+            if let nv = newValue {
+                storage.save(item: nv, for: userSelectedRepoKey)
+            }
+        }
+
+        get {
+            let repo: UserSelectedRepository? = storage.retrieve(for: userSelectedRepoKey)
+            if let r = repo {
+                let properRemote = oauth2Client.repoUrlRepacingNewAccessToken(r.remoteURL)
+                let properSelectedRepo = UserSelectedRepository(model: r.model, remoteURL: properRemote, clonedURL: r.clonedURL)
+                return properSelectedRepo
+            } else {
+                return nil
+            }
+        }
+    }
+
+    var userSelectedFileInRepo: FileItem.File? {
+        set {
+            if let nv = newValue {
+                storage.save(item: nv, for: userSelectedFileKey)
+            }
+        }
+
+        get {
+            let ret: FileItem.File? = storage.retrieve(for: userSelectedFileKey)
+            return ret
+        }
+    }
 
     init(with oauth2Client: BitbucketOauth2 = .shared, storage: StorageProtocol = DefaultsStorage()) {
         self.oauth2Client = oauth2Client

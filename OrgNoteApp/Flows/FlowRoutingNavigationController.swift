@@ -84,14 +84,14 @@ extension FlowRoutinNavigationController {
                 let newContent = newOrgFile.fileString
                 let writing = doTry { try newContent.write(to: file.url, atomically: true, encoding: .utf8) }
                 assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(file.url.path)")
-                self?.addAndCommit(file)
+                self?.addCommitPush(file)
             }
         }).controller
         controller.title = "Viewing \(file.name)"
         return controller
     }
 
-    private func addAndCommit(_ file: FileItem.File) {
+    private func addCommitPush(_ file: FileItem.File) {
         guard let git = userEnviornment.userSelectedRepo.map({ Git(repoInfo: $0) }) else {
             return
         }

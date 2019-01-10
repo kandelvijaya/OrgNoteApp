@@ -86,12 +86,9 @@ struct Git {
             let repo = try GTRepository(url: self.repoInfo.clonedURL)
             let branch = try repo.currentBranch()
 
-            guard let remoteName = try repo.remoteNames().first else {
-                return .failure(error: GitInteractionError.remoteDoesNotExist)
-            }
-            let remote = try GTRemote(name: remoteName, in: repo)
+            let remote = try GTRemote(name: "origin", in: repo)
+            try remote.updateURLString(self.repoInfo.remoteURL.absoluteString)
             try repo.push(branch, to: remote, withOptions: [:], progress: nil)
-            //TODO:- check for network finish status
             return .success(value: .affirm)
         } catch {
             return .failure(error: error)
@@ -103,10 +100,8 @@ struct Git {
             let repo = try GTRepository(url: self.repoInfo.clonedURL)
             let branch = try repo.currentBranch()
 
-            guard let remoteName = try repo.remoteNames().first else {
-                return .failure(error: GitInteractionError.remoteDoesNotExist)
-            }
-            let remote = try GTRemote(name: remoteName, in: repo)
+            let remote = try GTRemote(name: "origin", in: repo)
+            try remote.updateURLString(self.repoInfo.remoteURL.absoluteString)
             try repo.pull(branch, from: remote, withOptions: [:], progress: nil)
             return .success(value: .affirm)
         } catch {

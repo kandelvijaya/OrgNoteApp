@@ -41,5 +41,15 @@ final class BitbucketOauth2: OAuth2 {
         return BitbucketOauth2Config.config(withId: clientKey, clientSecret: clientSecret, scopes: [], redirectURI: redirectURI)
     }
 
+    func repoUrlRepacingNewAccessToken(_ url: URL) -> URL {
+        if let token = self.accessTokenStorageService.retrieve(tokenFor: self.config)?.accessToken,
+            let compoments = NSURLComponents(url: url, resolvingAgainstBaseURL: false) {
+            compoments.password = token
+            return compoments.url ?? url
+        } else {
+            return url
+        }
+    }
+
 
 }

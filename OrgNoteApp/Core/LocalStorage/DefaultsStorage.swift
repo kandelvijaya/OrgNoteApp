@@ -34,8 +34,6 @@ struct DefaultsStorage: StorageProtocol {
         } else {
             return nil
         }
-
-
     }
 
 }
