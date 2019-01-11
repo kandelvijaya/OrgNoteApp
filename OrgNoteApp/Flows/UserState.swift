@@ -11,7 +11,20 @@ import Foundation
 struct UserSelectedRepository: Codable {
     let model: BitbucketRepository.Value
     let remoteURL: URL
-    let clonedURL: URL
+    private let clonedFolderName: String
+
+    init(model: BitbucketRepository.Value, remoteURL: URL, folderName: String) {
+        self.model = model
+        self.remoteURL = remoteURL
+        self.clonedFolderName = folderName
+    }
+
+    // Absolute path of documents dir changes on every app relaunch. iOS8+
+    // Hence computed property
+    var clonedURL: URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent(clonedFolderName, isDirectory: true)
+    }
+    
 }
 
 
@@ -35,7 +48,7 @@ struct UserState {
             let repo: UserSelectedRepository? = storage.retrieve(for: userSelectedRepoKey)
             if let r = repo {
                 let properRemote = oauth2Client.repoUrlRepacingNewAccessToken(r.remoteURL)
-                let properSelectedRepo = UserSelectedRepository(model: r.model, remoteURL: properRemote, clonedURL: r.clonedURL)
+                let properSelectedRepo = UserSelectedRepository(model: r.model, remoteURL: properRemote, folderName: r.clonedURL.lastPathComponent)
                 return properSelectedRepo
             } else {
                 return nil

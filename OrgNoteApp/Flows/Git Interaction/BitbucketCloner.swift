@@ -29,7 +29,7 @@ struct BitbucketClone {
 
     func clone(_ repoModel: BitbucketRepository.Value) -> Result<UserSelectedRepository> {
         return remoteToeknizedURL(for: repoModel).flatMap(targetDirectoryURLToClone).flatMap(clone).map { item in
-            return UserSelectedRepository(model: repoModel, remoteURL: item.remote, clonedURL: item.local)
+            return UserSelectedRepository(model: repoModel, remoteURL: item.remote, folderName: item.local.lastPathComponent)
         }
     }
 
