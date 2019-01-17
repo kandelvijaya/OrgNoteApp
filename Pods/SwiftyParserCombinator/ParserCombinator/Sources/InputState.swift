@@ -54,8 +54,15 @@ extension InputState {
     }
     
     public init(from str: String) {
-        let l = str.split(separator: Character("\n")).map(String.init)
-        lines = l
+        var l = str.split(separator: "\n", omittingEmptySubsequences: false).map {
+            return $0.isEmpty ? "" : String($0)
+        }
+        if str.hasSuffix("\n") {
+            // for each n separator there are n+1 splits. We dont need the last one.
+            // If we have a trailing "\n", we dont need the empty subsequence after the end.
+            _ = l.popLast()
+        }
+        lines = Array(l)
         position = ParserPosition()
     }
     
