@@ -39,8 +39,9 @@ extension Outline: OrgStringRepresentable {
     var fileString: String {
         let newLine = "\n"
         let headingText = self.heading.fileString
-        let contentText = content.joined(separator: newLine)
-        let contentTextAligned = contentText.isEmpty ? "" : newLine + contentText
+        let contentText = content.map { return $0.isEmpty ? "\n" : "\($0)\n"  }.joined()
+        let contentTextRemovingLastNewLine = contentText.hasSuffix(newLine) ? String(contentText.dropLast()): contentText
+        let contentTextAligned = contentText.isEmpty ? "" : newLine + contentTextRemovingLastNewLine
         let subItemsText = subItems.fileString
         let subItemsTextAligned = subItemsText.isEmpty ? "" : newLine + subItemsText
         return headingText + contentTextAligned + subItemsTextAligned

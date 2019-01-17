@@ -39,6 +39,9 @@
 		281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA97021C7EB5500319B0A /* EditableGenericList.swift */; };
 		281BA97421C9006E00319B0A /* OrgFileOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA97321C9006E00319B0A /* OrgFileOperation.swift */; };
 		281BA97621C9007900319B0A /* OrgFileOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA97521C9007900319B0A /* OrgFileOperationTests.swift */; };
+		28295E5E21F0E0C500CD11CB /* OrgParserFlattened.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */; };
+		28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5F21F0E37900CD11CB /* GraphContainer.swift */; };
+		28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6121F0E4E800CD11CB /* OrgFile.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
@@ -147,6 +150,9 @@
 		281BA97021C7EB5500319B0A /* EditableGenericList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableGenericList.swift; sourceTree = "<group>"; };
 		281BA97321C9006E00319B0A /* OrgFileOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileOperation.swift; sourceTree = "<group>"; };
 		281BA97521C9007900319B0A /* OrgFileOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileOperationTests.swift; sourceTree = "<group>"; };
+		28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserFlattened.swift; sourceTree = "<group>"; };
+		28295E5F21F0E37900CD11CB /* GraphContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphContainer.swift; sourceTree = "<group>"; };
+		28295E6121F0E4E800CD11CB /* OrgFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFile.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
@@ -442,8 +448,11 @@
 			isa = PBXGroup;
 			children = (
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
+				28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */,
 				281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */,
 				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
+				28295E5F21F0E37900CD11CB /* GraphContainer.swift */,
+				28295E6121F0E4E800CD11CB /* OrgFile.swift */,
 			);
 			path = OrgParser;
 			sourceTree = "<group>";
@@ -825,6 +834,7 @@
 				285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
+				28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */,
 				28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */,
 				2810BCB621E1663E009067BF /* RepositoryDriver.swift in Sources */,
 				285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */,
@@ -856,6 +866,8 @@
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
 				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */,
+				28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */,
+				28295E5E21F0E0C500CD11CB /* OrgParserFlattened.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				2810BCD821E380F1009067BF /* UserState.swift in Sources */,
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,

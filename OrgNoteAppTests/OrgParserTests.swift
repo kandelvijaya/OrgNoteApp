@@ -128,16 +128,17 @@ final class OrgParserTests: XCTestCase {
 
     func test_whenOutlineWithSpaceAreParsed_thenNewLinesAreRespected() {
         let raw = "Hello there \n\nHow are you?"
-        let parsed = contentParser() |> SwiftyParserCombinator.run(raw)
+        let parsed = OrgParser().contentParser() |> SwiftyParserCombinator.run(raw)
         let output = parsed.value()!.0
         XCTAssertEqual(output, ["Hello there ", "", "How are you?"])
     }
 
-    func test_whenHeadingHasEmptyContent_thenItIsRespected() {
+    func test_when2headingHaveLineBetweeenThem_thisLineIsRespected() {
         let heading =
         """
         * H1
 
+        * H3
         """
         let parsed = OrgParser.parse(heading)
         XCTAssertEqual(parsed!.outlines.first!.content, [""])
