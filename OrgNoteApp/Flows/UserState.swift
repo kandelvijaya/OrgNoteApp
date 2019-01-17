@@ -9,13 +9,14 @@
 import Foundation
 
 struct UserSelectedRepository: Codable {
+
     let model: BitbucketRepository.Value
-    let remoteURL: URL
+    let _remoteURL: URL
     private let clonedFolderName: String
 
     init(model: BitbucketRepository.Value, remoteURL: URL, folderName: String) {
         self.model = model
-        self.remoteURL = remoteURL
+        self._remoteURL = remoteURL
         self.clonedFolderName = folderName
     }
 
@@ -23,6 +24,10 @@ struct UserSelectedRepository: Codable {
     // Hence computed property
     var clonedURL: URL {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent(clonedFolderName, isDirectory: true)
+    }
+
+    func remote(updatedWithOAuthClient oauth2: BitbucketOauth2) -> URL {
+        return oauth2.repoUrlRepacingNewAccessToken(self._remoteURL)
     }
     
 }
@@ -47,7 +52,7 @@ struct UserState {
         get {
             let repo: UserSelectedRepository? = storage.retrieve(for: userSelectedRepoKey)
             if let r = repo {
-                let properRemote = oauth2Client.repoUrlRepacingNewAccessToken(r.remoteURL)
+                let properRemote = oauth2Client.repoUrlRepacingNewAccessToken(r._remoteURL)
                 let properSelectedRepo = UserSelectedRepository(model: r.model, remoteURL: properRemote, folderName: r.clonedURL.lastPathComponent)
                 return properSelectedRepo
             } else {
