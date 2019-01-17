@@ -34,5 +34,22 @@ struct OrgFlowCurrentState {
         return .userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo)
     }
 
+    var allStatesInOrder: [FlowState] {
+        var accumulator: [FlowState] = []
+
+        accumulator.append(.userNeedsToAuthorize)
+        if userState.oauth2Client.isAuthorizationRequired() {
+            return accumulator
+        }
+
+        accumulator.append(.userIsAuthorizedButHasNotSelectedAnyRepo)
+        guard let selectedRepo = userState.userSelectedRepo else {
+            return accumulator
+        }
+
+        accumulator.append(.userIsAuthorizedAndHasSelectedRepo(repo: selectedRepo))
+        return accumulator
+    }
+
 
 }

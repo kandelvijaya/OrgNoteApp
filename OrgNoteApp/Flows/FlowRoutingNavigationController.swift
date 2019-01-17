@@ -26,19 +26,21 @@ final class FlowRoutinNavigationController: UINavigationController {
         self.state = next
     }
 
-    func jump(to state: FlowState) {
-
-    }
-
     private var userEnviornment = UserState()
 
     func computeCurrentState() -> FlowState {
         return OrgFlowCurrentState(userState: self.userEnviornment).current
     }
 
+    func computeAllInitialStates() -> [FlowState] {
+        return OrgFlowCurrentState(userState: self.userEnviornment).allStatesInOrder
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.state = computeCurrentState()
+        computeAllInitialStates().forEach { s in
+            self.state = s
+        }
         setupAccessTokenReceivedNotification()
     }
 
