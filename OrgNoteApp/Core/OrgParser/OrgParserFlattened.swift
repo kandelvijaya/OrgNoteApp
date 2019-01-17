@@ -16,29 +16,6 @@ extension OrgParser {
         return OrgParser().parse_flattened(contents)
     }
 
-    func parse_flattened(_ contents: String) -> OrgFile? {
-        let parser = comments() ->>- orgParser_flattenedOutlineOrdered() |>> {
-            OutlineTop(comments: $0.0, outlines_flat: $0.1)
-        }
-        let parsed = parser |> run(contents)
-        guard let flattened = parsed.value()?.0 else {
-            assertionFailure("can't parse org file")
-            return nil
-        }
-
-        let subItems = flattened.outlines_flat
-
-        var graphContainer = GraphContainer<OutlineTop.Item>(with: OutlineTop.Item.rootItem)
-        subItems.forEach { item in
-            graphContainer.add(item)
-        }
-
-        let orgFile = OrgFile.init(topComments: flattened.comments, outlines: graphContainer.allSubItems(of: graphContainer.root))
-
-        return orgFile
-    }
-    
-
 }
 
 

@@ -36,15 +36,29 @@ struct OrgParser {
 
 extension OrgParser {
 
-    static func parse_recursively(_ contents: String) -> OrgFile? {
-        return OrgParser().parse_recursively(contents)
+    func parse_flattened(_ contents: String) -> OrgFile? {
+        let outlinesP = outlineParser() |> many
+        let parser = comments() ->>- outlinesP |>> {
+            OutlineTop(comments: $0.0, outlines_flat: $0.1)
+        }
+        let parsed = parser |> run(contents)
+        guard let flattened = parsed.value()?.0 else {
+            assertionFailure("can't parse org file")
+            return nil
+        }
+
+        let subItems = flattened.outlines_flat
+
+        var graphContainer = GraphContainer<OutlineTop.Item>(with: OutlineTop.Item.rootItem)
+        subItems.forEach { item in
+            graphContainer.add(item)
+        }
+
+        let orgFile = OrgFile.init(topComments: flattened.comments, outlines: graphContainer.allSubItems(of: graphContainer.root))
+
+        return orgFile
     }
 
-    func parse_recursively(_ contents: String) -> OrgFile? {
-        let parser = comments() ->>- (orgParser(start: 1) |> many) |>> { OrgFile(topComments: $0.0, outlines: $0.1) }
-        let parsed = parser |> run(contents)
-        return parsed.value()?.0
-    }
 
 }
 
@@ -53,13 +67,6 @@ extension OrgParser {
 
     private func headingParser() -> Parser<OutlineHeading> {
         let p = (pstars ->> (pchar(" ") |> many1)) ->>- (anyCharacterBesidesNewLine |> many1) ->> newLine
-        let pH = p |>> { OutlineHeading(title: String($1), depth: $0.count) }
-        return pH <?> "Org Heading"
-    }
-
-    private func headingParser(depth: Int) -> Parser<OutlineHeading> {
-        let depthStars = Array<Parser<Character>>(repeating: pchar("*"), count: depth) |> sequenceOutput
-        let p = (depthStars ->> (pchar(" ") |> many1)) ->>- (anyCharacterBesidesNewLine |> many1) ->> newLine
         let pH = p |>> { OutlineHeading(title: String($1), depth: $0.count) }
         return pH <?> "Org Heading"
     }
@@ -108,52 +115,5 @@ extension OrgParser {
     private func outlineParser() -> Parser<OutlineTop.Item> {
         return headingParser() ->>- contentParser() |>> { OutlineTop.Item(heading: $0, content: $1) }
     }
-
-    private func outlineParser(for level: Int) -> Parser<Outline> {
-        return headingParser(depth: level) ->>- contentParser() |>> { Outline(heading: $0, content: $1) }
-    }
-
-    private func outlineParserTry(from level: Int, to maxLevel: Int) -> Parser<Outline> {
-        let choiced = (level..<maxLevel).map(outlineParser(for:)) |> choice
-        return choiced
-    }
-
-
-    /// Takes a org file string and parses to OrgFile.
-    /// OrgFile is a array of [Outline] where each Outline can have childrens recursively
-    ///
-    /// - Parameters:
-    ///   - startLevel: Usually 1
-    ///   - maxLevel: By default this is limitted to 32.
-    /// - Returns: Parsed Outline
-    ///
-    /// - Note:
-    ///   The complexity of the algorithm might be hard to tackle. We will try to
-    ///   find not uniform childrens too. i.e. `** H2\n******* Hsomething` is parsed
-    ///   although they are not direct childs.
-    private func orgParser(start startLevel: Int, maxLevel: Int = 32) -> Parser<Outline> {
-        typealias Output = ParserResult<(Outline, Parser<Outline>.RemainingStream)>
-        return Parser<Outline> { input in
-            let thisLevel = self.outlineParserTry(from: startLevel, to: maxLevel) |> run(input)
-            let mapped: Output = thisLevel.flatMap { v in
-                let nextLevel = v.0.heading.depth + 1
-                let nextRun = self.orgParser(start: nextLevel) |> many |> run(v.1)
-
-                let inner: Output = nextRun.map { subV in
-                    let output = Outline(heading: v.0.heading, content: v.0.content, subItems: subV.0)
-                    return (output, subV.1)
-                }
-                return inner
-            }
-            return mapped
-        }
-    }
-
-
-    func orgParser_flattenedOutlineOrdered() -> Parser<[OutlineTop.Item]> {
-        let par = outlineParser() |> many
-        return par
-    }
-
 
 }
