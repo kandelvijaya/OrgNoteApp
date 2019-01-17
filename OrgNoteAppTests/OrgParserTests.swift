@@ -113,10 +113,55 @@ final class OrgParserTests: XCTestCase {
         """)
     }
 
-    func test_whenTwoHeadingsHaveSpaceBetweenThem_ItIsNotRespected() {
-        let rawOrg = "* Heading1 \n\n * H2"
+    func test_whenTwoHeadingsHaveSpaceBetweenThem_ItIsRespected() {
+        let rawOrg = "* Heading1 \n something\nthat\n* H2"
         let parsed = OrgParser.parse(rawOrg)
         XCTAssertEqual(parsed!.outlines.fileString, rawOrg)
+    }
+
+    func test_whenSubContentHasNewlines_theyAreRespected() {
+        let raw = "* H1\nHello\n\n\nThere"
+        let parsed = OrgParser.parse(raw)
+        XCTAssertEqual(parsed!.outlines.first!.content, ["Hello", "", "", "There"])
+        XCTAssertEqual(parsed!.fileString, raw)
+    }
+
+    func test_whenOutlineWithSpaceAreParsed_thenNewLinesAreRespected() {
+        let raw = "Hello there \n\nHow are you?"
+        let parsed = contentParser() |> SwiftyParserCombinator.run(raw)
+        let output = parsed.value()!.0
+        XCTAssertEqual(output, ["Hello there ", "", "How are you?"])
+    }
+
+    func test_whenHeadingHasEmptyContent_thenItIsRespected() {
+        let heading =
+        """
+        * H1
+
+        """
+        let parsed = OrgParser.parse(heading)
+        XCTAssertEqual(parsed!.outlines.first!.content, [""])
+        XCTAssertEqual(parsed!.fileString, heading)
+    }
+
+    func test_whenOrgFileHasSpacesAroundContentAndHeading_theyArePreserved_afterParsing_andWhileWritingBack() {
+        let orgRaw =
+        """
+        * H1
+
+        This is the content
+        This is more
+
+        This is after a space.
+
+
+        * H1 again
+
+        ** H3
+        *H1 yet again
+        """
+        let parsed = OrgParser.parse(orgRaw)
+        XCTAssertEqual(parsed!.fileString, orgRaw)
     }
 
 }

@@ -57,8 +57,9 @@ struct OrgParser {
  */
 
 fileprivate let pstars = pchar("*") |> many1
-fileprivate let anyCharacterBesidesNewLine = satisfy({ $0 != Character("\n") }, label: "Except New Line")
-fileprivate let newLine = pchar("\n") |> many1
+fileprivate let anyCharacterBesidesNewLine = satisfy({ $0 != "\n" }, label: "Except New Line")
+fileprivate let newLine = pchar("\n")
+fileprivate let newLines = newLine |> many1
 
 fileprivate func headingParser() -> Parser<OutlineHeading> {
     let p = (pstars ->> (pchar(" ") |> many1)) ->>- (anyCharacterBesidesNewLine |> many1) ->> newLine
@@ -106,8 +107,10 @@ fileprivate func parseUntil<T,U>(_ next: Parser<T>) -> (Parser<U>) -> Parser<[U]
 }
 
 
-fileprivate func contentParser() -> Parser<[String]> {
-    let anyContent = (anyCharacterBesidesNewLine |> many1) ->> newLine |>> {String($0)}
+func contentParser() -> Parser<[String]> {
+    let anyContent = (anyCharacterBesidesNewLine |> many) ->> newLine |>> {
+        return $0.isEmpty ? "" : String($0)
+    }
     let manyLines = anyContent |> parseUntil(headingParser())
     return manyLines <?> "Org Content"
 }

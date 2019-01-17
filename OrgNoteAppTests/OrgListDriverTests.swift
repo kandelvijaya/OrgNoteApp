@@ -15,7 +15,7 @@ final class OrgListDriverTests: XCTestCase {
     func test_whenOrgDriverConfiguresControllerWithSections() throws {
         let model = Mock.OrgFileService().fetchWorkLog().resultingValueIfSynchornous!.value!
         let modelTopLevelItemCount = model.outlines.count
-        let configuredController = OrgListDriver(with: model).controller
+        let configuredController = OrgListDriver(with: model, onExit: {_ in}).controller
         let controllerSectionCount = configuredController.sectionDescriptors.count
         XCTAssertEqual(modelTopLevelItemCount, controllerSectionCount)
     }
@@ -24,21 +24,21 @@ final class OrgListDriverTests: XCTestCase {
     func test_orgDriverPromotesTopLevelOutlineToSectionDescriptors() {
         let orgModel = "* Hello\n** LeafNode\n* Hello Again\n** SecondNode\n*** leafNode\n* ThirdParent\n" |> OrgParser.parse
 
-        let currentListSections = OrgListDriver(with: orgModel!).controller.sectionDescriptors
+        let currentListSections = OrgListDriver(with: orgModel!, onExit: { _ in }).controller.sectionDescriptors
         XCTAssertEqual(currentListSections.count, 3)
     }
 
     func test_orgDriverPromotesTopLevelOutlineWithMinDepthLvelToSections() {
         let orgModel = "** Hello\n*** LeafNode\n** Hello Again\n*** SecondNode\n*** leafNode\n** ThirdParent\n" |> OrgParser.parse
 
-        let currentListSections = OrgListDriver(with: orgModel!).controller.sectionDescriptors
+        let currentListSections = OrgListDriver(with: orgModel!, onExit: {_ in }).controller.sectionDescriptors
         XCTAssertEqual(currentListSections.count, 3)
 
     }
 
     func test_whenGenerateNewSectionsIsTriggeredForLeafItem_thenItReturnsTheCurrentSectionsAsIs() {
         let orgModel = "* Hello\n** LeafNode" |> OrgParser.parse
-        let listDriver = OrgListDriver(with: orgModel!)
+        let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         let currentListSections = listDriver.controller.sectionDescriptors
         let leafItem = orgModel!.outlines.first!.subItems.first! |> OutlineViewModel.init
         let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: leafItem, with: currentListSections)
@@ -47,7 +47,7 @@ final class OrgListDriverTests: XCTestCase {
 
     func test_whenGenerateSectionsIsTriggeredForChildContainingItem_thenNewSetOfSectionsIsGenerated() {
         let orgModel = "* Hello\n** LeafNode" |> OrgParser.parse
-        let listDriver = OrgListDriver(with: orgModel!)
+        let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         let currentListSections = listDriver.controller.sectionDescriptors
         let parentItem = orgModel!.outlines.first! |> OutlineViewModel.init
         let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: parentItem, with: currentListSections)
@@ -56,7 +56,7 @@ final class OrgListDriverTests: XCTestCase {
 
     func test_whenGeneratedSectionsContainExpandedItems_AndItIsTapped_thenSubItemsOfExpandedItemsAreCollapsed() {
         let orgModel = "* Hello\n** LeafNode" |> OrgParser.parse
-        let listDriver = OrgListDriver(with: orgModel!)
+        let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         let initialSections = listDriver.controller.sectionDescriptors
         let parentItem = orgModel!.outlines.first! |> OutlineViewModel.init
         listDriver.didSelect(item: parentItem)
@@ -68,7 +68,7 @@ final class OrgListDriverTests: XCTestCase {
 
     func test_whenNodeIsExpandedOn2Levles_thenParentIsTapped_thenEverythingIsCollapsed() {
         let orgModel = "* H1\n** H2\n*** H3" |> OrgParser.parse
-        let listDriver = OrgListDriver(with: orgModel!)
+        let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         listDriver.didSelect(item: orgModel!.outlines.first! |> OutlineViewModel.init)
         listDriver.didSelect(item: orgModel!.outlines.first!.subItems.first! |> OutlineViewModel.init)
         XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 3)
