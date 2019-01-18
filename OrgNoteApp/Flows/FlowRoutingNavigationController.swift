@@ -143,9 +143,10 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
             // we know its going to be the only one on top
             self.navigationController?.popViewController(animated: true)
             self.state = computeCurrentState()
+            AlertController.alertPositive("Repo is pulled successfully")
         } else {
             // no-op. show error
-            print("cant pull to refresh for given repo")
+            AlertController.alertNegative("cant pull to refresh for given repo")
         }
     }
 
