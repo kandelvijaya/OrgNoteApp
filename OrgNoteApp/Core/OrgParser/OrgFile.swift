@@ -40,7 +40,10 @@ extension OrgFile {
 
     func flattenedSectionsRevelaingAllExpandedContainers() -> [[Outline]] {
         let topLevels = self.outlines
-        return topLevels.map { $0.flattenAllExpanded }
+        let items = topLevels.map {
+            $0.flattenAllExpanded
+        }
+        return items
     }
 
 }
@@ -49,15 +52,15 @@ extension OrgFile {
 extension Outline {
 
     var flattenAllExpanded: [Outline] {
-        return dfsFlatteningAllExpanded()
+        let items = dfsFlatteningAllExpanded()
+        return items
     }
 
     private func dfsFlatteningAllExpanded() -> [Outline] {
         if subItems.isEmpty || !isExpanded { return [self] }
-        return subItems.flatMap { $0.dfsFlatteningAllExpanded() }
+        let all = [self] + subItems.flatMap { $0.dfsFlatteningAllExpanded() }
+        return all
     }
-
-
 
 }
 
