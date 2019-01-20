@@ -22,7 +22,9 @@ final class OrgListDriver {
 
     // each top level cell is transformed to section
     var sections: [AnyListSectionDescriptor] {
-        return topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
+        let topItems = self.backingOrgModel.flattenedSectionsRevelaingAllExpandedContainers().map { $0.map(OutlineViewModel.init).map(cellDescriptor) }
+        //return topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
+        return topItems.map(sectionDescriptor)
     }
 
     private var backingOrgModel: OrgFile

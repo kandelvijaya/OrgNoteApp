@@ -101,7 +101,11 @@ extension FlowRoutinNavigationController {
             git.push()
         }
 
-        print(result)
+        if result.value != nil {
+            AlertController.alertPositive("Good! Your file changes is pushed to remote.")
+        } else {
+            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!)")
+        }
     }
 
 }
@@ -110,8 +114,7 @@ extension FlowRoutinNavigationController: LocateUserRepoControllerDelegate {
 
     func userDidSelectAndCloned(repo: Result<UserSelectedRepository>) {
         if let error = repo.error {
-            //TODO:- a toast or notifiation
-            print(error)
+            AlertController.alertNegative("Failed to clone the repo! \n \(error)")
         }
         self.userEnviornment.userSelectedRepo = repo.value
         self.state = computeCurrentState()
@@ -138,20 +141,23 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
 
     func userWantsToRefreshRepoContents(for repo: UserSelectedRepository) {
         let git = Git(repoInfo: repo)
-        let success = git.pull().value != nil
+        let action = git.pull()
+        let success = action.value != nil
         if success {
             // we know its going to be the only one on top
             self.navigationController?.popViewController(animated: true)
             self.state = computeCurrentState()
+            AlertController.alertPositive("Repo is pulled successfully")
         } else {
             // no-op. show error
-            print("cant pull to refresh for given repo")
+            AlertController.alertNegative("cant pull to refresh for given repo \n \(action.error!)")
         }
     }
 
     func isOrgModeFile(_ file: FileItem.File) -> Bool {
-        // FIXME:- Use also parser
-        return file.ext == "org"
+        let content = try! String(contentsOf: file.url)
+        let parsed = OrgParser.parse(content)
+        return file.ext == "org" && parsed != nil
     }
 
 }

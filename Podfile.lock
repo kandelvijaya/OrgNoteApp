@@ -5,12 +5,14 @@ PODS:
   - OAuthorize2 (0.3.5):
     - CommonCryptoModule
     - Kekka
+  - StatusAlert (1.1.0)
   - SwiftyParserCombinator (1.1)
 
 DEPENDENCIES:
   - FastDiff
   - Kekka
   - OAuthorize2
+  - StatusAlert
   - SwiftyParserCombinator
 
 SPEC REPOS:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - FastDiff
     - Kekka
     - OAuthorize2
+    - StatusAlert
     - SwiftyParserCombinator
 
 SPEC CHECKSUMS:
@@ -26,8 +29,9 @@ SPEC CHECKSUMS:
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
   Kekka: 5da34ad719887ec0e43e2b8e7383ef6f77b0bbda
   OAuthorize2: bf01bee7d7283bed82f89fa206ec092bbfd29e06
+  StatusAlert: 4d6dadebf5f7abd5648fa774ef3062f2f95cc4aa
   SwiftyParserCombinator: 5565b0948b219885799f43eb97058e9d929a560a
 
-PODFILE CHECKSUM: 92ab3d35878a55ea54a4b79a134c470f1d0733f1
+PODFILE CHECKSUM: 3458d6c93231591cb34f83dddb17f9755df346e2
 
 COCOAPODS: 1.5.3
