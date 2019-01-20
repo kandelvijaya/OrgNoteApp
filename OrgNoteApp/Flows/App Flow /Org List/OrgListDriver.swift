@@ -87,16 +87,35 @@ final class OrgListDriver {
     }
 
     func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
-        var newItem = item._backingModel
-        newItem.isExpanded = !newItem.isExpanded
+        let mutated = item._backingModel.updateExpansionOnAllChildrens(!item._backingModel.isExpanded)
         let immediateParent = self.backingOrgModel.immediateParent(ofFirst: item._backingModel)
-        let newModel = self.backingOrgModel.replace(old: item._backingModel, with: newItem, childOf: immediateParent)
+        let newModel = self.backingOrgModel.replace(old: item._backingModel, with: mutated, childOf: immediateParent)
         self.backingOrgModel = newModel
         return self.sections
     }
 
 }
 
+
+extension Outline {
+
+    func updateExpansionOnAllChildrens(_ expansion: Bool) -> Outline {
+        if expansion {
+            // user entered into finding details. Dont reveal everything
+            var copy = self
+            copy.isExpanded = expansion
+            return copy
+        } else {
+            // user wants to hide this and all the lower level opened items
+            let subItemsProper = self.subItems.map{ $0.updateExpansionOnAllChildrens(expansion) }
+            var item = Outline(heading: self.heading, content: self.content, subItems: subItemsProper)
+            item.isExpanded = expansion
+            return item
+        }
+
+    }
+
+}
 
 extension OrgFile {
 
