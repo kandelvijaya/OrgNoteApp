@@ -38,7 +38,7 @@ class ListViewController<T: Hashable>: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50
     }
-    
+
     private func packingConsequetiveDeleteAddWithUpdate<T>(from diffResult:  [DiffOperation<T>.Simple]) -> [DiffOperation<T>.Simple] {
         if diffResult.isEmpty { return [] }
 
@@ -59,11 +59,13 @@ class ListViewController<T: Hashable>: UITableViewController {
                         accumulator.append(thisItem)
                         accumulator.append(nextItem)
                 }
+                currentSeekIndex = nextIndex.advanced(by: 1)
             } else {
                 // This is the last item
                 accumulator.append(thisItem)
+                // This breaks the iteration
+                currentSeekIndex = nextIndex
             }
-            currentSeekIndex = nextIndex.advanced(by: 1)
         }
         return accumulator
     }
