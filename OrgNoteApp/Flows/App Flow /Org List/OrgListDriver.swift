@@ -113,6 +113,9 @@ extension OrgFile {
 
 extension Outline {
 
+    /// - Complexity:- O(n+m) i.e. O(allVertexes)
+    /// Memory complexity is worse. It replicates a lot of structs.
+    /// Maybe graph is better in this instance.
     func replace(old: Outline, with new: Outline, childOf parent: Outline?) -> Outline {
         if let p = parent {
             if p == self {

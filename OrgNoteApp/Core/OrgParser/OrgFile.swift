@@ -38,6 +38,7 @@ struct Outline: Hashable {
 
 extension OrgFile {
 
+    /// - Complexity:- O(n+m) i.e. O(allVertexes)
     func flattenedSectionsRevelaingAllExpandedContainers() -> [[Outline]] {
         let topLevels = self.outlines
         let items = topLevels.map {
@@ -56,6 +57,7 @@ extension Outline {
         return items
     }
 
+    /// - Complexity:- O(n+m) i.e. O(allVertexes)
     private func dfsFlatteningAllExpanded() -> [Outline] {
         if subItems.isEmpty || !isExpanded { return [self] }
         let all = [self] + subItems.flatMap { $0.dfsFlatteningAllExpanded() }
