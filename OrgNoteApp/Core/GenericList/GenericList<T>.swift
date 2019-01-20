@@ -38,10 +38,41 @@ class ListViewController<T: Hashable>: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50
     }
+    
+    private func packingConsequetiveDeleteAddWithUpdate<T>(from diffResult:  [DiffOperation<T>.Simple]) -> [DiffOperation<T>.Simple] {
+        if diffResult.isEmpty { return [] }
+
+        var currentSeekIndex = 0 // This is the index that is not processed.
+
+        var accumulator: [DiffOperation<T>.Simple] = []
+        while currentSeekIndex < diffResult.count {
+            let thisItem = diffResult[currentSeekIndex]
+            let nextIndex = currentSeekIndex.advanced(by: 1)
+
+            if nextIndex < diffResult.count {
+                let nextItem = diffResult[nextIndex]
+                switch (thisItem, nextItem) {
+                    case let (.delete(di, dIndex), .add(ai, aIndex)) where dIndex == aIndex:
+                        let update = DiffOperation<T>.Simple.update(di, ai, dIndex)
+                        accumulator.append(update)
+                    default:
+                        accumulator.append(thisItem)
+                        accumulator.append(nextItem)
+                }
+            } else {
+                // This is the last item
+                accumulator.append(thisItem)
+            }
+            currentSeekIndex = nextIndex.advanced(by: 1)
+        }
+        return accumulator
+    }
 
     func update(with newModels: [ListSectionDescriptor<T>]) {
         let currentModels = self.sectionDescriptors
-        let diffResult = orderedOperation(from: diff(currentModels, newModels))
+        let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
+
+        let diffResult = packingConsequetiveDeleteAddWithUpdate(from: diffResultTemp)
 
         tableView.performBatchUpdates({
             self.sectionDescriptors = newModels
