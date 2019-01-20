@@ -74,6 +74,8 @@ class ListViewController<T: Hashable>: UITableViewController {
         let currentModels = self.sectionDescriptors
         let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
 
+        /// We need to pack Section with delete(aI) and add(aI) as update(old, new, aI)
+        /// This is so that the we can maintain the previous state in the list +- the change
         let diffResult = packingConsequetiveDeleteAddWithUpdate(from: diffResultTemp)
 
         tableView.performBatchUpdates({

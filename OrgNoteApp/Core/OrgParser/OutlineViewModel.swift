@@ -14,9 +14,16 @@ struct OutlineViewModel: Hashable {
     let title: String
     let content: String
     let subModels: [OutlineViewModel]
-    var isExpanded: Bool = false
+
+    /// Making storage in sync with viewModel
+    var isExpanded: Bool = false {
+        didSet {
+            self._backingModel.isExpanded = isExpanded
+        }
+    }
+
     let indentationLevel: Int
-    let _backingModel: Outline
+    var _backingModel: Outline
 
     init(with outline: Outline) {
         self.title = "✦ " + outline.heading.title
