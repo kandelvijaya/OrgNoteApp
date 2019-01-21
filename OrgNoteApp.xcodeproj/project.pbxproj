@@ -76,6 +76,9 @@
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525821F674B000D49966 /* OrgFileInteractable.swift */; };
+		2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525B21F678E200D49966 /* OrgRawEditorController.swift */; };
+		2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */; };
+		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
@@ -189,6 +192,9 @@
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 		2899525821F674B000D49966 /* OrgFileInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileInteractable.swift; sourceTree = "<group>"; };
+		2899525B21F678E200D49966 /* OrgRawEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorController.swift; sourceTree = "<group>"; };
+		2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorDriver.swift; sourceTree = "<group>"; };
+		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
@@ -468,6 +474,16 @@
 			path = OrgFile;
 			sourceTree = "<group>";
 		};
+		2899525A21F678D200D49966 /* OrgRawEditor */ = {
+			isa = PBXGroup;
+			children = (
+				2899525B21F678E200D49966 /* OrgRawEditorController.swift */,
+				2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */,
+				2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */,
+			);
+			path = OrgRawEditor;
+			sourceTree = "<group>";
+		};
 		28BEF90520D7CEFD00BB7C19 /* GenericList */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,7 +501,7 @@
 				284C7D0521AB111900C0F290 /* Main.storyboard */,
 				28D22A5E21E00F3800ED3BEF /* Git Interaction */,
 				28D22A5D21E00F0800ED3BEF /* App Flow  */,
-				28D22A5C21E00EFB00ED3BEF /* LocateOrgInRepo */,
+				28D22A5C21E00EFB00ED3BEF /* User repo selector */,
 				28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */,
 				2810BCB121E165AE009067BF /* OrgFlowCurrentState.swift */,
 				2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */,
@@ -504,19 +520,20 @@
 			path = LogInToBitbucket;
 			sourceTree = "<group>";
 		};
-		28D22A5C21E00EFB00ED3BEF /* LocateOrgInRepo */ = {
+		28D22A5C21E00EFB00ED3BEF /* User repo selector */ = {
 			isa = PBXGroup;
 			children = (
 				2810BCB521E1663E009067BF /* RepositoryDriver.swift */,
 				2810BCB721E16A08009067BF /* LocateUserRepoController.swift */,
 				2810BCB921E16A13009067BF /* LocateUserRepoController.storyboard */,
 			);
-			path = LocateOrgInRepo;
+			path = "User repo selector";
 			sourceTree = "<group>";
 		};
 		28D22A5D21E00F0800ED3BEF /* App Flow  */ = {
 			isa = PBXGroup;
 			children = (
+				2899525A21F678D200D49966 /* OrgRawEditor */,
 				285F429721D1AD1900E66D6A /* PopoverPresenter */,
 				285F41D121D0535000E66D6A /* OrgEdit */,
 				284C7D0721AB11A100C0F290 /* Org List */,
@@ -681,6 +698,7 @@
 			files = (
 				2810BCBA21E16A13009067BF /* LocateUserRepoController.storyboard in Resources */,
 				2810BCD221E2B366009067BF /* RepoExploreCoordinatingController.storyboard in Resources */,
+				2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */,
 				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
@@ -829,6 +847,7 @@
 				28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */,
 				2810BCB621E1663E009067BF /* RepositoryDriver.swift in Sources */,
 				285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */,
+				2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				2810BCC921E2466F009067BF /* BitbucketCloner.swift in Sources */,
 				2810BCC321E18C81009067BF /* BitbucketRepository.swift in Sources */,
@@ -861,6 +880,7 @@
 				2810BCD821E380F1009067BF /* UserState.swift in Sources */,
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,
 				28295E6421F14CA000CD11CB /* AlertController.swift in Sources */,
+				2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */,
 				2810BCB221E165AE009067BF /* OrgFlowCurrentState.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
