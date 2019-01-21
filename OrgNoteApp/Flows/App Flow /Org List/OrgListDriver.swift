@@ -23,7 +23,6 @@ final class OrgListDriver {
     // each top level cell is transformed to section
     var sections: [AnyListSectionDescriptor] {
         let topItems = self.backingOrgModel.flattenedSectionsRevelaingAllExpandedContainers().map { $0.map(OutlineViewModel.init).map(cellDescriptor) }
-        //return topLevelcellDescriptors.map { [$0] }.map(sectionDescriptor)
         return topItems.map(sectionDescriptor)
     }
 
@@ -83,12 +82,15 @@ final class OrgListDriver {
     }
 
     func didSelect(item: OutlineViewModel) {
-        generateNewSectionItemsWhenTappedOn(for: item, with: controller.sectionDescriptors) |> controller.update
+        generateNewSectionItemsWhenTappedOn(for: item) |> controller.update
     }
 
-    func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
-        let interactionHandler = OrgListDriverInteractionHandler(cellDescriptor: self.cellDescriptor, sectionDescriptor: self.sectionDescriptor)
-        return interactionHandler.generateNewSectionItemsWhenTappedOn(item, with: currentSections)
+    func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel) -> [AnyListSectionDescriptor] {
+        let mutated = item._backingModel.updateOnAllChildrensRecursively(isExapnded: !item.isExpanded)
+        let immediateParent = self.backingOrgModel.immediateParent(ofFirst: item._backingModel)
+        let newModel = self.backingOrgModel.replace(old: item._backingModel, with: mutated, childOf: immediateParent)
+        self.backingOrgModel = newModel
+        return self.sections
     }
 
 }
