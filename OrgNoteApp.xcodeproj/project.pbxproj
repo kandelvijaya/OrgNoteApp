@@ -45,9 +45,7 @@
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
-		284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
-		284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
 		284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1C21AB5C7F00C0F290 /* NetworkService.swift */; };
 		2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D3F020A843180082EC00 /* AppDelegate.swift */; };
@@ -156,9 +154,7 @@
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
-		284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgLocateViewController.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewViewController.swift; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		284C7D1C21AB5C7F00C0F290 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2855D3ED20A843180082EC00 /* OrgNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrgNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,22 +309,6 @@
 				286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		284C7D0121AB072200C0F290 /* Org View */ = {
-			isa = PBXGroup;
-			children = (
-				284C7D0821AB11BB00C0F290 /* OrgViewViewController.swift */,
-			);
-			path = "Org View";
-			sourceTree = "<group>";
-		};
-		284C7D0221AB073F00C0F290 /* Org Locate */ = {
-			isa = PBXGroup;
-			children = (
-				284C7D0321AB076500C0F290 /* OrgLocateViewController.swift */,
-			);
-			path = "Org Locate";
 			sourceTree = "<group>";
 		};
 		284C7D0721AB11A100C0F290 /* Org List */ = {
@@ -529,8 +509,6 @@
 				285F429721D1AD1900E66D6A /* PopoverPresenter */,
 				285F41D121D0535000E66D6A /* OrgEdit */,
 				284C7D0721AB11A100C0F290 /* Org List */,
-				284C7D0221AB073F00C0F290 /* Org Locate */,
-				284C7D0121AB072200C0F290 /* Org View */,
 			);
 			path = "App Flow ";
 			sourceTree = "<group>";
@@ -841,8 +819,6 @@
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				2810BCC921E2466F009067BF /* BitbucketCloner.swift in Sources */,
 				2810BCC321E18C81009067BF /* BitbucketRepository.swift in Sources */,
-				284C7D0421AB076500C0F290 /* OrgLocateViewController.swift in Sources */,
-				284C7D0921AB11BB00C0F290 /* OrgViewViewController.swift in Sources */,
 				2810BCD021E2B33B009067BF /* RepoExploreCoordinatingController.swift in Sources */,
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				2810BCBF21E17D10009067BF /* RefreshAccessTokenModel.swift in Sources */,
