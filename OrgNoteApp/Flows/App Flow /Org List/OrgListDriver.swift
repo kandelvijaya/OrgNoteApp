@@ -86,77 +86,11 @@ final class OrgListDriver {
     }
 
     func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel) -> [AnyListSectionDescriptor] {
-        let mutated = item._backingModel.updateExpansionOnAllChildrens(!item.isExpanded)
+        let mutated = item._backingModel.updateOnAllChildrensRecursively(isExapnded: !item.isExpanded)
         let immediateParent = self.backingOrgModel.immediateParent(ofFirst: item._backingModel)
         let newModel = self.backingOrgModel.replace(old: item._backingModel, with: mutated, childOf: immediateParent)
         self.backingOrgModel = newModel
         return self.sections
-    }
-
-}
-
-
-extension Outline {
-
-    func updateExpansionOnAllChildrens(_ expansion: Bool) -> Outline {
-        if expansion {
-            // user entered into finding details. Dont reveal everything
-            var copy = self
-            copy.isExpanded = expansion
-            return copy
-        } else {
-            // user wants to hide this and all the lower level opened items
-            let subItemsProper = self.subItems.map{ $0.updateExpansionOnAllChildrens(expansion) }
-            var item = Outline(heading: self.heading, content: self.content, subItems: subItemsProper)
-            item.isExpanded = expansion
-            return item
-        }
-
-    }
-
-}
-
-extension OrgFile {
-
-    func replace(old: Outline, with new: Outline, childOf parent: Outline?) -> OrgFile {
-        if old == new { return self }
-        let thisComments = self.topComments
-        let thisOutlines = self.outlines
-        let modifiedOutlines = thisOutlines.map { $0.replace(old: old, with: new, childOf: parent) }
-        let orgFile = OrgFile(topComments: thisComments, outlines: modifiedOutlines)
-        return orgFile
-    }
-
-}
-
-extension Outline {
-
-    /// - Complexity:- O(n+m) i.e. O(allVertexes)
-    /// Memory complexity is worse. It replicates a lot of structs.
-    /// Maybe graph is better in this instance.
-    func replace(old: Outline, with new: Outline, childOf parent: Outline?) -> Outline {
-        if old == new { return self }
-
-        if let p = parent {
-            if p == self {
-                var parentCopy = p
-                parentCopy.subItems = parentCopy.subItems.replace(matching: old, with: new)
-                return parentCopy
-            } else {
-                var selfCopy = self
-                selfCopy.subItems = selfCopy.subItems.map {
-                    return $0.replace(old: old, with: new, childOf: parent)
-                }
-                return selfCopy
-            }
-        } else {
-            // This is the top level item
-            if old == self {
-                return new
-            } else {
-                return self
-            }
-        }
     }
 
 }
