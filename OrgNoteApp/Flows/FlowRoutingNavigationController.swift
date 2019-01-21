@@ -49,7 +49,6 @@ final class FlowRoutinNavigationController: UINavigationController {
     }
 
     private func setupAccessTokenReceivedNotification() {
-        // TODO:- figure out why this is not working.
         NotificationCenter.default.addObserver(forName: userDidReceiveAccessTokenNotification, object: nil, queue: .main) { notification in
             self.state = self.computeCurrentState()
         }

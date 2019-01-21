@@ -69,10 +69,12 @@ final class OrgListDriverTests: XCTestCase {
     func test_whenNodeIsExpandedOn2Levles_thenParentIsTapped_thenEverythingIsCollapsed() {
         let orgModel = "* H1\n** H2\n*** H3" |> OrgParser.parse
         let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
-        listDriver.didSelect(item: orgModel!.outlines.first! |> OutlineViewModel.init)
-        listDriver.didSelect(item: orgModel!.outlines.first!.subItems.first! |> OutlineViewModel.init)
+        let h1 = orgModel!.outlines.first! |> OutlineViewModel.init
+        let h2 = orgModel!.outlines.first!.subItems.first! |> OutlineViewModel.init
+        listDriver.didSelect(item: h1)
+        listDriver.didSelect(item: h2)
         XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 3)
-        var firstParent = orgModel!.outlines.first! |> OutlineViewModel.init
+        var firstParent = h1
         firstParent.isExpanded = true
         listDriver.didSelect(item: firstParent)
         XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 1)

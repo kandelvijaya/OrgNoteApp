@@ -87,7 +87,7 @@ final class OrgListDriver {
     }
 
     func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
-        let mutated = item._backingModel.updateExpansionOnAllChildrens(!item._backingModel.isExpanded)
+        let mutated = item._backingModel.updateExpansionOnAllChildrens(!item.isExpanded)
         let immediateParent = self.backingOrgModel.immediateParent(ofFirst: item._backingModel)
         let newModel = self.backingOrgModel.replace(old: item._backingModel, with: mutated, childOf: immediateParent)
         self.backingOrgModel = newModel
@@ -136,6 +136,8 @@ extension Outline {
     /// Memory complexity is worse. It replicates a lot of structs.
     /// Maybe graph is better in this instance.
     func replace(old: Outline, with new: Outline, childOf parent: Outline?) -> Outline {
+        if old == new { return self }
+
         if let p = parent {
             if p == self {
                 var parentCopy = p
@@ -150,11 +152,7 @@ extension Outline {
             }
         } else {
             // This is the top level item
-            if old == self {
-                return new
-            } else {
-                return self
-            }
+            return new
         }
     }
 
