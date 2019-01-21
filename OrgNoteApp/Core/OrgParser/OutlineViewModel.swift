@@ -16,9 +16,13 @@ struct OutlineViewModel: Hashable {
     let subModels: [OutlineViewModel]
 
     /// Making storage in sync with viewModel
-    var isExpanded: Bool = false {
-        didSet {
-            self._backingModel.isExpanded = isExpanded
+    var isExpanded: Bool {
+        get {
+            return self._backingModel.isExpanded
+        }
+
+        set {
+            self._backingModel.isExpanded = newValue
         }
     }
 
@@ -37,7 +41,7 @@ struct OutlineViewModel: Hashable {
         // TODO:- Emit range of color based on content size or characterstics
         let materialBlue = UIColor(displayP3Red: 52.0/255.0, green: 152.0/255.0, blue: 219.0/255.0, alpha: 0.3)
         let materialWhite = UIColor(displayP3Red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 0.3)
-        return self.isExpanded ?  materialBlue : materialWhite
+        return self.isExpanded && !self._backingModel.subItems.isEmpty ?  materialBlue : materialWhite
     }
 
 }
