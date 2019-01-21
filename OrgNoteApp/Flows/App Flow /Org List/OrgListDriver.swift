@@ -83,10 +83,10 @@ final class OrgListDriver {
     }
 
     func didSelect(item: OutlineViewModel) {
-        generateNewSectionItemsWhenTappedOn(for: item, with: controller.sectionDescriptors) |> controller.update
+        generateNewSectionItemsWhenTappedOn(for: item) |> controller.update
     }
 
-    func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel, with currentSections: [AnyListSectionDescriptor]) -> [AnyListSectionDescriptor] {
+    func generateNewSectionItemsWhenTappedOn(for item: OutlineViewModel) -> [AnyListSectionDescriptor] {
         let mutated = item._backingModel.updateExpansionOnAllChildrens(!item.isExpanded)
         let immediateParent = self.backingOrgModel.immediateParent(ofFirst: item._backingModel)
         let newModel = self.backingOrgModel.replace(old: item._backingModel, with: mutated, childOf: immediateParent)
@@ -152,7 +152,11 @@ extension Outline {
             }
         } else {
             // This is the top level item
-            return new
+            if old == self {
+                return new
+            } else {
+                return self
+            }
         }
     }
 

@@ -41,7 +41,7 @@ final class OrgListDriverTests: XCTestCase {
         let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         let currentListSections = listDriver.controller.sectionDescriptors
         let leafItem = orgModel!.outlines.first!.subItems.first! |> OutlineViewModel.init
-        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: leafItem, with: currentListSections)
+        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: leafItem)
         XCTAssertEqual(newSections, currentListSections)
     }
 
@@ -50,7 +50,7 @@ final class OrgListDriverTests: XCTestCase {
         let listDriver = OrgListDriver(with: orgModel!, onExit: {_ in })
         let currentListSections = listDriver.controller.sectionDescriptors
         let parentItem = orgModel!.outlines.first! |> OutlineViewModel.init
-        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: parentItem, with: currentListSections)
+        let newSections = listDriver.generateNewSectionItemsWhenTappedOn(for: parentItem)
         XCTAssertNotEqual(newSections[0], currentListSections[0])
     }
 
@@ -74,9 +74,8 @@ final class OrgListDriverTests: XCTestCase {
         listDriver.didSelect(item: h1)
         listDriver.didSelect(item: h2)
         XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 3)
-        var firstParent = h1
-        firstParent.isExpanded = true
-        listDriver.didSelect(item: firstParent)
+        let firstPrent = listDriver.controller.sectionDescriptors.first?.items.first?.model as! OutlineViewModel
+        listDriver.didSelect(item: firstPrent)
         XCTAssertEqual(listDriver.controller.sectionDescriptors.first!.items.count, 1)
     }
 
