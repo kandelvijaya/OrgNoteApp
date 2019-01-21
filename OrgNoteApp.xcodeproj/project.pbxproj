@@ -33,7 +33,6 @@
 		2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */; };
 		281BA96621C3AA5900319B0A /* OrgStringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */; };
-		281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */; };
 		281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */; };
 		281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA96E21C6FCE100319B0A /* IntExtension.swift */; };
 		281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA97021C7EB5500319B0A /* EditableGenericList.swift */; };
@@ -42,6 +41,7 @@
 		28295E5E21F0E0C500CD11CB /* OrgParserFlattened.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */; };
 		28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5F21F0E37900CD11CB /* GraphContainer.swift */; };
 		28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6121F0E4E800CD11CB /* OrgFile.swift */; };
+		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
 		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
 		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
@@ -75,6 +75,7 @@
 		2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A020C196E700CD4ACC /* OrgListDriver.swift */; };
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
+		2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525821F674B000D49966 /* OrgFileInteractable.swift */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
@@ -142,7 +143,6 @@
 		2814518920D3D4260006BBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentable.swift; sourceTree = "<group>"; };
 		281BA96521C3AA5900319B0A /* OrgStringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStringRepresentableTests.swift; sourceTree = "<group>"; };
-		281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverInteractionHandler.swift; sourceTree = "<group>"; };
 		281BA96C21C6FCD000319B0A /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		281BA96E21C6FCE100319B0A /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		281BA97021C7EB5500319B0A /* EditableGenericList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableGenericList.swift; sourceTree = "<group>"; };
@@ -151,6 +151,7 @@
 		28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParserFlattened.swift; sourceTree = "<group>"; };
 		28295E5F21F0E37900CD11CB /* GraphContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphContainer.swift; sourceTree = "<group>"; };
 		28295E6121F0E4E800CD11CB /* OrgFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFile.swift; sourceTree = "<group>"; };
+		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
@@ -187,6 +188,7 @@
 		2880A0A020C196E700CD4ACC /* OrgListDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriver.swift; sourceTree = "<group>"; };
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
+		2899525821F674B000D49966 /* OrgFileInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileInteractable.swift; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
@@ -315,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				2880A0A020C196E700CD4ACC /* OrgListDriver.swift */,
-				281BA96921C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift */,
 				285F42A321D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift */,
 			);
 			path = "Org List";
@@ -427,12 +428,12 @@
 		28703D3E20A85A0200DC8DBF /* OrgParser */ = {
 			isa = PBXGroup;
 			children = (
+				2899525721F6733400D49966 /* OrgFile */,
 				28703D4120A85A1E00DC8DBF /* OrgParser.swift */,
 				28295E5D21F0E0C500CD11CB /* OrgParserFlattened.swift */,
 				281BA96321C3AA4900319B0A /* OrgStringRepresentable.swift */,
 				28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */,
 				28295E5F21F0E37900CD11CB /* GraphContainer.swift */,
-				28295E6121F0E4E800CD11CB /* OrgFile.swift */,
 			);
 			path = OrgParser;
 			sourceTree = "<group>";
@@ -458,6 +459,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		2899525721F6733400D49966 /* OrgFile */ = {
+			isa = PBXGroup;
+			children = (
+				28295E6121F0E4E800CD11CB /* OrgFile.swift */,
+				2899525821F674B000D49966 /* OrgFileInteractable.swift */,
+			);
+			path = OrgFile;
+			sourceTree = "<group>";
+		};
 		28BEF90520D7CEFD00BB7C19 /* GenericList */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +490,7 @@
 				2810BCB121E165AE009067BF /* OrgFlowCurrentState.swift */,
 				2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */,
 				2810BCD721E380F1009067BF /* UserState.swift */,
+				28295E6321F14CA000CD11CB /* AlertController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -728,6 +739,7 @@
 				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
 				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
 				"${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework",
+				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -738,6 +750,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthorize2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,9 +816,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */,
 				2810BCCE21E2B307009067BF /* FileItem.swift in Sources */,
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
-				281BA96A21C6FC2C00319B0A /* OrgListDriverInteractionHandler.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
 				2810BCD421E2DB21009067BF /* FlowRoutingNavigationController.swift in Sources */,
 				28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */,
@@ -847,6 +860,7 @@
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				2810BCD821E380F1009067BF /* UserState.swift in Sources */,
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,
+				28295E6421F14CA000CD11CB /* AlertController.swift in Sources */,
 				2810BCB221E165AE009067BF /* OrgFlowCurrentState.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,

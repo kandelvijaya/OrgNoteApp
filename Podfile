@@ -5,6 +5,7 @@ target 'OrgNoteApp' do
   pod 'FastDiff'
   pod 'SwiftyParserCombinator'
   pod 'OAuthorize2'
+  pod 'StatusAlert'
 
   target 'OrgNoteAppTests' do
     inherit! :search_paths

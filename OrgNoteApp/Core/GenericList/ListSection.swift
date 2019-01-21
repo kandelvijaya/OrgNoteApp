@@ -37,7 +37,7 @@ extension ListSectionDescriptor {
 
     init(with items: [ListCellDescriptor<T, UITableViewCell>]) {
         self.items = items
-        self.identifier = Int.random(fittingSize: 1000)
+        self.identifier = 0 // Might be required later on
     }
 
 }
@@ -117,7 +117,7 @@ extension ListSectionDescriptor: Diffable {
     typealias InternalItemType = ListCellDescriptor<T, UITableViewCell>
 
     var diffHash: Int {
-        return footerText.hashValue ^ identifier.hashValue
+        return items.diffHash
     }
 
     var children: [ListCellDescriptor<T, UITableViewCell>] {

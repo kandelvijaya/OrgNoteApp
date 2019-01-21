@@ -25,6 +25,16 @@ enum GitInteractionError: Error {
 struct Git {
 
     let repoInfo: UserSelectedRepository
+    private let oauth2: BitbucketOauth2
+
+    private var remoteURL: String {
+        return self.repoInfo.remote(updatedWithOAuthClient: oauth2).absoluteString
+    }
+
+    init(repoInfo: UserSelectedRepository, oauth2Client: BitbucketOauth2 = .shared) {
+        self.repoInfo = repoInfo
+        self.oauth2 = oauth2Client
+    }
 
     func add(_ file: String) -> Result<Affirmitive> {
         do {
@@ -87,7 +97,7 @@ struct Git {
             let branch = try repo.currentBranch()
 
             let remote = try GTRemote(name: "origin", in: repo)
-            try remote.updateURLString(self.repoInfo.remoteURL.absoluteString)
+            try remote.updateURLString(remoteURL)
             try repo.push(branch, to: remote, withOptions: [:], progress: nil)
             return .success(value: .affirm)
         } catch {
@@ -101,7 +111,7 @@ struct Git {
             let branch = try repo.currentBranch()
 
             let remote = try GTRemote(name: "origin", in: repo)
-            try remote.updateURLString(self.repoInfo.remoteURL.absoluteString)
+            try remote.updateURLString(remoteURL)
             try repo.pull(branch, from: remote, withOptions: [:], progress: nil)
             return .success(value: .affirm)
         } catch {
