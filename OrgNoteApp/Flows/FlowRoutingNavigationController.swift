@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Kekka
 import FastDiff
-
+import OAuthorize2
 
 final class FlowRoutinNavigationController: UINavigationController {
 
@@ -38,14 +38,20 @@ final class FlowRoutinNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initiateTokenRefresh()
         computeAllInitialStates().forEach { s in
             self.state = s
         }
-        setupAccessTokenReceivedNotification()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    private func initiateTokenRefresh() {
+        userEnviornment.oauth2Client.refreshAccessToken().then { item -> Void in
+            if case let .failure(error: e) = item {
+                print(e)
+            } else {
+                print("Access token refreshed!")
+            }
+        }.execute()
     }
 
     private func setupAccessTokenReceivedNotification() {
@@ -63,7 +69,7 @@ extension FlowRoutinNavigationController {
         switch state {
         case .userNeedsToAuthorize:
             return AuthorizeController.created { [weak self] in
-                self?.state = self?.computeCurrentState()
+                self?.state = .userIsAuthorizedButHasNotSelectedAnyRepo
             }
         case .userIsAuthorizedButHasNotSelectedAnyRepo:
             return LocateUserRepoController.create(with: self, userState: self.userEnviornment)
@@ -129,9 +135,7 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
             self.pushViewController(controllerToView(note: file), animated: true)
         } else {
             let oops = UIAlertController(title: "OOPS 😉", message: "We can only process ORG mode file. Please select org mode file to proceed.", preferredStyle: .alert)
-            let okayAction = UIAlertAction(title: "Got it!", style: .cancel) { action in
-
-            }
+            let okayAction = UIAlertAction(title: "Got it!", style: .cancel) { _ in  }
             oops.addAction(okayAction)
             self.present(oops, animated: true, completion: nil)
         }
@@ -160,5 +164,3 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
     }
 
 }
-
-
