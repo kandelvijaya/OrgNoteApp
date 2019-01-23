@@ -23,7 +23,7 @@ final class RepoExploreCoordinatingController: UIViewController, StoryboardAwake
         let controller = created
         controller.delegate = delegate
         controller.userSelectedRepo = userSelectedRepo
-        controller.title = "select note from \(userSelectedRepo.model.full_name)"
+        controller.title = "Select note"
         return controller
     }
 

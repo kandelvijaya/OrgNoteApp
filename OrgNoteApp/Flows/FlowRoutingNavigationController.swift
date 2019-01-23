@@ -38,6 +38,7 @@ final class FlowRoutinNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.prefersLargeTitles = true
         initiateTokenRefresh()
         computeAllInitialStates().forEach { s in
             self.state = s
