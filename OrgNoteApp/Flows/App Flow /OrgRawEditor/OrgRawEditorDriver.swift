@@ -11,18 +11,19 @@ import UIKit
 struct OrgRawEditorDriver {
 
     var controller: OrgRawEditorController {
-        return OrgRawEditorController.create(input: self.orgFileInput, onSave: self.onSave(_:), onDismiss: self.onDismiss)
+        return OrgRawEditorController.create(input: self.orgFileInput, onDismiss: self.onDismiss)
     }
 
     private let orgFileInput: OrgFile
     private let onDone: (OrgFile?) -> Void
 
-    private func onDismiss() {
-        self.onDone(nil)
+    init(with input: OrgFile, onDone: @escaping (OrgFile?) -> Void) {
+        self.orgFileInput = input
+        self.onDone = onDone
     }
 
-    private func onSave(_ orgFile: OrgFile?) {
-        self.onDone(orgFile)
+    private func onDismiss(newOrgFile: OrgFile?) {
+        self.onDone(newOrgFile)
     }
 
 }

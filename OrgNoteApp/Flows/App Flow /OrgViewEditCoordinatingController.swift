@@ -17,6 +17,7 @@ final class OrgViewEditCoordinatingController: UIViewController {
 
     private var onExit: ClosedBlock!
     private var noteToView: FileItem.File!
+    private var initialOrgFile: OrgFile!
     private var userSelectedRepo: UserSelectedRepository!
 
     static func created(with note: FileItem.File, userSelectedRepo: UserSelectedRepository, onExit: @escaping ClosedBlock = {} ) -> OrgViewEditCoordinatingController {
@@ -24,6 +25,7 @@ final class OrgViewEditCoordinatingController: UIViewController {
         controller.onExit = onExit
         controller.noteToView = note
         controller.userSelectedRepo = userSelectedRepo
+        controller.initialOrgFile = controller.inputOrgFile
         return controller
     }
 
@@ -85,27 +87,39 @@ final class OrgViewEditCoordinatingController: UIViewController {
 
 
     private func editor() -> UIViewController {
-        return UIViewController()
+        let driver = OrgRawEditorDriver(with: inputOrgFile) { [weak self] newOrgFile in
+            guard let this = self else { return }
+            guard let newOrgFile = newOrgFile else {
+                assertionFailure("Invlaid org file detected")
+                this.onExit()
+                return
+            }
+            this.saveToDisk(with: this.inputOrgFile, new: newOrgFile)
+        }
+        return driver.controller
     }
 
-    private func listController() -> ListViewController<AnyHashable> {
+    private var inputOrgFile: OrgFile {
         guard let fileContents = try? String(contentsOf: noteToView.url), let orgFile = OrgParser.parse(fileContents) else {
             fatalError("File \(noteToView.name) at url \(noteToView.url.path) cant be processed as ORG file")
         }
-        let controller = OrgListDriver(with: orgFile, onExit: { [weak self] newOrgFile in
-            self?.exit(with: orgFile, new: newOrgFile)
+        return orgFile
+    }
+
+    private func listController() -> ListViewController<AnyHashable> {
+        let controller = OrgListDriver(with: inputOrgFile, onExit: { [weak self] newOrgFile in
+            guard let this = self else { return }
+            this.saveToDisk(with: this.inputOrgFile, new: newOrgFile)
         }).controller
         return controller
     }
 
-    private func exit(with orgFile: OrgFile, new newOrgFile: OrgFile) {
+    private func saveToDisk(with orgFile: OrgFile, new newOrgFile: OrgFile) {
         // NOTE:- comparing orgFile and newOrgFile is incorrect as we dont care about isExpaneded property.
         if orgFile.fileString != newOrgFile.fileString {
             let newContent = newOrgFile.fileString
             let writing = doTry { try newContent.write(to: noteToView.url, atomically: true, encoding: .utf8) }
             assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(noteToView.url.path)")
-            self.addCommitPush(noteToView)
-            self.onExit()
         }
     }
 
@@ -124,6 +138,15 @@ final class OrgViewEditCoordinatingController: UIViewController {
         } else {
             AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.currentChildController?.viewWillDisappear(animated)    // This is so that the internal model can save to disk before we commit
+        if inputOrgFile.fileString != initialOrgFile.fileString {
+            self.addCommitPush(noteToView)
+        }
+        self.onExit()
     }
 
 }
