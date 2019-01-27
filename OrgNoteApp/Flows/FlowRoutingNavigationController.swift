@@ -80,37 +80,10 @@ extension FlowRoutinNavigationController {
     }
 
     func controllerToView(note file: FileItem.File) -> UIViewController {
-        guard let fileContents = try? String(contentsOf: file.url), let orgFile = OrgParser.parse(fileContents) else {
-            fatalError("File \(file.name) at url \(file.url.path) cant be processed as ORG file")
-        }
-        let controller = OrgListDriver(with: orgFile, onExit: { [weak self] newOrgFile in
-            // NOTE:- comparing orgFile and newOrgFile is incorrect as we dont care about isExpaneded property.
-            if orgFile.fileString != newOrgFile.fileString {
-                let newContent = newOrgFile.fileString
-                let writing = doTry { try newContent.write(to: file.url, atomically: true, encoding: .utf8) }
-                assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(file.url.path)")
-                self?.addCommitPush(file)
-            }
-        }).controller
-        controller.title = "Viewing \(file.name)"
+        let controller = OrgViewEditCoordinatingController.created(with: file, userSelectedRepo: userEnviornment.userSelectedRepo!, onExit: { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        })
         return controller
-    }
-
-    private func addCommitPush(_ file: FileItem.File) {
-        guard let git = userEnviornment.userSelectedRepo.map({ Git(repoInfo: $0) }) else {
-            return
-        }
-        let result = git.addAll().flatMap { _ in
-            git.commit(with: "@synced From @app @\(NSDate().timeIntervalSince1970) @ \(file.name)")
-        }.flatMap { _ in
-            git.push()
-        }
-
-        if result.value != nil {
-            AlertController.alertPositive("Good! Your file changes is pushed to remote.")
-        } else {
-            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
-        }
     }
 
 }
