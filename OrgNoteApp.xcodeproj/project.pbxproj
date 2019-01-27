@@ -86,6 +86,7 @@
 		28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6521E013A800ED3BEF /* AuthorizeController.swift */; };
 		28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */; };
 		28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */; };
+		28FB8DD721FDFCBC00233275 /* OrgViewEditCoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */; };
 		980266756A61043EF909D38F /* Pods_OrgNoteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +202,7 @@
 		28D22A6521E013A800ED3BEF /* AuthorizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
 		28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAwaker.swift; sourceTree = "<group>"; };
 		28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewEditCoordinatingController.swift; sourceTree = "<group>"; };
 		2B4CED12D5748F616CCAEACB /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				285F429721D1AD1900E66D6A /* PopoverPresenter */,
 				285F41D121D0535000E66D6A /* OrgEdit */,
 				284C7D0721AB11A100C0F290 /* Org List */,
+				28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */,
 			);
 			path = "App Flow ";
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */,
 				28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */,
+				28FB8DD721FDFCBC00233275 /* OrgViewEditCoordinatingController.swift in Sources */,
 				28295E5E21F0E0C500CD11CB /* OrgParserFlattened.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
 				2810BCD821E380F1009067BF /* UserState.swift in Sources */,
