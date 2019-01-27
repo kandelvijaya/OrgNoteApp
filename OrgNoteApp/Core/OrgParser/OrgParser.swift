@@ -73,7 +73,7 @@ extension OrgParser {
 
     func comments() -> Parser<[String]> {
         let commentLine = pstring("#+") ->>- (anyCharacterBesidesNewLine |> many1) ->> (newLine |> many)
-        let comments = commentLine |> many
+        let comments = commentLine |> parseUntil(headingParser())
         let formatted = comments.map { lines in
             return lines.map { "\($0.0)\(String($0.1))" }
         }
