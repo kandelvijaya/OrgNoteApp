@@ -25,7 +25,9 @@ extension Array: OrgStringRepresentable where Element == Outline {
 extension OrgFile: OrgStringRepresentable {
 
     var fileString: String {
-        return self.topComments.joined(separator: "\n") + self.outlines.fileString
+        let comments = self.topComments.joined(separator: "\n")
+        let delimitter = self.topComments.isEmpty ? "" : "\n"
+        return  comments + delimitter + self.outlines.fileString
     }
 
 }
