@@ -30,9 +30,9 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
             case let .success(value: v):
                 self.createAndEmbedRepositoryList(with: v.values)
             case let .failure(error: e):
-                // TODO:-
                 self.indicatorView.stopAnimating()
-                print(e)
+                let localizedError = (e as NSError).localizedFailureReason ?? "some unknown reason"
+                AlertController.alertNegative("Can't pull repo due to \(localizedError)")
             }
 
         }.execute()

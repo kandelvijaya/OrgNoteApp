@@ -23,6 +23,11 @@ final class AuthorizeController: UIViewController, StoryboardAwaker {
     
     @IBOutlet weak var authorizeButton: UIButton!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        authorizeButton.tintColor = Theme.blueish.buttonTint
+    }
+
     @IBAction func authorizeUser(_ sender: Any) {
         let oauth = BitbucketOauth2.shared
         if oauth.isAuthorizationRequired() {
