@@ -109,7 +109,7 @@ extension FlowRoutinNavigationController {
         if result.value != nil {
             AlertController.alertPositive("Good! Your file changes is pushed to remote.")
         } else {
-            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!)")
+            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
         }
     }
 
@@ -119,7 +119,7 @@ extension FlowRoutinNavigationController: LocateUserRepoControllerDelegate {
 
     func userDidSelectAndCloned(repo: Result<UserSelectedRepository>) {
         if let error = repo.error {
-            AlertController.alertNegative("Failed to clone the repo! \n \(error)")
+            AlertController.alertNegative("Failed to clone the repo! \n \(error.localizedDescription)")
         }
         self.userEnviornment.userSelectedRepo = repo.value
         self.state = computeCurrentState()
@@ -153,7 +153,7 @@ extension FlowRoutinNavigationController: RepoExploreCoordinatingControllerDeleg
             AlertController.alertPositive("Repo is pulled successfully")
         } else {
             // no-op. show error
-            AlertController.alertNegative("cant pull to refresh for given repo \n \(action.error!)")
+            AlertController.alertNegative("cant pull to refresh for given repo \n \(action.error!.localizedDescription)")
         }
     }
 
