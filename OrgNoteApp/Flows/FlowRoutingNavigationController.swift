@@ -63,7 +63,7 @@ extension FlowRoutinNavigationController {
         switch state {
         case .userNeedsToAuthorize:
             return AuthorizeController.created { [weak self] in
-                self?.state = self?.computeCurrentState()
+                self?.state = .userIsAuthorizedButHasNotSelectedAnyRepo
             }
         case .userIsAuthorizedButHasNotSelectedAnyRepo:
             return LocateUserRepoController.create(with: self, userState: self.userEnviornment)
