@@ -85,9 +85,7 @@ extension FlowRoutinNavigationController {
         }
         let controller = OrgListDriver(with: orgFile, onExit: { [weak self] newOrgFile in
             // NOTE:- comparing orgFile and newOrgFile is incorrect as we dont care about isExpaneded property.
-            if orgFile.fileString == newOrgFile.fileString {
-                // no changes
-            } else {
+            if orgFile.fileString != newOrgFile.fileString {
                 let newContent = newOrgFile.fileString
                 let writing = doTry { try newContent.write(to: file.url, atomically: true, encoding: .utf8) }
                 assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(file.url.path)")
