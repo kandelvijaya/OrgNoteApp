@@ -84,7 +84,8 @@ extension FlowRoutinNavigationController {
             fatalError("File \(file.name) at url \(file.url.path) cant be processed as ORG file")
         }
         let controller = OrgListDriver(with: orgFile, onExit: { [weak self] newOrgFile in
-            if orgFile == newOrgFile {
+            // NOTE:- comparing orgFile and newOrgFile is incorrect as we dont care about isExpaneded property.
+            if orgFile.fileString == newOrgFile.fileString {
                 // no changes
             } else {
                 let newContent = newOrgFile.fileString
