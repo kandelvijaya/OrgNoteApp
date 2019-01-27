@@ -37,7 +37,7 @@ final class OrgViewEditCoordinatingController: UIViewController {
 
     private func addRightBarButton() {
         let toggleBarItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(toggleEditor(_:)))
-        self.navigationController?.navigationItem.rightBarButtonItems = [toggleBarItem]
+        self.navigationItem.rightBarButtonItems = [toggleBarItem]
     }
 
     @IBAction func toggleEditor(_ sneder: UIButton) {
