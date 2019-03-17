@@ -1,4 +1,4 @@
 language: objective-c
 xcode_workspace: OrgNoteApp.xcworkspace # path to your xcodeproj folder
-xcode_scheme: OrgNoteAppTests
+xcode_scheme: OrgNoteApp
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
