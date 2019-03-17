@@ -7,68 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0153E4A4D723549F429B3500AD313B4C /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B393AA42B5B1A28195F63FFDDDD4A /* FastDiff-dummy.m */; };
-		0AB47B891F139C2195D6B4512437CFB0 /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA192AC91DE781028AD8EB56EE0699D /* FullyTypedResult.swift */; };
-		0B6671C671B27F9E158CD1B8D0B5F592 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1026F280191F66165A3957E92C979 /* InternalDiff.swift */; };
-		0F7CCEDB05DE3482FAC20B61DCCA3CDA /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF65C2DE4FD9315723A36B390658213 /* ParserResult.swift */; };
-		1028ADB065BDDB485A0D42C5AD7DE13B /* Parser+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAEB7CB8E60995CE7DBB6FC5AA4C53 /* Parser+Operators.swift */; };
-		106C2B6050DE9D2C9C957E3DC6CFD47B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E55E0D330073725E6C82208928829B /* ArrayExtension.swift */; };
-		14C0398EFA441A2F1A5A4FD82FAA8B8B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D799EE6EE8492B3FAF5EF253955943A /* Future.swift */; };
-		184E0A67DC3E2086AC3D88D7364A13FE /* OAuthorize2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A74543B8BAD00A81C2F5EE1FE520C962 /* OAuthorize2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28175DB4F79C8D1D093FDA6ED8129F3C /* UIDevice+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AFCD8B8235DEB507187552B747693C /* UIDevice+Platform.swift */; };
-		2A60091E2607B656AB70C4BD67C816C0 /* OAuth2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76E89AD9974CBD5B40948256EA3D3D /* OAuth2Error.swift */; };
-		2BB78245EC8447E39AF10BC1D1FC90D1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4F486604BF8530FF827141FB0BFD1 /* Result.swift */; };
-		2F86CE6642823B104F0D43EEEC480371 /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC156053919B485AAC611846E2FB0BA /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31389AC1D80EA57AFC4DEACADB4CD3EF /* CommonCryptoModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60786AE6650F5E7BAFDA1C2CAE5CB3 /* CommonCryptoModule-dummy.m */; };
+		0153E4A4D723549F429B3500AD313B4C /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00B196870D87B822BCB5968F494FB3 /* FastDiff-dummy.m */; };
+		0AB47B891F139C2195D6B4512437CFB0 /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC53EAE3C8D1442B71BBB242A27152B /* FullyTypedResult.swift */; };
+		0B6671C671B27F9E158CD1B8D0B5F592 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB40005378CBC2B6DDF73A6505C092 /* InternalDiff.swift */; };
+		0F7CCEDB05DE3482FAC20B61DCCA3CDA /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2AF12F47000D1BAAECF055268715C /* ParserResult.swift */; };
+		1028ADB065BDDB485A0D42C5AD7DE13B /* Parser+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2418F24514B54A6398382174195718 /* Parser+Operators.swift */; };
+		106C2B6050DE9D2C9C957E3DC6CFD47B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD028977B292E4C59D3788DC4344CA0 /* ArrayExtension.swift */; };
+		14C0398EFA441A2F1A5A4FD82FAA8B8B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1244F6504F35882AFDF270F30EAD2452 /* Future.swift */; };
+		184E0A67DC3E2086AC3D88D7364A13FE /* OAuthorize2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECA1C82CF8E62A83E594A6DD801C98C /* OAuthorize2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28175DB4F79C8D1D093FDA6ED8129F3C /* UIDevice+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2483D060767159203E54ED629FC420 /* UIDevice+Platform.swift */; };
+		2A60091E2607B656AB70C4BD67C816C0 /* OAuth2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA543854C0569C58F5D4DAD40A2B330 /* OAuth2Error.swift */; };
+		2BB78245EC8447E39AF10BC1D1FC90D1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBEFC5FA0B575C299E03406B668A606 /* Result.swift */; };
+		2F86CE6642823B104F0D43EEEC480371 /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DEE2C4BC96C2161C3B9E60C79C469C /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31389AC1D80EA57AFC4DEACADB4CD3EF /* CommonCryptoModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF66141366C6780F52D980EF0F319 /* CommonCryptoModule-dummy.m */; };
 		31F854D356AC65722EA78F273708921A /* Pods-OrgNoteApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E3B2AAACAA07B454AAC5F414024BF /* Pods-OrgNoteApp-dummy.m */; };
-		38EF1EB72F87380539C52A8CB5CED345 /* StatusAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E68E0BFD8A5F6791C5624F3D569C9F4E /* StatusAlert-dummy.m */; };
-		3A391743664D3E96927A2F018BEBA3AC /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBB8E38AF4F7CDD568357F4F48169BB /* InputState.swift */; };
-		49A56F19D53E3747D0D64AE844A53418 /* StatusAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DEE489826AC91408523BD21F82AEAE /* StatusAlert.swift */; };
-		4D05F1C3F2C3AC6D1A49EF4FA27F8CD3 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CFE0501FE95949F8B1C1E2247489E2 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38EF1EB72F87380539C52A8CB5CED345 /* StatusAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 153492085B189CAD1EA0937E5E2FDBAB /* StatusAlert-dummy.m */; };
+		3A391743664D3E96927A2F018BEBA3AC /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC0408110873EA5A4E6DE2FCFA2A0A /* InputState.swift */; };
+		49A56F19D53E3747D0D64AE844A53418 /* StatusAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0306886EA4C57FB7319FF0C5B6257 /* StatusAlert.swift */; };
+		4D05F1C3F2C3AC6D1A49EF4FA27F8CD3 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B383F965B5DFFD6464E93966D51E075 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DEEE7257FCBC7E3A4B04A401D51ECBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
 		4E1960C5CDACA55EDB27210B19A772AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2556A068F603F9170E570692B27BBF54 /* UIKit.framework */; };
 		4FEE2298D2BE25AE8E18CAF203783F7D /* Pods-OrgNoteAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71777AF5BC7007046B6CA3C24D9965F5 /* Pods-OrgNoteAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5438F2DE2D69026BB81906282AD1DCED /* Parser+STDLIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67C59B236B1558167700E0D80C97C3 /* Parser+STDLIB.swift */; };
+		5438F2DE2D69026BB81906282AD1DCED /* Parser+STDLIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311658539CE0F4FAD47997D5FA12F7B /* Parser+STDLIB.swift */; };
 		5AF078FE872F4BD4FD85C9193987C8A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		62B262340CEB7F09F0200CD5B454709A /* OAuthorize2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DA6964ADA41782513FCBA704070AA4 /* OAuthorize2-dummy.m */; };
-		670097B5526B362445727C74FBF0C9B9 /* OAuth2AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5983A2685192EEAD958ADD15F0662B8F /* OAuth2AccessToken.swift */; };
+		62B262340CEB7F09F0200CD5B454709A /* OAuthorize2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B35B6B3E73CD3C7A7A605042802924 /* OAuthorize2-dummy.m */; };
+		670097B5526B362445727C74FBF0C9B9 /* OAuth2AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEAF699F098EBEBEE00427744D755D /* OAuth2AccessToken.swift */; };
 		6711962784585271378DBE60DD55E6E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		696D873A5DD426262ED4904ADD66206D /* module.modulemap in Resources */ = {isa = PBXBuildFile; fileRef = D55F1000452E17915BAFA7AA50F47639 /* module.modulemap */; };
-		69960B24CFD4E079FDAA45764E8B7A92 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8004DFB37542193856F793AC14DD8AC /* Diffable.swift */; };
-		699B3FAAD61B0CD86A7DBD9D2FA996D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B5B0F6D920B8CC1BD8683FC28FF62E /* Operators.swift */; };
-		69A7A2FEC298A53AEB2DA86871FDCBF2 /* Parser+Combinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4DC95789CB96434B66260CA061EC7 /* Parser+Combinator.swift */; };
-		748CBAF79F3EA7EDCFA8CD6E3328FC24 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632C2CD76ABA51FCB674A9459AF7CBA /* DiffingAlgorithm.swift */; };
-		76A0B534B4230132C42BAF28FC6BBD20 /* BitbucketOAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCCEC820CE81F4E6A025904650584D /* BitbucketOAuth2Config.swift */; };
+		696D873A5DD426262ED4904ADD66206D /* module.modulemap in Resources */ = {isa = PBXBuildFile; fileRef = FB801304866303DC0BB3A324D43E1A3F /* module.modulemap */; };
+		69960B24CFD4E079FDAA45764E8B7A92 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F4FD9071EC07BC8144850CC5CF681 /* Diffable.swift */; };
+		699B3FAAD61B0CD86A7DBD9D2FA996D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D0194F7926B8D4A2CDE4468AC3F3D /* Operators.swift */; };
+		69A7A2FEC298A53AEB2DA86871FDCBF2 /* Parser+Combinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C32D0A570793DC500793AB3895EB5 /* Parser+Combinator.swift */; };
+		748CBAF79F3EA7EDCFA8CD6E3328FC24 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E0FBB075611D99AE18B1939F2956F7 /* DiffingAlgorithm.swift */; };
+		76A0B534B4230132C42BAF28FC6BBD20 /* BitbucketOAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6DF1FDC589B5E769B47DD28D89A15 /* BitbucketOAuth2Config.swift */; };
 		78B99FE9FFDBC0E52A95BCBFB037DDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		79B35A2DED8BD617C01B6F57919F7361 /* SwiftyParserCombinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F42B539CC70A43EA6C119AFE105A6204 /* SwiftyParserCombinator-dummy.m */; };
-		7EB7A3DC122F0C49C8697193F2D22B49 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A15600CF33107D4BFEE40E4A15CCC9 /* Parser.swift */; };
-		80E9B810609DED3895A9A1E5395F0482 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70C87EDA8ED535046E5028F6A371713 /* Empty.swift */; };
-		80F58209BC63414873B1586A33C26AB4 /* OAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16201C50A64001B5DE2AAE8AE48F4E58 /* OAuth2Config.swift */; };
-		8B082C4FF2A04157785FD0929F3D337E /* OAuth2AccessTokenStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA565FAC9D2D379DA4FA8F170F4B2BF2 /* OAuth2AccessTokenStorageService.swift */; };
-		9A3B9237A839B8CC68DD6B43EEB52F61 /* Parser+TypedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057FAC1425BB739DBE99A30EC5307B7 /* Parser+TypedMethods.swift */; };
-		9ECFABCA3B2650F1A3544398B851B047 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B8A0AC8F4B9FE7A97177CDE8ABE3C /* OAuth2.swift */; };
-		A0152E3888CFC3027E44C4CB070120B8 /* StatusAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 692E78809B2BF65FAB83BE4AF536DFBA /* StatusAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79B35A2DED8BD617C01B6F57919F7361 /* SwiftyParserCombinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EBDB938B41BFBC08A757FD47D8D7A2 /* SwiftyParserCombinator-dummy.m */; };
+		7EB7A3DC122F0C49C8697193F2D22B49 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C9AF27C04DEF749CABE2FFCAC619E /* Parser.swift */; };
+		80E9B810609DED3895A9A1E5395F0482 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38123DF39BC59515E7BED34981EBDFF /* Empty.swift */; };
+		80F58209BC63414873B1586A33C26AB4 /* OAuth2Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74048C1C00D6241A710A1A47A469E07C /* OAuth2Config.swift */; };
+		8B082C4FF2A04157785FD0929F3D337E /* OAuth2AccessTokenStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023317DF20D9B524C60182FB25F6634E /* OAuth2AccessTokenStorageService.swift */; };
+		9A3B9237A839B8CC68DD6B43EEB52F61 /* Parser+TypedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9858A3578577230F3024B27120ABBCA2 /* Parser+TypedMethods.swift */; };
+		9ECFABCA3B2650F1A3544398B851B047 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E512DA4E313B34C5A8C43F9A6A95683 /* OAuth2.swift */; };
+		A0152E3888CFC3027E44C4CB070120B8 /* StatusAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1D4B5AC84DDAFCE528919FF77BAE16A /* StatusAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1791E37C0EDB60A040479B157B58635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		ACA53AE20F08DEF642309827207050A3 /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F8F9F21B3EBA7388797EC1BC2C95B /* Kekka-dummy.m */; };
+		ACA53AE20F08DEF642309827207050A3 /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7288EB2D3EFD279068B23434C314222A /* Kekka-dummy.m */; };
 		B198CBE31762CA797FCFA7DFB3EAB9AB /* Kekka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8785003BFD6E1BD65650F5B758C1F9DC /* Kekka.framework */; };
 		B8FB5DEAC8C81E54F451038CB1381671 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		BA5902368F4EC0F5BFFA010EFCB3CA66 /* CommonCryptoModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B36781CCCF910441DEAFB191AA5B006 /* CommonCryptoModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2A1587E5CE091FF0F4869A4229B404C /* CommonCryptoBridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 45865FD4C7503BC7444F5CE7B0AAFEFB /* CommonCryptoBridge.h */; };
-		C9B60B0B75766DB8D3D0DA0501BC6CD3 /* Parser+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315B1B638686FA9951450EA533C584FF /* Parser+Monad.swift */; };
+		BA5902368F4EC0F5BFFA010EFCB3CA66 /* CommonCryptoModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACA1BBF088027BD24C627041B1D1F9E /* CommonCryptoModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A1587E5CE091FF0F4869A4229B404C /* CommonCryptoBridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 4F8821E459D3A4715F013ED3A02A5568 /* CommonCryptoBridge.h */; };
+		C9B60B0B75766DB8D3D0DA0501BC6CD3 /* Parser+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02989D54B2F2057608D7E9FBC1F165F /* Parser+Monad.swift */; };
 		CAC609C516DA73AC95C63B3DF3A308BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		CCDF80DB0A1AC1A17E671A18360C0EB4 /* CommonCryptoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E1165F146177E223CC6FBB742D630219 /* CommonCryptoModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFBACC9A65109771A7A348358B2F26E9 /* OAuthorize2.h in Headers */ = {isa = PBXBuildFile; fileRef = CE783FF69BA5D1BC615167A293EDBEE1 /* OAuthorize2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D65CFC7E773D7A57140CE97EAD777CDE /* SwiftyParserCombinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C258AE6858F7E8B3E13DFF94A9ACC9C /* SwiftyParserCombinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCDF80DB0A1AC1A17E671A18360C0EB4 /* CommonCryptoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E385F61BD7D0B247C0802F8A7583C324 /* CommonCryptoModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFBACC9A65109771A7A348358B2F26E9 /* OAuthorize2.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5B802A167B64ECF5EE2D49F940B679 /* OAuthorize2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D65CFC7E773D7A57140CE97EAD777CDE /* SwiftyParserCombinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B929972FFE851F2216311F3EB70F93 /* SwiftyParserCombinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9D4F3BAC6BBDBBA0A2909F5D113DC25 /* Pods-OrgNoteApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 406B7975005FA99FD1C132BC6DC144BA /* Pods-OrgNoteApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCF7E106310D4180030FD80FD3BB78C5 /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C131AFA1ADE530C5E8F9B04CDBBFC /* ErrorEquality.swift */; };
+		DCF7E106310D4180030FD80FD3BB78C5 /* ErrorEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D5841EC01955CB7C030FAED3526C40 /* ErrorEquality.swift */; };
 		DDF889B6AFDB8FC3F7EE60B649796F27 /* CommonCryptoModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8919BABE16895277FCDA9604F34E6E /* CommonCryptoModule.framework */; };
-		DFE21B4178AC1D4F4F1E372B715D0060 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED009B683B34DCBEDFBAB11F0EADF63 /* ParserError.swift */; };
-		E7E525EEC9CAFC72D9DF01893A005083 /* UIDevice+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AE865FCB717DD008582B5B1D1E77A6 /* UIDevice+Blur.swift */; };
-		EC77DE8B85F328E8116D6EED87A08725 /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86403DEB74B48F4C4EF577B508E1B60B /* CharacterExtension.swift */; };
+		DFE21B4178AC1D4F4F1E372B715D0060 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B98F0E6C01E0887A52E18D2C67163 /* ParserError.swift */; };
+		E7E525EEC9CAFC72D9DF01893A005083 /* UIDevice+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51383295198BB76E39002F85D420088F /* UIDevice+Blur.swift */; };
+		EC77DE8B85F328E8116D6EED87A08725 /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48D6C8282FEC740A1B4B1DFEE79164 /* CharacterExtension.swift */; };
 		EE0DD12361E5E0846BC7C582C2063F83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */; };
-		F78CE31187E6E3AA90CF7046A6A6401A /* StatusAlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00513A68184DA4163684C2E96F0885 /* StatusAlertUtils.swift */; };
+		F78CE31187E6E3AA90CF7046A6A6401A /* StatusAlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3BE514FA85AA6E8C5D1BEA6DFF2AC /* StatusAlertUtils.swift */; };
 		F7952ADE874348BC2AD01BC6BE34767F /* Pods-OrgNoteAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8E39B23101627A35837D31AC20A59 /* Pods-OrgNoteAppTests-dummy.m */; };
-		FAFAA90CF2ACE4CA3674F780549F634B /* OAuth2NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB51F82F09A47530210975D509BEF80 /* OAuth2NetworkService.swift */; };
+		FAFAA90CF2ACE4CA3674F780549F634B /* OAuth2NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5CBB12E62DA54C77B0DB70F18C3C57 /* OAuth2NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,108 +145,121 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05BD8B77ACB3506B05C6CB269CA736AF /* StatusAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StatusAlert.modulemap; sourceTree = "<group>"; };
-		0A401293C36FD26E3DA6BBEF562F085B /* OAuthorize2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthorize2.xcconfig; sourceTree = "<group>"; };
-		0DF65C2DE4FD9315723A36B390658213 /* ParserResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserResult.swift; path = ParserCombinator/Sources/ParserResult.swift; sourceTree = "<group>"; };
-		120C131AFA1ADE530C5E8F9B04CDBBFC /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
-		16201C50A64001B5DE2AAE8AE48F4E58 /* OAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Config.swift; path = OAuthorize2/OAuth2Config.swift; sourceTree = "<group>"; };
+		0119DECFDCDC93AE0F83421F824C0C74 /* CommonCryptoModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-prefix.pch"; sourceTree = "<group>"; };
+		0211C115F3605AD61B314FD4A0DAF8DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023317DF20D9B524C60182FB25F6634E /* OAuth2AccessTokenStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessTokenStorageService.swift; path = OAuthorize2/OAuth2AccessTokenStorageService.swift; sourceTree = "<group>"; };
+		04B35B6B3E73CD3C7A7A605042802924 /* OAuthorize2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthorize2-dummy.m"; sourceTree = "<group>"; };
+		0A5CBB12E62DA54C77B0DB70F18C3C57 /* OAuth2NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2NetworkService.swift; path = OAuthorize2/OAuth2NetworkService.swift; sourceTree = "<group>"; };
+		0D4CDE088ED713483B67A33C758AD21A /* CommonCryptoModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CommonCryptoModule.modulemap; sourceTree = "<group>"; };
+		0F5B802A167B64ECF5EE2D49F940B679 /* OAuthorize2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAuthorize2.h; path = OAuthorize2/OAuthorize2.h; sourceTree = "<group>"; };
+		1244F6504F35882AFDF270F30EAD2452 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
+		13D5841EC01955CB7C030FAED3526C40 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		153492085B189CAD1EA0937E5E2FDBAB /* StatusAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StatusAlert-dummy.m"; sourceTree = "<group>"; };
+		169CF66141366C6780F52D980EF0F319 /* CommonCryptoModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCryptoModule-dummy.m"; sourceTree = "<group>"; };
 		16AAB47A0ED92F90556C24B574673121 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
-		19CFE0501FE95949F8B1C1E2247489E2 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-umbrella.h"; sourceTree = "<group>"; };
+		1BAD74F3F6FF639F2FF9DA042447578C /* IBGBugReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGBugReporting.h; path = Instabug.framework/Headers/IBGBugReporting.h; sourceTree = "<group>"; };
+		1C9F4FD9071EC07BC8144850CC5CF681 /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
+		1CA543854C0569C58F5D4DAD40A2B330 /* OAuth2Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Error.swift; path = OAuthorize2/OAuth2Error.swift; sourceTree = "<group>"; };
 		1D6684AB064C0BF83933C592F96671D2 /* Pods-OrgNoteAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1DF7F61EDC830D43C756B031395056F9 /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kekka.modulemap; sourceTree = "<group>"; };
-		1EBB51CE858382FB06C7728F9920E6F7 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
+		23023BDDED1EA3A740155419DE15B89D /* IBGTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGTypes.h; path = Instabug.framework/Headers/IBGTypes.h; sourceTree = "<group>"; };
 		2556A068F603F9170E570692B27BBF54 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2970B3CB39E6C0693F395C1F5F129437 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
+		29DEAF699F098EBEBEE00427744D755D /* OAuth2AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessToken.swift; path = OAuthorize2/OAuth2AccessToken.swift; sourceTree = "<group>"; };
 		29FC4BA82A86E7DA2F8D0B2290755777 /* Pods_OrgNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrgNoteApp.framework; path = "Pods-OrgNoteApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8919BABE16895277FCDA9604F34E6E /* CommonCryptoModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCryptoModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D0C1AC0A945A1DF02CA75FB50EF88EE /* StatusAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatusAlert-prefix.pch"; sourceTree = "<group>"; };
-		30A56ABEDFFBF88F69A4125C4FA20C42 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
-		315B1B638686FA9951450EA533C584FF /* Parser+Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Monad.swift"; path = "ParserCombinator/Sources/Parser+Monad.swift"; sourceTree = "<group>"; };
-		31DCCEC820CE81F4E6A025904650584D /* BitbucketOAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BitbucketOAuth2Config.swift; path = OAuthorize2/BitbucketOAuth2Config.swift; sourceTree = "<group>"; };
-		33E55E0D330073725E6C82208928829B /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ParserCombinator/Sources/ArrayExtension.swift; sourceTree = "<group>"; };
+		2DE7762B16776B2352CC04DBB32A858B /* IBGCrashReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGCrashReporting.h; path = Instabug.framework/Headers/IBGCrashReporting.h; sourceTree = "<group>"; };
+		32CB42D02EBEFD6F4A46AF3E573D0E72 /* InstabugCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InstabugCore.h; path = Instabug.framework/Headers/InstabugCore.h; sourceTree = "<group>"; };
+		345BCF6FE031E09B9C8006ADE141236B /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FastDiff.modulemap; sourceTree = "<group>"; };
 		38C4637A127479224D79F4C944C93D1F /* Pods-OrgNoteApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-resources.sh"; sourceTree = "<group>"; };
 		397B59F593FCF9D27E75226C082A963E /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3CC156053919B485AAC611846E2FB0BA /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-umbrella.h"; sourceTree = "<group>"; };
-		3EE4DC95789CB96434B66260CA061EC7 /* Parser+Combinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Combinator.swift"; path = "ParserCombinator/Sources/Parser+Combinator.swift"; sourceTree = "<group>"; };
-		4057FAC1425BB739DBE99A30EC5307B7 /* Parser+TypedMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+TypedMethods.swift"; path = "ParserCombinator/Sources/Parser+TypedMethods.swift"; sourceTree = "<group>"; };
+		39DEE2C4BC96C2161C3B9E60C79C469C /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-umbrella.h"; sourceTree = "<group>"; };
+		3A1B98F0E6C01E0887A52E18D2C67163 /* ParserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserError.swift; path = ParserCombinator/Sources/ParserError.swift; sourceTree = "<group>"; };
+		3A203B80990D22D5A6E04CEE4EBA80A7 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
+		3EA2AF2FE7F73C83AA27CB22F1F7AFFC /* IBGLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGLog.h; path = Instabug.framework/Headers/IBGLog.h; sourceTree = "<group>"; };
 		406B7975005FA99FD1C132BC6DC144BA /* Pods-OrgNoteApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteApp-umbrella.h"; sourceTree = "<group>"; };
-		4539B58FD255378B85B5B570CF226695 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45865FD4C7503BC7444F5CE7B0AAFEFB /* CommonCryptoBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoBridge.h; path = CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h; sourceTree = "<group>"; };
-		49A15600CF33107D4BFEE40E4A15CCC9 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ParserCombinator/Sources/Parser.swift; sourceTree = "<group>"; };
+		40823F91CB3B3B4B38613EDEC1947601 /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
+		40D74B92CC6F900BABA014C5765EF2DF /* StatusAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatusAlert-prefix.pch"; sourceTree = "<group>"; };
+		427ACB99DB1E7F997387EC96696FA193 /* IBGReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGReport.h; path = Instabug.framework/Headers/IBGReport.h; sourceTree = "<group>"; };
+		42B0306886EA4C57FB7319FF0C5B6257 /* StatusAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusAlert.swift; path = Sources/StatusAlert/StatusAlert.swift; sourceTree = "<group>"; };
+		453D1B2C9B6053E80C81668DF4B138B9 /* SwiftyParserCombinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-prefix.pch"; sourceTree = "<group>"; };
 		4CBB06515A92A92C8FA0E2125E619441 /* Pods-OrgNoteApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteApp.modulemap"; sourceTree = "<group>"; };
+		4D9A2CEE1B2B97FFCFECEE5068EF35FB /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kekka.modulemap; sourceTree = "<group>"; };
+		4F8821E459D3A4715F013ED3A02A5568 /* CommonCryptoBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoBridge.h; path = CommonCryptoModule/CommonCryptoBridge/CommonCryptoBridge.h; sourceTree = "<group>"; };
+		51383295198BB76E39002F85D420088F /* UIDevice+Blur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Blur.swift"; path = "Sources/StatusAlert/Extensions/UIDevice+Blur.swift"; sourceTree = "<group>"; };
+		51AC98977ACE3DE5A1341B72FCF656A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FD52DC3C4A8C33B07E9AFE8921E24D /* Pods-OrgNoteAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-frameworks.sh"; sourceTree = "<group>"; };
-		56BFA1EC71BE25B191AB567DB7AA7A1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5983A2685192EEAD958ADD15F0662B8F /* OAuth2AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessToken.swift; path = OAuthorize2/OAuth2AccessToken.swift; sourceTree = "<group>"; };
-		5C258AE6858F7E8B3E13DFF94A9ACC9C /* SwiftyParserCombinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-umbrella.h"; sourceTree = "<group>"; };
-		617D0E3FC3687E6037D6045720B93069 /* SwiftyParserCombinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyParserCombinator.xcconfig; sourceTree = "<group>"; };
-		62AFCD8B8235DEB507187552B747693C /* UIDevice+Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Platform.swift"; path = "Sources/StatusAlert/Extensions/UIDevice+Platform.swift"; sourceTree = "<group>"; };
+		5E2483D060767159203E54ED629FC420 /* UIDevice+Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Platform.swift"; path = "Sources/StatusAlert/Extensions/UIDevice+Platform.swift"; sourceTree = "<group>"; };
+		605D0194F7926B8D4A2CDE4468AC3F3D /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
+		60E0FBB075611D99AE18B1939F2956F7 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		64CFBE30296E876F3BA5982FD6176935 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
 		679B8EA5C6FF831043F3AE5A6E9B4743 /* OAuthorize2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OAuthorize2.framework; path = OAuthorize2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687FE0A9C86A5EA132E5F3AE250AEC79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		692E78809B2BF65FAB83BE4AF536DFBA /* StatusAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatusAlert-umbrella.h"; sourceTree = "<group>"; };
+		68EBDB938B41BFBC08A757FD47D8D7A2 /* SwiftyParserCombinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyParserCombinator-dummy.m"; sourceTree = "<group>"; };
+		6BD028977B292E4C59D3788DC4344CA0 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ParserCombinator/Sources/ArrayExtension.swift; sourceTree = "<group>"; };
 		6CA8E39B23101627A35837D31AC20A59 /* Pods-OrgNoteAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteAppTests-dummy.m"; sourceTree = "<group>"; };
+		6D2C9AF27C04DEF749CABE2FFCAC619E /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ParserCombinator/Sources/Parser.swift; sourceTree = "<group>"; };
 		713FDBDA42317EFDD41E091F6F9FD1B5 /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		71777AF5BC7007046B6CA3C24D9965F5 /* Pods-OrgNoteAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrgNoteAppTests-umbrella.h"; sourceTree = "<group>"; };
-		7271E3E04D9D1FAB28D04A54B6599489 /* CommonCryptoModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-prefix.pch"; sourceTree = "<group>"; };
-		72BBF3056F4F00EF50F6E193E004DC13 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
-		74DA6964ADA41782513FCBA704070AA4 /* OAuthorize2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthorize2-dummy.m"; sourceTree = "<group>"; };
-		77535779C5344ECAD423E5F1F6519BE9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78A4F486604BF8530FF827141FB0BFD1 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
-		79B591B154B481FB821983DA602CB05D /* OAuthorize2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-prefix.pch"; sourceTree = "<group>"; };
-		7D799EE6EE8492B3FAF5EF253955943A /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
-		7E67C59B236B1558167700E0D80C97C3 /* Parser+STDLIB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+STDLIB.swift"; path = "ParserCombinator/Sources/Parser+STDLIB.swift"; sourceTree = "<group>"; };
-		800DEBA2C88B66ADD7005061A6080CBD /* CommonCryptoModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CommonCryptoModule.modulemap; sourceTree = "<group>"; };
+		723AB941A9A977C5163E89C54336B88E /* IBGNetworkLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGNetworkLogger.h; path = Instabug.framework/Headers/IBGNetworkLogger.h; sourceTree = "<group>"; };
+		7288EB2D3EFD279068B23434C314222A /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
+		731A160471FD4AF85103051D7F40C5BE /* UIView+Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Instabug.h"; path = "Instabug.framework/Headers/UIView+Instabug.h"; sourceTree = "<group>"; };
+		74048C1C00D6241A710A1A47A469E07C /* OAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Config.swift; path = OAuthorize2/OAuth2Config.swift; sourceTree = "<group>"; };
+		74E2AF12F47000D1BAAECF055268715C /* ParserResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserResult.swift; path = ParserCombinator/Sources/ParserResult.swift; sourceTree = "<group>"; };
+		7641E687F50BE6B1A7DE87B70614674F /* OAuthorize2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-prefix.pch"; sourceTree = "<group>"; };
+		7ACA1BBF088027BD24C627041B1D1F9E /* CommonCryptoModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-umbrella.h"; sourceTree = "<group>"; };
+		7BFB40005378CBC2B6DDF73A6505C092 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
+		7CA03DC85D01FAFDB011ED82A22C4B00 /* SwiftyParserCombinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyParserCombinator.modulemap; sourceTree = "<group>"; };
+		7E512DA4E313B34C5A8C43F9A6A95683 /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = OAuthorize2/OAuth2.swift; sourceTree = "<group>"; };
 		81B0CE54353C092A1BB935712D52417A /* SwiftyParserCombinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyParserCombinator.framework; path = SwiftyParserCombinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86403DEB74B48F4C4EF577B508E1B60B /* CharacterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ParserCombinator/CharacterExtension.swift; sourceTree = "<group>"; };
+		81FC0408110873EA5A4E6DE2FCFA2A0A /* InputState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputState.swift; path = ParserCombinator/Sources/InputState.swift; sourceTree = "<group>"; };
+		83390DB22721F9BCC7326B736DE50FAB /* OAuthorize2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthorize2.xcconfig; sourceTree = "<group>"; };
+		84B4C3BD4EB81A5AF25FE04726576853 /* CommonCryptoModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCryptoModule.xcconfig; sourceTree = "<group>"; };
 		866E3B2AAACAA07B454AAC5F414024BF /* Pods-OrgNoteApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrgNoteApp-dummy.m"; sourceTree = "<group>"; };
 		8785003BFD6E1BD65650F5B758C1F9DC /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B36781CCCF910441DEAFB191AA5B006 /* CommonCryptoModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCryptoModule-umbrella.h"; sourceTree = "<group>"; };
-		8D76E89AD9974CBD5B40948256EA3D3D /* OAuth2Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Error.swift; path = OAuthorize2/OAuth2Error.swift; sourceTree = "<group>"; };
-		8E2B17C26D1B8E75F514DE5B89BE9AE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED009B683B34DCBEDFBAB11F0EADF63 /* ParserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserError.swift; path = ParserCombinator/Sources/ParserError.swift; sourceTree = "<group>"; };
-		91AE865FCB717DD008582B5B1D1E77A6 /* UIDevice+Blur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Blur.swift"; path = "Sources/StatusAlert/Extensions/UIDevice+Blur.swift"; sourceTree = "<group>"; };
+		87B929972FFE851F2216311F3EB70F93 /* SwiftyParserCombinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-umbrella.h"; sourceTree = "<group>"; };
+		8FBEFC5FA0B575C299E03406B668A606 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
+		91A989AC5678F5D6B503449D53B7044F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E3C3E6C3A0A19BE51E81D8931B5EC1 /* Pods-OrgNoteApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrgNoteApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		930C32D0A570793DC500793AB3895EB5 /* Parser+Combinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Combinator.swift"; path = "ParserCombinator/Sources/Parser+Combinator.swift"; sourceTree = "<group>"; };
+		9311658539CE0F4FAD47997D5FA12F7B /* Parser+STDLIB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+STDLIB.swift"; path = "ParserCombinator/Sources/Parser+STDLIB.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		963132283C9662F4A8036A7961DB0D69 /* CommonCryptoModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CommonCryptoModule.framework; path = CommonCryptoModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BCAEB7CB8E60995CE7DBB6FC5AA4C53 /* Parser+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Operators.swift"; path = "ParserCombinator/Sources/Parser+Operators.swift"; sourceTree = "<group>"; };
-		A0D0085AFFCEC153F692149AADE9BB41 /* SwiftyParserCombinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyParserCombinator-prefix.pch"; sourceTree = "<group>"; };
+		9858A3578577230F3024B27120ABBCA2 /* Parser+TypedMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+TypedMethods.swift"; path = "ParserCombinator/Sources/Parser+TypedMethods.swift"; sourceTree = "<group>"; };
+		9B383F965B5DFFD6464E93966D51E075 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-umbrella.h"; sourceTree = "<group>"; };
+		9CB6118879D22876F8EE70A4B6205FCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ECA1C82CF8E62A83E594A6DD801C98C /* OAuthorize2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-umbrella.h"; sourceTree = "<group>"; };
+		A17B682670F85BEAED1BA70DFD6AA697 /* IBGFeatureRequests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGFeatureRequests.h; path = Instabug.framework/Headers/IBGFeatureRequests.h; sourceTree = "<group>"; };
+		A1D4B5AC84DDAFCE528919FF77BAE16A /* StatusAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatusAlert-umbrella.h"; sourceTree = "<group>"; };
 		A71A244501D7E5FB7AB0DFCE560514F2 /* StatusAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StatusAlert.framework; path = StatusAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A74543B8BAD00A81C2F5EE1FE520C962 /* OAuthorize2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthorize2-umbrella.h"; sourceTree = "<group>"; };
-		AA4B8A0AC8F4B9FE7A97177CDE8ABE3C /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = OAuthorize2/OAuth2.swift; sourceTree = "<group>"; };
-		AD00513A68184DA4163684C2E96F0885 /* StatusAlertUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusAlertUtils.swift; path = Sources/StatusAlert/StatusAlertUtils.swift; sourceTree = "<group>"; };
-		B4B6E3473E01A44FA1B2E6B55CD6AE50 /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FastDiff.modulemap; sourceTree = "<group>"; };
-		B632C2CD76ABA51FCB674A9459AF7CBA /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
-		BA565FAC9D2D379DA4FA8F170F4B2BF2 /* OAuth2AccessTokenStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AccessTokenStorageService.swift; path = OAuthorize2/OAuth2AccessTokenStorageService.swift; sourceTree = "<group>"; };
-		BBB51F82F09A47530210975D509BEF80 /* OAuth2NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2NetworkService.swift; path = OAuthorize2/OAuth2NetworkService.swift; sourceTree = "<group>"; };
-		BCD842004A3C3AE555B5D1D58B6C1A82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD48D6C8282FEC740A1B4B1DFEE79164 /* CharacterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ParserCombinator/CharacterExtension.swift; sourceTree = "<group>"; };
+		B28BD9BBCFFE35916EA8809D7A724BC5 /* SwiftyParserCombinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyParserCombinator.xcconfig; sourceTree = "<group>"; };
+		BAA0DDFCCB75DC1D65E65AFE69B40017 /* Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Instabug.h; path = Instabug.framework/Headers/Instabug.h; sourceTree = "<group>"; };
+		BD2418F24514B54A6398382174195718 /* Parser+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Operators.swift"; path = "ParserCombinator/Sources/Parser+Operators.swift"; sourceTree = "<group>"; };
+		BD3A1A320A21D583CEC2DA311FE1FDB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECA5034E3AF09A08F32384818956039 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8304DEA79450A9B415747A15A0AE60 /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kekka.framework; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C083C6CFDE29347EEC84AC15C07EE796 /* SwiftyParserCombinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyParserCombinator.modulemap; sourceTree = "<group>"; };
+		C0FBB2E7FF0B3CD603D3DB95529C6626 /* IBGSurvey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGSurvey.h; path = Instabug.framework/Headers/IBGSurvey.h; sourceTree = "<group>"; };
 		C1121399DF0E7B2055BD3BAC4DCA2C3B /* FastDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FastDiff.framework; path = FastDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C358C1E41E845767AF6EF7030D726466 /* Pods-OrgNoteAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteAppTests-resources.sh"; sourceTree = "<group>"; };
-		C61D21B124E1C0D7F35C1B7903E1803B /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
+		C366D52B73BAC4B2CEA8CEF0DF86903D /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 		C66066BEF208DE4D7B8622105F8B0F2A /* Pods-OrgNoteApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CE783FF69BA5D1BC615167A293EDBEE1 /* OAuthorize2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAuthorize2.h; path = OAuthorize2/OAuthorize2.h; sourceTree = "<group>"; };
-		D55F1000452E17915BAFA7AA50F47639 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = CommonCryptoModule/CommonCryptoBridge/module.modulemap; sourceTree = "<group>"; };
-		D6DEE489826AC91408523BD21F82AEAE /* StatusAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusAlert.swift; path = Sources/StatusAlert/StatusAlert.swift; sourceTree = "<group>"; };
-		D86B393AA42B5B1A28195F63FFDDDD4A /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
-		DAA192AC91DE781028AD8EB56EE0699D /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
-		DB60786AE6650F5E7BAFDA1C2CAE5CB3 /* CommonCryptoModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCryptoModule-dummy.m"; sourceTree = "<group>"; };
+		C6A23902543630F74C6387D47689D169 /* IBGSurveys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGSurveys.h; path = Instabug.framework/Headers/IBGSurveys.h; sourceTree = "<group>"; };
+		CEC53EAE3C8D1442B71BBB242A27152B /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		D38123DF39BC59515E7BED34981EBDFF /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = CommonCryptoModule/Empty.swift; sourceTree = "<group>"; };
 		DC15F93E129394D0A20DBFDB88ED6770 /* Pods-OrgNoteAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrgNoteAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DCBB8E38AF4F7CDD568357F4F48169BB /* InputState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputState.swift; path = ParserCombinator/Sources/InputState.swift; sourceTree = "<group>"; };
-		E1165F146177E223CC6FBB742D630219 /* CommonCryptoModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoModule.h; path = CommonCryptoModule/CommonCryptoModule.h; sourceTree = "<group>"; };
-		E24046B1F8F4A692097240C9FDFF7D68 /* StatusAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatusAlert.xcconfig; sourceTree = "<group>"; };
+		DE00B196870D87B822BCB5968F494FB3 /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		E02989D54B2F2057608D7E9FBC1F165F /* Parser+Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Parser+Monad.swift"; path = "ParserCombinator/Sources/Parser+Monad.swift"; sourceTree = "<group>"; };
+		E3055F81B39775F012B9DD304D5F7668 /* StatusAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StatusAlert.modulemap; sourceTree = "<group>"; };
+		E385F61BD7D0B247C0802F8A7583C324 /* CommonCryptoModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonCryptoModule.h; path = CommonCryptoModule/CommonCryptoModule.h; sourceTree = "<group>"; };
+		E4E6DF1FDC589B5E769B47DD28D89A15 /* BitbucketOAuth2Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BitbucketOAuth2Config.swift; path = OAuthorize2/BitbucketOAuth2Config.swift; sourceTree = "<group>"; };
 		E53C2BD899F517C13600DA8E28AAF5FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5B5B0F6D920B8CC1BD8683FC28FF62E /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
-		E68E0BFD8A5F6791C5624F3D569C9F4E /* StatusAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StatusAlert-dummy.m"; sourceTree = "<group>"; };
-		E70C87EDA8ED535046E5028F6A371713 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = CommonCryptoModule/Empty.swift; sourceTree = "<group>"; };
-		E9CDF1613A5157CAE104657DDB9E1B79 /* OAuthorize2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthorize2.modulemap; sourceTree = "<group>"; };
-		EA9F8F9F21B3EBA7388797EC1BC2C95B /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
 		EE1741FBEE597A7EE7022696315C937D /* Pods-OrgNoteApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrgNoteApp-frameworks.sh"; sourceTree = "<group>"; };
-		F1B1026F280191F66165A3957E92C979 /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
-		F42B539CC70A43EA6C119AFE105A6204 /* SwiftyParserCombinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyParserCombinator-dummy.m"; sourceTree = "<group>"; };
-		F69DE49C72E34450E0EFFF47B84A403D /* CommonCryptoModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCryptoModule.xcconfig; sourceTree = "<group>"; };
+		F0D3BE514FA85AA6E8C5D1BEA6DFF2AC /* StatusAlertUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusAlertUtils.swift; path = Sources/StatusAlert/StatusAlertUtils.swift; sourceTree = "<group>"; };
 		F70016BFD35C33C4BA177F2BAB28B69F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F7DA146966DC587B9416BF1609D929B9 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
-		F8004DFB37542193856F793AC14DD8AC /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
-		F983D809E0C8F5CDF76DAE76C9C28D58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F914DB9865619CE4DBA36371D9C9BE81 /* OAuthorize2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthorize2.modulemap; sourceTree = "<group>"; };
+		FB801304866303DC0BB3A324D43E1A3F /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = CommonCryptoModule/CommonCryptoBridge/module.modulemap; sourceTree = "<group>"; };
+		FD962D61B5EDE8FA26BF8EADABA35D8B /* StatusAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatusAlert.xcconfig; sourceTree = "<group>"; };
 		FE5A55E1CC6628F698C1104C65E557FC /* Pods-OrgNoteAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrgNoteAppTests.modulemap"; sourceTree = "<group>"; };
 		FF8B13BFD8B10C2613D74B83D1B9EB8D /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrgNoteAppTests.framework; path = "Pods-OrgNoteAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -322,46 +335,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0818466AE4F7524A35F9E2455C2EF6E2 /* Kekka */ = {
+		0DF282243E059176AD6BAB0BDEF7A125 /* FastDiff */ = {
 			isa = PBXGroup;
 			children = (
-				120C131AFA1ADE530C5E8F9B04CDBBFC /* ErrorEquality.swift */,
-				DAA192AC91DE781028AD8EB56EE0699D /* FullyTypedResult.swift */,
-				7D799EE6EE8492B3FAF5EF253955943A /* Future.swift */,
-				E5B5B0F6D920B8CC1BD8683FC28FF62E /* Operators.swift */,
-				78A4F486604BF8530FF827141FB0BFD1 /* Result.swift */,
-				1B60A9C03CF7D96D6BA30599FD9CDA37 /* Support Files */,
+				1C9F4FD9071EC07BC8144850CC5CF681 /* Diffable.swift */,
+				60E0FBB075611D99AE18B1939F2956F7 /* DiffingAlgorithm.swift */,
+				7BFB40005378CBC2B6DDF73A6505C092 /* InternalDiff.swift */,
+				8E3323F38E6725AEF65C00DA00807B9D /* Support Files */,
 			);
-			name = Kekka;
-			path = Kekka;
-			sourceTree = "<group>";
-		};
-		0FE4C2F922C6D1E4F13A53D26D0B54C2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				77535779C5344ECAD423E5F1F6519BE9 /* Info.plist */,
-				05BD8B77ACB3506B05C6CB269CA736AF /* StatusAlert.modulemap */,
-				E24046B1F8F4A692097240C9FDFF7D68 /* StatusAlert.xcconfig */,
-				E68E0BFD8A5F6791C5624F3D569C9F4E /* StatusAlert-dummy.m */,
-				2D0C1AC0A945A1DF02CA75FB50EF88EE /* StatusAlert-prefix.pch */,
-				692E78809B2BF65FAB83BE4AF536DFBA /* StatusAlert-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/StatusAlert";
-			sourceTree = "<group>";
-		};
-		1B60A9C03CF7D96D6BA30599FD9CDA37 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8E2B17C26D1B8E75F514DE5B89BE9AE7 /* Info.plist */,
-				1DF7F61EDC830D43C756B031395056F9 /* Kekka.modulemap */,
-				1EBB51CE858382FB06C7728F9920E6F7 /* Kekka.xcconfig */,
-				EA9F8F9F21B3EBA7388797EC1BC2C95B /* Kekka-dummy.m */,
-				30A56ABEDFFBF88F69A4125C4FA20C42 /* Kekka-prefix.pch */,
-				3CC156053919B485AAC611846E2FB0BA /* Kekka-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Kekka";
+			name = FastDiff;
+			path = FastDiff;
 			sourceTree = "<group>";
 		};
 		37E6BF18E851527E48C70F3970C12AA3 /* Pods-OrgNoteAppTests */ = {
@@ -382,106 +365,125 @@
 			path = "Target Support Files/Pods-OrgNoteAppTests";
 			sourceTree = "<group>";
 		};
-		390CC05DA4B62DD7A455D346A45A42E3 /* CommonCryptoModule */ = {
+		39AB50B1F50B440D1EE472E7ED88F1A1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1165F146177E223CC6FBB742D630219 /* CommonCryptoModule.h */,
-				E70C87EDA8ED535046E5028F6A371713 /* Empty.swift */,
-				CD4873FD02B60665AD8F3BF0B2FA0DB9 /* Resources */,
-				5711591B79973AA62057C6DE4E85B03C /* Support Files */,
+				91A989AC5678F5D6B503449D53B7044F /* Info.plist */,
+				7CA03DC85D01FAFDB011ED82A22C4B00 /* SwiftyParserCombinator.modulemap */,
+				B28BD9BBCFFE35916EA8809D7A724BC5 /* SwiftyParserCombinator.xcconfig */,
+				68EBDB938B41BFBC08A757FD47D8D7A2 /* SwiftyParserCombinator-dummy.m */,
+				453D1B2C9B6053E80C81668DF4B138B9 /* SwiftyParserCombinator-prefix.pch */,
+				87B929972FFE851F2216311F3EB70F93 /* SwiftyParserCombinator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyParserCombinator";
+			sourceTree = "<group>";
+		};
+		3DB8A476CF87AC10F1EDA9EFF5861137 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51AC98977ACE3DE5A1341B72FCF656A8 /* Info.plist */,
+				F914DB9865619CE4DBA36371D9C9BE81 /* OAuthorize2.modulemap */,
+				83390DB22721F9BCC7326B736DE50FAB /* OAuthorize2.xcconfig */,
+				04B35B6B3E73CD3C7A7A605042802924 /* OAuthorize2-dummy.m */,
+				7641E687F50BE6B1A7DE87B70614674F /* OAuthorize2-prefix.pch */,
+				9ECA1C82CF8E62A83E594A6DD801C98C /* OAuthorize2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OAuthorize2";
+			sourceTree = "<group>";
+		};
+		410E1C28B2FCCE8DD2FE24FDC02F288E /* CommonCryptoModule */ = {
+			isa = PBXGroup;
+			children = (
+				E385F61BD7D0B247C0802F8A7583C324 /* CommonCryptoModule.h */,
+				D38123DF39BC59515E7BED34981EBDFF /* Empty.swift */,
+				5A4E80E7A266C6A1E6FE8E7C12A7D917 /* Resources */,
+				D2EDA8AB3AA8480288F1B5FC5626E2C4 /* Support Files */,
 			);
 			name = CommonCryptoModule;
 			path = CommonCryptoModule;
 			sourceTree = "<group>";
 		};
-		3ADA07CF15617BA3D481079C5E3D008F /* FastDiff */ = {
+		5A4E80E7A266C6A1E6FE8E7C12A7D917 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8004DFB37542193856F793AC14DD8AC /* Diffable.swift */,
-				B632C2CD76ABA51FCB674A9459AF7CBA /* DiffingAlgorithm.swift */,
-				F1B1026F280191F66165A3957E92C979 /* InternalDiff.swift */,
-				5CFEE2D37ADA5F0DEBC9F5FF689BB88B /* Support Files */,
+				4F8821E459D3A4715F013ED3A02A5568 /* CommonCryptoBridge.h */,
+				FB801304866303DC0BB3A324D43E1A3F /* module.modulemap */,
 			);
-			name = FastDiff;
-			path = FastDiff;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		5711591B79973AA62057C6DE4E85B03C /* Support Files */ = {
+		5C6541E07F4F48B5E04E60A7330A3624 /* OAuthorize2 */ = {
 			isa = PBXGroup;
 			children = (
-				800DEBA2C88B66ADD7005061A6080CBD /* CommonCryptoModule.modulemap */,
-				F69DE49C72E34450E0EFFF47B84A403D /* CommonCryptoModule.xcconfig */,
-				DB60786AE6650F5E7BAFDA1C2CAE5CB3 /* CommonCryptoModule-dummy.m */,
-				7271E3E04D9D1FAB28D04A54B6599489 /* CommonCryptoModule-prefix.pch */,
-				8B36781CCCF910441DEAFB191AA5B006 /* CommonCryptoModule-umbrella.h */,
-				BCD842004A3C3AE555B5D1D58B6C1A82 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CommonCryptoModule";
-			sourceTree = "<group>";
-		};
-		5B8FECE1ED8248EE4410AF2E61FF0A40 /* StatusAlert */ = {
-			isa = PBXGroup;
-			children = (
-				D6DEE489826AC91408523BD21F82AEAE /* StatusAlert.swift */,
-				AD00513A68184DA4163684C2E96F0885 /* StatusAlertUtils.swift */,
-				91AE865FCB717DD008582B5B1D1E77A6 /* UIDevice+Blur.swift */,
-				62AFCD8B8235DEB507187552B747693C /* UIDevice+Platform.swift */,
-				0FE4C2F922C6D1E4F13A53D26D0B54C2 /* Support Files */,
-			);
-			name = StatusAlert;
-			path = StatusAlert;
-			sourceTree = "<group>";
-		};
-		5CFEE2D37ADA5F0DEBC9F5FF689BB88B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B4B6E3473E01A44FA1B2E6B55CD6AE50 /* FastDiff.modulemap */,
-				C61D21B124E1C0D7F35C1B7903E1803B /* FastDiff.xcconfig */,
-				D86B393AA42B5B1A28195F63FFDDDD4A /* FastDiff-dummy.m */,
-				72BBF3056F4F00EF50F6E193E004DC13 /* FastDiff-prefix.pch */,
-				19CFE0501FE95949F8B1C1E2247489E2 /* FastDiff-umbrella.h */,
-				4539B58FD255378B85B5B570CF226695 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FastDiff";
-			sourceTree = "<group>";
-		};
-		66E343109E529E52552BA712993B17D7 /* SwiftyParserCombinator */ = {
-			isa = PBXGroup;
-			children = (
-				33E55E0D330073725E6C82208928829B /* ArrayExtension.swift */,
-				86403DEB74B48F4C4EF577B508E1B60B /* CharacterExtension.swift */,
-				DCBB8E38AF4F7CDD568357F4F48169BB /* InputState.swift */,
-				49A15600CF33107D4BFEE40E4A15CCC9 /* Parser.swift */,
-				3EE4DC95789CB96434B66260CA061EC7 /* Parser+Combinator.swift */,
-				315B1B638686FA9951450EA533C584FF /* Parser+Monad.swift */,
-				9BCAEB7CB8E60995CE7DBB6FC5AA4C53 /* Parser+Operators.swift */,
-				7E67C59B236B1558167700E0D80C97C3 /* Parser+STDLIB.swift */,
-				4057FAC1425BB739DBE99A30EC5307B7 /* Parser+TypedMethods.swift */,
-				8ED009B683B34DCBEDFBAB11F0EADF63 /* ParserError.swift */,
-				0DF65C2DE4FD9315723A36B390658213 /* ParserResult.swift */,
-				83733684E3C147727AD610F3A5637EBF /* Support Files */,
-			);
-			name = SwiftyParserCombinator;
-			path = SwiftyParserCombinator;
-			sourceTree = "<group>";
-		};
-		7AA4139D5C86A91D2A5D1E1F9888EA9C /* OAuthorize2 */ = {
-			isa = PBXGroup;
-			children = (
-				31DCCEC820CE81F4E6A025904650584D /* BitbucketOAuth2Config.swift */,
-				AA4B8A0AC8F4B9FE7A97177CDE8ABE3C /* OAuth2.swift */,
-				5983A2685192EEAD958ADD15F0662B8F /* OAuth2AccessToken.swift */,
-				BA565FAC9D2D379DA4FA8F170F4B2BF2 /* OAuth2AccessTokenStorageService.swift */,
-				16201C50A64001B5DE2AAE8AE48F4E58 /* OAuth2Config.swift */,
-				8D76E89AD9974CBD5B40948256EA3D3D /* OAuth2Error.swift */,
-				BBB51F82F09A47530210975D509BEF80 /* OAuth2NetworkService.swift */,
-				CE783FF69BA5D1BC615167A293EDBEE1 /* OAuthorize2.h */,
-				EA7CEAF843DCD28EDF4AA171B49A6E85 /* Support Files */,
+				E4E6DF1FDC589B5E769B47DD28D89A15 /* BitbucketOAuth2Config.swift */,
+				7E512DA4E313B34C5A8C43F9A6A95683 /* OAuth2.swift */,
+				29DEAF699F098EBEBEE00427744D755D /* OAuth2AccessToken.swift */,
+				023317DF20D9B524C60182FB25F6634E /* OAuth2AccessTokenStorageService.swift */,
+				74048C1C00D6241A710A1A47A469E07C /* OAuth2Config.swift */,
+				1CA543854C0569C58F5D4DAD40A2B330 /* OAuth2Error.swift */,
+				0A5CBB12E62DA54C77B0DB70F18C3C57 /* OAuth2NetworkService.swift */,
+				0F5B802A167B64ECF5EE2D49F940B679 /* OAuthorize2.h */,
+				3DB8A476CF87AC10F1EDA9EFF5861137 /* Support Files */,
 			);
 			name = OAuthorize2;
 			path = OAuthorize2;
+			sourceTree = "<group>";
+		};
+		6302BE7F73376F8DDB30176DCAAEF871 /* Kekka */ = {
+			isa = PBXGroup;
+			children = (
+				13D5841EC01955CB7C030FAED3526C40 /* ErrorEquality.swift */,
+				CEC53EAE3C8D1442B71BBB242A27152B /* FullyTypedResult.swift */,
+				1244F6504F35882AFDF270F30EAD2452 /* Future.swift */,
+				605D0194F7926B8D4A2CDE4468AC3F3D /* Operators.swift */,
+				8FBEFC5FA0B575C299E03406B668A606 /* Result.swift */,
+				6607F868231E85240AF65ECA865F5E84 /* Support Files */,
+			);
+			name = Kekka;
+			path = Kekka;
+			sourceTree = "<group>";
+		};
+		6607F868231E85240AF65ECA865F5E84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A1A320A21D583CEC2DA311FE1FDB1 /* Info.plist */,
+				4D9A2CEE1B2B97FFCFECEE5068EF35FB /* Kekka.modulemap */,
+				64CFBE30296E876F3BA5982FD6176935 /* Kekka.xcconfig */,
+				7288EB2D3EFD279068B23434C314222A /* Kekka-dummy.m */,
+				2970B3CB39E6C0693F395C1F5F129437 /* Kekka-prefix.pch */,
+				39DEE2C4BC96C2161C3B9E60C79C469C /* Kekka-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kekka";
+			sourceTree = "<group>";
+		};
+		6937BC9166B5F3FDE4AE9DC9B1F4F51A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				410E1C28B2FCCE8DD2FE24FDC02F288E /* CommonCryptoModule */,
+				0DF282243E059176AD6BAB0BDEF7A125 /* FastDiff */,
+				FAAD18E36C648A837C18B08A7EDA1C24 /* Instabug */,
+				6302BE7F73376F8DDB30176DCAAEF871 /* Kekka */,
+				5C6541E07F4F48B5E04E60A7330A3624 /* OAuthorize2 */,
+				7D3D82B64776C368A857E59B8245EA71 /* StatusAlert */,
+				ECB75552D730C68B87CBD5CACED71C15 /* SwiftyParserCombinator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D3D82B64776C368A857E59B8245EA71 /* StatusAlert */ = {
+			isa = PBXGroup;
+			children = (
+				42B0306886EA4C57FB7319FF0C5B6257 /* StatusAlert.swift */,
+				F0D3BE514FA85AA6E8C5D1BEA6DFF2AC /* StatusAlertUtils.swift */,
+				51383295198BB76E39002F85D420088F /* UIDevice+Blur.swift */,
+				5E2483D060767159203E54ED629FC420 /* UIDevice+Platform.swift */,
+				B745672C490468DBC190FA44AEE078CD /* Support Files */,
+			);
+			name = StatusAlert;
+			path = StatusAlert;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -489,7 +491,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				98A34C9C0E53E061E7BC477DBA6A69B8 /* Frameworks */,
-				E6BADF5814F821900021EFE729C11F32 /* Pods */,
+				6937BC9166B5F3FDE4AE9DC9B1F4F51A /* Pods */,
 				7DD65C45B67A360FFBB6DD2784D4C209 /* Products */,
 				A0E45B40EAAB9D05AD9AAE4C5A192C3F /* Targets Support Files */,
 			);
@@ -510,18 +512,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83733684E3C147727AD610F3A5637EBF /* Support Files */ = {
+		89D0592ADBE558DDA1D6A1325EA1ACF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56BFA1EC71BE25B191AB567DB7AA7A1E /* Info.plist */,
-				C083C6CFDE29347EEC84AC15C07EE796 /* SwiftyParserCombinator.modulemap */,
-				617D0E3FC3687E6037D6045720B93069 /* SwiftyParserCombinator.xcconfig */,
-				F42B539CC70A43EA6C119AFE105A6204 /* SwiftyParserCombinator-dummy.m */,
-				A0D0085AFFCEC153F692149AADE9BB41 /* SwiftyParserCombinator-prefix.pch */,
-				5C258AE6858F7E8B3E13DFF94A9ACC9C /* SwiftyParserCombinator-umbrella.h */,
+				C366D52B73BAC4B2CEA8CEF0DF86903D /* Instabug.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E3323F38E6725AEF65C00DA00807B9D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				345BCF6FE031E09B9C8006ADE141236B /* FastDiff.modulemap */,
+				40823F91CB3B3B4B38613EDEC1947601 /* FastDiff.xcconfig */,
+				DE00B196870D87B822BCB5968F494FB3 /* FastDiff-dummy.m */,
+				3A203B80990D22D5A6E04CEE4EBA80A7 /* FastDiff-prefix.pch */,
+				9B383F965B5DFFD6464E93966D51E075 /* FastDiff-umbrella.h */,
+				BECA5034E3AF09A08F32384818956039 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyParserCombinator";
+			path = "../Target Support Files/FastDiff";
 			sourceTree = "<group>";
 		};
 		98A34C9C0E53E061E7BC477DBA6A69B8 /* Frameworks */ = {
@@ -543,6 +553,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B745672C490468DBC190FA44AEE078CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0211C115F3605AD61B314FD4A0DAF8DD /* Info.plist */,
+				E3055F81B39775F012B9DD304D5F7668 /* StatusAlert.modulemap */,
+				FD962D61B5EDE8FA26BF8EADABA35D8B /* StatusAlert.xcconfig */,
+				153492085B189CAD1EA0937E5E2FDBAB /* StatusAlert-dummy.m */,
+				40D74B92CC6F900BABA014C5765EF2DF /* StatusAlert-prefix.pch */,
+				A1D4B5AC84DDAFCE528919FF77BAE16A /* StatusAlert-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StatusAlert";
+			sourceTree = "<group>";
+		};
 		BA09629552A8CD0887A2D7B91297F4D4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,40 +576,38 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CD4873FD02B60665AD8F3BF0B2FA0DB9 /* Resources */ = {
+		D2EDA8AB3AA8480288F1B5FC5626E2C4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				45865FD4C7503BC7444F5CE7B0AAFEFB /* CommonCryptoBridge.h */,
-				D55F1000452E17915BAFA7AA50F47639 /* module.modulemap */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		E6BADF5814F821900021EFE729C11F32 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				390CC05DA4B62DD7A455D346A45A42E3 /* CommonCryptoModule */,
-				3ADA07CF15617BA3D481079C5E3D008F /* FastDiff */,
-				0818466AE4F7524A35F9E2455C2EF6E2 /* Kekka */,
-				7AA4139D5C86A91D2A5D1E1F9888EA9C /* OAuthorize2 */,
-				5B8FECE1ED8248EE4410AF2E61FF0A40 /* StatusAlert */,
-				66E343109E529E52552BA712993B17D7 /* SwiftyParserCombinator */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EA7CEAF843DCD28EDF4AA171B49A6E85 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F983D809E0C8F5CDF76DAE76C9C28D58 /* Info.plist */,
-				E9CDF1613A5157CAE104657DDB9E1B79 /* OAuthorize2.modulemap */,
-				0A401293C36FD26E3DA6BBEF562F085B /* OAuthorize2.xcconfig */,
-				74DA6964ADA41782513FCBA704070AA4 /* OAuthorize2-dummy.m */,
-				79B591B154B481FB821983DA602CB05D /* OAuthorize2-prefix.pch */,
-				A74543B8BAD00A81C2F5EE1FE520C962 /* OAuthorize2-umbrella.h */,
+				0D4CDE088ED713483B67A33C758AD21A /* CommonCryptoModule.modulemap */,
+				84B4C3BD4EB81A5AF25FE04726576853 /* CommonCryptoModule.xcconfig */,
+				169CF66141366C6780F52D980EF0F319 /* CommonCryptoModule-dummy.m */,
+				0119DECFDCDC93AE0F83421F824C0C74 /* CommonCryptoModule-prefix.pch */,
+				7ACA1BBF088027BD24C627041B1D1F9E /* CommonCryptoModule-umbrella.h */,
+				9CB6118879D22876F8EE70A4B6205FCD /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/OAuthorize2";
+			path = "../Target Support Files/CommonCryptoModule";
+			sourceTree = "<group>";
+		};
+		ECB75552D730C68B87CBD5CACED71C15 /* SwiftyParserCombinator */ = {
+			isa = PBXGroup;
+			children = (
+				6BD028977B292E4C59D3788DC4344CA0 /* ArrayExtension.swift */,
+				AD48D6C8282FEC740A1B4B1DFEE79164 /* CharacterExtension.swift */,
+				81FC0408110873EA5A4E6DE2FCFA2A0A /* InputState.swift */,
+				6D2C9AF27C04DEF749CABE2FFCAC619E /* Parser.swift */,
+				930C32D0A570793DC500793AB3895EB5 /* Parser+Combinator.swift */,
+				E02989D54B2F2057608D7E9FBC1F165F /* Parser+Monad.swift */,
+				BD2418F24514B54A6398382174195718 /* Parser+Operators.swift */,
+				9311658539CE0F4FAD47997D5FA12F7B /* Parser+STDLIB.swift */,
+				9858A3578577230F3024B27120ABBCA2 /* Parser+TypedMethods.swift */,
+				3A1B98F0E6C01E0887A52E18D2C67163 /* ParserError.swift */,
+				74E2AF12F47000D1BAAECF055268715C /* ParserResult.swift */,
+				39AB50B1F50B440D1EE472E7ED88F1A1 /* Support Files */,
+			);
+			name = SwiftyParserCombinator;
+			path = SwiftyParserCombinator;
 			sourceTree = "<group>";
 		};
 		F93A472AC9A1FBAAAB514999127DACE1 /* Pods-OrgNoteApp */ = {
@@ -604,6 +626,27 @@
 			);
 			name = "Pods-OrgNoteApp";
 			path = "Target Support Files/Pods-OrgNoteApp";
+			sourceTree = "<group>";
+		};
+		FAAD18E36C648A837C18B08A7EDA1C24 /* Instabug */ = {
+			isa = PBXGroup;
+			children = (
+				1BAD74F3F6FF639F2FF9DA042447578C /* IBGBugReporting.h */,
+				2DE7762B16776B2352CC04DBB32A858B /* IBGCrashReporting.h */,
+				A17B682670F85BEAED1BA70DFD6AA697 /* IBGFeatureRequests.h */,
+				3EA2AF2FE7F73C83AA27CB22F1F7AFFC /* IBGLog.h */,
+				723AB941A9A977C5163E89C54336B88E /* IBGNetworkLogger.h */,
+				427ACB99DB1E7F997387EC96696FA193 /* IBGReport.h */,
+				C0FBB2E7FF0B3CD603D3DB95529C6626 /* IBGSurvey.h */,
+				C6A23902543630F74C6387D47689D169 /* IBGSurveys.h */,
+				23023BDDED1EA3A740155419DE15B89D /* IBGTypes.h */,
+				BAA0DDFCCB75DC1D65E65AFE69B40017 /* Instabug.h */,
+				32CB42D02EBEFD6F4A46AF3E573D0E72 /* InstabugCore.h */,
+				731A160471FD4AF85103051D7F40C5BE /* UIView+Instabug.h */,
+				89D0592ADBE558DDA1D6A1325EA1ACF5 /* Frameworks */,
+			);
+			name = Instabug;
+			path = Instabug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1149,7 +1192,7 @@
 		};
 		0F05CA5847C97AFFA653E51D9597DCEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EBB51CE858382FB06C7728F9920E6F7 /* Kekka.xcconfig */;
+			baseConfigurationReference = 64CFBE30296E876F3BA5982FD6176935 /* Kekka.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1187,7 +1230,7 @@
 		};
 		14140D2F994224256F85640AE2F99979 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A401293C36FD26E3DA6BBEF562F085B /* OAuthorize2.xcconfig */;
+			baseConfigurationReference = 83390DB22721F9BCC7326B736DE50FAB /* OAuthorize2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1225,7 +1268,7 @@
 		};
 		2BE3C22CA549B63E922BE4F66D45961A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61D21B124E1C0D7F35C1B7903E1803B /* FastDiff.xcconfig */;
+			baseConfigurationReference = 40823F91CB3B3B4B38613EDEC1947601 /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1263,7 +1306,7 @@
 		};
 		4FA2202297103B07907FEE462FBD994E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F69DE49C72E34450E0EFFF47B84A403D /* CommonCryptoModule.xcconfig */;
+			baseConfigurationReference = 84B4C3BD4EB81A5AF25FE04726576853 /* CommonCryptoModule.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1301,7 +1344,7 @@
 		};
 		50C0DDBDC030FCEB8AEACC88725188B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F69DE49C72E34450E0EFFF47B84A403D /* CommonCryptoModule.xcconfig */;
+			baseConfigurationReference = 84B4C3BD4EB81A5AF25FE04726576853 /* CommonCryptoModule.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1337,7 +1380,7 @@
 		};
 		5131AAAB8942F420F7119730CF8ED00E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 617D0E3FC3687E6037D6045720B93069 /* SwiftyParserCombinator.xcconfig */;
+			baseConfigurationReference = B28BD9BBCFFE35916EA8809D7A724BC5 /* SwiftyParserCombinator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1375,7 +1418,7 @@
 		};
 		62DEFAB4AA4A01BB6D223D829318450D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61D21B124E1C0D7F35C1B7903E1803B /* FastDiff.xcconfig */;
+			baseConfigurationReference = 40823F91CB3B3B4B38613EDEC1947601 /* FastDiff.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1451,7 +1494,7 @@
 		};
 		9449B557AA6E8C01E9C6BF78BB5FB5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 617D0E3FC3687E6037D6045720B93069 /* SwiftyParserCombinator.xcconfig */;
+			baseConfigurationReference = B28BD9BBCFFE35916EA8809D7A724BC5 /* SwiftyParserCombinator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1568,7 +1611,7 @@
 		};
 		C5E6284F2DC5EE743F50EBB600C9B237 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EBB51CE858382FB06C7728F9920E6F7 /* Kekka.xcconfig */;
+			baseConfigurationReference = 64CFBE30296E876F3BA5982FD6176935 /* Kekka.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1604,7 +1647,7 @@
 		};
 		CD64A504660C414A9D5E2A3072DBC172 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24046B1F8F4A692097240C9FDFF7D68 /* StatusAlert.xcconfig */;
+			baseConfigurationReference = FD962D61B5EDE8FA26BF8EADABA35D8B /* StatusAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1681,7 +1724,7 @@
 		};
 		DA3C1829A4A146DED0B3AEE0BF16155C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24046B1F8F4A692097240C9FDFF7D68 /* StatusAlert.xcconfig */;
+			baseConfigurationReference = FD962D61B5EDE8FA26BF8EADABA35D8B /* StatusAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1783,7 +1826,7 @@
 		};
 		F963CE50554F7A4BFD812878A3AFF2F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A401293C36FD26E3DA6BBEF562F085B /* OAuthorize2.xcconfig */;
+			baseConfigurationReference = 83390DB22721F9BCC7326B736DE50FAB /* OAuthorize2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

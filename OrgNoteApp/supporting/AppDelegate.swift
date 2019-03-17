@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // TODO:- secure key with git-crypt possibly
+        Instabug.start(withToken: "1654e29831cbf5d22d2c5f6a7a6b19e8", invocationEvents: [.shake, .screenshot])
         return true
     }
 
