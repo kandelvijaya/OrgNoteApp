@@ -145,6 +145,8 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework"
+  install_framework "${PODS_ROOT}/Instabug/Instabug.framework"
+  install_dsym "${PODS_ROOT}/Instabug/Instabug.framework.dSYM"
   install_framework "${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework"
@@ -153,6 +155,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework"
+  install_framework "${PODS_ROOT}/Instabug/Instabug.framework"
+  install_dsym "${PODS_ROOT}/Instabug/Instabug.framework.dSYM"
   install_framework "${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework"

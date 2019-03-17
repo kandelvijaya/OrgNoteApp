@@ -1,6 +1,7 @@
 PODS:
   - CommonCryptoModule (1.0.2)
   - FastDiff (1.1.1)
+  - Instabug (8.0.17)
   - Kekka (0.7.3)
   - OAuthorize2 (0.3.5):
     - CommonCryptoModule
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - FastDiff
+  - Instabug
   - Kekka
   - OAuthorize2
   - StatusAlert
@@ -19,6 +21,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CommonCryptoModule
     - FastDiff
+    - Instabug
     - Kekka
     - OAuthorize2
     - StatusAlert
@@ -27,11 +30,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
+  Instabug: 399f0ce0ac407adcd157c4a0693918442b13d9c3
   Kekka: 5da34ad719887ec0e43e2b8e7383ef6f77b0bbda
   OAuthorize2: bf01bee7d7283bed82f89fa206ec092bbfd29e06
   StatusAlert: 4d6dadebf5f7abd5648fa774ef3062f2f95cc4aa
   SwiftyParserCombinator: 5565b0948b219885799f43eb97058e9d929a560a
 
-PODFILE CHECKSUM: 3458d6c93231591cb34f83dddb17f9755df346e2
+PODFILE CHECKSUM: cc5f8d007da6d232d7d0a698c541069386573473
 
 COCOAPODS: 1.5.3
