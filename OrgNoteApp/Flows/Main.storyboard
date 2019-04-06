@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Cw-rT-7X2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PqK-i0-36b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,25 +32,32 @@
                     <view key="view" contentMode="scaleToFill" id="rGi-Yp-TZ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-kH-XFE">
-                                <rect key="frame" x="129" y="250" width="112" height="30"/>
-                                <state key="normal" title="Open Document"/>
-                                <connections>
-                                    <action selector="openDocument:" destination="7Cw-rT-7X2" eventType="touchUpInside" id="yH2-NW-wOk"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9Vh-kH-XFE" firstAttribute="centerX" secondItem="7Hv-St-9q7" secondAttribute="centerX" id="86i-ub-sNe"/>
-                            <constraint firstItem="9Vh-kH-XFE" firstAttribute="centerY" secondItem="7Hv-St-9q7" secondAttribute="centerY" id="r7r-yT-vOb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Hv-St-9q7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8fI-5p-50l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ww9-o1-ItP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1608.8" y="55.322338830584712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dxa-d8-MRu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PqK-i0-36b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xYm-vu-ejT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Cw-rT-7X2" kind="relationship" relationship="rootViewController" id="w7v-vb-zP5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWN-DT-V4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.60000000000002" y="-642.72863568215894"/>
         </scene>
     </scenes>
 </document>

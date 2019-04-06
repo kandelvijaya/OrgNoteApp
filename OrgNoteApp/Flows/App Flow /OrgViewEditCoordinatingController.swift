@@ -18,13 +18,13 @@ final class OrgViewEditCoordinatingController: UIViewController {
     private var onExit: ClosedBlock!
     private var noteToView: FileItem.File!
     private var initialOrgFile: OrgFile!
-    private var userSelectedRepo: UserSelectedRepository!
+//    private var userSelectedRepo: UserSelectedRepository!
 
-    static func created(with note: FileItem.File, userSelectedRepo: UserSelectedRepository, onExit: @escaping ClosedBlock = {} ) -> OrgViewEditCoordinatingController {
+    static func created(with note: FileItem.File, /* userSelectedRepo: UserSelectedRepository,*/ onExit: @escaping ClosedBlock = {} ) -> OrgViewEditCoordinatingController {
         let controller = OrgViewEditCoordinatingController()
         controller.onExit = onExit
         controller.noteToView = note
-        controller.userSelectedRepo = userSelectedRepo
+//        controller.userSelectedRepo = userSelectedRepo
         controller.initialOrgFile = controller.inputOrgFile
         return controller
     }
@@ -123,28 +123,28 @@ final class OrgViewEditCoordinatingController: UIViewController {
         }
     }
 
-    private func addCommitPush(_ file: FileItem.File) {
-        guard let git = userSelectedRepo.map({ Git(repoInfo: $0) }) else {
-            return
-        }
-        let result = git.addAll().flatMap { _ in
-            git.commit(with: "@synced From @app @\(NSDate().timeIntervalSince1970) @ \(file.name)")
-            }.flatMap { _ in
-                git.push()
-        }
-
-        if result.value != nil {
-            AlertController.alertPositive("Good! Your file changes is pushed to remote.")
-        } else {
-            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
-        }
-    }
+//    private func addCommitPush(_ file: FileItem.File) {
+//        guard let git = userSelectedRepo.map({ Git(repoInfo: $0) }) else {
+//            return
+//        }
+//        let result = git.addAll().flatMap { _ in
+//            git.commit(with: "@synced From @app @\(NSDate().timeIntervalSince1970) @ \(file.name)")
+//            }.flatMap { _ in
+//                git.push()
+//        }
+//
+//        if result.value != nil {
+//            AlertController.alertPositive("Good! Your file changes is pushed to remote.")
+//        } else {
+//            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
+//        }
+//    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.currentChildController?.viewWillDisappear(animated)    // This is so that the internal model can save to disk before we commit
         if inputOrgFile.fileString != initialOrgFile.fileString {
-            self.addCommitPush(noteToView)
+//            self.addCommitPush(noteToView)
         }
         self.onExit()
     }

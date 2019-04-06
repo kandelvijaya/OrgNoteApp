@@ -80,7 +80,7 @@ extension FlowRoutinNavigationController {
     }
 
     func controllerToView(note file: FileItem.File) -> UIViewController {
-        let controller = OrgViewEditCoordinatingController.created(with: file, userSelectedRepo: userEnviornment.userSelectedRepo!, onExit: { [weak self] in
+        let controller = OrgViewEditCoordinatingController.created(with: file, /*userSelectedRepo: userEnviornment.userSelectedRepo!,*/ onExit: { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         })
         return controller
