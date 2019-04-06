@@ -81,6 +81,7 @@
 		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */; };
+		28BE2F1822593CCE00834877 /* org_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE2F1722592CD100834877 /* org_file.png */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
 		28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */; };
@@ -704,6 +705,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BE2F1822593CCE00834877 /* org_file.png in Resources */,
 				2810BCBA21E16A13009067BF /* LocateUserRepoController.storyboard in Resources */,
 				2810BCD221E2B366009067BF /* RepoExploreCoordinatingController.storyboard in Resources */,
 				2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */,
