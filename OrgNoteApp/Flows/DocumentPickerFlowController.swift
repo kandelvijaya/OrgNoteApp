@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-let kOrgFileType = ""
+/// This comes from the info.plist file exported Document Types. 
+let kOrgFileType = "kandelvijaya.org"
 
 final class DocumentPickerFlowController: UIViewController {
     
     @IBAction func openDocument(_ sender: UIButton) {
         let picker = UIDocumentPickerViewController(documentTypes: [kOrgFileType], in: .import)
         picker.delegate = self
+        picker.allowsMultipleSelection = false
         present(picker, animated: true, completion: nil)
     }
     
@@ -24,7 +26,11 @@ final class DocumentPickerFlowController: UIViewController {
 extension DocumentPickerFlowController: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        print(urls)
+        guard let firstURL = urls.first else {
+            assertionFailure("When document is picked there should be a url associated to it")
+            return
+        }
+        
     }
     
 }

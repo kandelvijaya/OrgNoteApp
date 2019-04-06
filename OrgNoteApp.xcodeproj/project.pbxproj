@@ -199,6 +199,7 @@
 		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerFlowController.swift; sourceTree = "<group>"; };
+		28BE2F1722592CD100834877 /* org_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = org_file.png; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
 		28D22A6521E013A800ED3BEF /* AuthorizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
@@ -351,6 +352,7 @@
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
+				28BE2F1722592CD100834877 /* org_file.png */,
 				2855D3EF20A843180082EC00 /* OrgNoteApp */,
 				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
 				2814518720D3D4260006BBD7 /* EnablePlaygroundShare */,
@@ -1126,6 +1128,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1152,6 +1155,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
