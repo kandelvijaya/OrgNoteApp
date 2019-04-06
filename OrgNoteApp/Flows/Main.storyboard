@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aY5-yk-mS4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Cw-rT-7X2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIM-hk-MPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="779"/>
+        </scene>
+        <!--Document Picker Flow Controller-->
+        <scene sceneID="InZ-JB-AF7">
+            <objects>
+                <viewController id="7Cw-rT-7X2" customClass="DocumentPickerFlowController" customModule="OrgNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rGi-Yp-TZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-kH-XFE">
+                                <rect key="frame" x="129" y="250" width="112" height="30"/>
+                                <state key="normal" title="Open Document"/>
+                                <connections>
+                                    <action selector="openDocument:" destination="7Cw-rT-7X2" eventType="touchUpInside" id="yH2-NW-wOk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Vh-kH-XFE" firstAttribute="centerX" secondItem="7Hv-St-9q7" secondAttribute="centerX" id="86i-ub-sNe"/>
+                            <constraint firstItem="9Vh-kH-XFE" firstAttribute="centerY" secondItem="7Hv-St-9q7" secondAttribute="centerY" id="r7r-yT-vOb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Hv-St-9q7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww9-o1-ItP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

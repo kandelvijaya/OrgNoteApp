@@ -80,6 +80,7 @@
 		2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */; };
 		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
+		28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
 		28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */; };
@@ -197,6 +198,7 @@
 		2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorDriver.swift; sourceTree = "<group>"; };
 		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
+		28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerFlowController.swift; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
 		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
 		28D22A6521E013A800ED3BEF /* AuthorizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */,
 				2810BCD721E380F1009067BF /* UserState.swift */,
 				28295E6321F14CA000CD11CB /* AlertController.swift */,
+				28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */,
 				2810BCBD21E173E8009067BF /* BitbucketAPI.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
+				28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */,
 				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */,
 				28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */,
