@@ -35,6 +35,12 @@ final class OrgViewEditCoordinatingController: UIViewController {
         view.backgroundColor = .white
         update(to: .list)
         addRightBarButton()
+        addLeftBarButton()
+    }
+    
+    private func addLeftBarButton() {
+        let exitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(exitOrg))
+        self.navigationItem.leftBarButtonItems = [exitButton]
     }
 
     private func addRightBarButton() {
@@ -146,6 +152,10 @@ final class OrgViewEditCoordinatingController: UIViewController {
         if inputOrgFile.fileString != initialOrgFile.fileString {
 //            self.addCommitPush(noteToView)
         }
+        self.onExit()
+    }
+    
+    @objc private func exitOrg() {
         self.onExit()
     }
 
