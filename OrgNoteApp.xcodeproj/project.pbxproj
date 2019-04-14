@@ -788,12 +788,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework",
+				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeclarativeTableView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1175,7 +1181,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
 			};
@@ -1196,7 +1202,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
 			};

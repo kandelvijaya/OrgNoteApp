@@ -11,6 +11,7 @@ target 'OrgNoteApp' do
   target 'OrgNoteAppTests' do
     inherit! :search_paths
     pod 'SwiftyParserCombinator'
+    pod 'DeclarativeTableView', :path => "/Users/vkandel/Proj/DeclarativeTableView/"
     # Pods for testing
   end
 
