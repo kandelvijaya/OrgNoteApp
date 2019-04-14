@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import DeclarativeTableView
 
 struct OrgEditInteractionCoordinatingController {
 
@@ -21,7 +22,7 @@ struct OrgEditInteractionCoordinatingController {
     }
 
 
-    func performAction(_ action: OutlineAction, on itemViewModel: OutlineViewModel, currentModels: OrgFile, from controller: UIViewController, onCompletion: @escaping ((OrgFile) -> Void)) {
+    func performAction(_ action: ModelAction, on itemViewModel: OutlineViewModel, currentModels: OrgFile, from controller: UIViewController, onCompletion: @escaping ((OrgFile) -> Void)) {
         let backingOrgModel = currentModels
         switch action {
         case .addItemBelow:

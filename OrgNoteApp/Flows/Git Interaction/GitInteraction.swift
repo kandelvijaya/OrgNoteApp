@@ -40,14 +40,14 @@ struct Git {
         do {
             let repo = try GTRepository(url: self.repoInfo.clonedURL)
             if repo.isWorkingDirectoryClean {
-                return .success(value: .affirm)
+                return .success( .affirm)
             }
             let index = try repo.index()
             try index.addFile(file)
             try index.write()
-            return .success(value: .affirm)
+            return .success( .affirm)
         } catch {
-            return .failure(error: error)
+            return .failure( error)
         }
     }
 
@@ -55,14 +55,14 @@ struct Git {
         do {
             let repo = try GTRepository(url: self.repoInfo.clonedURL)
             if repo.isWorkingDirectoryClean {
-                return .success(value: .affirm)
+                return .success( .affirm)
             }
             let index = try repo.index()
             try index.addAll()
             try index.write()
-            return .success(value: .affirm)
+            return .success( .affirm)
         } catch {
-            return .failure(error: error)
+            return .failure( error)
         }
     }
 
@@ -70,7 +70,7 @@ struct Git {
         do {
             let repo = try GTRepository(url: self.repoInfo.clonedURL)
             if repo.isWorkingDirectoryClean {
-                return .failure(error: GitInteractionError.workingDirectoryIsClean_nothingChanged_nothingToCommit)
+                return .failure( GitInteractionError.workingDirectoryIsClean_nothingChanged_nothingToCommit)
             }
             let index = try repo.index()
             let currentBranch = try repo.currentBranch()
@@ -81,13 +81,13 @@ struct Git {
             let modTree = try index.writeTree()
 
             if prevTree == modTree {
-                return .failure(error: GitInteractionError.nothingChanged_nothingToCommit)
+                return .failure( GitInteractionError.nothingChanged_nothingToCommit)
             }
 
             try repo.createCommit(with: modTree, message: message, parents: [currentCommit], updatingReferenceNamed: branchRefName)
-            return .success(value: .affirm)
+            return .success( .affirm)
         } catch {
-            return .failure(error: error)
+            return .failure( error)
         }
     }
 
@@ -99,9 +99,9 @@ struct Git {
             let remote = try GTRemote(name: "origin", in: repo)
             try remote.updateURLString(remoteURL)
             try repo.push(branch, to: remote, withOptions: [:], progress: nil)
-            return .success(value: .affirm)
+            return .success( .affirm)
         } catch {
-            return .failure(error: error)
+            return .failure( error)
         }
     }
 
@@ -113,14 +113,14 @@ struct Git {
             let remote = try GTRemote(name: "origin", in: repo)
             try remote.updateURLString(remoteURL)
             try repo.pull(branch, from: remote, withOptions: [:], progress: nil)
-            return .success(value: .affirm)
+            return .success( .affirm)
         } catch {
-            return .failure(error: error)
+            return .failure( error)
         }
     }
 
     func stash() -> Result<Affirmitive> {
-        return .failure(error: NSError(domain: "git interaction to  be implemented", code: 123, userInfo: nil))
+        return .failure( NSError(domain: "git interaction to  be implemented", code: 123, userInfo: nil))
     }
 
 }

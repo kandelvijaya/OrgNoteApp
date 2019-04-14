@@ -30,19 +30,48 @@ extension DocumentPickerFlowController: UIDocumentBrowserViewControllerDelegate 
             assertionFailure("When document is picked there should be a url associated to it")
             return
         }
-        let orgFile = FileItem.File(url: firstURL, name: firstURL.path, ext: firstURL.pathExtension)
+        let orgDocument = OrgDocument(fileURL: firstURL)
+        orgDocument.open { (success) in
+            if success {
+                self.presentEditor(for: orgDocument.fileURL)
+            } else {
+                print("something went wrong")
+            }
+        }
+    }
+    
+    private func presentEditor(for url: URL) {
+        let orgFile = FileItem.File(url: url, name: url.path, ext: url.pathExtension)
         let controller = OrgViewEditCoordinatingController.created(with: orgFile, onExit: { [weak self] in
             // write back maybe
             self?.dismiss(animated: true, completion: nil)
         })
+        
         // dismiss any other modals and present the new one
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         show(wrappedInNav(controller), sender: self)
     }
     
     private func wrappedInNav(_ controller: UIViewController) -> UIViewController {
         let navController = UINavigationController(rootViewController: controller)
         return navController
+    }
+    
+}
+
+
+final class OrgDocument: UIDocument {
+    
+    /// Raw string representing raw org mode files
+    var orgRawString: String = ""
+    
+    override func contents(forType typeName: String) throws -> Any {
+        return orgRawString.data(using: .utf8)!
+    }
+    
+    override func load(fromContents contents: Any, ofType typeName: String?) throws {
+        let content = contents as! Data
+        self.orgRawString = String(data: content, encoding: .utf8)!
     }
     
 }

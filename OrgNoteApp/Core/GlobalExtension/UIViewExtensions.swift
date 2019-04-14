@@ -8,8 +8,7 @@
 
 import Foundation
 import UIKit
-
-typealias ClosedBlock = () -> Void
+import Kekka
 
 func asyncOnMain(_ block: @escaping ClosedBlock) {
     DispatchQueue.main.async(execute: block)
@@ -21,11 +20,11 @@ extension UIViewController {
         let operation: () -> Void = { [weak self] in
             guard let this = self else { return }
             guard let contentView = toView ?? this.view, this.isViewLoaded else { return }
-            this.addChildViewController(child)
+            this.addChild(child)
             child.view.frame = frame ?? contentView.bounds
             child.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             contentView.addSubview(child.view)
-            child.didMove(toParentViewController: this)
+            child.didMove(toParent: this)
             completion()
         }
         if isAsync {
@@ -36,9 +35,9 @@ extension UIViewController {
     }
 
     public func org_removeChildController(_ child: UIViewController) {
-        child.willMove(toParentViewController: nil)
+        child.willMove(toParent: nil)
         child.view.removeFromSuperview()
-        child.didMove(toParentViewController: nil)
+        child.didMove(toParent: nil)
     }
 
 }

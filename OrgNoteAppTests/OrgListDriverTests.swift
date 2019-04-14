@@ -9,6 +9,7 @@
 import XCTest
 @testable import SwiftyParserCombinator
 @testable import OrgNoteApp
+@testable import DeclarativeTableView
 
 final class OrgListDriverTests: XCTestCase {
 

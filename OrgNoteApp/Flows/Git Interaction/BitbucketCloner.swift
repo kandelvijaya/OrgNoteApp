@@ -46,7 +46,7 @@ struct BitbucketClone {
             return cloningResult
         }
 
-        return .success(value: (remote: remote, local: local))
+        return .success( (remote: remote, local: local))
     }
 
     private func remoteToeknizedURL(for repoModel: BitbucketRepository.Value) -> Result<URL> {
@@ -56,7 +56,7 @@ struct BitbucketClone {
 
         let tokenBase = URL(string: "https://x-token-auth:\(accessToken)@\(host)")!
         let url = tokenBase.appendingPathComponent(repoURL.path)
-        return .success(value: url)
+        return .success( url)
     }
 
     private func targetDirectoryURLToClone(for remoteURL: URL) -> Result<(remote: URL, local: URL)> {
@@ -66,7 +66,7 @@ struct BitbucketClone {
 
         let workingDir = documentsDir.appendingPathComponent(remoteURL.lastPathComponent, isDirectory: true)
         let value = (remote: remoteURL, local: workingDir)
-        return .success(value: value)
+        return .success( value)
     }
 
 }

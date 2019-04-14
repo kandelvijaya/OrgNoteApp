@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Kekka
+import DeclarativeTableView
 
 
 final class FileItemCell: UITableViewCell { }
@@ -73,7 +74,5 @@ struct RepoExploreDriver {
         let controller = driver.controller
         navController.pushViewController(controller, animated: true)
     }
-
-
 
 }

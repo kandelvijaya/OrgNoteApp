@@ -115,11 +115,11 @@ public extension OAuth2 {
 
     public func verifyRequest(from request: NSMutableURLRequest) -> Result<NSMutableURLRequest> {
         guard let accessToken = accessTokenStorageService.retrieve(tokenFor: config) else {
-            return .failure(error: OAuth2Error.accessTokenNotFound)
+            return .failure(OAuth2Error.accessTokenNotFound)
         }
         let bearerToken = "Bearer \(accessToken.accessToken)"
         request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
-        return .success(value: request)
+        return .success(request)
     }
 
     // MARK:- Private helper functions
@@ -164,7 +164,7 @@ public extension OAuth2 {
 
     public func refreshAccessToken() -> Future<Result<OAuth2AccessToken>> {
         guard let refreshToken = accessTokenStorageService.retrieve(tokenFor: config)?.refreshToken else {
-            return Future<Result<OAuth2AccessToken>> { $0?(.failure(error: OAuth2Error.refreshTokenNotFound)) }
+            return Future<Result<OAuth2AccessToken>> { $0?(.failure(OAuth2Error.refreshTokenNotFound)) }
         }
         let request = tokenServerRefreshTokenRequest(with: refreshToken)
         return fetchStoreAccessToken(with: request)

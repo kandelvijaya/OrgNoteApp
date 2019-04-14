@@ -27,9 +27,9 @@ final class LocateUserRepoController: UIViewController, StoryboardAwaker {
         indicatorView.startAnimating()
         BitbucketAPI().fetchRepositories().then { item in
             switch item {
-            case let .success(value: v):
+            case let .success( v):
                 self.createAndEmbedRepositoryList(with: v.values)
-            case let .failure(error: e):
+            case let .failure( e):
                 self.indicatorView.stopAnimating()
                 let localizedError = (e as NSError).localizedFailureReason ?? "some unknown reason"
                 AlertController.alertNegative("Can't pull repo due to \(localizedError)")

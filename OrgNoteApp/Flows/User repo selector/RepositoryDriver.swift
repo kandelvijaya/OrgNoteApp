@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Kekka
+import DeclarativeTableView
 
 final class RepositoryItemCell: UITableViewCell {}
 typealias RepoModel = BitbucketRepository.Value

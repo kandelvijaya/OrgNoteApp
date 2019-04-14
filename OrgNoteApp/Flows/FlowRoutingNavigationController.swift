@@ -47,7 +47,7 @@ final class FlowRoutinNavigationController: UINavigationController {
 
     private func initiateTokenRefresh() {
         userEnviornment.oauth2Client.refreshAccessToken().then { item -> Void in
-            if case let .failure(error: e) = item {
+            if case let .failure( e) = item {
                 print(e)
             } else {
                 print("Access token refreshed!")

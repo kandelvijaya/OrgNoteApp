@@ -18,8 +18,8 @@ import Foundation
 /// When U conforms to Error type there is a handy conversion function
 /// to coerce to Result<T> type.
 public enum ResultTyped<SuccessValue, FailureValue> {
-    case success(value: SuccessValue)
-    case failure(error: FailureValue)
+    case success(SuccessValue)
+    case failure(FailureValue)
 }
 
 
@@ -27,10 +27,10 @@ public extension ResultTyped where FailureValue: Error {
 
     public var untyped: KResult<SuccessValue> {
         switch self {
-        case let .success(value: v):
-            return .success(value: v)
-        case let .failure(error: v):
-            return .failure(error: v)
+        case let .success(v):
+            return .success(v)
+        case let .failure(v):
+            return .failure(v)
         }
     }
 

@@ -6,6 +6,7 @@ target 'OrgNoteApp' do
   pod 'SwiftyParserCombinator'
   pod 'OAuthorize2'
   pod 'StatusAlert'
+  pod 'DeclarativeTableView', :path => "/Users/vkandel/Proj/DeclarativeTableView/"
 
   target 'OrgNoteAppTests' do
     inherit! :search_paths

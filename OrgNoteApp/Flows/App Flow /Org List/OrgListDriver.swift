@@ -9,6 +9,7 @@
 import Foundation
 import Kekka
 import FastDiff
+import DeclarativeTableView
 
 typealias OutlineCellDesc = ListCellDescriptor<OutlineViewModel, OutlineCell>
 typealias OutlineSectionDesc = ListSectionDescriptor<OutlineViewModel>
@@ -68,7 +69,7 @@ final class OrgListDriver {
         return temp
     }()
 
-    func perfromAction(_ action: OutlineAction, on itemViewModel: OutlineViewModel) {
+    func perfromAction(_ action: ModelAction, on itemViewModel: OutlineViewModel) {
         let onCompletion = { [weak self] (newModel: OrgFile) in
             guard let this = self else { return }
             if this.backingOrgModel == newModel { return }

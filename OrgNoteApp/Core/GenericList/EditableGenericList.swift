@@ -9,6 +9,7 @@
 import Foundation
 import Kekka
 import UIKit
+import DeclarativeTableView
 
 final class EditableListController<T: Hashable>: ListViewController<T> {
 
@@ -46,7 +47,7 @@ final class EditableListController<T: Hashable>: ListViewController<T> {
         tableView.setEditing(true, animated: true)
     }
 
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         guard let selected = currentlyPressedIndexPath else { return .none }
         return selected == indexPath ? .insert : .none
     }
@@ -69,20 +70,20 @@ final class EditableListController<T: Hashable>: ListViewController<T> {
         return [moreAction, removeAction]
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
-            self.model(at: indexPath).onPerfromAction?(OutlineAction.addItemBelow)
+            self.model(at: indexPath).onPerfromAction?(ModelAction.addItemBelow)
         }
     }
 
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let addAction = UIContextualAction(style: .normal, title: "Add") { (action, view, completion) in
-            self.model(at: indexPath).onPerfromAction?(OutlineAction.addItemBelow)
+            self.model(at: indexPath).onPerfromAction?(ModelAction.addItemBelow)
             completion(true)
         }
         addAction.backgroundColor = Theme.blueish.normal
         let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, completion) in
-            self.model(at: indexPath).onPerfromAction?(OutlineAction.editItem)
+            self.model(at: indexPath).onPerfromAction?(ModelAction.editItem)
             completion(true)
         }
         editAction.backgroundColor = Theme.blueish.normal.withAlphaComponent(0.7)

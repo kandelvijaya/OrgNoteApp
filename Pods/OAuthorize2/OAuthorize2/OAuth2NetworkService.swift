@@ -20,17 +20,17 @@ struct OAuthNetworkService: OAuth2NetworkServiceProtocol {
             let session = URLSession(configuration: .default)
             session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 if let error = error {
-                    asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.networkFailed(with: error))) }
+                    asyncOnMain{ aCompletion?(.failure(OAuth2Error.networkFailed(with: error))) }
                 } else if let _ = response as? HTTPURLResponse, let data = data {
                     do {
                         let token = try JSONDecoder().decode(OAuth2AccessToken.self, from: data)
-                        asyncOnMain{ aCompletion?(.success(value: token)) }
+                        asyncOnMain{ aCompletion?(.success(token)) }
                     } catch {
-                        asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.dataConversionFailed(with: error))) }
+                        asyncOnMain{ aCompletion?(.failure(OAuth2Error.dataConversionFailed(with: error))) }
                     }
 
                 } else {
-                    asyncOnMain{ aCompletion?(.failure(error: OAuth2Error.unknownNetworkError)) }
+                    asyncOnMain{ aCompletion?(.failure(OAuth2Error.unknownNetworkError)) }
                 }
 
             }).resume()

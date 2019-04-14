@@ -49,7 +49,7 @@ final class BitbucketAPI: BitbucketAPIProtocol {
                     self.bUser = v
                     return self.fetch(for: self.repoRequest(for: v))
                 case let .failure(e):
-                    return Future(.failure(error: e))
+                    return Future(.failure(e))
                 }
             }.convert()
         }
@@ -61,7 +61,7 @@ final class BitbucketAPI: BitbucketAPIProtocol {
 
     private func fetch(for request: URLRequest?) -> Future<Result<Data>> {
         guard let request = request else {
-            return Future(Result.failure(error: APIError.couldntAddAceesTokenToRequest))
+            return Future(Result.failure(APIError.couldntAddAceesTokenToRequest))
         }
         return dataTaskByRefreshingAccessTokenIfNeeded(request)
     }
@@ -82,7 +82,7 @@ final class BitbucketAPI: BitbucketAPIProtocol {
                     case .success:
                         return self.dataTask(request)
                     case let .failure(e):
-                        return Future(.failure(error: e))
+                        return Future(.failure(e))
                     }
                 }
                 return eventual
@@ -95,10 +95,10 @@ final class BitbucketAPI: BitbucketAPIProtocol {
         return NetworkService().dataTask(request).then { item  in
             return item.flatMap { value -> Result<Data> in
                 if let _ = doTry({ try JSONDecoder().decode(RefreshAccessTokenModel.self, from: value) }).value {
-                    return Result<Data>.failure(error: APIError.requireRefreshAccessToken)
+                    return Result<Data>.failure(APIError.requireRefreshAccessToken)
                 } else {
                     // is not asking for access token refresh. must be other value
-                    return Result<Data>.success(value: value)
+                    return Result<Data>.success(value)
                 }
             }
         }
@@ -113,10 +113,10 @@ extension Future where T == Result<Data>  {
             return item.flatMap { thisItem -> Result<T> in
                 do {
                     let item =  try JSONDecoder().decode(T.self, from: thisItem)
-                    return .success(value: item)
+                    return .success(item)
                 } catch {
                     print(try! JSONSerialization.jsonObject(with: thisItem, options: []))
-                    return .failure(error: error)
+                    return .failure(error)
                 }
             }
         }

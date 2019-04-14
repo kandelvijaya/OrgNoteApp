@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kekka
+import DeclarativeTableView
 
 final class OrgViewEditCoordinatingController: UIViewController {
 
@@ -73,11 +75,11 @@ final class OrgViewEditCoordinatingController: UIViewController {
 
     private func reset() {
         self.view.subviews.forEach { $0.removeFromSuperview() }
-        self.currentChildController.map { $0.removeFromParentViewController() }
+        self.currentChildController.map { $0.removeFromParent() }
     }
 
     private func addController(_ vc: UIViewController) {
-        vc.willMove(toParentViewController: self)
+        vc.willMove(toParent: self)
         self.view.addSubview(vc.view)
         vc.view.frame = self.view.bounds
         //view.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +89,7 @@ final class OrgViewEditCoordinatingController: UIViewController {
          vc.view.leftAnchor.constraint(equalTo: view.leftAnchor),
          vc.view.rightAnchor.constraint(equalTo: view.rightAnchor)].forEach { $0.isActive = true }
 
-        vc.didMove(toParentViewController: self)
+        vc.didMove(toParent: self)
         self.currentChildController = vc
     }
 

@@ -32,10 +32,10 @@ struct Mock {
                 guard let url = Bundle.main.url(forResource: "WLbig", withExtension: "org"),
                     let buffer = try? String(contentsOf: url),
                     let orgFile = OrgParser.parse(buffer) else {
-                        aComplation?(Result.failure(error: OrgFileServiceError.unknown))
+                        aComplation?(Result.failure(OrgFileServiceError.unknown))
                         return 
                 }
-                aComplation?(.success(value: orgFile))
+                aComplation?(.success(orgFile))
             })
         }
 

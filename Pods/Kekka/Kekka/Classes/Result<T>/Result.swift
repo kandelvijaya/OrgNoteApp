@@ -20,8 +20,8 @@ public typealias KResult<T> = Result<T>
  */
 public enum Result<T> {
 
-    case success(value: T)
-    case failure(error: Error)
+    case success(_ value: T)
+    case failure(_ error: Error)
 
 }
 
@@ -49,9 +49,9 @@ public extension Result {
     public func map<U>(_ transform: (T) -> U) -> Result<U> {
         switch self {
         case let .success(v):
-            return .success(value: transform(v))
+            return .success(transform(v))
         case let .failure(e):
-            return .failure(error: e)
+            return .failure(e)
         }
     }
 
@@ -60,7 +60,7 @@ public extension Result {
         case let .success(v):
             return v
         case let .failure(e):
-            return .failure(error: e)
+            return .failure(e)
         }
     }
 
@@ -69,14 +69,14 @@ public extension Result {
 public extension Result {
 
     public var value: T? {
-        if case .success(value: let value) = self {
+        if case .success(let value) = self {
             return value
         }
         return nil
     }
 
     public var error: Error? {
-        if case .failure(error: let error) = self {
+        if case .failure(let error) = self {
             return error
         }
         return nil
@@ -108,9 +108,9 @@ public extension Result {
     public func mapError(_ transform: (Error) -> Error) -> Result<T> {
         switch self {
         case let .success(v):
-            return .success(value: v)
+            return .success(v)
         case let .failure(e):
-            return .failure(error: transform(e))
+            return .failure(transform(e))
         }
     }
 
@@ -122,7 +122,7 @@ public extension Result {
 public extension Error {
 
     public func result<T>() -> Result<T> {
-        return Result<T>.failure(error: self)
+        return Result<T>.failure(self)
     }
 
 }
@@ -133,9 +133,9 @@ extension Result: Equatable where T: Equatable {
 
     public static func == (lhs: Result<T>, rhs: Result<T>) -> Bool {
         switch (lhs, rhs) {
-        case let (.success(value: v1), .success(value: v2)):
+        case let (.success(v1), .success(v2)):
             return v1 == v2
-        case let (.failure(error: e1), .failure(error: e2)):
+        case let (.failure(e1), .failure(e2)):
             return areEqual(e1, e2)
         default:
             return false
