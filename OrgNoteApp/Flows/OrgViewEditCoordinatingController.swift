@@ -10,6 +10,16 @@ import UIKit
 import Kekka
 import DeclarativeTableView
 
+struct File {
+    
+    let url: URL
+    
+    var name: String {
+        return url.lastPathComponent
+    }
+    
+}
+
 final class OrgViewEditCoordinatingController: UIViewController {
 
     enum State {
@@ -18,15 +28,13 @@ final class OrgViewEditCoordinatingController: UIViewController {
     }
 
     private var onExit: ClosedBlock!
-    private var noteToView: FileItem.File!
+    private var noteToView: File!
     private var initialOrgFile: OrgFile!
-//    private var userSelectedRepo: UserSelectedRepository!
 
-    static func created(with note: FileItem.File, /* userSelectedRepo: UserSelectedRepository,*/ onExit: @escaping ClosedBlock = {} ) -> OrgViewEditCoordinatingController {
+    static func created(with note: File, onExit: @escaping ClosedBlock = {} ) -> OrgViewEditCoordinatingController {
         let controller = OrgViewEditCoordinatingController()
         controller.onExit = onExit
         controller.noteToView = note
-//        controller.userSelectedRepo = userSelectedRepo
         controller.initialOrgFile = controller.inputOrgFile
         return controller
     }
@@ -130,23 +138,6 @@ final class OrgViewEditCoordinatingController: UIViewController {
             assert(writing.error == nil, "Something happend wrong during writing orgfile to file \(noteToView.url.path)")
         }
     }
-
-//    private func addCommitPush(_ file: FileItem.File) {
-//        guard let git = userSelectedRepo.map({ Git(repoInfo: $0) }) else {
-//            return
-//        }
-//        let result = git.addAll().flatMap { _ in
-//            git.commit(with: "@synced From @app @\(NSDate().timeIntervalSince1970) @ \(file.name)")
-//            }.flatMap { _ in
-//                git.push()
-//        }
-//
-//        if result.value != nil {
-//            AlertController.alertPositive("Good! Your file changes is pushed to remote.")
-//        } else {
-//            AlertController.alertNegative("OOPS! Your file changes is NOT synced. \n \(result.error!.localizedDescription)")
-//        }
-//    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

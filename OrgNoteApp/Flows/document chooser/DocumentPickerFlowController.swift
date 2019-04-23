@@ -41,7 +41,7 @@ extension DocumentPickerFlowController: UIDocumentBrowserViewControllerDelegate 
     }
     
     private func presentEditor(for url: URL) {
-        let orgFile = FileItem.File(url: url, name: url.path, ext: url.pathExtension)
+        let orgFile = File(url: url)
         let controller = OrgViewEditCoordinatingController.created(with: orgFile, onExit: { [weak self] in
             // write back maybe
             self?.dismiss(animated: true, completion: nil)
