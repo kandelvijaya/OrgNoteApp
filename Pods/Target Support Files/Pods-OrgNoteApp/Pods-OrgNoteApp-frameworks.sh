@@ -153,20 +153,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework"
 fi

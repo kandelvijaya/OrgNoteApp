@@ -1,46 +1,34 @@
 PODS:
-  - CommonCryptoModule (1.0.2)
-  - DeclarativeTableView (0.0.4):
+  - DeclarativeTableView (0.0.5):
     - FastDiff
     - Kekka
   - FastDiff (1.1.1)
   - Kekka (0.8.1)
-  - OAuthorize2 (0.3.6):
-    - CommonCryptoModule
-    - Kekka
   - StatusAlert (1.1.0)
   - SwiftyParserCombinator (1.1)
 
 DEPENDENCIES:
-  - DeclarativeTableView (from `/Users/vkandel/Proj/DeclarativeTableView/`)
+  - DeclarativeTableView
   - FastDiff
   - Kekka
-  - OAuthorize2
   - StatusAlert
   - SwiftyParserCombinator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CommonCryptoModule
+    - DeclarativeTableView
     - FastDiff
     - Kekka
-    - OAuthorize2
     - StatusAlert
     - SwiftyParserCombinator
 
-EXTERNAL SOURCES:
-  DeclarativeTableView:
-    :path: "/Users/vkandel/Proj/DeclarativeTableView/"
-
 SPEC CHECKSUMS:
-  CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
-  DeclarativeTableView: afa3a025922b204282fa6ffa5f824c661c911742
+  DeclarativeTableView: 799269cf5ff66e04c3c86c1286086f7abbc8b81d
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
   Kekka: a3d3021cca1200f77ba1cfba0329242ffb48c8c3
-  OAuthorize2: 6fc374932e32e7907ef2f7ca7e0fbfd4b6d55c48
   StatusAlert: 4d6dadebf5f7abd5648fa774ef3062f2f95cc4aa
   SwiftyParserCombinator: 5565b0948b219885799f43eb97058e9d929a560a
 
-PODFILE CHECKSUM: 5ecd6d6516ae304a63dc495ee5f2b1b6394c21a2
+PODFILE CHECKSUM: b7da0da25b29de2e0002229c1143416d1800d36a
 
 COCOAPODS: 1.6.1
