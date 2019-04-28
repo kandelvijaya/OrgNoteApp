@@ -30,8 +30,7 @@ final class OrgRawEditorController: UIViewController {
 
     private func customizeTextView() {
         self.textView.font = UIFont.preferredFont(forTextStyle: .body)
-        self.textView.backgroundColor = .black
-        self.textView.textColor = .white
+        self.textView.backgroundColor = UIColor.orgDarBackground
     }
 
     private func setOrgFileInTextView() {

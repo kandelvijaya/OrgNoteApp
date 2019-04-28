@@ -13,5 +13,10 @@ target 'OrgNoteApp' do
     pod 'DeclarativeTableView'
     # Pods for testing
   end
+  
+  target 'EnablePlaygroundShare' do
+    inherit! :search_paths
+    pod 'Kekka'
+  end
 
 end

@@ -46,20 +46,22 @@ extension UIColor {
         return .color(red: 170, green: 170, blue: 170)
     }
     
-    static var background: UIColor {
+    static var orgDarBackground: UIColor {
         return .color(red: 41, green: 43, blue: 46)
     }
     
 }
 
-struct OrgHighlighter {
+public struct OrgHighlighter {
     
-    func plainText(from input: NSAttributedString) -> String {
+    public init() {}
+    
+    public func plainText(from input: NSAttributedString) -> String {
         let plainText = input.string
         return plainText.replacingOccurrences(of: "✦", with: "*")
     }
     
-    func orgHighlight(_ input: String) -> NSAttributedString {
+    public func orgHighlight(_ input: String) -> NSAttributedString {
         return NSAttributedString.init(string: input) |> highlightNormal |> highlightHeadings
     }
     
