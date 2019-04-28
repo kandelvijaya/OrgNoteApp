@@ -1,0 +1,6 @@
+framework module DeclarativeTableView {
+  umbrella header "DeclarativeTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

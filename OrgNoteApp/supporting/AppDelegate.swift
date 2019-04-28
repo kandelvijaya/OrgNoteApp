@@ -13,22 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if let authorizationCode = BitbucketOauth2.shared.extractAuthCode(from: url) {
-            BitbucketOauth2.shared.askForAccessToken(with: authorizationCode).then { item in
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: userDidReceiveAccessTokenNotification, object: self)
-                }
-            }.execute()
-        }
+    private func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return true 
     }
 
 }
-
-
-let userDidReceiveAccessTokenNotification = NSNotification.Name(rawValue: "userDidReceiveAccessToken")

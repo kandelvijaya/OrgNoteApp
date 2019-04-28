@@ -8,25 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */; };
-		2810BCB221E165AE009067BF /* OrgFlowCurrentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCB121E165AE009067BF /* OrgFlowCurrentState.swift */; };
-		2810BCB621E1663E009067BF /* RepositoryDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCB521E1663E009067BF /* RepositoryDriver.swift */; };
-		2810BCB821E16A08009067BF /* LocateUserRepoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCB721E16A08009067BF /* LocateUserRepoController.swift */; };
-		2810BCBA21E16A13009067BF /* LocateUserRepoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2810BCB921E16A13009067BF /* LocateUserRepoController.storyboard */; };
-		2810BCBD21E173E8009067BF /* BitbucketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCBC21E173E8009067BF /* BitbucketAPI.swift */; };
-		2810BCBF21E17D10009067BF /* RefreshAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCBE21E17D10009067BF /* RefreshAccessTokenModel.swift */; };
-		2810BCC121E1881C009067BF /* BitbucketUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCC021E1881C009067BF /* BitbucketUser.swift */; };
-		2810BCC321E18C81009067BF /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCC221E18C81009067BF /* BitbucketRepository.swift */; };
 		2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; };
 		2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2810BCC921E2466F009067BF /* BitbucketCloner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCC821E2466F009067BF /* BitbucketCloner.swift */; };
-		2810BCCC21E2A979009067BF /* RepoExploreDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCCB21E2A979009067BF /* RepoExploreDriver.swift */; };
-		2810BCCE21E2B307009067BF /* FileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCCD21E2B307009067BF /* FileItem.swift */; };
-		2810BCD021E2B33B009067BF /* RepoExploreCoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCCF21E2B33B009067BF /* RepoExploreCoordinatingController.swift */; };
-		2810BCD221E2B366009067BF /* RepoExploreCoordinatingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2810BCD121E2B366009067BF /* RepoExploreCoordinatingController.storyboard */; };
-		2810BCD421E2DB21009067BF /* FlowRoutingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */; };
 		2810BCD621E380CB009067BF /* DefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD521E380CB009067BF /* DefaultsStorage.swift */; };
-		2810BCD821E380F1009067BF /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD721E380F1009067BF /* UserState.swift */; };
-		2810BCDA21E39835009067BF /* GitInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD921E39835009067BF /* GitInteraction.swift */; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */; };
@@ -42,8 +26,6 @@
 		28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5F21F0E37900CD11CB /* GraphContainer.swift */; };
 		28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6121F0E4E800CD11CB /* OrgFile.swift */; };
 		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
-		28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E2D20A84A4C00996941 /* GenericList<T>.swift */; };
-		28417E3820A84E0800996941 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28417E3720A84E0800996941 /* ListSection.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
@@ -55,7 +37,6 @@
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
 		285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */; };
 		285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */; };
-		285F41D721D05C9600E66D6A /* OutlineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D621D05C9600E66D6A /* OutlineAction.swift */; };
 		285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F429821D1AD2700E66D6A /* PopoverController.swift */; };
 		285F429B21D1ADA200E66D6A /* PopoverController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F429A21D1ADA200E66D6A /* PopoverController.storyboard */; };
 		285F429E21D24AFB00E66D6A /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F429D21D24AFB00E66D6A /* StoryboardInitializable.swift */; };
@@ -80,10 +61,10 @@
 		2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */; };
 		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
+		28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */; };
+		28BE2F1822593CCE00834877 /* org_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE2F1722592CD100834877 /* org_file.png */; };
 		28BEF90420D7CB8500BB7C19 /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */; };
-		28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */; };
-		28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6521E013A800ED3BEF /* AuthorizeController.swift */; };
 		28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */; };
 		28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */; };
 		28FB8DD721FDFCBC00233275 /* OrgViewEditCoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */; };
@@ -123,24 +104,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2810BCB121E165AE009067BF /* OrgFlowCurrentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFlowCurrentState.swift; sourceTree = "<group>"; };
-		2810BCB521E1663E009067BF /* RepositoryDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDriver.swift; sourceTree = "<group>"; };
-		2810BCB721E16A08009067BF /* LocateUserRepoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateUserRepoController.swift; sourceTree = "<group>"; };
-		2810BCB921E16A13009067BF /* LocateUserRepoController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocateUserRepoController.storyboard; sourceTree = "<group>"; };
-		2810BCBC21E173E8009067BF /* BitbucketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketAPI.swift; sourceTree = "<group>"; };
-		2810BCBE21E17D10009067BF /* RefreshAccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAccessTokenModel.swift; sourceTree = "<group>"; };
-		2810BCC021E1881C009067BF /* BitbucketUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketUser.swift; sourceTree = "<group>"; };
-		2810BCC221E18C81009067BF /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
 		2810BCC421E243E3009067BF /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectiveGit.framework; sourceTree = "<group>"; };
-		2810BCC821E2466F009067BF /* BitbucketCloner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketCloner.swift; sourceTree = "<group>"; };
-		2810BCCB21E2A979009067BF /* RepoExploreDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoExploreDriver.swift; sourceTree = "<group>"; };
-		2810BCCD21E2B307009067BF /* FileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItem.swift; sourceTree = "<group>"; };
-		2810BCCF21E2B33B009067BF /* RepoExploreCoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoExploreCoordinatingController.swift; sourceTree = "<group>"; };
-		2810BCD121E2B366009067BF /* RepoExploreCoordinatingController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoExploreCoordinatingController.storyboard; sourceTree = "<group>"; };
-		2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRoutingNavigationController.swift; sourceTree = "<group>"; };
 		2810BCD521E380CB009067BF /* DefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorage.swift; sourceTree = "<group>"; };
-		2810BCD721E380F1009067BF /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
-		2810BCD921E39835009067BF /* GitInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInteraction.swift; sourceTree = "<group>"; };
 		2814517420D349380006BBD7 /* OrgListDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListDriverTests.swift; sourceTree = "<group>"; };
 		2814518620D3D4260006BBD7 /* EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnablePlaygroundShare.h; sourceTree = "<group>"; };
@@ -156,8 +121,6 @@
 		28295E5F21F0E37900CD11CB /* GraphContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphContainer.swift; sourceTree = "<group>"; };
 		28295E6121F0E4E800CD11CB /* OrgFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFile.swift; sourceTree = "<group>"; };
 		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		28417E2D20A84A4C00996941 /* GenericList<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
-		28417E3720A84E0800996941 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
@@ -173,7 +136,6 @@
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditOutlineViewController.swift; sourceTree = "<group>"; };
 		285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrgViewController.storyboard; sourceTree = "<group>"; };
-		285F41D621D05C9600E66D6A /* OutlineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineAction.swift; sourceTree = "<group>"; };
 		285F429821D1AD2700E66D6A /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
 		285F429A21D1ADA200E66D6A /* PopoverController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverController.storyboard; sourceTree = "<group>"; };
 		285F429D21D24AFB00E66D6A /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
@@ -197,9 +159,9 @@
 		2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorDriver.swift; sourceTree = "<group>"; };
 		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
+		28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerFlowController.swift; sourceTree = "<group>"; };
+		28BE2F1722592CD100834877 /* org_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = org_file.png; sourceTree = "<group>"; };
 		28BEF90620D812C400BB7C19 /* OutlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewModel.swift; sourceTree = "<group>"; };
-		28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizeController.storyboard; sourceTree = "<group>"; };
-		28D22A6521E013A800ED3BEF /* AuthorizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
 		28D22A6821E0145400ED3BEF /* StoryboardAwaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAwaker.swift; sourceTree = "<group>"; };
 		28D22A7821E0170900ED3BEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewEditCoordinatingController.swift; sourceTree = "<group>"; };
@@ -240,28 +202,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2810BCBB21E173CC009067BF /* BitbucketAPI */ = {
-			isa = PBXGroup;
-			children = (
-				2810BCBC21E173E8009067BF /* BitbucketAPI.swift */,
-				2810BCBE21E17D10009067BF /* RefreshAccessTokenModel.swift */,
-				2810BCC021E1881C009067BF /* BitbucketUser.swift */,
-				2810BCC221E18C81009067BF /* BitbucketRepository.swift */,
-			);
-			path = BitbucketAPI;
-			sourceTree = "<group>";
-		};
-		2810BCCA21E2A969009067BF /* Repo Explorer */ = {
-			isa = PBXGroup;
-			children = (
-				2810BCCB21E2A979009067BF /* RepoExploreDriver.swift */,
-				2810BCCD21E2B307009067BF /* FileItem.swift */,
-				2810BCCF21E2B33B009067BF /* RepoExploreCoordinatingController.swift */,
-				2810BCD121E2B366009067BF /* RepoExploreCoordinatingController.storyboard */,
-			);
-			path = "Repo Explorer";
-			sourceTree = "<group>";
-		};
 		2814518720D3D4260006BBD7 /* EnablePlaygroundShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +230,14 @@
 			path = OrgFileEdits;
 			sourceTree = "<group>";
 		};
+		283AE847226FB0A800E55958 /* document chooser */ = {
+			isa = PBXGroup;
+			children = (
+				28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */,
+			);
+			path = "document chooser";
+			sourceTree = "<group>";
+		};
 		28417E2520A844C000996941 /* supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +254,6 @@
 		28417E2C20A8494D00996941 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2810BCBB21E173CC009067BF /* BitbucketAPI */,
 				28D22A6721E0144200ED3BEF /* StoryboardAwaker */,
 				285F42A521D3AE4600E66D6A /* OrgSyntaxHighlighter */,
 				281BA97221C9005900319B0A /* OrgFileEdits */,
@@ -349,6 +296,7 @@
 		2855D3E420A843180082EC00 = {
 			isa = PBXGroup;
 			children = (
+				28BE2F1722592CD100834877 /* org_file.png */,
 				2855D3EF20A843180082EC00 /* OrgNoteApp */,
 				2855D40420A8431A0082EC00 /* OrgNoteAppTests */,
 				2814518720D3D4260006BBD7 /* EnablePlaygroundShare */,
@@ -451,7 +399,6 @@
 			children = (
 				2880A09B20C18FFC00CD4ACC /* OutlineView.swift */,
 				2880A09D20C194BE00CD4ACC /* OutlineCell.swift */,
-				285F41D621D05C9600E66D6A /* OutlineAction.swift */,
 			);
 			path = OutlineView;
 			sourceTree = "<group>";
@@ -489,8 +436,6 @@
 		28BEF90520D7CEFD00BB7C19 /* GenericList */ = {
 			isa = PBXGroup;
 			children = (
-				28417E3720A84E0800996941 /* ListSection.swift */,
-				28417E2D20A84A4C00996941 /* GenericList<T>.swift */,
 				281BA97021C7EB5500319B0A /* EditableGenericList.swift */,
 			);
 			path = GenericList;
@@ -499,58 +444,16 @@
 		28D22A5921E00EDB00ED3BEF /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				2810BCCA21E2A969009067BF /* Repo Explorer */,
-				284C7D0521AB111900C0F290 /* Main.storyboard */,
-				28D22A5E21E00F3800ED3BEF /* Git Interaction */,
-				28D22A5D21E00F0800ED3BEF /* App Flow  */,
-				28D22A5C21E00EFB00ED3BEF /* User repo selector */,
-				28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */,
-				2810BCB121E165AE009067BF /* OrgFlowCurrentState.swift */,
-				2810BCD321E2DB21009067BF /* FlowRoutingNavigationController.swift */,
-				2810BCD721E380F1009067BF /* UserState.swift */,
-				28295E6321F14CA000CD11CB /* AlertController.swift */,
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		28D22A5A21E00EE800ED3BEF /* LogInToBitbucket */ = {
-			isa = PBXGroup;
-			children = (
-				28D22A6321E0137400ED3BEF /* AuthorizeController.storyboard */,
-				28D22A6521E013A800ED3BEF /* AuthorizeController.swift */,
-			);
-			path = LogInToBitbucket;
-			sourceTree = "<group>";
-		};
-		28D22A5C21E00EFB00ED3BEF /* User repo selector */ = {
-			isa = PBXGroup;
-			children = (
-				2810BCB521E1663E009067BF /* RepositoryDriver.swift */,
-				2810BCB721E16A08009067BF /* LocateUserRepoController.swift */,
-				2810BCB921E16A13009067BF /* LocateUserRepoController.storyboard */,
-			);
-			path = "User repo selector";
-			sourceTree = "<group>";
-		};
-		28D22A5D21E00F0800ED3BEF /* App Flow  */ = {
-			isa = PBXGroup;
-			children = (
+				283AE847226FB0A800E55958 /* document chooser */,
 				2899525A21F678D200D49966 /* OrgRawEditor */,
 				285F429721D1AD1900E66D6A /* PopoverPresenter */,
 				285F41D121D0535000E66D6A /* OrgEdit */,
 				284C7D0721AB11A100C0F290 /* Org List */,
 				28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */,
+				28295E6321F14CA000CD11CB /* AlertController.swift */,
+				284C7D0521AB111900C0F290 /* Main.storyboard */,
 			);
-			path = "App Flow ";
-			sourceTree = "<group>";
-		};
-		28D22A5E21E00F3800ED3BEF /* Git Interaction */ = {
-			isa = PBXGroup;
-			children = (
-				2810BCC821E2466F009067BF /* BitbucketCloner.swift */,
-				2810BCD921E39835009067BF /* GitInteraction.swift */,
-			);
-			path = "Git Interaction";
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		28D22A6721E0144200ED3BEF /* StoryboardAwaker */ = {
@@ -699,14 +602,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2810BCBA21E16A13009067BF /* LocateUserRepoController.storyboard in Resources */,
-				2810BCD221E2B366009067BF /* RepoExploreCoordinatingController.storyboard in Resources */,
+				28BE2F1822593CCE00834877 /* org_file.png in Resources */,
 				2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */,
 				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
-				28D22A6421E0137400ED3BEF /* AuthorizeController.storyboard in Resources */,
 				285F429B21D1ADA200E66D6A /* PopoverController.storyboard in Resources */,
 				285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */,
 				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
@@ -755,11 +656,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
 				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
-				"${BUILT_PRODUCTS_DIR}/OAuthorize2/OAuthorize2.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
 			);
@@ -767,16 +667,15 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeclarativeTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthorize2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ABCF228C3AA96DF8538D1229 /* [CP] Embed Pods Frameworks */ = {
@@ -787,18 +686,24 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework",
+				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeclarativeTableView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CDFE1EC30A1299DB03A0C38B /* [CP] Check Pods Manifest.lock */ = {
@@ -838,57 +743,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */,
-				2810BCCE21E2B307009067BF /* FileItem.swift in Sources */,
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
-				2810BCD421E2DB21009067BF /* FlowRoutingNavigationController.swift in Sources */,
 				28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */,
 				285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
-				28417E2E20A84A4C00996941 /* GenericList<T>.swift in Sources */,
 				28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */,
-				28D22A6621E013A800ED3BEF /* AuthorizeController.swift in Sources */,
-				2810BCB621E1663E009067BF /* RepositoryDriver.swift in Sources */,
 				285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */,
 				2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
-				2810BCC921E2466F009067BF /* BitbucketCloner.swift in Sources */,
-				2810BCC321E18C81009067BF /* BitbucketRepository.swift in Sources */,
-				2810BCD021E2B33B009067BF /* RepoExploreCoordinatingController.swift in Sources */,
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
-				2810BCBF21E17D10009067BF /* RefreshAccessTokenModel.swift in Sources */,
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
-				2810BCDA21E39835009067BF /* GitInteraction.swift in Sources */,
 				281BA97421C9006E00319B0A /* OrgFileOperation.swift in Sources */,
 				285F42A721D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift in Sources */,
 				28D22A6921E0145400ED3BEF /* StoryboardAwaker.swift in Sources */,
-				28417E3820A84E0800996941 /* ListSection.swift in Sources */,
-				285F41D721D05C9600E66D6A /* OutlineAction.swift in Sources */,
-				2810BCCC21E2A979009067BF /* RepoExploreDriver.swift in Sources */,
 				285F42A021D250D600E66D6A /* AddOutlineViewController.swift in Sources */,
 				285F429E21D24AFB00E66D6A /* StoryboardInitializable.swift in Sources */,
 				2810BCD621E380CB009067BF /* DefaultsStorage.swift in Sources */,
 				285F42A421D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift in Sources */,
 				2880A09E20C194BE00CD4ACC /* OutlineCell.swift in Sources */,
-				2810BCB821E16A08009067BF /* LocateUserRepoController.swift in Sources */,
 				286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */,
 				281BA96D21C6FCD000319B0A /* ArrayExtensions.swift in Sources */,
-				2810BCBD21E173E8009067BF /* BitbucketAPI.swift in Sources */,
 				2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */,
+				28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */,
 				281BA96421C3AA4900319B0A /* OrgStringRepresentable.swift in Sources */,
 				285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */,
 				28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */,
 				28FB8DD721FDFCBC00233275 /* OrgViewEditCoordinatingController.swift in Sources */,
 				28295E5E21F0E0C500CD11CB /* OrgParserFlattened.swift in Sources */,
 				284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */,
-				2810BCD821E380F1009067BF /* UserState.swift in Sources */,
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,
 				28295E6421F14CA000CD11CB /* AlertController.swift in Sources */,
 				2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */,
-				2810BCB221E165AE009067BF /* OrgFlowCurrentState.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
-				2810BCC121E1881C009067BF /* BitbucketUser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
 				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
@@ -1122,6 +1010,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1129,7 +1018,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1148,6 +1037,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/ObjectiveGit.framework/Headers/";
 				INFOPLIST_FILE = OrgNoteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1155,7 +1045,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1175,7 +1065,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
 			};
@@ -1196,7 +1086,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.OrgNoteAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrgNoteApp.app/OrgNoteApp";
 			};

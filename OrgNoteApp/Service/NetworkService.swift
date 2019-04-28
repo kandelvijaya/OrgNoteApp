@@ -27,17 +27,17 @@ final class NetworkService: NetworkServiceProtocol {
         return get(path).then { dataR -> Result<String> in
             return dataR.flatMap { data in
                 if let str = String(data: data, encoding: .utf8) {
-                    return Result<String>.success(value: str)
+                    return Result<String>.success(str)
                 } else {
-                    return Result<String>.failure(error: NetworkServiceError.dataConversionFailed("File not in utf8 format"))
+                    return Result<String>.failure(NetworkServiceError.dataConversionFailed("File not in utf8 format"))
                 }
             }
         }.then { stringR in
             return stringR.flatMap { str in
                 if let orgFile = OrgParser.parse(str) {
-                    return Result<OrgFile>.success(value: orgFile)
+                    return Result<OrgFile>.success(orgFile)
                 } else {
-                    return Result<OrgFile>.failure(error: NetworkServiceError.dataConversionFailed("File is a Org structured document"))
+                    return Result<OrgFile>.failure(NetworkServiceError.dataConversionFailed("File is a Org structured document"))
                 }
             }
         }
@@ -51,15 +51,15 @@ final class NetworkService: NetworkServiceProtocol {
         return Future { aCompletion in
             URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
                 if error != nil {
-                    asyncOnMain{ aCompletion?(Result<Data>.failure(error: NetworkServiceError.error(error!))) }
+                    asyncOnMain{ aCompletion?(Result<Data>.failure(NetworkServiceError.error(error!))) }
                     return
                 }
 
                 if data == nil {
-                    asyncOnMain{ aCompletion?(.failure(error: NetworkServiceError.emptyResourceFound)) }
+                    asyncOnMain{ aCompletion?(.failure(NetworkServiceError.emptyResourceFound)) }
                     return
                 } else {
-                    asyncOnMain{ aCompletion?(.success(value: data!)) }
+                    asyncOnMain{ aCompletion?(.success(data!)) }
                     return
                 }
             }).resume()

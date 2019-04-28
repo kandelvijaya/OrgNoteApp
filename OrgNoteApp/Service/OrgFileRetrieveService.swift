@@ -35,7 +35,7 @@ final class OrgFileRetrieveService: OrgFileRetrieveServiceProtocol {
         if url.isFileURL {
             let filePath = url.path
             guard FileManager.default.fileExists(atPath: filePath) else {
-                return Result.failure(error: ServiceError.localFileDoesnotExist) |> Future.init
+                return Result.failure( ServiceError.localFileDoesnotExist) |> Future.init
             }
 
             let parsed = doTry{ try String(contentsOfFile: filePath) }.flatMap { str -> Result<OrgFile> in
