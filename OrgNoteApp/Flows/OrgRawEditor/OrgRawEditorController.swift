@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kekka
 
 final class OrgRawEditorController: UIViewController {
 
@@ -35,12 +36,12 @@ final class OrgRawEditorController: UIViewController {
 
     private func setOrgFileInTextView() {
         let orgFileContents = orgFile.fileString
-        textView.text = orgFileContents
+        textView.attributedText = OrgHighlighter().orgHighlight(orgFileContents)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        let newOrgFile = self.textView.text.flatMap(OrgParser.parse)
+        let newOrgFile = self.textView.attributedText |> OrgHighlighter().plainText |> OrgParser.parse
         if (newOrgFile?.fileString ?? "").isEmpty && !self.textView.text.isEmpty && !self.orgFile.fileString.isEmpty {
             /// something went wrong
             onDismiss(orgFile)
