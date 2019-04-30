@@ -19,41 +19,50 @@ Personal is divided into 3 segments:
 *** Travel
 """
 
-func findLineNumber(on cursorCount: Int, in text: String) -> Int {
-    var currentLineNo: Int = 0
-    for (index, item) in text.enumerated() {
-        if index == cursorCount {
-            break
-        }
-        if item == Character("\n") {
-            currentLineNo += 1
+
+let rangeTop = Range<String.Index>.init(NSRange(location: 0, length: 0), in: string)!
+let rangeBottom = Range.init(NSRange(location: string.count, length: 0), in: string)!
+let rangeMiddleEmptyLine = Range.init(NSRange(location: 16, length: 0), in: string)!
+
+let line = string.lineRange(for: rangeMiddleEmptyLine)
+print(string[line])
+
+
+// INTERVIEW QUESTION:
+func findLineRange(on cursorPosition: Int, in text: String) -> Range<String.Index> {
+    
+    let cursorIndexInText = String.Index(encodedOffset: cursorPosition)
+    
+    // upper limit
+    var currentPosition: String.Index = cursorIndexInText
+    var upperPosition: String.Index? = nil
+    var lowerPosition: String.Index? = nil
+    while upperPosition == nil {
+        if currentPosition < text.endIndex {
+            if text[currentPosition] == Character("\n") {
+                upperPosition = currentPosition
+            }
+            currentPosition = text.index(after: currentPosition)
+        } else {
+            // EOF
+            upperPosition = text.endIndex
         }
     }
     
-    return currentLineNo
+    currentPosition = cursorIndexInText
+    
+    // lower limit
+    while lowerPosition == nil {
+        if currentPosition == text.startIndex {
+            lowerPosition = text.startIndex
+        } else {
+            if text[currentPosition] == Character("\n") {
+                lowerPosition = currentPosition
+            }
+            currentPosition = text.index(before: currentPosition)
+        }
+        
+    }
+    
+    return Range(uncheckedBounds: (lower: lowerPosition!, upper: upperPosition!))
 }
-
-func findLine(on cursorPos: Int, in string: String) -> (Int, String) {
-    let lineNo = findLineNumber(on: cursorPos, in: string)
-    return (lineNo, String(string.split(separator: "\n", omittingEmptySubsequences: false)[lineNo]))
-}
-
-
-func replaceLine(old: NSAttributedString, with new: NSAttributedString, at cursorPos: Int) -> NSAttributedString {
-    let lineInfo = findLine(on: cursorPos, in: old.string)
-    /// this might be ambigious if the same line exists on top
-    let oldRange = (old.string as NSString).range(of: lineInfo.1)
-    let oldCopy = NSMutableAttributedString.init(attributedString: old)
-    oldCopy.replaceCharacters(in: oldRange, with: oldCopy)
-    return oldCopy
-}
-
-
-
-findLineNumber(on: 7, in: string)
-findLineNumber(on: 17, in: string)
-
-findLine(on: 17, in: string)
-
-
-"\n\n\n".split(separator: "\n", omittingEmptySubsequences: false)

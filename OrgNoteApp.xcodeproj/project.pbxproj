@@ -36,6 +36,7 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+		28566F5222782DC200E69C86 /* OrgTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28566F5122782DC200E69C86 /* OrgTextStorage.swift */; };
 		285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */; };
 		285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */; };
 		285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F429821D1AD2700E66D6A /* PopoverController.swift */; };
@@ -135,6 +136,7 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28566F5122782DC200E69C86 /* OrgTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgTextStorage.swift; sourceTree = "<group>"; };
 		285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditOutlineViewController.swift; sourceTree = "<group>"; };
 		285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrgViewController.storyboard; sourceTree = "<group>"; };
 		285F429821D1AD2700E66D6A /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */,
+				28566F5122782DC200E69C86 /* OrgTextStorage.swift */,
 			);
 			path = OrgSyntaxHighlighter;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
 				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
+				28566F5222782DC200E69C86 /* OrgTextStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
