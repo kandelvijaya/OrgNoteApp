@@ -60,12 +60,13 @@ public struct OrgHighlighter {
     }
     
     public init() {}
+    
     public func plainText(from input: NSAttributedString) -> String {
         let plainText = input.string
         return plainText.replacingOccurrences(of: Symbol.heading.rawValue, with: Symbol.rawHeading.rawValue)
     }
     
-    public func orgHighlight(_ input: String) -> NSAttributedString {
+    public func highlight(_ input: String) -> NSAttributedString {
         return NSAttributedString.init(string: input) |> highlightNormal |> highlightHeadings
     }
     

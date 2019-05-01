@@ -67,7 +67,7 @@ final class OrgRawEditorController: UIViewController {
     private func addHeadingBelow(with depth: Int) {
         let starsAndSpace = "\n" + Array<String>.init(repeating: "*", count: depth).joined() + " "
         let currentCusorPos = currentSelectionRange()
-        textView.textStorage.insert(OrgHighlighter().orgHighlight(starsAndSpace), at: currentCusorPos.upperBound.encodedOffset + 1)
+        textView.textStorage.insert(OrgHighlighter().highlight(starsAndSpace), at: currentCusorPos.upperBound.encodedOffset + 1)
         let oldRange = rangeToNS(for: textView.attributedText.string, range: currentCusorPos)
         let newRange = NSRange(location: oldRange.location + starsAndSpace.count + 1, length: oldRange.length)
         textView.selectedRange = newRange
@@ -94,7 +94,7 @@ final class OrgRawEditorController: UIViewController {
 
     private func setOrgFileInTextView() {
         let orgFileContents = orgFile.fileString
-        textView.attributedText = OrgHighlighter().orgHighlight(orgFileContents)
+        textView.attributedText = OrgHighlighter().highlight(orgFileContents)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -150,7 +150,7 @@ extension OrgRawEditorController: UITextViewDelegate {
         let stringToFormat = OrgHighlighter().plainText(from: textView.attributedText.attributedSubstring(from: nslineRange))
         
         // highlight
-        let formatted = OrgHighlighter().orgHighlight(stringToFormat)
+        let formatted = OrgHighlighter().highlight(stringToFormat)
         
         // set 
         textView.textStorage.replaceCharacters(in: nslineRange, with: formatted)
