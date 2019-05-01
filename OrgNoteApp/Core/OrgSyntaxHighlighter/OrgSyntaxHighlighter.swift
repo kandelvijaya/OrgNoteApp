@@ -92,6 +92,7 @@ public struct OrgHighlighter {
         let attributedString = NSMutableAttributedString.init(attributedString: raw)
         try! OrgPattern.contentMatch.findMatches(in: raw.string) { item in
             attributedString.addAttributes([NSAttributedString.Key.foregroundColor: UIColor.normal], range: item.range)
+            attributedString.addAttribute(.font, value: UIFont.preferredFont(forTextStyle: .body), range: item.range)
         }
         return attributedString
     }
@@ -120,7 +121,7 @@ public struct OrgHighlighter {
 
 
 enum OrgPattern: String {
-    case contentMatch = "^(([^*]+)|(\\*+)[^ ]\\w.*)"
+    case contentMatch = "^(?!(\\*+)( +).*).*"       // negative of heading match
     case headingMatch = "^(\\*+)( +).*"
     
     func findMatches(in input: String, performing: @escaping (NSTextCheckingResult) -> Void) throws {
