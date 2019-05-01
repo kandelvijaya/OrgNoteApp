@@ -180,6 +180,10 @@ extension OrgRawEditorController {
                 return
         }
         let verticalDistance: CGFloat = keyboardBeginFrame.origin.y - keyboardEndFrame.origin.y
+        if verticalDistance == 0 {
+            // keyboard was already there, might have been input accessory view redraw. Dont do anything.
+            return
+        }
         let safeBottomInsetThatKeyboardDoesnotUse: CGFloat = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0
         let applicableVerticalDistance: CGFloat = verticalDistance - safeBottomInsetThatKeyboardDoesnotUse
         UIView.animate(withDuration: keyboardAnimationTime) {
