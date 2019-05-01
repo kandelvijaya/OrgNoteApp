@@ -44,8 +44,8 @@ final class OrgRawEditorController: UIViewController {
     
     private func headingInsertionButtons() -> [UIBarButtonItem] {
         guard let depth = currentSelectionsHeadingDepth() else { return [] }
-        let sameLevelStars = Array<String>.init(repeating: "✦", count: depth).joined()
-        let subStars = sameLevelStars + "✦"
+        let sameLevelStars = Array<String>.init(repeating: OrgHighlighter.Symbol.heading.rawValue, count: depth).joined()
+        let subStars = sameLevelStars + OrgHighlighter.Symbol.heading.rawValue
         
         let addSubHeadingBelow = UIBarButtonItem.init(title: "››\(subStars)", style: .plain, target: self, action: #selector(addSubHeadingRightBelowCursor(_:)))
         let addHeadingBelow = UIBarButtonItem.init(title: "\(sameLevelStars)", style: .plain, target: self, action: #selector(addHeadingRightBelowCursor(_:)))
@@ -61,21 +61,26 @@ final class OrgRawEditorController: UIViewController {
     
     @objc private func addSubHeadingRightBelowCursor(_ button: UIBarButtonItem) {
         guard let depth = currentSelectionsHeadingDepth() else { return }
+        addHeadingBelow(with: depth + 1)
+    }
+    
+    private func addHeadingBelow(with depth: Int) {
         let starsAndSpace = "\n" + Array<String>.init(repeating: "*", count: depth).joined() + " "
         let currentCusorPos = currentSelectionRange()
         textView.textStorage.insert(OrgHighlighter().orgHighlight(starsAndSpace), at: currentCusorPos.upperBound.encodedOffset + 1)
         let oldRange = rangeToNS(for: textView.attributedText.string, range: currentCusorPos)
         let newRange = NSRange(location: oldRange.location + starsAndSpace.count + 1, length: oldRange.length)
         textView.selectedRange = newRange
-        
     }
     
     @objc private func addHeadingRightBelowCursor(_ button: UIBarButtonItem) {
-        
+        guard let depth = currentSelectionsHeadingDepth() else { return }
+        addHeadingBelow(with: depth)
     }
     
     @objc private func addParentHeadingRightBelowCursor(_ button: UIBarButtonItem) {
-        
+        guard let depth = currentSelectionsHeadingDepth() else { return }
+        addHeadingBelow(with: max(depth - 1, 0))
     }
     
     @objc private func hideKeyboard(_ item: UIBarButtonItem) {

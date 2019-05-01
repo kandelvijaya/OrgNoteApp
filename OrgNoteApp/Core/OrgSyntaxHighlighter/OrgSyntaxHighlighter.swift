@@ -54,11 +54,15 @@ extension UIColor {
 
 public struct OrgHighlighter {
     
-    public init() {}
+    enum Symbol: String {
+        case heading = "✦"
+        case rawHeading = "*"
+    }
     
+    public init() {}
     public func plainText(from input: NSAttributedString) -> String {
         let plainText = input.string
-        return plainText.replacingOccurrences(of: "✦", with: "*")
+        return plainText.replacingOccurrences(of: Symbol.heading.rawValue, with: Symbol.rawHeading.rawValue)
     }
     
     public func orgHighlight(_ input: String) -> NSAttributedString {
@@ -100,7 +104,7 @@ public struct OrgHighlighter {
             /// replace * with beautiful emojied star
             let firstStarsRange = item.range(at: 1)
             let starsCount = firstStarsRange.length
-            let stars = Array<String>.init(repeating: "✦", count: starsCount).joined()
+            let stars = Array<String>.init(repeating: Symbol.heading.rawValue, count: starsCount).joined()
             attributedString.replaceCharacters(in: firstStarsRange, with: stars)
             
             /// apply color depending on the heading depth
