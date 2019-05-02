@@ -71,6 +71,8 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
         super.viewDidLoad()
         embedEditor()   // do this first
         stylize()
+        editorContainer.layer.borderColor = UIColor.lightGray.cgColor
+        editorContainer.layer.borderWidth = 0.5
     }
     
     private func embedEditor() {
