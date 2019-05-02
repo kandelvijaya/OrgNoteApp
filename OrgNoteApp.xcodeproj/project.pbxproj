@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		11A7D5E269BFBFD1711277BF /* Pods_EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB75DBF21142522630D809F3 /* Pods_EnablePlaygroundShare.framework */; };
 		1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */; };
-		2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; };
-		2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2810BCD621E380CB009067BF /* DefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD521E380CB009067BF /* DefaultsStorage.swift */; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,7 +27,6 @@
 		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
 		283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C6227AEEBC00DC2159 /* OrgEditorController.swift */; };
 		283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */; };
-		283337CB227B1DFB00DC2159 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
@@ -100,7 +97,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */,
-				2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +123,6 @@
 		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		283337C6227AEEBC00DC2159 /* OrgEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgEditorController.swift; sourceTree = "<group>"; };
 		283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenOrgRawEditorController.swift; sourceTree = "<group>"; };
-		283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
@@ -196,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
-				2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */,
 				1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +327,6 @@
 				2880A0A220C197DC00CD4ACC /* Service */,
 				28417E2C20A8494D00996941 /* Core */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
-				283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */,
 				28417E2520A844C000996941 /* supporting */,
 			);
 			path = OrgNoteApp;
@@ -533,6 +526,7 @@
 				2855D3EB20A843180082EC00 /* Resources */,
 				2814519220D3D4260006BBD7 /* Embed Frameworks */,
 				A9FDE7474DE33D00D0D1782D /* [CP] Embed Pods Frameworks */,
+				286106F7227B5E1F007FCC08 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -625,7 +619,6 @@
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
 				285F429B21D1ADA200E66D6A /* PopoverController.storyboard in Resources */,
-				283337CB227B1DFB00DC2159 /* GoogleService-Info.plist in Resources */,
 				285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */,
 				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
 			);
@@ -643,6 +636,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		286106F7227B5E1F007FCC08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" 82817dc09821eda860663063af8c795091c804ab f548d18106d744927cbfbe4477b74b338857a6f11b50bfd2bf62a83c06577c5a\n";
+		};
 		47E83F03AEF52FA63B42270F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,11 +709,9 @@
 				"${PODS_ROOT}/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -710,11 +719,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeclarativeTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1051,6 +1058,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

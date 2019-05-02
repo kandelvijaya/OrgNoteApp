@@ -21,6 +21,10 @@ final class DocumentPickerFlowController: UIDocumentBrowserViewController {
         self.allowsPickingMultipleItems = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
 }
 
 extension DocumentPickerFlowController: UIDocumentBrowserViewControllerDelegate {
