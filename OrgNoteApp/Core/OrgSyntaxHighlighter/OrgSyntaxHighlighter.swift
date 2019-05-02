@@ -50,6 +50,11 @@ extension UIColor {
         return .color(red: 41, green: 43, blue: 46)
     }
     
+    static func headingStarColor(for depth: Int) -> UIColor {
+        let mapping: [Int: UIColor] = [1: .H1, 2: .H2, 3: .H3, 4: .H4]
+        return mapping[depth] ?? .normal
+    }
+    
 }
 
 protocol HighlighterProtocol {

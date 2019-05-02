@@ -142,28 +142,44 @@ extension OrgEditorController {
     
     private func headingInsertionButtons() -> [UIBarButtonItem] {
         guard let depth = currentSelectionsHeadingDepth() else { return [] }
-        let sameLevelStars = Array<String>.init(repeating: OrgHighlighter.Symbol.heading.rawValue, count: depth).joined()
-        let subStars = sameLevelStars + OrgHighlighter.Symbol.heading.rawValue
-        
-        let addSubHeadingBelow = UIBarButtonItem.init(title: "››\(subStars)", style: .plain, target: self, action: #selector(addSubHeadingRightBelowCursor(_:)))
-        let addHeadingBelow = UIBarButtonItem.init(title: "\(sameLevelStars)", style: .plain, target: self, action: #selector(addHeadingRightBelowCursor(_:)))
-        
-        if sameLevelStars.count > 1 {
-            let parentStars = String(sameLevelStars.dropLast())
-            let addParentHeadingBelow = UIBarButtonItem.init(title: "\(parentStars)‹‹", style: .plain, target: self, action: #selector(addParentHeadingRightBelowCursor(_:)))
-            return [addParentHeadingBelow, addHeadingBelow, addSubHeadingBelow]
-        } else {
-            return [addHeadingBelow, addSubHeadingBelow]
-        }
+        return [parentHeadingBarButton(from: depth), headingBarButton(from: depth), subHeadingBarButton(from: depth)].compactMap{ $0 }
+    }
+    
+    private func attributeForHeading(depth: Int) -> [NSAttributedString.Key: Any] {
+        let color = UIColor.headingStarColor(for: depth)
+        let font = UIFont.preferredFont(forTextStyle: .body)
+        return [NSAttributedString.Key.foregroundColor: color,
+                NSAttributedString.Key.font: font]
+    }
+    
+    private func subHeadingBarButton(from currentHeadingDepth: Int) -> UIBarButtonItem {
+        let depth = currentHeadingDepth + 1
+        return barButtonItem(for: depth, with: #selector(addSubHeadingRightBelowCursor(_:)))
+    }
+    
+    private func headingBarButton(from currentHeadingDepth: Int) -> UIBarButtonItem {
+        return barButtonItem(for: currentHeadingDepth, with: #selector(addHeadingRightBelowCursor(_:)))
+    }
+    
+    private func parentHeadingBarButton(from currentHeadingDepth: Int) -> UIBarButtonItem? {
+        guard currentHeadingDepth > 1 else { return nil }
+        return barButtonItem(for: currentHeadingDepth - 1, with: #selector(addParentHeadingRightBelowCursor(_:)))
+    }
+    
+    private func barButtonItem(for depth: Int, with selector: Selector) -> UIBarButtonItem {
+        let stars = Array<String>.init(repeating: OrgHighlighter.Symbol.heading.rawValue, count: depth).joined()
+        let item = UIBarButtonItem.init(title: stars, style: .plain, target: self, action: selector)
+        item.setTitleTextAttributes(attributeForHeading(depth: depth), for: .normal)
+        return item
     }
     
     @objc private func addSubHeadingRightBelowCursor(_ button: UIBarButtonItem) {
         guard let depth = currentSelectionsHeadingDepth() else { return }
-        addHeadingBelow(with: depth + 1)
+        insertHeadingBelow(with: depth + 1)
     }
     
-    private func addHeadingBelow(with depth: Int) {
-        let starsAndSpace = "\n" + Array<String>.init(repeating: "*", count: depth).joined() + " "
+    private func insertHeadingBelow(with depth: Int) {
+        let starsAndSpace = "\n" + Array<String>.init(repeating: OrgHighlighter.Symbol.rawHeading.rawValue, count: depth).joined() + " "
         let currentCusorPos = currentSelectionRange()
         textView.textStorage.insert(OrgHighlighter().highlight(starsAndSpace), at: currentCusorPos.upperBound.encodedOffset + 1)
         let oldRange = rangeToNS(for: textView.attributedText.string, range: currentCusorPos)
@@ -173,12 +189,12 @@ extension OrgEditorController {
     
     @objc private func addHeadingRightBelowCursor(_ button: UIBarButtonItem) {
         guard let depth = currentSelectionsHeadingDepth() else { return }
-        addHeadingBelow(with: depth)
+        insertHeadingBelow(with: depth)
     }
     
     @objc private func addParentHeadingRightBelowCursor(_ button: UIBarButtonItem) {
         guard let depth = currentSelectionsHeadingDepth() else { return }
-        addHeadingBelow(with: max(depth - 1, 0))
+        insertHeadingBelow(with: max(depth - 1, 0))
     }
     
     @objc private func hideKeyboard(_ item: UIBarButtonItem) {
