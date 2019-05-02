@@ -30,14 +30,16 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
 
     @IBAction func cancel(_ sender: Any) {
         defer { onDone?() }
-        onCancel()
+        headingTextField.resignFirstResponder()
+        editor.textView.resignFirstResponder()
+        cancelTapped()
     }
 
-    func onCancel() {
+    func cancelTapped() {
         //no-op
     }
 
-    func onDone(with outline: Outline?) {
+    func doneTapped(with outline: Outline?) {
         //no-op
     }
 
@@ -48,7 +50,9 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
 
     @IBAction func done(_ sender: Any) {
         defer { onDone?() }
-        onDone(with: newOutline())
+        headingTextField.resignFirstResponder()
+        editor.textView.resignFirstResponder()
+        doneTapped(with: newOutline())
     }
 
     /// Will discard if you try adding parent heading.

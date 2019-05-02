@@ -35,7 +35,7 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
         editor.display(content)
     }
 
-    override func onCancel() {
+    override func cancelTapped() {
         // nothing
     }
 
@@ -43,7 +43,7 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
         return modelToEdit.heading.depth
     }
 
-    override func onDone(with outline: Outline?) {
+    override func doneTapped(with outline: Outline?) {
         guard let newModel = outline else {
             // error report
             // TODO:- show a error toast animating from the top of the container view

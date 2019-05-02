@@ -22,7 +22,7 @@ final class AddOutlineViewController: BaseEditOutlineViewController {
         return controller
     }
 
-    override func onCancel() {
+    override func cancelTapped() {
         // nothing
     }
 
@@ -31,7 +31,7 @@ final class AddOutlineViewController: BaseEditOutlineViewController {
         return immediateParent!.heading.depth + 1
     }
 
-    override func onDone(with outline: Outline?) {
+    override func doneTapped(with outline: Outline?) {
         guard let newModel = outline else {
             // error report
             // TODO:- show a error toast animating from the top of the container view
