@@ -1,6 +1,0 @@
-framework module Kekka {
-  umbrella header "Kekka-umbrella.h"
-
-  export *
-  module * { export * }
-}
