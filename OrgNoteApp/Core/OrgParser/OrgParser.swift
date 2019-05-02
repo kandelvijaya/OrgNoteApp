@@ -65,7 +65,7 @@ extension OrgParser {
 
 extension OrgParser {
 
-    private func headingParser() -> Parser<OutlineHeading> {
+    func headingParser() -> Parser<OutlineHeading> {
         let p = (pstars ->> (pchar(" ") |> many1)) ->>- (anyCharacterBesidesNewLine |> many1) ->> newLine
         let pH = p |>> { OutlineHeading(title: String($1), depth: $0.count) }
         return pH <?> "Org Heading"

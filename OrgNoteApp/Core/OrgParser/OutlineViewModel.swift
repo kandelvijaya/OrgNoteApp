@@ -30,7 +30,7 @@ struct OutlineViewModel: Hashable {
     var _backingModel: Outline
 
     init(with outline: Outline) {
-        self.title = "✦ " + outline.heading.title
+        self.title = "\(OrgHighlighter.Symbol.heading.rawValue) " + outline.heading.title
         self.content = outline.content.joined(separator: "\n")
         self.subModels = outline.subItems.map(OutlineViewModel.init)
         self.indentationLevel = outline.heading.depth

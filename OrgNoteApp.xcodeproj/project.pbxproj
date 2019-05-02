@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A7D5E269BFBFD1711277BF /* Pods_EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB75DBF21142522630D809F3 /* Pods_EnablePlaygroundShare.framework */; };
 		1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */; };
 		2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; };
 		2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,6 +27,8 @@
 		28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5F21F0E37900CD11CB /* GraphContainer.swift */; };
 		28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6121F0E4E800CD11CB /* OrgFile.swift */; };
 		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
+		283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C6227AEEBC00DC2159 /* OrgEditorController.swift */; };
+		283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
@@ -35,6 +38,7 @@
 		2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F720A8431A0082EC00 /* Assets.xcassets */; };
 		2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2855D3F920A8431A0082EC00 /* LaunchScreen.storyboard */; };
 		2855D40620A8431A0082EC00 /* OrgNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */; };
+		28566F5222782DC200E69C86 /* OrgTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28566F5122782DC200E69C86 /* OrgTextStorage.swift */; };
 		285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */; };
 		285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */; };
 		285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F429821D1AD2700E66D6A /* PopoverController.swift */; };
@@ -44,7 +48,6 @@
 		285F42A221D250EA00E66D6A /* EditOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A121D250EA00E66D6A /* EditOutlineViewController.swift */; };
 		285F42A421D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A321D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift */; };
 		285F42A721D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */; };
-		285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */; };
 		286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */; };
 		286BCE0B21B3ED8000F7337F /* UsefulExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */; };
 		28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28703D4120A85A1E00DC8DBF /* OrgParser.swift */; };
@@ -57,9 +60,9 @@
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525821F674B000D49966 /* OrgFileInteractable.swift */; };
-		2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525B21F678E200D49966 /* OrgRawEditorController.swift */; };
 		2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */; };
-		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
+		2899526021F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */; };
+		28A83A802275E8E00021C14C /* OrgSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */; };
 		28BE2F1822593CCE00834877 /* org_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE2F1722592CD100834877 /* org_file.png */; };
@@ -121,6 +124,8 @@
 		28295E5F21F0E37900CD11CB /* GraphContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphContainer.swift; sourceTree = "<group>"; };
 		28295E6121F0E4E800CD11CB /* OrgFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFile.swift; sourceTree = "<group>"; };
 		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		283337C6227AEEBC00DC2159 /* OrgEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgEditorController.swift; sourceTree = "<group>"; };
+		283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenOrgRawEditorController.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 		2855D40120A8431A0082EC00 /* OrgNoteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgNoteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2855D40520A8431A0082EC00 /* OrgNoteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgNoteAppTests.swift; sourceTree = "<group>"; };
 		2855D40720A8431A0082EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28566F5122782DC200E69C86 /* OrgTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgTextStorage.swift; sourceTree = "<group>"; };
 		285F41D221D0535D00E66D6A /* BaseEditOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditOutlineViewController.swift; sourceTree = "<group>"; };
 		285F41D421D0568200E66D6A /* EditOrgViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrgViewController.storyboard; sourceTree = "<group>"; };
 		285F429821D1AD2700E66D6A /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
@@ -143,7 +149,6 @@
 		285F42A121D250EA00E66D6A /* EditOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOutlineViewController.swift; sourceTree = "<group>"; };
 		285F42A321D3ABAB00E66D6A /* OrgListEditInteractionCoordintaingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListEditInteractionCoordintaingController.swift; sourceTree = "<group>"; };
 		285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgSyntaxHighlighter.swift; sourceTree = "<group>"; };
-		285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgHighlightingTheme.swift; sourceTree = "<group>"; };
 		286BCE0821B3D92700F7337F /* OrgFileRetrieveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileRetrieveService.swift; sourceTree = "<group>"; };
 		286BCE0A21B3ED8000F7337F /* UsefulExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtension.swift; sourceTree = "<group>"; };
 		28703D4120A85A1E00DC8DBF /* OrgParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgParser.swift; sourceTree = "<group>"; };
@@ -155,9 +160,8 @@
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 		2899525821F674B000D49966 /* OrgFileInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileInteractable.swift; sourceTree = "<group>"; };
-		2899525B21F678E200D49966 /* OrgRawEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorController.swift; sourceTree = "<group>"; };
 		2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorDriver.swift; sourceTree = "<group>"; };
-		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
+		2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullScreenOrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerFlowController.swift; sourceTree = "<group>"; };
 		28BE2F1722592CD100834877 /* org_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = org_file.png; sourceTree = "<group>"; };
@@ -167,10 +171,13 @@
 		28FB8DD621FDFCBC00233275 /* OrgViewEditCoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewEditCoordinatingController.swift; sourceTree = "<group>"; };
 		2B4CED12D5748F616CCAEACB /* Pods-OrgNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7721403C970CF5F23672A99A /* Pods-EnablePlaygroundShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnablePlaygroundShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnablePlaygroundShare/Pods-EnablePlaygroundShare.debug.xcconfig"; sourceTree = "<group>"; };
 		8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		8F3749A49DE485E46AE35369 /* Pods-OrgNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteAppTests/Pods-OrgNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		929366CE92CDA5339436B813 /* Pods-EnablePlaygroundShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnablePlaygroundShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnablePlaygroundShare/Pods-EnablePlaygroundShare.release.xcconfig"; sourceTree = "<group>"; };
 		AC86076F5200C2BA7256D377 /* Pods-OrgNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrgNoteApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrgNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB75DBF21142522630D809F3 /* Pods_EnablePlaygroundShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnablePlaygroundShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A7D5E269BFBFD1711277BF /* Pods_EnablePlaygroundShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */,
-				285F42A821D3B14E00E66D6A /* OrgHighlightingTheme.swift */,
+				28566F5122782DC200E69C86 /* OrgTextStorage.swift */,
 			);
 			path = OrgSyntaxHighlighter;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 				2810BCC421E243E3009067BF /* ObjectiveGit.framework */,
 				CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */,
 				50AFE1921C74957FF0D8E201 /* Pods_OrgNoteAppTests.framework */,
+				FB75DBF21142522630D809F3 /* Pods_EnablePlaygroundShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,9 +435,10 @@
 		2899525A21F678D200D49966 /* OrgRawEditor */ = {
 			isa = PBXGroup;
 			children = (
-				2899525B21F678E200D49966 /* OrgRawEditorController.swift */,
+				283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */,
 				2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */,
-				2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */,
+				2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */,
+				283337C6227AEEBC00DC2159 /* OrgEditorController.swift */,
 			);
 			path = OrgRawEditor;
 			sourceTree = "<group>";
@@ -471,6 +481,8 @@
 				8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */,
 				2B4CED12D5748F616CCAEACB /* Pods-OrgNoteAppTests.debug.xcconfig */,
 				8F3749A49DE485E46AE35369 /* Pods-OrgNoteAppTests.release.xcconfig */,
+				7721403C970CF5F23672A99A /* Pods-EnablePlaygroundShare.debug.xcconfig */,
+				929366CE92CDA5339436B813 /* Pods-EnablePlaygroundShare.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -493,6 +505,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2814518F20D3D4260006BBD7 /* Build configuration list for PBXNativeTarget "EnablePlaygroundShare" */;
 			buildPhases = (
+				8EE98D35FFD205FFDBCB33A5 /* [CP] Check Pods Manifest.lock */,
 				2814518120D3D4260006BBD7 /* Headers */,
 				2814518220D3D4260006BBD7 /* Sources */,
 				2814518320D3D4260006BBD7 /* Frameworks */,
@@ -603,7 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BE2F1822593CCE00834877 /* org_file.png in Resources */,
-				2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */,
+				2899526021F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard in Resources */,
 				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
@@ -642,6 +655,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-OrgNoteAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EE98D35FFD205FFDBCB33A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnablePlaygroundShare-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -735,6 +770,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A83A802275E8E00021C14C /* OrgSyntaxHighlighter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,11 +782,10 @@
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
 				28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */,
+				283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */,
 				285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */,
-				285F42A921D3B14E00E66D6A /* OrgHighlightingTheme.swift in Sources */,
-				2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
@@ -775,11 +810,13 @@
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,
 				28295E6421F14CA000CD11CB /* AlertController.swift in Sources */,
 				2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */,
+				283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,
 				28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */,
 				28BEF90720D812C400BB7C19 /* OutlineViewModel.swift in Sources */,
+				28566F5222782DC200E69C86 /* OrgTextStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +862,7 @@
 /* Begin XCBuildConfiguration section */
 		2814519020D3D4260006BBD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7721403C970CF5F23672A99A /* Pods-EnablePlaygroundShare.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -855,6 +893,7 @@
 		};
 		2814519120D3D4260006BBD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929366CE92CDA5339436B813 /* Pods-EnablePlaygroundShare.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1000,6 +1039,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC86076F5200C2BA7256D377 /* Pods-OrgNoteApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1027,6 +1067,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8899F4104CCF8976B4E3FDE7 /* Pods-OrgNoteApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
