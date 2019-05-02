@@ -31,7 +31,8 @@ final class EditOutlineViewController: BaseEditOutlineViewController {
 
     private func updateUIWithToEditModel() {
         headingTextField.text = modelToEdit.heading.title
-        contentTextView.text = modelToEdit.fileString.split(separator: "\n").dropFirst().joined(separator: "\n")
+        let content =  modelToEdit.fileString.split(separator: "\n").dropFirst().joined(separator: "\n")
+        editor.display(content)
     }
 
     override func onCancel() {

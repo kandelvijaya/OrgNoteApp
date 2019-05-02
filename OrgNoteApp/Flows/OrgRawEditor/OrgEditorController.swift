@@ -12,10 +12,14 @@ import SwiftyParserCombinator
 
 final class OrgEditorController: UIViewController {
     
-    /// Input OrgFile to render
-    func display(_ orgFile: OrgFile) {
-        let orgFileContents = orgFile.fileString
-        textView.attributedText = highlighter.highlight(orgFileContents)
+    /// Input OrgFile to render or empty in case of new addition
+    func display(_ orgFile: OrgFile?) {
+        display(orgFile?.fileString)
+    }
+    
+    /// Input raw string
+    func display(_ orgString: String?) {
+        textView.attributedText = highlighter.highlight(orgString ?? "")
     }
     
     /// Extract the org representation from currently rendered
@@ -27,7 +31,11 @@ final class OrgEditorController: UIViewController {
         return newOrgFile
     }
     
-    public static func create(for orgFile: OrgFile, using highlighter: HighlighterProtocol = OrgHighlighter(), rendering on: UITextView = UITextView()) -> OrgEditorController {
+    func extract() -> String? {
+        return self.textView.attributedText |> highlighter.plainText
+    }
+    
+    public static func create(for orgFile: OrgFile?, using highlighter: HighlighterProtocol = OrgHighlighter(), rendering on: UITextView = UITextView()) -> OrgEditorController {
         let controller = OrgEditorController()
         controller.highlighter = highlighter
         controller.textView = on
@@ -70,7 +78,7 @@ extension OrgEditorController {
     
     func currentSelectionRange() -> Range<String.Index> {
         // just the new char pos. Not after
-        let cursorPositon = textView.offset(from: textView.beginningOfDocument, to: textView.selectedTextRange!.start) - 1
+        let cursorPositon = max(textView.offset(from: textView.beginningOfDocument, to: textView.selectedTextRange!.start) - 1, 0)
         return Range<String.Index>.init(NSRange(location: cursorPositon, length: 0), in: textView.attributedText.string)!
     }
     
