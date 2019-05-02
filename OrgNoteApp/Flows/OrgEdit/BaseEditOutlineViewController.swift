@@ -69,7 +69,11 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        embedEditor()   // do this first
         stylize()
+    }
+    
+    private func embedEditor() {
         editor = OrgEditorController.create(for: nil, using: OrgHighlighter())
         addChild(editor)
         editorContainer.addSubview(editor.view)
@@ -82,7 +86,7 @@ class BaseEditOutlineViewController: UIViewController, StoryboardInitializable {
         [headingLabel, contentLabel].forEach {
             $0?.textColor = Theme.blueish.normal
         }
-        //contentTextView.textColor = Theme.blueish.text
+        editor.textView.backgroundColor = .white
         headingTextField.textColor = Theme.blueish.text
 
         cancelButton.tintColor = Theme.blueish.attention
