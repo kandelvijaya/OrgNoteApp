@@ -3,13 +3,64 @@ PODS:
     - FastDiff
     - Kekka
   - FastDiff (1.1.1)
+  - Firebase/Core (5.20.2):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.8.1)
+  - Firebase/CoreOnly (5.20.2):
+    - FirebaseCore (= 5.4.1)
+  - FirebaseAnalytics (5.8.1):
+    - FirebaseCore (~> 5.4)
+    - FirebaseInstanceID (~> 3.8)
+    - GoogleAppMeasurement (= 5.8.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.4.1):
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.8.1):
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/UserDefaults (~> 5.2)
+  - GoogleAppMeasurement (5.8.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.7.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.7.0)
+  - GoogleUtilities/Logger (5.7.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.7.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.7.0)"
+  - GoogleUtilities/Reachability (5.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.7.0):
+    - GoogleUtilities/Logger
   - Kekka (0.8.1)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - StatusAlert (1.1.0)
   - SwiftyParserCombinator (1.1)
 
 DEPENDENCIES:
   - DeclarativeTableView
   - FastDiff
+  - Firebase/Core
   - Kekka
   - StatusAlert
   - SwiftyParserCombinator
@@ -18,17 +69,31 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DeclarativeTableView
     - FastDiff
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - Kekka
+    - nanopb
     - StatusAlert
     - SwiftyParserCombinator
 
 SPEC CHECKSUMS:
   DeclarativeTableView: 799269cf5ff66e04c3c86c1286086f7abbc8b81d
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
+  Firebase: 0c8cf33f266410c61ab3e2265cfa412200351d9c
+  FirebaseAnalytics: ece1aa57a4f43c64d53a648b5a5e05151aae947b
+  FirebaseCore: f1a9a8be1aee4bf71a2fc0f4096df6788bdfda61
+  FirebaseInstanceID: a122b0c258720cf250551bb2bedf48c699f80d90
+  GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
+  GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
   Kekka: a3d3021cca1200f77ba1cfba0329242ffb48c8c3
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   StatusAlert: 4d6dadebf5f7abd5648fa774ef3062f2f95cc4aa
   SwiftyParserCombinator: 5565b0948b219885799f43eb97058e9d929a560a
 
-PODFILE CHECKSUM: 201e9b04e3a539d673da0c600ef7ca8120a42a10
+PODFILE CHECKSUM: 677905ab18c6ff0aba03b8ffd78e2c783d6a2418
 
 COCOAPODS: 1.6.1

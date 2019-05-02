@@ -29,6 +29,7 @@
 		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
 		283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C6227AEEBC00DC2159 /* OrgEditorController.swift */; };
 		283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */; };
+		283337CB227B1DFB00DC2159 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
@@ -126,6 +127,7 @@
 		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		283337C6227AEEBC00DC2159 /* OrgEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgEditorController.swift; sourceTree = "<group>"; };
 		283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenOrgRawEditorController.swift; sourceTree = "<group>"; };
+		283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				2880A0A220C197DC00CD4ACC /* Service */,
 				28417E2C20A8494D00996941 /* Core */,
 				2855D3FC20A8431A0082EC00 /* Info.plist */,
+				283337CA227B1DFB00DC2159 /* GoogleService-Info.plist */,
 				28417E2520A844C000996941 /* supporting */,
 			);
 			path = OrgNoteApp;
@@ -622,6 +625,7 @@
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
 				2880A0A620C1ACF200CD4ACC /* WL.org in Resources */,
 				285F429B21D1ADA200E66D6A /* PopoverController.storyboard in Resources */,
+				283337CB227B1DFB00DC2159 /* GoogleService-Info.plist in Resources */,
 				285F41D521D0568200E66D6A /* EditOrgViewController.storyboard in Resources */,
 				284C7D0621AB111900C0F290 /* Main.storyboard in Resources */,
 			);
@@ -694,9 +698,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-OrgNoteApp/Pods-OrgNoteApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DeclarativeTableView/DeclarativeTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyParserCombinator/SwiftyParserCombinator.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -704,9 +710,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeclarativeTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyParserCombinator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

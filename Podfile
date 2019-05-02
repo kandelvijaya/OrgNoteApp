@@ -6,6 +6,7 @@ target 'OrgNoteApp' do
   pod 'SwiftyParserCombinator'
   pod 'StatusAlert'
   pod 'DeclarativeTableView'
+  pod 'Firebase/Core'
 
   target 'OrgNoteAppTests' do
     inherit! :search_paths
