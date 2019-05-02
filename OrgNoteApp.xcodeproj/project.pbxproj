@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		11A7D5E269BFBFD1711277BF /* Pods_EnablePlaygroundShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB75DBF21142522630D809F3 /* Pods_EnablePlaygroundShare.framework */; };
 		1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA7E44E7DE4473194F4D1EE /* Pods_OrgNoteApp.framework */; };
-		2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; };
-		2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2810BCC421E243E3009067BF /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2810BCD621E380CB009067BF /* DefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810BCD521E380CB009067BF /* DefaultsStorage.swift */; };
 		2814517520D349380006BBD7 /* OrgListDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814517420D349380006BBD7 /* OrgListDriverTests.swift */; };
 		2814518A20D3D4260006BBD7 /* EnablePlaygroundShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2814518820D3D4260006BBD7 /* EnablePlaygroundShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,7 +97,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2814518E20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Embed Frameworks */,
-				2810BCC721E244D4009067BF /* ObjectiveGit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2814518D20D3D4260006BBD7 /* EnablePlaygroundShare.framework in Frameworks */,
-				2810BCC621E244D4009067BF /* ObjectiveGit.framework in Frameworks */,
 				1FBEAC36ACED1C8364D81928 /* Pods_OrgNoteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +526,7 @@
 				2855D3EB20A843180082EC00 /* Resources */,
 				2814519220D3D4260006BBD7 /* Embed Frameworks */,
 				A9FDE7474DE33D00D0D1782D /* [CP] Embed Pods Frameworks */,
+				286106F7227B5E1F007FCC08 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -639,6 +636,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		286106F7227B5E1F007FCC08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" 82817dc09821eda860663063af8c795091c804ab f548d18106d744927cbfbe4477b74b338857a6f11b50bfd2bf62a83c06577c5a\n";
+		};
 		47E83F03AEF52FA63B42270F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1043,6 +1058,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

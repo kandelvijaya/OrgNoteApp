@@ -1,14 +1,19 @@
 PODS:
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
   - DeclarativeTableView (0.0.5):
     - FastDiff
     - Kekka
+  - Fabric (1.9.0)
   - FastDiff (1.1.1)
   - Kekka (0.8.1)
   - StatusAlert (1.1.0)
   - SwiftyParserCombinator (1.1)
 
 DEPENDENCIES:
+  - Crashlytics
   - DeclarativeTableView
+  - Fabric
   - FastDiff
   - Kekka
   - StatusAlert
@@ -16,19 +21,23 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
     - DeclarativeTableView
+    - Fabric
     - FastDiff
     - Kekka
     - StatusAlert
     - SwiftyParserCombinator
 
 SPEC CHECKSUMS:
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   DeclarativeTableView: 799269cf5ff66e04c3c86c1286086f7abbc8b81d
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
   Kekka: a3d3021cca1200f77ba1cfba0329242ffb48c8c3
   StatusAlert: 4d6dadebf5f7abd5648fa774ef3062f2f95cc4aa
   SwiftyParserCombinator: 5565b0948b219885799f43eb97058e9d929a560a
 
-PODFILE CHECKSUM: 201e9b04e3a539d673da0c600ef7ca8120a42a10
+PODFILE CHECKSUM: 26832757011c20c4f13dc7f03ebbabc040e9b7f0
 
 COCOAPODS: 1.6.1
