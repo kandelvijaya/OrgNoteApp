@@ -10,8 +10,8 @@ import UIKit
 
 struct OrgRawEditorDriver {
 
-    var controller: OrgRawEditorController {
-        return OrgRawEditorController.create(input: self.orgFileInput, onDismiss: self.onDismiss)
+    var controller: FullScreenOrgRawEditorController {
+        return FullScreenOrgRawEditorController.create(input: self.orgFileInput, onDismiss: self.onDismiss)
     }
 
     private let orgFileInput: OrgFile

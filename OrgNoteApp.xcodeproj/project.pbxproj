@@ -27,6 +27,8 @@
 		28295E6021F0E37900CD11CB /* GraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E5F21F0E37900CD11CB /* GraphContainer.swift */; };
 		28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6121F0E4E800CD11CB /* OrgFile.swift */; };
 		28295E6421F14CA000CD11CB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28295E6321F14CA000CD11CB /* AlertController.swift */; };
+		283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C6227AEEBC00DC2159 /* OrgEditorController.swift */; };
+		283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */; };
 		2846CC5320D066DC00946CC6 /* ArrayReplaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */; };
 		284C7D0621AB111900C0F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C7D0521AB111900C0F290 /* Main.storyboard */; };
 		284C7D1B21AB1A4600C0F290 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */; };
@@ -58,9 +60,8 @@
 		2880A0A420C197E600CD4ACC /* OrgFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880A0A320C197E600CD4ACC /* OrgFileService.swift */; };
 		2880A0A620C1ACF200CD4ACC /* WL.org in Resources */ = {isa = PBXBuildFile; fileRef = 2880A0A520C1ACF200CD4ACC /* WL.org */; };
 		2899525921F674B000D49966 /* OrgFileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525821F674B000D49966 /* OrgFileInteractable.swift */; };
-		2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525B21F678E200D49966 /* OrgRawEditorController.swift */; };
 		2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */; };
-		2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */; };
+		2899526021F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */; };
 		28A83A802275E8E00021C14C /* OrgSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F42A621D3AE5A00E66D6A /* OrgSyntaxHighlighter.swift */; };
 		28AE71C8217E16C500EFCE53 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */; };
 		28BE2F1622592B7700834877 /* DocumentPickerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */; };
@@ -123,6 +124,8 @@
 		28295E5F21F0E37900CD11CB /* GraphContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphContainer.swift; sourceTree = "<group>"; };
 		28295E6121F0E4E800CD11CB /* OrgFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFile.swift; sourceTree = "<group>"; };
 		28295E6321F14CA000CD11CB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		283337C6227AEEBC00DC2159 /* OrgEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgEditorController.swift; sourceTree = "<group>"; };
+		283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenOrgRawEditorController.swift; sourceTree = "<group>"; };
 		2846CC5220D066DC00946CC6 /* ArrayReplaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayReplaceTest.swift; sourceTree = "<group>"; };
 		284C7D0521AB111900C0F290 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		284C7D1A21AB1A4600C0F290 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
@@ -157,9 +160,8 @@
 		2880A0A320C197E600CD4ACC /* OrgFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileService.swift; sourceTree = "<group>"; };
 		2880A0A520C1ACF200CD4ACC /* WL.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = WL.org; sourceTree = "<group>"; };
 		2899525821F674B000D49966 /* OrgFileInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgFileInteractable.swift; sourceTree = "<group>"; };
-		2899525B21F678E200D49966 /* OrgRawEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorController.swift; sourceTree = "<group>"; };
 		2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgRawEditorDriver.swift; sourceTree = "<group>"; };
-		2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgRawEditorController.storyboard; sourceTree = "<group>"; };
+		2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullScreenOrgRawEditorController.storyboard; sourceTree = "<group>"; };
 		28AE71C7217E16C400EFCE53 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
 		28BE2F1522592B7700834877 /* DocumentPickerFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerFlowController.swift; sourceTree = "<group>"; };
 		28BE2F1722592CD100834877 /* org_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = org_file.png; sourceTree = "<group>"; };
@@ -433,9 +435,10 @@
 		2899525A21F678D200D49966 /* OrgRawEditor */ = {
 			isa = PBXGroup;
 			children = (
-				2899525B21F678E200D49966 /* OrgRawEditorController.swift */,
+				283337C8227AF76500DC2159 /* FullScreenOrgRawEditorController.swift */,
 				2899525D21F6790E00D49966 /* OrgRawEditorDriver.swift */,
-				2899525F21F67A7100D49966 /* OrgRawEditorController.storyboard */,
+				2899525F21F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard */,
+				283337C6227AEEBC00DC2159 /* OrgEditorController.swift */,
 			);
 			path = OrgRawEditor;
 			sourceTree = "<group>";
@@ -613,7 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BE2F1822593CCE00834877 /* org_file.png in Resources */,
-				2899526021F67A7100D49966 /* OrgRawEditorController.storyboard in Resources */,
+				2899526021F67A7100D49966 /* FullScreenOrgRawEditorController.storyboard in Resources */,
 				2855D3FB20A8431A0082EC00 /* LaunchScreen.storyboard in Resources */,
 				2855D3F820A8431A0082EC00 /* Assets.xcassets in Resources */,
 				2880A09820C18DEE00CD4ACC /* WLbig.org in Resources */,
@@ -779,10 +782,10 @@
 				2855D3F320A843180082EC00 /* ViewController.swift in Sources */,
 				281BA96F21C6FCE100319B0A /* IntExtension.swift in Sources */,
 				28D22A7921E0170900ED3BEF /* UIViewExtensions.swift in Sources */,
+				283337C7227AEEBC00DC2159 /* OrgEditorController.swift in Sources */,
 				285F41D321D0535D00E66D6A /* BaseEditOutlineViewController.swift in Sources */,
 				2880A09C20C18FFC00CD4ACC /* OutlineView.swift in Sources */,
 				28295E6221F0E4E800CD11CB /* OrgFile.swift in Sources */,
-				2899525C21F678E200D49966 /* OrgRawEditorController.swift in Sources */,
 				2880A0A120C196E700CD4ACC /* OrgListDriver.swift in Sources */,
 				286BCE0921B3D92700F7337F /* OrgFileRetrieveService.swift in Sources */,
 				281BA97121C7EB5500319B0A /* EditableGenericList.swift in Sources */,
@@ -807,6 +810,7 @@
 				285F429921D1AD2700E66D6A /* PopoverController.swift in Sources */,
 				28295E6421F14CA000CD11CB /* AlertController.swift in Sources */,
 				2899525E21F6790E00D49966 /* OrgRawEditorDriver.swift in Sources */,
+				283337C9227AF76500DC2159 /* FullScreenOrgRawEditorController.swift in Sources */,
 				284C7D1D21AB5C7F00C0F290 /* NetworkService.swift in Sources */,
 				28703D4220A85A1E00DC8DBF /* OrgParser.swift in Sources */,
 				2855D3F120A843180082EC00 /* AppDelegate.swift in Sources */,

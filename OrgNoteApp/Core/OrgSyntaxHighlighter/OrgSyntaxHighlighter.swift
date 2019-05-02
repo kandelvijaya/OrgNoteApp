@@ -52,7 +52,12 @@ extension UIColor {
     
 }
 
-public struct OrgHighlighter {
+protocol HighlighterProtocol {
+    func plainText(from input: NSAttributedString) -> String
+    func highlight(_ input: String) -> NSAttributedString
+}
+
+public struct OrgHighlighter: HighlighterProtocol {
     
     enum Symbol: String {
         case heading = "✦"
