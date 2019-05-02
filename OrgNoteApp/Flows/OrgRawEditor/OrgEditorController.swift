@@ -167,7 +167,7 @@ extension OrgEditorController {
     }
     
     private func barButtonItem(for depth: Int, with selector: Selector) -> UIBarButtonItem {
-        let stars = Array<String>.init(repeating: OrgHighlighter.Symbol.heading.rawValue, count: depth).joined()
+        let stars = "↳" + Array<String>.init(repeating: OrgHighlighter.Symbol.heading.rawValue, count: depth).joined()
         let item = UIBarButtonItem.init(title: stars, style: .plain, target: self, action: selector)
         item.setTitleTextAttributes(attributeForHeading(depth: depth), for: .normal)
         return item
